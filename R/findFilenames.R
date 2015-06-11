@@ -11,6 +11,7 @@
 #' @param directory
 #' 
 #' @examples
+#' Placeholder
 findFilenames = function(dl,directory) {
   index = dl@index
   filenames = c()

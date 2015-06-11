@@ -15,9 +15,10 @@ License: CC0 (http://bit.ly/1F96Zgp)
 Collate:
     'buildDocList.R'
     'docList.R'
-    'docConcordance.R'
     'docTexts.R'
     'docFrequencies.R'
+    'docConcordance.R'
+    'docAssociations.R'
     'findFilenames.R'
     'getDocAssociations.R'
     'getDocConcordance.R'

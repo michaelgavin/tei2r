@@ -36,7 +36,7 @@
 #'                      \code{term} in the document. The number of elements in the list 
 #'                      will be equal to the number of documents in the corpus.
 #'
-#' @section What it does
+#' @section What it does:
 #' Placeholder
 #' @include docList.R docConcordance.R docFrequencies.R
 docAssociations <- setClass("docAssociations",

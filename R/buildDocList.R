@@ -15,7 +15,7 @@
 #' @param wizard
 #' 
 #' @examples
-#' 
+#' Placeholder
 buildDocList = function(directory, stopwordsFile = "", indexFile ="", includeTexts = FALSE, wizard=FALSE) {
   dl = docList()
   dl@directory = directory
