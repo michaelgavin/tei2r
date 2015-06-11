@@ -1,3 +1,5 @@
+# TEST
+
 #====================================================================
 # Set stopwords. The argument is a filepath to a comma-separated list
 # of stopwords. The output is a character vector of terms, which is 
