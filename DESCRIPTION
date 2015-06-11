@@ -1,0 +1,29 @@
+Package: tei2r
+Type: Package
+Title: Import and parse TEI files in R
+Version: 0.0.0.9000
+Date: 2015-05-30
+Authors: c(person("Michael","Gavin", email = "mgavin@mailbox.sc.edu", role =
+    c("aut", "cre")), person("Travis","Mullen", email =
+    "tmullen@email.sc.edu",role = "aut")
+Description: This package provides humanities scholars with a simple
+    set of tools for manipulating TEI files, importing text from them,
+    and preparing text data for computational analysis.
+Imports:
+    XML
+License: CC0 (http://bit.ly/1F96Zgp)
+Collate:
+    'buildDocList.R'
+    'docList.R'
+    'docConcordance.R'
+    'docTexts.R'
+    'docFrequencies.R'
+    'findFilenames.R'
+    'getDocAssociations.R'
+    'getDocConcordance.R'
+    'getDocFrequencies.R'
+    'getDocTexts.R'
+    'getKwics.R'
+    'setStopwords.R'
+    'tei2r.R'
+    'textCleanup.R'
