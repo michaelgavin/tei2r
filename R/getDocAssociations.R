@@ -16,7 +16,7 @@
 getDocAssociations = function(dc, df) {
   da = docAssociations()
   da@directory    = df@directory
-  da@index        = df@index
+  da@indexFile    = df@indexFile
   da@term         = dc@term
   da@context      = dc@context
   da@associations = list()
@@ -30,7 +30,8 @@ getDocAssociations = function(dc, df) {
   proportions = list()
   for(i in 1:length(da@associations)) {
     words = names(da@associations[[i]])
-    wordProps = df@proportional[[i]][words]
+    #browser()
+    wordProps = unlist(df@proportionalVocab[words])
     da@proportions[[i]] = (da@associations[[i]]/wordProps)
   }
   names(da@proportions) = names(da@associations)

@@ -28,3 +28,4 @@ Collate:
     'setStopwords.R'
     'tei2r.R'
     'textCleanup.R'
+    'writeDocFrequencies.R'

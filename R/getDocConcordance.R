@@ -24,7 +24,7 @@
 getDocConcordance = function(dt, term, context) {
   dc = docConcordance()
   dc@directory   = dt@directory
-  dc@index       = dt@directory
+  dc@indexFile   = dt@indexFile
   dc@term        = term
   dc@context     = context
   dc@concordance = list()

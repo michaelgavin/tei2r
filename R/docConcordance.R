@@ -16,7 +16,7 @@
 
 docConcordance <- setClass("docConcordance",
                            slots = c(directory   = "character",
-                                     indexFile       = "character",
+                                     indexFile   = "character",
                                      term        = "character",
                                      context     = "numeric",
                                      concordance = "list"
