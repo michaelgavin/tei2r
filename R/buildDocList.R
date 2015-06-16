@@ -16,15 +16,28 @@
 #' 
 #' @examples
 #' Placeholder
-buildDocList = function(directory, stopwordsFile = "", indexFile ="", includeTexts = FALSE, wizard=FALSE) {
+buildDocList = function(directory = "", stopwordsFile = "", indexFile ="", includeTexts = FALSE, wizard=FALSE) {
   dl = docList()
-  dl@directory = directory
-  dl@indexFile = indexFile
-  dl@index = read.csv(indexFile,stringsAsFactors=FALSE)
-  dl@filenames = findFilenames(dl = dl, directory = directory)
-  dl@paths = paste(dl@directory,"/",dl@filenames,sep="")
-  dl@stopwordsFile = stopwordsFile
-  dl@stopwords = setStopwords(stopwordsFile)
+  if(wizard == FALSE) {
+    dl@directory = directory
+    if(indexFile == "") {
+      print("It seems like we don't have an index file for you.  Building one now.")
+      dl@indexFile = buildIndex(dl@directory)
+      dl@index = read.csv(dl@indexFile,stringsAsFactors=FALSE)
+      dl@filenames = dl@index$filenames
+      dl@paths = dl@index$paths
+    } else {
+      dl@indexFile = indexFile
+      #browser()
+      dl@index = read.csv(dl@indexFile,stringsAsFactors=FALSE)
+      dl@filenames = findFilenames(dl = dl, directory = directory)
+      dl@paths = paste(dl@directory,"/",dl@filenames,sep="")
+    }
+    dl@stopwordsFile = stopwordsFile
+    dl@stopwords = setStopwords(stopwordsFile)
+  } else {
+    dl = useWizard(dl)
+  }
   #if (includeTexts == TRUE) {
   # for (i in 1:nrow(dl@index)) {
   #  if (length(grep(".txt",dl@paths[i])) == 1) {
