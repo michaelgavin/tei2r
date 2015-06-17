@@ -14,6 +14,7 @@ Imports:
 License: CC0 (http://bit.ly/1F96Zgp)
 Collate:
     'buildDocList.R'
+    'buildIndex.R'
     'docList.R'
     'docTexts.R'
     'docFrequencies.R'
@@ -28,4 +29,5 @@ Collate:
     'setStopwords.R'
     'tei2r.R'
     'textCleanup.R'
+    'useWizard.R'
     'writeDocFrequencies.R'

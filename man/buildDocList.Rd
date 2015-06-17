@@ -2,27 +2,59 @@
 % Please edit documentation in R/buildDocList.R
 \name{buildDocList}
 \alias{buildDocList}
-\title{}
+\title{This function constructs a \code{docList} object.  The \code{docList}
+object is the foundation of the \code{tei2r} package and contains references
+to all of the basic information that is required to begin working with
+texts in R.}
 \usage{
-buildDocList(directory, stopwordsFile = "", indexFile = "",
-  includeTexts = FALSE, wizard = FALSE)
+buildDocList(directory = "", stopwordsFile = "", indexFile = "",
+  wizard = FALSE)
 }
 \arguments{
 \item{directory}{A string that is the path to the directory where the
 files that make up your corpus are located.}
 
-\item{stopwordsFile}{}
+\item{stopwordsFile}{A string that is the path to the file that contains
+the words that are to be removed from the text in the
+\code{cleanup} function.}
 
-\item{indexFile}{}
+\item{indexFile}{A string that is the path to the index file for the
+corpus.  This function expects to find a .csv file
+that contains the metadata for your corpus.  At the
+very least, it needs to have a column with \code{id}
+numbers that correspond to filenames or vice versa.
+If you do not have an index file, this parameter can
+be left blank and the \code{buildIndex} function will
+be called to construct one based on the files found in
+\code{directory}.}
 
-\item{includeTexts}{}
-
-\item{wizard}{}
+\item{wizard}{A boolean value that determines whether the wizard function
+                       will be used.  If this value is true, you will be prompted
+                       for your corpus' directory, asked if you would like to build
+                       an index, and if you have a stopwords file.  You may provide
+                       the directory in addition to activating the wizard.}
+}
+\value{
+dl             The completed \code{docList} object for use with the other
+                       functions of the \code{tei2r} package.
 }
 \description{
+This function constructs a \code{docList} object.  The \code{docList}
+object is the foundation of the \code{tei2r} package and contains references
+to all of the basic information that is required to begin working with
+texts in R.
+}
+\section{Description}{
 
+The \code{buildDocList} function is designed to construct the \code{docList}
+object with as much or as little information available.  You can begin this
+process by simply including the parameter \code{wizard = T} which will walk
+you through the process of building your intial \code{docList}.
 }
 \examples{
-Placeholder
+dl = buildDocList(directory = "~/path/to/your/corpus/files", stopwordsFile = "~/path/to/your/stopwords/file", indexFile = "~/path/to/your/index/File/")
+dl = buildDocList(wizard = T)
+dl = buildDocList(directory="~/path/to/your/corpus/files", wizard=T)
+dl = buildDocList(directory = "~/path/to/your/corpus/files", stopwordsFile = "~/path/to/your/stopwords/file")
 }
 

@@ -2,17 +2,33 @@
 % Please edit documentation in R/getDocTexts.R
 \name{getDocTexts}
 \alias{getDocTexts}
-\title{Placeholder}
+\title{This function collects, cleans up (removes stopwords), and stores
+the text of the corpus' documents in a single object in which the
+text is labeled by the corresponding \code{id} in the \code{index}
+file.  This is usually the filename sans extension or the \code{tcp}
+number.}
 \usage{
 getDocTexts(dl)
 }
 \arguments{
-\item{dl}{}
+\item{dl}{The \code{docList} object that contains the \code{index} with
+          the \code{paths} to the files that house the text.}
+}
+\value{
+dt The \code{docTexts} object that contains the texts of the corpus,
+           the path to the \code{indexFile} and the original \code{directory}
+           that the \code{docList} object was constructed with.  This information
+           enables the user to keep track of which objects are associated with
+           which corpus.
 }
 \description{
-Placeholder
+This function collects, cleans up (removes stopwords), and stores
+the text of the corpus' documents in a single object in which the
+text is labeled by the corresponding \code{id} in the \code{index}
+file.  This is usually the filename sans extension or the \code{tcp}
+number.
 }
 \examples{
-placeholder
+dt = getDocTexts(dl)
 }
 
