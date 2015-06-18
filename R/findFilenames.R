@@ -69,7 +69,7 @@ detectColumn <- function(index, directory) {
         #}
         fName = file_path_sans_ext(loc)
         #print(paste(" FNAME:  ", fName, sep=""))
-        if(index[i,j] == fName) {
+        if(!is.na(index[i,j]) && index[i,j] == fName) {
           colNum = j
         }
       }

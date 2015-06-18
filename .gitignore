@@ -1,3 +1,7 @@
 .Rproj.user
 .Rhistory
 .RData
+tfidf_check_King.csv
+.DS_Store
+Locke_Just_Right_tfidf.csv
+tfidf_all_test.csv

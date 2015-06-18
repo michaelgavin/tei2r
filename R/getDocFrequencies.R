@@ -37,16 +37,35 @@ getDocFrequencies = function(dt, limit=0) {
   names(df@proportional) = names(dt@text)
   
   # Get the vocabulary
-  print("Determining vocabulary for corpus.  Accessible through df@vocabulary.")
-  freqs = rev(sort(table(unlist(dt@text))))
-  #browser()
-  df@vocabulary = freqs
-  # Get proportional vocab
-  print("Determining proportional frequency for each word in the vocabulary accross the whole corpus.  Accessible through df@proportionalVocab")
-  total = sum(df@vocabulary)
-  for(i in 1:nrow(df@vocabulary)){
-    df@proportionalVocab[i] = ((df@vocabulary[i]) / total)
+  vocabAnswer = readline("Would you like to determine the vocabulary for the corpus? [yes/no] > ")
+  if(vocabAnswer == "yes") {
+    print("Determining vocabulary for corpus.  Accessible through df@vocabulary.")
+    freqs = rev(sort(table(unlist(dt@text))))
+    #browser()
+    df@vocabulary = freqs
   }
-  names(df@proportionalVocab) = names(df@vocabulary)
+  # Get proportional vocab
+  propsAnswer = readline("Would you like to calculate the proportional frequency for each term across the corpus? (This may take quite some time) [yes/no] > ")
+  if(propsAnswer == "yes" && vocabAnswer == "yes") {
+    print("Determining proportional frequency for each word in the vocabulary accross the whole corpus.  Accessible through df@proportionalVocab")
+    total = sum(df@vocabulary)
+    for(i in 1:nrow(df@vocabulary)){
+      df@proportionalVocab[i] = ((df@vocabulary[i]) / total)
+    }
+    names(df@proportionalVocab) = names(df@vocabulary)
+  } else if(propsAnswer == "yes" && vocabAnswer == "no") {
+    print("We'll need to calculate the vocabulary for the corpus first.")
+    ans = readlin("Would you like to do that? [yes/no] > ")
+    if (ans == "yes") {
+      print("Determining vocabulary for corpus.  Accessible through df@vocabulary.")
+      freqs = rev(sort(table(unlist(dt@text))))
+      #browser()
+      df@vocabulary = freqs
+    } else {
+      print("Skipping proportional frequencies.")
+    }
+  } else {
+    print("skipping proportional frequencies.")
+  }
   return(df)
 }
