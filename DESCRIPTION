@@ -9,10 +9,10 @@ Authors: c(person("Michael","Gavin", email = "mgavin@mailbox.sc.edu", role =
 Description: This package provides humanities scholars with a simple
     set of tools for manipulating TEI files, importing text from them,
     and preparing text data for computational analysis.
-Imports:
+Imports: 
     XML
 License: CC0 (http://bit.ly/1F96Zgp)
-Collate:
+Collate: 
     'buildDocList.R'
     'buildIndex.R'
     'docList.R'
@@ -31,3 +31,5 @@ Collate:
     'textCleanup.R'
     'useWizard.R'
     'writeDocFrequencies.R'
+Suggests: knitr
+VignetteBuilder: knitr

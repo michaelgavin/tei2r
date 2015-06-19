@@ -49,18 +49,25 @@ getDocFrequencies = function(dt, limit=0) {
   if(propsAnswer == "yes" && vocabAnswer == "yes") {
     print("Determining proportional frequency for each word in the vocabulary accross the whole corpus.  Accessible through df@proportionalVocab")
     total = sum(df@vocabulary)
-    for(i in 1:nrow(df@vocabulary)){
-      df@proportionalVocab[i] = ((df@vocabulary[i]) / total)
-    }
+     for(i in 1:nrow(df@vocabulary)){
+       df@proportionalVocab[i] = ((df@vocabulary[i]) / total)
+     }
+    #df@proportionalVocab = (df@vocabulary/total)
     names(df@proportionalVocab) = names(df@vocabulary)
   } else if(propsAnswer == "yes" && vocabAnswer == "no") {
     print("We'll need to calculate the vocabulary for the corpus first.")
-    ans = readlin("Would you like to do that? [yes/no] > ")
+    ans = readline("Would you like to do that? [yes/no] > ")
     if (ans == "yes") {
       print("Determining vocabulary for corpus.  Accessible through df@vocabulary.")
       freqs = rev(sort(table(unlist(dt@text))))
       #browser()
       df@vocabulary = freqs
+      print("Determining proportional frequency for each word in the vocabulary accross the whole corpus.  Accessible through df@proportionalVocab")
+      total = sum(df@vocabulary)
+      for(i in 1:nrow(df@vocabulary)){
+        df@proportionalVocab[i] = ((df@vocabulary[i]) / total)
+      }
+      names(df@proportionalVocab) = names(df@vocabulary)
     } else {
       print("Skipping proportional frequencies.")
     }
