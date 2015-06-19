@@ -97,16 +97,16 @@ dl = buildDocList(directory = "~/Desktop/Grad School/R Project 15/data/testCaseT
     indexFile = "~/Desktop/Grad School/R Project 15/data/testCaseThree/index.csv")
 
 # Build the docTexts object
-dt = getDocTexts(dl)
+dt = getTexts(dl)
 
 # Build the docFrequencies object
-df = getDocFrequencies(dt)
+df = getFrequencies(dt)
 
 # Build the docConcordance object
-dc = getDocConcordance(dt, term = "just", context = 5)
+dc = getConcordance(dt, term = "just", context = 5)
 
 # Build the docAssociations object
-da = getDocAssociations(dc, df)
+da = getAssociations(dc, df)
 
 # Now I have all of my FACTs, I can do some investigation!
 
