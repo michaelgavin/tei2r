@@ -1,0 +1,100 @@
+---
+title: "The docTexts Object"
+author: "Travis Mullen"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+# Introduction
+***
+The `docTexts` object, along with your `docList` object make up the core of the `tei2r` package.  Most other objects in the package require the `docTexts` object to perform their functions and to generate their data.  The `docTexts` object holds a list of all of the words (minus stopwords) in each of the documents included in your corpus.  
+
+The `docTexts` object has several slots:
+
+  - `directory` a string that gives the full path to the main directory (folder) that houses your corpus of texts.
+  - `indexFile` a string that gives the full path to the file that contains your index file (the meta-data for your corpus).
+  - `text` a list that holds the full text of each document in your corpus.  The number of elements in the `text` list will be equal to the number of documents in your corpus.
+
+`text` serves as the building block for most of the other objects: `docConcordance` and `docFrequencies` especially.  Since `text` holds all of the words for each of your documents, it can serve as the basis of many analytical functions.  The `text` slot will consist of the 'cleaned' text of each document.  That is, the text free of all stopwords and with characters like the 'long s' (∫) converted to Ss.
+
+***
+
+# `docTexts` Slots
+
+## `dt@text`
+The `text` slot holds all of the words from each document in your corpus.  These documents are derived from the filenames found in your `indexFile`.  If your `indexFile` is missing a `filenames` field, docTexts will look in your `directory` for files that it can use based on any column of your `indexFile` that matches up with file names within the `directory`.  For example,  if `indexFile` does not have a `filenames` column, but it does have a file that has id numbers that match file names in your directory, the text will come from those files.
+  
+  | TCP   |
+  |------:|
+  |A00301 |
+
+```
+                                                |
+                                                |
+                                                |
+                                                V
+                                        directory/A00301.xml
+```
+
+The `text` slot will hold all of the words in each document of your corpus.  Running `dt@text[1]` will return:
+```
+$A26092
+[1] "x"             "licensed"      "july"          "16th"          "1694"          "poplar"        "serious"       "proposal"      "ladies"        "advancement"   "true"          "greatest"     
+[13] "interest"      "lover"         "sex"           "london"        "printed"       "wilkin"        "king"          "head"          "paul"          "church"        "yard"          "1694"         
+[25] "serious"       "proposal"      "ladies"        "advancement"   "true"          "greatest"      "interest"      "ladies"        "prositable"    "adventures"    "gone"          "abroad"       
+[37] "world"         "met"           "great"         "encouragement" "tho"           "highest"       "advantage"     "propose"       "uncertain"     "lot"           "matters"       "opinion"      
+[49] "real"          "worth"  ....     
+```
+
+You can also access values in the `text` list by referring to them by their `id`: `dt@text$A26092`.
+
+The output is much easier to read using the `View()` command (`View(dt@text[1])`).  Given that all of the words are present in this list, finding the top 50 most frequent words is relatively simple (aside from using the `docFrequencies` object):
+```r
+rev(sort(table(dt@text[1])))[1:50]
+```
+returns:
+
+```
+    world       good  therefore       make      being       self      great       well themselves    nothing     vertue     selves     little        god        out      think      whose        tho 
+        69         69         45         45         45         44         43         41         38         36         34         34         32         32         31         29         28         28 
+    ladies     better      thing      women     things        now       love         up       time     reason      never     nature        men       here       true      souls     others       mind 
+        28         28         26         25         25         25         24         23         23         23         23         23         23         23         22         22         22         22 
+  greatest       many    without       wise    persons       take   religion  knowledge       know      piety      minds       holy      truly  religious 
+        22         21         20         20         20         19         19         19         19         18         18         18         17         17 
+```
+
+This works by reversing a sorted table (frequencies) of the words in the first position of the `text` slot of the `dt` object.  Each index in the list is labeled with its corresponding `id` or `filename`.
+
+## Diagram
+
+![docTexts structure](./img/dt_diagram.png)  
+The `docTexts` object.
+
+
+## Examples
+```r
+  > library(tools)
+  > library(XML)
+  
+  > dl = buildDocList(directory = "./data/sampleSetOne/", 
+                  indexFile="./data/sampleSetOne/index.csv", 
+                  stopwordsFile = "./data/stopword_list.txt")
+  > dt = getTexts(dl)
+  > dt@text[1]
+  $A26092
+  [1] "x"             "licensed"      "july"          "16th"          "1694"          "poplar"        "serious"       "proposal"      "ladies"        "advancement"   "true"          "greatest"     
+  [13] "interest"      "lover"         "sex"           "london"        "printed"       "wilkin"        "king"          "head"          "paul"          "church"        "yard"          "1694"         
+  [25] "serious"       "proposal"      "ladies"        "advancement"   "true"          "greatest"      "interest"      "ladies"        "prositable"    "adventures"    "gone"          "abroad"       
+  [37] "world"         "met"           "great"         "encouragement" "tho"           "highest"       "advantage"     "propose"       "uncertain"     "lot"           "matters"       "opinion"      
+  [49] "real"          "worth"  ....
+```
+
+## Extending `docTexts` with Analysis
+There are many ways to use the `docText` object for analysis.
+
+  1.  You can find the top n most frequently used words in a document by running `rev(sort(table(dt@text[[i]][1:n])))` where `i` is the index of the document you're looking for and `n` is the number of words you want to display.  Alternatively, you can use `rev(sort(table(dt@text$A26092[1:n])))` where `A26092` is the `id` of the text you're looking for.
+  1. You can also pass the `docText` object to the `docFrequencies` object to get all of the frequencies for each word in each document across the whole corpus: `df = getFrequencies(dt)`.^[For more on `docFrequencies` see [The `docFrequencies` Object Vignette]('docFrequencies.Rmd')].
+  1. After calculating the term frequencies, you can get the 'term frequency inverse document frequency' by running `tf = tfidf(df, 'term', all=F)`.  We recommend finding the `tfidf` for a single or collection of terms to save time and to make the results easier to interpret.

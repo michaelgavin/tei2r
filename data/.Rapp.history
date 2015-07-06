@@ -1,0 +1,5 @@
+load("/Users/travismullen/Desktop/Grad School/R Project 15/tei2r/data/stopwords.rda")
+stopwords
+load("/Users/travismullen/Desktop/Grad School/R Project 15/tei2r/data/stopwords.rda")
+load("/Users/travismullen/Desktop/Grad School/R Project 15/tei2r/data/indexfile.rda")
+indexfile

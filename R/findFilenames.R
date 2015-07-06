@@ -34,6 +34,7 @@ findFilenames = function(dl,directory) {
     #  }
     loc = grep(index[i,colNum],dir(directory),value=T,fixed = T)
     if (length(loc) == 1) {
+      #browser()
       filenames[i] = loc
     }
   }
@@ -41,13 +42,24 @@ findFilenames = function(dl,directory) {
   for(i in 1:length(filenames)) {
     if (all(is.na(filenames[i]) == T)) {
       # Will fail if 'filenames' is not complete.
-      errors = c(errors, index[i][colNum])
+      #browser()
+      errors = c(errors, index[i,colNum])
     }
   }
   if(length(errors) > 0) {
     print("We seem to be missing the following files: ")
     for(i in 1:length(errors)) {
       print(errors[i])
+    }
+    download = readline("Would you like to download them? [yes/no] > ")
+    if(download == "yes" || download == "Yes") {
+      getFiles(dl=dl, ids = errors)
+      convert = readline("Would you like to convert from XML to txt? [yes/no] > ")
+      if(convert == "yes" || convert == "Yes") {
+        for(i in 1:length(errors)) {
+          xmlToText(paste(dl@directory, errors[i], ".xml", sep=""), dl@directory)
+        }
+      }
     }
   }
   return(filenames)
@@ -58,9 +70,11 @@ detectColumn <- function(index, directory) {
   for (i in 1:10) {
     print(paste("Checking Row Number: ", i, " of 10", sep=""))
     for (j in 1:ncol(index)) {
-      loc = grep(index[i,j], dir(directory), value=T, fixed=T)
+      if(!is.na(index[i,j])){
+        loc = grep(index[i,j], dir(directory), value=T, fixed=T)
+      }
       
-      if(length(loc == 1)) {
+      if(length(loc == 1) && !is.na(loc)) {
         #print(paste("LOCATION ", loc, " J: ", j, sep=""))
         #if(colNum != j && colNum > 0) {
         #  print(paste("Conflicting columns detected: ", colNum, " vs. ", j, sep=""))

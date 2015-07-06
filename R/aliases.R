@@ -8,12 +8,12 @@ getFrequencies = function(dt) {
   return(df)
 }
 
-getConcordance = function(df, term, context) {
-  dc = getDocConcordance(df, term, context)
+getConcordance = function(dt, term, context) {
+  dc = getDocConcordance(dt, term, context)
   return(dc)
 }
 
 getAssociations = function(dc, df) {
-  da = getDocConcordance(dc, df)
+  da = getDocAssociations(dc, df)
   return(da)
 }
