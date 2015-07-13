@@ -63,7 +63,9 @@ buildDocList = function(directory = "", stopwordsFile = "", indexFile ="", wizar
       dl@paths = paste(dl@directory,"/",dl@filenames,sep="")
     }
     dl@stopwordsFile = stopwordsFile
-    dl@stopwords = setStopwords(stopwordsFile)
+    if(stopwordsFile != "") {
+      dl@stopwords = setStopwords(stopwordsFile)
+    }
   } else {
     dl = useWizard(dl, directory)
   }

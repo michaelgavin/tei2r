@@ -1,0 +1,91 @@
+---
+title: "Investigating Justness in the English Civil war and its Contexts Using `tei2r`"
+author: "Travis Mullen"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+# Introduction
+***
+
+This vignette will serve as a guide to working with a corpus of texts from scratch using the `tei2r` package.  We'll be walking through the process of using the `tei2r` package from the very basic steps like building a corpus to doing analysis.  Our focus will be on the English Civil War (1642-1651) and the surrounding years.  We'll be using the EEBO TCP to obtain our texts and metadata.  We're going to use a buffer of ~5 years on each side of the war for context: 1635-1655.
+
+***
+# The Process
+
+## Building our corpus.
+Since we're starting from scratch, I don't have any files downloaded. I'm going to use `getFiles` to download them and get my `docList` object started.^[I'm truncating directories herein because your directories need to be specific to your filesystem.]
+
+```r
+  > library(tei2r)
+  > dl = getFiles(directory = "~/Desktop/.../data/justnessExample/") # Takes some time to load as it must read in whole TCP metadata
+  How would you like to subset the TCP Index? [date, authors, titles, status, subject] > date
+  Would you also like to limit by status? [yes/no] > yes      # I want to limit the status because I can only download free files.
+  Which status do you want to limit your selection to? [free/restricted] > free
+  Please enter the start year > 1635
+  Please enter the end year > 1655
+  [1] "We have selected the following 5670 TCP numbers: "
+   [1] A00011 A00028 A00089 A00211 A00214 A00233 A00235 A00289 A00293 A00395 A00426 A00459 A00475 A00478 A00510 A00519 A00573 A00586 A00604 A00695 A00737 A00749 A00761
+  [24] A00816 A00926 A00958 A00959 A00960 A00966 A00967 A01011 A01025 A01038 A01039 A01049 A01052 A01059 A01084 A01089 A01108 A01139 A01158 A01210 A01234 A01253 A01342
+  ...  # Omitting for space
+  Would you like to download these files? [yes/no] > yes
+  [1] "Saving in ~/Desktop/.../data/justnessExample/data"
+  [1] "Downloading file: A00011.xml File number: 1 of 5670"
+  [1] "Downloading file: A00028.xml File number: 2 of 5670"
+  [1] "Downloading file: A00089.xml File number: 3 of 5670"
+  [1] "Downloading file: A00211.xml File number: 4 of 5670"
+  [1] "Downloading file: A00214.xml File number: 5 of 5670"
+  [1] "Downloading file: A00233.xml File number: 6 of 5670"
+  [1] "Downloading file: A00235.xml File number: 7 of 5670"
+  ...
+  # Now I can check out the metadata for the files that were retrieved:
+  > View(dl@index)
+```
+Now that I have my `docList` object, I can get the `FACT`s about my corpus.  We'll start with `T` the texts of the corpus:
+
+```r
+  > dt = getTexts(dl)
+  > df = getFrequencies(dt)
+```
+
+
+## Styles
+
+The `html_vignette` template includes a basic CSS theme. To override this theme you can specify your own CSS in the document metadata as follows:
+
+    output: 
+      rmarkdown::html_vignette:
+        css: mystyles.css
+
+## Figures
+
+The figure sizes have been customised so that you can easily put two images side-by-side. 
+
+```{r, fig.show='hold'}
+plot(1:10)
+plot(10:1)
+```
+
+You can enable figure captions by `fig_caption: yes` in YAML:
+
+    output:
+      rmarkdown::html_vignette:
+        fig_caption: yes
+
+Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
+
+## More Examples
+
+You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
+
+```{r, echo=FALSE, results='asis'}
+knitr::kable(head(mtcars, 10))
+```
+
+Also a quote using `>`:
+
+> "He who gives up [code] safety for [code] speed deserves neither."
+([via](https://twitter.com/hadleywickham/status/504368538874703872))

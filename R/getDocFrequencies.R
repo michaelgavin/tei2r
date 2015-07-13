@@ -1,17 +1,30 @@
 #====================================================================
+# Get term frequency data for the terms in each document across the
+# corpus.  Also (optionally) determines the frequency and proportional 
+# frequency of all terms across the corpus. The first parameter is a
+# docTexts object containing the full cleaned text for each document
+# in your corpus.  The second is a limit on the number of terms to
+# include from each document in the frequency lists.
 #
-#
-#
-#
+# Returns a docFrequencies object.
 #====================================================================
 #' 
-#' Placeholder
+#' Get the frequency of all words in each text in \code{dt} and
+#' optionally of all words in the corpus.
 #' 
-#' @param dt
-#' @param limit
+#' @param dt      A \code{docTexts} object that contains the full
+#'                text of each document in your corpus.
+#' @param limit   A numeric value that limits the number of words
+#'                to find the frequency of in each document in
+#'                \code{dt}. Defaults to all terms.
+#'                
+#' @return df     a \code{docFrequencies} object with frequency
+#'                data for the corpus.
 #' 
 #' @examples
-#' placeholder
+#' df = getDocFrequencies(dt)
+#' df = getDocFrequencies(dt, 500)
+#' df = getDocFrequencies(dt=dt, limit=1000)
 getDocFrequencies = function(dt, limit=0) {
   df = docFrequencies()
   df@directory         = dt@directory
@@ -38,7 +51,7 @@ getDocFrequencies = function(dt, limit=0) {
   
   # Get the vocabulary
   vocabAnswer = readline("Would you like to determine the vocabulary for the corpus? [yes/no] > ")
-  if(vocabAnswer == "yes") {
+  if(vocabAnswer == "yes" || vocabAnswer == "Yes") {
     print("Determining vocabulary for corpus.  Accessible through df@vocabulary.")
     freqs = rev(sort(table(unlist(dt@text))))
     #browser()

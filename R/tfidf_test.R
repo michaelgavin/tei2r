@@ -1,4 +1,60 @@
-
+#====================================================================
+# This function calculates the Term Frequency Inverse Document
+# Frequency in a variety of situations, including: a single term across
+# all documents, multiple terms, all terms, all terms [with limit]. The
+# first parameter is either a docFrequencies, docConcordance, or
+# docAssociations object, the second is the term or terms, the third
+# is a boolean for all terms, and the last is a numerical limit for
+# the number of terms included in all.
+#
+# Returns a list of words and their tfidf value in each document.
+#
+#====================================================================
+#'
+#' This function calculates the Term Frequency Inverse Document
+#' Frequency in a variety of situations, including: a single term
+#' across all documents, multiple terms, all terms, all terms (with limit)
+#' for \code{docFrequencies}, \code{docConcordance}, or \code{docAssociations}
+#' objects.
+#' 
+#' @section What It Does:
+#' 
+#' The Term Frequency Inverse Document Frequency is determined
+#' by multiplying the frequency of a term in a document by the
+#' log of the total number of documents divided by the number
+#' of documents in which the term appears:
+#' 
+#' f(term) * log(numDocuments/numDocumentsWithTerm)
+#' 
+#' @param df      A \code{tei2r} object of class \code{docFrequencies}, 
+#'                \code{docConcordance}, or \code{docAssociations}. This
+#'                object contains the terms to calculate the \code{tfidf}
+#'                for.
+#'               
+#' @param term    The term or list of terms (\code{c("termOne", "termTwo")})
+#'                to calculate \code{tfidf} for.
+#'               
+#' @param all     A boolean value that tells the function whether to calculate
+#'                \code{tfidf} for all terms or not (limited to 1000 by default).
+#'               
+#' @param limit   A numerical value that tells the function how many terms to limit
+#'                \code{all} to.  Defaults to 1000.
+#'               
+#' @return tf.idf A list of numerical values for each \code{term} that represents
+#'                their \code{tfidf} value in each document.
+#'                
+#' @examples
+#' tf = tfidf(df, term="just")
+#' tf = tfidf(df, term=c('just', 'right'))
+#' tf = tfidf(df, all=T)
+#' tf = tfidf(df, all=T, limit=5000)
+#' 
+#' tf = tfidf(dc, all=T)
+#' 
+#' tf = tfidf(da, all=T)
+#' @name tfidf
+NULL
+#' @rdname tfidf
 tfidf = function(df, term = "", all=F, limit = 1000) {
   if (class(df) == 'docAssociations') {
     tf.idf = tfidfAssociation(df, term, all)
@@ -45,6 +101,7 @@ tfidf = function(df, term = "", all=F, limit = 1000) {
   }
 }
 
+#' @rdname tfidf
 tfidfAssociation = function(da, term = "", all=F){
   if(!all && length(term) == 1) {
     numdocs = 0
@@ -89,6 +146,7 @@ tfidfAssociation = function(da, term = "", all=F){
   return(tf.idf)
 }
 
+#' @rdname tfidf
 tfidfConcordance = function(dc, term, all){
   tempText = ""
   associations = list()
