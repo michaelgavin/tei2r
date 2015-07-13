@@ -3,16 +3,21 @@ Type: Package
 Title: Import and parse TEI files in R
 Version: 0.0.0.9000
 Date: 2015-05-30
-Authors: c(person("Michael","Gavin", email = "mgavin@mailbox.sc.edu", role =
+Author: c(person("Michael","Gavin", email = "mgavin@mailbox.sc.edu", role =
     c("aut", "cre")), person("Travis","Mullen", email =
     "tmullen@email.sc.edu",role = "aut")
+Maintainer: Michael Gavin <michael.a.gavin@gmail.com>
 Description: This package provides humanities scholars with a simple
     set of tools for manipulating TEI files, importing text from them,
     and preparing text data for computational analysis.
 Imports:
     XML
 License: CC0 (http://bit.ly/1F96Zgp)
+<<<<<<< HEAD
 Collate:
+=======
+Collate: 
+>>>>>>> 3a3e5442e76fc34b7250acc4c6d3654100e3b6a9
     'aliases.R'
     'buildDocList.R'
     'buildIndex.R'
@@ -36,6 +41,10 @@ Collate:
     'useWizard.R'
     'writeDocFrequencies.R'
     'xmlToText.R'
+<<<<<<< HEAD
 Suggests:
     knitr
+=======
+Suggests: knitr
+>>>>>>> 3a3e5442e76fc34b7250acc4c6d3654100e3b6a9
 VignetteBuilder: knitr
