@@ -32,7 +32,7 @@
 #' dl = getFiles(ids=c("idOne", "idTwo"))
 #' dl = getFiles(dl=dl)
 #' dl = getFiles(dl=dl, append=T)
-getFiles = function(src = "TCP", ids = "", directory="", dl = NA, append=F){
+getFiles = function(src = "TCP", ids = "", directory="", dl = NA, append=F, suppressWarnings=T){
   if (src == "TCP" || src == "tcp") {
     TCP = read.csv("./data/TCP.csv")
     TCP$Date = as.character(TCP$Date)
@@ -124,9 +124,7 @@ getFiles = function(src = "TCP", ids = "", directory="", dl = NA, append=F){
             print(paste("Skipping file: ", dl@directory, "data/", selection[i],".xml", " As it already exists.", sep=""))
           }
         }
-        browser()
         if(!is.na(dl) && append == FALSE && length(dl@index) > 0) {
-          browser()
           write.csv(TCP[which(TCP$TCP %in% selection),], paste(dl@directory, "data/index.csv", sep=""))
           dl@indexFile = paste(dl@directory, "data/index.csv", sep="")
           dl@index = read.csv(dl@indexFile)
@@ -134,7 +132,6 @@ getFiles = function(src = "TCP", ids = "", directory="", dl = NA, append=F){
           
           return(dl)
         } else if(!is.na(dl) && append == TRUE && length(dl@index) > 0) {
-          browser()
           index = TCP[which(TCP$TCP %in% selection),]
           dl@index = cbind(dl@index, index)
           write.csv(dl@index, dl@indexFile)
@@ -142,7 +139,6 @@ getFiles = function(src = "TCP", ids = "", directory="", dl = NA, append=F){
           
           return(dl)
         } else {
-          browser()
           index = TCP[which(TCP$TCP %in% selection),]
           write.csv(index, paste(directory, "data/index.csv", sep="/"))
           dl = buildDocList(directory = paste(directory, "data/", sep=""), indexFile=paste(directory, "data/index.csv", sep="/"))
@@ -150,7 +146,6 @@ getFiles = function(src = "TCP", ids = "", directory="", dl = NA, append=F){
           return(dl)
         }
       } else {
-        browser()
         index = TCP[which(TCP$TCP %in% selection),]
         write.csv(index, paste(dl@directory, "index.csv", sep=""))
         dl@indexFile = paste(dl@directory, "index.csv", sep="")

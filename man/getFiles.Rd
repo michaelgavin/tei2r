@@ -5,7 +5,7 @@
 \title{This function acts as a wizard for the user for downloading
 files from the EEBO TCP based on a number of available filters.}
 \usage{
-getFiles(src = "TCP", ids = "", dl = NA, append = F)
+getFiles(src = "TCP", ids = "", directory = "", dl = NA, append = F)
 }
 \arguments{
 \item{src}{A string that determines the source from which to

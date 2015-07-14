@@ -16,8 +16,8 @@ writeDocFrequencies(df, filename, limit = 100)
 \item{df}{The \code{docFrequencies} object that holds your frequency values.}
 
 \item{filename}{The name of the file you want the frequency tables to be saved to.
-\strong{requires} that the file end be a .csv file.  Stored in the \code{directory}
-provided in the \code{docList}.}
+\strong{requires} that the file eextension be a .csv file.  Stored in the \code{directory}
+provided in the \code{docList} object.}
 
 \item{limit}{The number of words to include from each document.}
 }

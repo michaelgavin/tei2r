@@ -47,8 +47,16 @@ Since we're starting from scratch, I don't have any files downloaded. I'm going 
 Now that I have my `docList` object, I can get the `FACT`s about my corpus.  We'll start with `T` the texts of the corpus:
 
 ```r
-  > dt = getTexts(dl)
-  > df = getFrequencies(dt)
+  > dt = texts(dl)         #This will take some time since there are 5,670.
+  [1] "Compiling and cleaning up your texts."
+  [1] "10% complete! Document 539 of 5670."
+  [1] "20% complete! Document 1106 of 5670."
+  ...
+  > df = frequencies(dt)
+  [1] "Calculating raw frequencies for each text.  Accessible by df@raw"
+  [1] "Have calculated raw frequencies, moving on to proportional for each term in each text. Accessible by df@proportional."
+  Would you like to determine the vocabulary for the corpus? [yes/no] > yes  # I'm interested in being able to do calculations across the whole corpus.
+  [1] "Determining vocabulary for corpus.  Accessible through df@vocabulary."
 ```
 
 
