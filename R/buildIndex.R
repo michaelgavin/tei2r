@@ -5,8 +5,8 @@
 #  user's corpus.
 #====================================================================
 #'
-#' This function will build an \code{index} file for use with \code{docList}
-#' objects given a \code{directory}.
+#' This function will build an \code{index} file from a \code{directory} of
+#' \code{xml} or \code{txt} files.
 #' 
 #' @section Description:
 #' This function accepts a directory and reads the files in that directory
@@ -64,7 +64,7 @@ buildIndex = function(directory) {
       stc[i] = ""
       tcp[i] = ""
       
-    } else if(length(grep(".xml", files[i])) == 1) {
+    } else if (length(grep(".xml", files[i])) == 1) {
       ns = c(d = "http://www.tei-c.org/ns/1.0")
       filepath = paste(directory, files[i], sep="/")
       filenames[i] = files[i]
@@ -121,16 +121,29 @@ buildIndex = function(directory) {
       # Get TCP
       tcpTemp = getNodeSet(parsedText, "//d:fileDesc/d:publicationStmt/d:idno[@type='DLPS']",
                            namespace = c(d = "http://www.tei-c.org/ns/1.0"))
-      tcpTemp = unlist(sapply(tcpTemp, xmlValue))
-      tcp[i] = tcpTemp
+      if(!is.na(tcpTemp) && length(tcpTemp) > 0) {
+        tcpTemp = unlist(sapply(tcpTemp, xmlValue))
+        if(!is.null(tcpTemp)) {
+          tcp[i] = tcpTemp
+        } else {
+          tcp[i] = ""
+        }
+      } else {
+        tcp[i] = ""
+      }
       
       # Set ID
       id[i] = file_path_sans_ext(files[i])
     }
   }
-  #browser()
   index = data.frame(id, stc, tcp, eebo, author, date, title, filenames, paths)
-  write.csv(index, paste(directory, "index.csv", sep=""))
-  indexFile = paste(directory, "index.csv", sep="")
+  # browser()
+  not_blanks = c()
+  for (i in 1:ncol(index)) {
+    not_blanks = c(not_blanks, any(index[,i] != ""))
+  }
+  index = index[,not_blanks]
+  write.csv(index, paste(directory, "/", "index.csv", sep=""))
+  indexFile = paste(directory, "/", "index.csv", sep="")
   return(indexFile)
 }

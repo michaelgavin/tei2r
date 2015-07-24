@@ -6,13 +6,13 @@
 # corpus' home directory, filenames, and paths.
 #====================================================================
 #'
-#' This function constructs a \code{docList} object.  The \code{docList}
-#' object is the foundation of the \code{tei2r} package and contains references
-#' to all of the basic information that is required to begin working with
-#' texts in R.
+#' This function constructs a \code{docList} object. 
 #' 
 #' @section Description:
-#' The \code{buildDocList} function is designed to construct the \code{docList}
+#' 
+#' The \code{docList} object is the foundation of the \code{tei2r} package and contains references
+#' to all of the basic information that is required to begin working with
+#' texts in R. The \code{buildDocList} function is designed to construct the \code{docList}
 #' object with as much or as little information available.  You can begin this
 #' process by simply including the parameter \code{wizard = T} which will walk
 #' you through the process of building your intial \code{docList}.
