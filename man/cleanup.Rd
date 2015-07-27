@@ -28,6 +28,6 @@ Convert a plain-text document into a character vector
 }
 \examples{
 locke.path = "~/Desktop/locke2ndTreatise.txt"
-textCleanup(locke.path, removeCaps = TRUE, removeStopwords = FALSE)
+cleanup(locke.path, removeCaps = TRUE, removeStopwords = FALSE)
 }
 
