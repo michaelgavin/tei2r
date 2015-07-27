@@ -24,12 +24,12 @@ df     a \code{docFrequencies} object with frequency
 Returns a docFrequencies object.
 }
 \description{
-Get the frequency of all words in a collection.
+Get the frequencies of all words in a collection.
 }
 \section{What it does}{
 
 Get term frequency data for the terms in each document across the
-collection, represented by a \code{docTexts} object.  Also (optionally)
+collection, represented by a \code{docTexts} object.  Also
 determines the frequency and proportional
 frequency of all terms across the corpus. The first parameter is a
 \code{docTexts} object containing the full cleaned text for each document

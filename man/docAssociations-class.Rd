@@ -24,7 +24,7 @@ object is associated with.This is carried over from the
 \code{docConcordance} object that is passed in to the
 \code{getDocAssociations} function.}
 
-\item{\code{term}}{A string that retains the term that the
+\item{\code{keyword}}{A string that retains the term that the
 \code{docAssociations} object provides associations
 for. This is carried over from the \code{docConcordance}
 object that is passed in to the \code{getDocAssociations}

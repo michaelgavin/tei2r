@@ -32,11 +32,11 @@ getDocConcordance = function(dt, keyword, context) {
   dc@concordance = list()
   for(i in 1:length(dt@text)) {
     text = dt@text[[i]]
-    hits = which(text == term)
+    hits = which(text == keyword)
     concordance = list()
     #browser()
     #stringLen = context * 2 + 1
-    if(term %in% text) {
+    if(keyword %in% text) {
       for(j in 1:length(hits)) {
         start = hits[j] - context
         end = hits[j] + context

@@ -13,7 +13,7 @@
 #'                      object is associated with.This is carried over from the 
 #'                      \code{docConcordance} object that is passed in to the 
 #'                      \code{getDocAssociations} function.
-#' @slot term           A string that retains the term that the
+#' @slot keyword        A string that retains the term that the
 #'                      \code{docAssociations} object provides associations
 #'                      for. This is carried over from the \code{docConcordance}
 #'                      object that is passed in to the \code{getDocAssociations}
@@ -42,9 +42,9 @@
 docAssociations <- setClass("docAssociations",
                             slots = c(directory    = "character",
                                       indexFile    = "character",
-                                      term         = "character",
+                                      keyword      = "character",
                                       context      = "numeric",
                                       associations = "list",
-                                      proportions  = "list"
+                                      total        = "array"
                             )
 )
