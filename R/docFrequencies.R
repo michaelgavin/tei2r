@@ -1,20 +1,20 @@
 #' An S4 class that contains and manages word-frequency data
 #'  
-#' \code{docFrequencies} creates a special \code{tei2r} object called
+#' \code{docFrequencies} creates a special \code{tei2r} object that holds word-frequency data for each document.
 #' 
-#' @slot directory A string ...
-#' @slot indexFile A string [NOTE: THIS SHOULD BE CALLED indexFile.
-#' @slot raw A list ... [RENAME 'RAW']
-#' @slot proportional A list ...
-#' @slot vocabulary A list that holds the frequencies of each word across
-#'                  the whole corpus.
-#' @slot proportionalVocab A list that holds the proportional frequency of
-#'                         of each word in the corpus. A funciton of the
-#'                         word's frequency divided by the total number
-#'                         of words in the corpus.
+#' @slot directory A string that gives the filepath to the main directory
+#' @slot indexFile A string providing the filepath to the index (usually a .csv file)
+#' @slot raw A list of named vectors, showing the raw frequency of each word in each document
+#' @slot proportional A list of vectors showing the proportional frequency of each word
+#' @slot vocabulary A vector that holds the frequencies of each word across
+#'                  the whole collection.
+#' @slot proportionalVocab A vector that holds the proportional frequency of
+#'                         of each word over the entire collection.
 #' 
 #' @section What it does:
-#' Here we can paste longer descriptions of what each function does.
+#' The \code{docFrequencies} object is a structured list that hold word frequencies
+#' for each document in the collection, as well as summary data about the collection
+#' as a whole.
 #' @include docList.R docTexts.R
 docFrequencies <- setClass("docFrequencies",
                            slots = c(directory         = "character",
@@ -22,6 +22,6 @@ docFrequencies <- setClass("docFrequencies",
                                      proportional      = "list",
                                      raw               = "list",
                                      vocabulary        = "array",
-                                     proportionalVocab = "list"
+                                     proportionalVocab = "array"
                            ))
 

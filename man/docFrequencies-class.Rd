@@ -6,29 +6,29 @@
 \alias{docFrequencies-class}
 \title{An S4 class that contains and manages word-frequency data}
 \description{
-\code{docFrequencies} creates a special \code{tei2r} object called
+\code{docFrequencies} creates a special \code{tei2r} object that holds word-frequency data for each document.
 }
 \section{Slots}{
 
 \describe{
-\item{\code{directory}}{A string ...}
+\item{\code{directory}}{A string that gives the filepath to the main directory}
 
-\item{\code{indexFile}}{A string [NOTE: THIS SHOULD BE CALLED indexFile.}
+\item{\code{indexFile}}{A string providing the filepath to the index (usually a .csv file)}
 
-\item{\code{raw}}{A list ... [RENAME 'RAW']}
+\item{\code{raw}}{A list of named vectors, showing the raw frequency of each word in each document}
 
-\item{\code{proportional}}{A list ...}
+\item{\code{proportional}}{A list of vectors showing the proportional frequency of each word}
 
-\item{\code{vocabulary}}{A list that holds the frequencies of each word across
-the whole corpus.}
+\item{\code{vocabulary}}{A vector that holds the frequencies of each word across
+the whole collection.}
 
-\item{\code{proportionalVocab}}{A list that holds the proportional frequency of
-                        of each word in the corpus. A funciton of the
-                        word's frequency divided by the total number
-                        of words in the corpus.}
+\item{\code{proportionalVocab}}{A vector that holds the proportional frequency of
+                        of each word over the entire collection.}
 }}
 \section{What it does}{
 
-Here we can paste longer descriptions of what each function does.
+The \code{docFrequencies} object is a structured list that hold word frequencies
+for each document in the collection, as well as summary data about the collection
+as a whole.
 }
 
