@@ -23,7 +23,6 @@ Collate:
     'docFrequencies.R'
     'docConcordance.R'
     'docAssociations.R'
-    'docMatrix.R'
     'findFilenames.R'
     'getDocAssociations.R'
     'getDocConcordance.R'
