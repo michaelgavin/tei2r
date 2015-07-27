@@ -3,39 +3,32 @@
 \alias{tei2r}
 \docType{package}
 \title{
-What the package does (short line)
-~~ package title ~~
+Import and parse TEI files in R
 }
 \description{
-More about what it does (maybe more than one line)
-~~ A concise (1-5 lines) description of the package ~~
+tei2r imports collections of plain-text or TEI-encoded files into
+the R environment and makes them available for quantitative analysis.
 }
 \details{
 \tabular{ll}{
 Package: \tab tei2r\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
+Version: \tab 0.0.0.9000\cr
 Date: \tab 2015-05-30\cr
-License: \tab What license is it under?\cr
+License: \tab CC0 (http://bit.ly/1F96Zgp) \cr
 }
-~~ An overview of how to use the package, including the most important functions ~~
+
 }
 \author{
-Who wrote it
+Michael Gavin and Travis Mullen
 
-Maintainer: Who to complain to <yourfault@somewhere.net>
-~~ The author and/or maintainer of the package ~~
+Maintainer: Michael Gavin <mgavin@mailbox.sc.edu>
 }
-\references{
-~~ Literature or other references for background information ~~
-}
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R ~~
-~~ documentation directory ~~
-\keyword{ package }
-\seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
-}
+\references{}
+
+\keyword{ tei, text analysis }
 \examples{
-~~ simple examples of the most important functions ~~
+dl = buildDocList(wizard = T) # Creates a structured list for your metadata
+dt = texts(dl) # Imports and cleans up text from TEI or plain text sources
+dc = concordance(dt, keyword = "rights", context = 10) # Builds a concordance
 }
