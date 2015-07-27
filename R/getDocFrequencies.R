@@ -1,16 +1,6 @@
-#====================================================================
-# Get term frequency data for the terms in each document across the
-# corpus.  Also (optionally) determines the frequency and proportional 
-# frequency of all terms across the corpus. The first parameter is a
-# docTexts object containing the full cleaned text for each document
-# in your corpus.  The second is a limit on the number of terms to
-# include from each document in the frequency lists.
-#
-# Returns a docFrequencies object.
-#====================================================================
+#' Calculate word frequencies across a collection
 #' 
-#' Get the frequency of all words in each text in \code{dt} and
-#' optionally of all words in the corpus.
+#' Get the frequency of all words in a collection.
 #' 
 #' @param dt      A \code{docTexts} object that contains the full
 #'                text of each document in your corpus.
@@ -21,6 +11,17 @@
 #' @return df     a \code{docFrequencies} object with frequency
 #'                data for the corpus.
 #' 
+#' @section What it does:
+#' Get term frequency data for the terms in each document across the
+#' collection, represented by a \code{docTexts} object.  Also (optionally) 
+#' determines the frequency and proportional 
+#' frequency of all terms across the corpus. The first parameter is a
+#' \code{docTexts} object containing the full cleaned text for each document
+#' in your colleciton.  The second is a limit on the number of terms to
+#' include from each document in the frequency lists, in case what you're
+#' looking for are only the most frequent words.
+#' 
+#' @return Returns a docFrequencies object.
 #' @examples
 #' df = getDocFrequencies(dt)
 #' df = getDocFrequencies(dt, 500)

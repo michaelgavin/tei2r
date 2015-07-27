@@ -4,21 +4,25 @@
 \name{docTexts-class}
 \alias{docTexts}
 \alias{docTexts-class}
-\title{An S4 class that contains and manages text data from document collections}
+\title{An S4 class that contains and manages text data}
 \description{
-\code{docTexts} creates a special \code{tei2r} object called
+\code{docTexts} creates a special \code{tei2r} object that holds the
+texts of a collection
 }
 \section{Slots}{
 
 \describe{
-\item{\code{directory}}{A string ...}
+\item{\code{directory}}{A string that gives the filepath to the main directory}
 
-\item{\code{indexFile}}{A string [NOTE: THIS SHOULD BE CALLED indexFile.}
+\item{\code{indexFile}}{A string that gives the filepath to the index file for the
+collection.}
 
-\item{\code{text}}{A list ...}
+\item{\code{text}}{A list of character vectors, each drawn from documents in the collection,
+           and each placed in the order provided by the index.}
 }}
 \section{What it does}{
 
-Here we can paste longer descriptions of what each function does.
+The \code{docTexts} object is one of the primary objects in \code{tei2r}. It
+holds all of your text data in a structured list, controlled by an index.
 }
 

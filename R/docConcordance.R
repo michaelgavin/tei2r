@@ -1,23 +1,21 @@
-#' An S4 class that holds a concordance for one term across document collections
+#' An S4 class that holds a concordance for one term
 #' 
-#' \code{docConcordance} creates a special \code{tei2r} object called
+#' \code{docConcordance} creates a special \code{tei2r} object called a concordance
 #' 
-#' @slot directory A string ...
-#' @slot indexFile A string [NOTE: THIS SHOULD BE CALLED indexFile.
-#' @slot term A string ...
-#' @slot context An integer [This probably doesn't matter, but it should
-#'   be an integer rather than a numeric]
-#' @slot concordance A list...
+#' @slot directory A string that gives the filepath to the main directory
+#' @slot indexFile A string providing the filepath to the index (usually a .csv file)
+#' @slot keyword A string providing the keyword
+#' @slot context An integer providing the context window, before and after the keyword
+#' @slot concordance A list of "keyword-in-context" character vectors.
 #' 
 #' @section What it does:
-#' Here we can paste longer descriptions of what each function does.
+#' The docConcordance object is a structured list that holds all uses of a keyword
+#' found in a collection.
 #' @include docList.R
-
-
 docConcordance <- setClass("docConcordance",
                            slots = c(directory   = "character",
                                      indexFile   = "character",
-                                     term        = "character",
+                                     keyword     = "character",
                                      context     = "numeric",
                                      concordance = "list"
                            )

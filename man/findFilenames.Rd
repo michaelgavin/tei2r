@@ -2,19 +2,26 @@
 % Please edit documentation in R/findFilenames.R
 \name{findFilenames}
 \alias{findFilenames}
-\title{Placeholder description}
+\title{Find filenames in an index}
 \usage{
 findFilenames(dl, directory)
 }
 \arguments{
-\item{dl}{}
+\item{dl}{The \code{docList} representing the collection}
 
-\item{directory}{}
+\item{directory}{A string providing the filepath to the collection}
 }
 \description{
-Placeholder description
+Searches an index and returns the column that represents the names of each file.
+}
+\section{What it does}{
+
+Users should rarely, if ever, need to use \code{findFilenames} directly. The \code{findFilenames}
+operation is a key component of the \code{buildDocList} function. Given an index in the form of
+a .csv file, \code{findFilenames} searches through the index to find which column has a unique
+identifier that matches the naming scheme of the files.
 }
 \examples{
-Placeholder
+filenames = findFilenames(dl = dl, directory = "~/path/to/your/corpus/files")
 }
 

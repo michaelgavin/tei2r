@@ -4,24 +4,35 @@
 #  by the corresponding ID in the index file (usually the file name
 #  sans extension).
 #====================================================================
+#' Get the texts of a collection
 #' 
-#' This function collects, cleans up (removes stopwords), and stores
-#' the text of the corpus' documents in a single object in which the
-#' text is labeled by the corresponding \code{id} in the \code{index}
-#' file.  This is usually the filename sans extension or the \code{tcp}
-#' number.
+#' Imports a collection of documents into R and performs basic text processing
 #' 
 #' @param dl The \code{docList} object that contains the \code{index} with
-#'           the \code{paths} to the files that house the text.
+#'           the \code{paths} to the files for each text.
+#'           
+#' @param removeCaps Option to remove capitalization. Default is 'TRUE'.
+#' 
+#' @param removeStopwords Option to remove stopwords, stored in the corresponding \code{docList} object. Default is 'TRUE'.
+#' 
+#' @param normalizeLongS Option to normalize '∫' and 'ſ' to 's'. Default is 'TRUE'. 
 #' 
 #' @return dt The \code{docTexts} object that contains the texts of the corpus,
 #'            the path to the \code{indexFile} and the original \code{directory}
-#'            that the \code{docList} object was constructed with.  This information
-#'            enables the user to keep track of which objects are associated with
-#'            which corpus.
+#'            that the \code{docList} object was built from.
+#' 
+#' @section What it does:
+#' This function collects, cleans up, and stores
+#' the text of the collection's documents in a single object. The texts are held as
+#' vectors in a single list, labeled by the corresponding id 
+#' in the index file.  The id is usually the filename or the Text Creation Partnership number.
+#' 
+#' @seealso docTexts
+#' 
 #' @examples
+#' dt = texts(dl)
 #' dt = getDocTexts(dl)
-getDocTexts <- function(dl) {
+getDocTexts <- function(dl, removeCaps = TRUE, removeStopwords = TRUE, normalizeLongS = TRUE) {
   dt = docTexts()
   indexFile = dl@index
   fileNames = dl@filenames

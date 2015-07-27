@@ -7,18 +7,18 @@
 \title{An S4 class to represent a document collection.}
 \description{
 \code{docList} returns a special \code{tei2r} object that contains
-all of the necessary information to begin working with a corpus of
-text in R.
+a list of information about your document collection.
 }
 \section{Slots}{
 
 \describe{
-\item{\code{directory}}{A string that gives the filepath to the main directory (folder)}
+\item{\code{directory}}{A string that gives the filepath to the main directory (folder), which
+holds all the files in the collection.}
 
 \item{\code{filenames}}{A vector containing all of the filenames for the documents in
-the corpus.}
+the collection.}
 
-\item{\code{paths}}{A vector containing the full path to all files in the corpus.}
+\item{\code{paths}}{A vector containing the full path to each file in the collection.}
 
 \item{\code{indexFile}}{A string that gives the filepath to the index file for the
 corpus.  This file should house the meta-data for each file
@@ -38,14 +38,17 @@ cleanup.}
 }}
 \section{What it does}{
 
-The \code{docList} is the foundaiton of the \code{tei2r}
-package and, as such, should be the first object created when working
+The \code{docList} is the foundation of the \code{tei2r}
+package and should be the first object created when working
 with the package.  The object is constructed by calling the
 \code{buildDocList} function.  This function builds the object by
-storing the path to the corpus' files (\code{directory}), the
-file containing the corpus' meta-data (\code{indexFile}), and
+storing the path to the collection's files (\code{directory}), the
+file containing the collection's meta-data (\code{indexFile}), and
 the stopwords file (\code{stopwordsFile}).  From these pieces
 of information, the function automatically determines the
-\code{filenames} and \code{paths} for the corpus' files.
+\code{filenames} and \code{paths} for the collection's files.
+}
+\seealso{
+buildDocList, docTexts, docConcordance, docMatrix
 }
 

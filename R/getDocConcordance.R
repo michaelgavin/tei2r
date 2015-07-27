@@ -1,31 +1,33 @@
 #====================================================================
-# Get document concordance for a term.  The first parameter is a 
-# docTexts object that contains all of the texts that you want
-# to find the concordance for term in. The second parameter is
-# the term that you are interested in.  The third is the context
-# that you want to use for the concordance, the value is the 
-# number of words on each side of the term that you want to return.
+# 
 #====================================================================
-#' Get the concordance for \code{term} within \code{context} across
+#' Get the concordance for \code{keyword} across
 #' all texts in \code{dt}.
 #' 
 #' @param dt A \code{docTexts} object that contains your collection
-#'        of texts.  These are the texts that will be used when 
-#'        searching for \code{term}s concordance (the words that
-#'        appear within a certain \code{context} of \code{term}.
-#' @param term The term that you are interested in finding the
-#'        concurring words for across the text.
+#'        of texts.
+#' @param keyword The keyword that you are studying.
 #' @param context The number of words on each side of the 
-#'        \code{term}.
+#'        \code{keyword} to search for.
+#'        
+#' @section What it does:
+#' Builds a concordance for a keyword, using keyword-in-context (KWIC) technique.
+#' The first parameter is a \code{docTexts} object that contains all of your texts. 
+#' The second parameter is the keyword you are interested studying. The third gives the
+#' size of the context
+#' that you want to use for the concordance: i.e., how many words on each side of 
+#' your keyword that you want to look at. The context is sometimes referred to as the
+#' 'search window'.
+#' @return A \code{docConcordance} object: essentially a structured list that contains
+#' every use of the keyword in the collection.
 #' @examples
-#' dc = getDocConcordance(dt, "just", 5)
+#' dc = getDocConcordance(dt, "justice", 5)
 #'
-
-getDocConcordance = function(dt, term, context) {
+getDocConcordance = function(dt, keyword, context) {
   dc = docConcordance()
   dc@directory   = dt@directory
   dc@indexFile   = dt@indexFile
-  dc@term        = term
+  dc@keyword     = keyword
   dc@context     = context
   dc@concordance = list()
   for(i in 1:length(dt@text)) {

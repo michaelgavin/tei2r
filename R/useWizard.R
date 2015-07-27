@@ -21,9 +21,7 @@
 #'                     from being asked for their directory if they have already
 #'                     provided it.
 useWizard <- function(dl, directory = "") {
-  print("Thank you for choosing the wizard option.  This wizard
-        is designed to walk you through setting up your corpus and
-        docList object.")
+  print("Thank you for choosing the wizard option. This wizard is designed to walk you through setting up your corpus and docList object.")
   if(directory == "") {
     directory <- readline("To get started, what is the directory that you
                          have your files stored in? [full path] > ")
@@ -54,13 +52,21 @@ useWizard <- function(dl, directory = "") {
   }
   indexAnswer <- readline("Do you have an index file? [yes/no] > ")
   
-  if(indexAnswer == "yes") {
-    indexFile <- readline("Please enter the directory that your index file is stored in. [full path] > ")
+  if (indexAnswer %in% c("yes", "Yes", "YES", "y", "Y") == T) {
+    indexFile <- readline("Please enter the full path to the file (usually .csv) of your index (including the file name). > ")
     if(substr(indexFile, 1, 1) == '\"') {
-      indexFile = substr(indexFile, 2, nchar(directory)-1)
+      indexFile = substr(indexFile, 2, nchar(indexFile)-1)
     }
-  } else if(indexAnswer == "no") {
-      indexFile <- readline("Ok, we'll create one for you.  Where would you like it stored? [full path] > ")
+    if (file.exists(indexFile) == T) { 
+      dl@indexFile = indexFile
+    } else {
+      browser()
+      stop("Index file not found. Usually this means there was a typo in your file path. Try using tab-complete to navigate your file system while entering paths.")
+    }
+  } 
+  
+  if (indexAnswer %in% c("no", "No", "NO", "n", "N") == T) {
+      indexFile <- readline("Ok, we'll create one for you.  Where would you like it stored? > ")
       #browser()
       if(substr(indexFile, 1, 1) == '\"') {
         indexFile = substr(indexFile, 2, nchar(indexFile)-1)
@@ -76,12 +82,15 @@ useWizard <- function(dl, directory = "") {
           indexFile = paste(indexFileTemp, "index.csv", sep="")
           dl@indexFile = indexFile
         }
-        dl@index = read.csv(dl@indexFile)
+      } else {
+        stop("The path you entered doesn't seem valid. Either you haven't created the folder, or there's a typo in the path.")
       }
   }
   
+  dl@index = read.csv(dl@indexFile)
+  
   stopwordsAnswer <- readline("Do you have a stopwords file? [yes/no] > ")
-  if(stopwordsAnswer == "yes") {
+  if(stopwordsAnswer %in% c("yes", "Yes", "YES", "y", "Y") == T) {
     stopwordsFile = readline("Please enter the directory where your stopwords file is stored. [full path] > ")
     if(substr(stopwordsFile, 1, 1) == '\"') {
       stopwordsFile = substr(stopwordsFile, 2, nchar(stopwordsFile)-1)
@@ -93,9 +102,11 @@ useWizard <- function(dl, directory = "") {
       dl@stopwordsFile = stopwordsFile
       dl@stopwords = setStopwords(stopwordsFile)
     }
-  } else if(stopwordsAnswer == "no") {
+  } else if(stopwordsAnswer %in% c("no", "No", "NO", "n", "N") == T) {
     print("Ok, we'll supply one for you.")
     #need to look into integrating this data.
   }
+  dl@filenames = findFilenames(dl = dl, directory = directory)
+  dl@paths = paste(dl@directory,"/",dl@filenames,sep="")
   return(dl)
 }

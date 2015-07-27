@@ -22,8 +22,8 @@ frequencies = function(dt) {
 }
 
 #' @rdname getDocConcordance
-concordance = function(dt, term, context) {
-  dc = getDocConcordance(dt, term, context)
+concordance = function(dt, keyword, context) {
+  dc = getDocConcordance(dt, keyword, context)
   return(dc)
 }
 

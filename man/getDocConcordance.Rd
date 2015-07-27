@@ -3,30 +3,41 @@
 \name{concordance}
 \alias{concordance}
 \alias{getDocConcordance}
-\title{Get the concordance for \code{term} within \code{context} across
+\title{Get the concordance for \code{keyword} across
 all texts in \code{dt}.}
 \usage{
-concordance(dt, term, context)
+concordance(dt, keyword, context)
 
-getDocConcordance(dt, term, context)
+getDocConcordance(dt, keyword, context)
 }
 \arguments{
 \item{dt}{A \code{docTexts} object that contains your collection
-of texts.  These are the texts that will be used when
-searching for \code{term}s concordance (the words that
-appear within a certain \code{context} of \code{term}.}
+of texts.}
 
-\item{term}{The term that you are interested in finding the
-concurring words for across the text.}
+\item{keyword}{The keyword that you are studying.}
 
 \item{context}{The number of words on each side of the
-\code{term}.}
+       \code{keyword} to search for.}
+}
+\value{
+A \code{docConcordance} object: essentially a structured list that contains
+every use of the keyword in the collection.
 }
 \description{
-Get the concordance for \code{term} within \code{context} across
+Get the concordance for \code{keyword} across
 all texts in \code{dt}.
 }
+\section{What it does}{
+
+Builds a concordance for a keyword, using keyword-in-context (KWIC) technique.
+The first parameter is a \code{docTexts} object that contains all of your texts.
+The second parameter is the keyword you are interested studying. The third gives the
+size of the context
+that you want to use for the concordance: i.e., how many words on each side of
+your keyword that you want to look at. The context is sometimes referred to as the
+'search window'.
+}
 \examples{
-dc = getDocConcordance(dt, "just", 5)
+dc = getDocConcordance(dt, "justice", 5)
 }
 

@@ -4,26 +4,26 @@
 \name{docConcordance-class}
 \alias{docConcordance}
 \alias{docConcordance-class}
-\title{An S4 class that holds a concordance for one term across document collections}
+\title{An S4 class that holds a concordance for one term}
 \description{
-\code{docConcordance} creates a special \code{tei2r} object called
+\code{docConcordance} creates a special \code{tei2r} object called a concordance
 }
 \section{Slots}{
 
 \describe{
-\item{\code{directory}}{A string ...}
+\item{\code{directory}}{A string that gives the filepath to the main directory}
 
-\item{\code{indexFile}}{A string [NOTE: THIS SHOULD BE CALLED indexFile.}
+\item{\code{indexFile}}{A string providing the filepath to the index (usually a .csv file)}
 
-\item{\code{term}}{A string ...}
+\item{\code{keyword}}{A string providing the keyword}
 
-\item{\code{context}}{An integer [This probably doesn't matter, but it should
-be an integer rather than a numeric]}
+\item{\code{context}}{An integer providing the context window, before and after the keyword}
 
-\item{\code{concordance}}{A list...}
+\item{\code{concordance}}{A list of "keyword-in-context" character vectors.}
 }}
 \section{What it does}{
 
-Here we can paste longer descriptions of what each function does.
+The docConcordance object is a structured list that holds all uses of a keyword
+found in a collection.
 }
 

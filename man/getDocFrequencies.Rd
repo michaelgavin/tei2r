@@ -3,8 +3,7 @@
 \name{frequencies}
 \alias{frequencies}
 \alias{getDocFrequencies}
-\title{Get the frequency of all words in each text in \code{dt} and
-optionally of all words in the corpus.}
+\title{Calculate word frequencies across a collection}
 \usage{
 frequencies(dt)
 
@@ -21,10 +20,22 @@ text of each document in your corpus.}
 \value{
 df     a \code{docFrequencies} object with frequency
                data for the corpus.
+
+Returns a docFrequencies object.
 }
 \description{
-Get the frequency of all words in each text in \code{dt} and
-optionally of all words in the corpus.
+Get the frequency of all words in a collection.
+}
+\section{What it does}{
+
+Get term frequency data for the terms in each document across the
+collection, represented by a \code{docTexts} object.  Also (optionally)
+determines the frequency and proportional
+frequency of all terms across the corpus. The first parameter is a
+\code{docTexts} object containing the full cleaned text for each document
+in your colleciton.  The second is a limit on the number of terms to
+include from each document in the frequency lists, in case what you're
+looking for are only the most frequent words.
 }
 \examples{
 df = getDocFrequencies(dt)

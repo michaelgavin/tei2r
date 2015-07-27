@@ -10,7 +10,7 @@ cleanup(filepath, removeCaps = TRUE, stopwords = dl@stopwords,
   removeStopwords = TRUE)
 
 textCleanup(filepath, removeCaps = TRUE, stopwords = dl@stopwords,
-  removeStopwords = TRUE)
+  removeStopwords = TRUE, normalizeLongS = TRUE)
 
 teiTextCleanup(filepath, stopwords)
 }
@@ -20,6 +20,8 @@ teiTextCleanup(filepath, stopwords)
 \item{removeCaps}{A logical condition. If "TRUE", all words will be converted to lower case.}
 
 \item{removeStopwords}{A logical condition. If "TRUE", all words contained in a pre-defined vector of stopwords will be excluded.}
+
+\item{normalizeLongS}{A logical condition. If "TRUE", all instances of '∫' and 'ſ' will be converted to 's'.}
 }
 \description{
 Convert a plain-text document into a character vector

@@ -6,21 +6,30 @@
 \alias{docMatrix-class}
 \title{An S4 class that contains and manages word-frequency data}
 \description{
-\code{docMatrix} creates a special \code{tei2r} object called
+\code{docMatrix} creates a special \code{tei2r} object that
+represents a document collection as a matrix of words
 }
 \section{Slots}{
 
 \describe{
-\item{\code{directory}}{A string ...}
+\item{\code{directory}}{A string that gives the filepath to the main directory}
 
-\item{\code{indexFile}}{A string [NOTE: THIS SHOULD BE CALLED indexFile.}
+\item{\code{indexFile}}{A string that gives the filepath to the index file for the
+collection.}
 
-\item{\code{type}}{A string ... [RENAME 'RAW']}
+\item{\code{type}}{A string: either "docTerm" for a document-term matrix, or "wordContext"
+for a word-context matrix.}
 
-\item{\code{mat}}{A matrix ...}
+\item{\code{mat}}{A matrix of words.}
 }}
 \section{What it does}{
 
-Here we can paste longer descriptions of what each function does.
+The \code{docMatrix} object holds a vector-space model of
+your document collection. The two most common vector-space models (which
+are the only two currently supported in \code{tei2r}) are document-term
+matrices and word-context matrices. In a document-term matrix, each column is
+a document in the collection, and each row is a word found in that document. In
+a word-context matrix, each column is a keyword, and each row is a context term
+found within a window of that keyword.
 }
 

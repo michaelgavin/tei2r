@@ -13,14 +13,15 @@
 #' @param filepath A path to the file that will be converted.
 #' @param removeCaps A logical condition. If "TRUE", all words will be converted to lower case.
 #' @param removeStopwords A logical condition. If "TRUE", all words contained in a pre-defined vector of stopwords will be excluded.
+#' @param normalizeLongS A logical condition. If "TRUE", all instances of '∫' and 'ſ' will be converted to 's'.
 #' 
 #' @examples
 #' locke.path = "~/Desktop/locke2ndTreatise.txt"
-#' textCleanup(locke.path, removeCaps = TRUE, removeStopwords = FALSE)
+#' cleanup(locke.path, removeCaps = TRUE, removeStopwords = FALSE)
 #' @name cleanup
 NULL
 #' @rdname cleanup
-textCleanup = function(filepath, removeCaps = TRUE, stopwords = dl@stopwords, removeStopwords = TRUE) {
+textCleanup = function(filepath, removeCaps = TRUE, stopwords = dl@stopwords, removeStopwords = TRUE, normalizeLongS = TRUE) {
   # Need to create a test that checks if stopwords are defined.
   #if(!is.na(stopwords) || length(stopwords) < 1) {
   #  stopwords = setStopwords("defaultPath")
@@ -39,8 +40,10 @@ textCleanup = function(filepath, removeCaps = TRUE, stopwords = dl@stopwords, re
   text = strsplit(text,"\\W")
   text = unlist(text)
   text = text[text!=""]
-  text= gsub("∫", "s", text)
-  text = gsub('ſ', "s", text)
+  if (normalizeLongS == TRUE) {
+    text= gsub("∫", "s", text)
+    text = gsub('ſ', "s", text) 
+  }
   # gsub("(*<=[^'f'])+f(((['t','n','p','i','c', 'h', 'o', 'u'])*)([^'ff','oo']))", "s\\1", text, fixed=F)
   # or gsub("(['i','o','n','u','d'])+f((['t'|'n'|'p'|'i'|'c'|'h'|'o'|'u']+))", "\\1s\\2", text, fixed=F)
   # Think I solved it: gsub("([ionud])+f(([tnpichou]))", "\\1s\\2", text, fixed=F)
