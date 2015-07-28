@@ -12,17 +12,20 @@ Description: This package provides humanities scholars with a simple
     and preparing text data for computational analysis.
 Imports:
     XML,
-    tools
+    tools,
+    mallet
 License: CC0 (http://bit.ly/1F96Zgp)
 Collate:
     'aliases.R'
     'buildDocList.R'
     'buildIndex.R'
+    'buildModel.R'
     'docList.R'
     'docTexts.R'
     'docFrequencies.R'
     'docConcordance.R'
     'docAssociations.R'
+    'docModel.R'
     'findFilenames.R'
     'getDocAssociations.R'
     'getDocConcordance.R'

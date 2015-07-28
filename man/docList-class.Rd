@@ -49,6 +49,6 @@ of information, the function automatically determines the
 \code{filenames} and \code{paths} for the collection's files.
 }
 \seealso{
-buildDocList, docTexts, docConcordance, docMatrix
+buildDocList, docTexts, docConcordance, docModel
 }
 
