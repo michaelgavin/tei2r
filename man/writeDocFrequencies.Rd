@@ -2,13 +2,7 @@
 % Please edit documentation in R/writeDocFrequencies.R
 \name{writeDocFrequencies}
 \alias{writeDocFrequencies}
-\title{This function will write a \code{docFrequencies} object to a comma
-seperated values \code{.csv} file.  The values are derived from a
-\code{docFrequencies} object and use the \code{raw} slot.  Each
-document will have a seperate set of columns that are the word
-and frequency.  Each set of columns is labeled with the document's
-ID that is derived from the index file.  The file is stored in the
-directory that was provided when you built your \code{docList}.}
+\title{Export word frequencies to .csv}
 \usage{
 writeDocFrequencies(df, filename, limit = 100)
 }

@@ -2,6 +2,8 @@
 # This funciton will write a docFrequencies object to a comma
 # seperated values (csv) file.
 #====================================================================
+#' Export word frequencies to .csv
+#' 
 #' This function will write a \code{docFrequencies} object to a comma
 #' seperated values \code{.csv} file.  The values are derived from a
 #' \code{docFrequencies} object and use the \code{raw} slot.  Each
