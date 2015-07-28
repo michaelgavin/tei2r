@@ -13,7 +13,9 @@ Description: This package provides humanities scholars with a simple
 Imports:
     XML
 Suggests:
-    NA
+    knitr,
+    mallet,
+    tools
 License: CC0 (http://bit.ly/1F96Zgp)
 Collate:
     'buildConcordance.R'
@@ -40,4 +42,4 @@ Collate:
     'writeDocFrequencies.R'
     'writeXML.R'
     'xmlToText.R'
-VignetteBuilder: NA
+VignetteBuilder: knitr
