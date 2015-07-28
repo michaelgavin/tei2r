@@ -55,45 +55,81 @@ Now that I have my `docList` object, I can get the `FACT`s about my corpus.  We'
   > df = frequencies(dt)
   [1] "Calculating raw frequencies for each text.  Accessible by df@raw"
   [1] "Have calculated raw frequencies, moving on to proportional for each term in each text. Accessible by df@proportional."
-  Would you like to determine the vocabulary for the corpus? [yes/no] > yes  # I'm interested in being able to do calculations across the whole corpus.
+  Would you like to determine the vocabulary for the corpus? [yes/no] > yes
   [1] "Determining vocabulary for corpus.  Accessible through df@vocabulary."
+  Would you like to calculate the proportional frequency for each term across the corpus? (This may take quite some time) [yes/no] > No
+  # We're skipping this part because for some reason R can't handle running this for a corpus this large.
 ```
 
+Let's take a look at some of our frequency data.  We'll start by picking a single year's texts out of our set and view their top words:
 
-## Styles
+```r
+  > wantedTCPs = dl@index$TCP[which(dl@index$Date == 1645)]
+```
+We'll break down this command so that it's more useful to you.  In order to select a single year's (1645) texts, we'll need to extract the `TCP` numbers from the `index` for those text since the frequency data will be labeled with the `TCP` number.  Our `index` is stored in `dl`, so we'll need to access `dl@index`'s `TCP` column.  We do that by using the `$` symbol: `dl@index$TCP` mean's look in `dl`'s `index` and extract values from it's `TCP` column.  The `[ ]` symbols refer to the indices of the values that we want to extract from `dl@index$TCP`.  To find the ones that we're specifically interested in, we're using a `which()` statement.  The `which()` statement takes a `conditional` inside it's parenthases. A `conditional` is a statement that evaluates to either `true` or `false`.  So the `which()` here will return the index (or location within the list) of each value of `dl@index$Date` (the values in the `Date` column of `dl@index`) that `==` (or is equal to) 1645.  Having these values will tell us which `TCP` numbers to extract from `df@raw`.
 
-The `html_vignette` template includes a basic CSS theme. To override this theme you can specify your own CSS in the document metadata as follows:
-
-    output: 
-      rmarkdown::html_vignette:
-        css: mystyles.css
-
-## Figures
-
-The figure sizes have been customised so that you can easily put two images side-by-side. 
-
-```{r, fig.show='hold'}
-plot(1:10)
-plot(10:1)
+```r
+  > View(df@raw[wantedTCPs][1:50])
 ```
 
-You can enable figure captions by `fig_caption: yes` in YAML:
+This command will open up a viewer tab (assuming you're using RStudio (if you're not, you should be!)) with a column for the top 50 words of each `df@raw` list in each document that was published in 1645.   Viewing the top 50 words for each document printed in 1645 is really interesting, but less helpful for our investigation of the use of the term 'just' throughout this period.  A concordance (or list of words that appear within a given context of a particular term) for 'just' in our corpus would be more helpful right now.
 
-    output:
-      rmarkdown::html_vignette:
-        fig_caption: yes
+Since we're interested in the way that 'just' is being used, we'll make a concordance using that as the `term` parameter.  In this case, we're interested in the words that appear with 'just' in or around the same sentence, so we'll be using a context of 5.  Feel free to adjust the context and to experiment on your own.
 
-Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
-
-## More Examples
-
-You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
-
-```{r, echo=FALSE, results='asis'}
-knitr::kable(head(mtcars, 10))
+```r
+  > dc = concordance(dt, 'just', 5)  # docText object, term, context
+  > dc@concordance[1]
+  $A00011
+  $A00011[[1]]
+   [1] "beleeve"    "that"       "thou"       "in"         "thy"        "just"       "judgement"  "restrained" "and"        "withheld"   "from"      
+  
+  $A00011[[2]]
+   [1] "ordinary"   "rules"      "of"         "good"       "and"        "just"       "government" "of"         "the"        "subject"    "the" 
+   ...
 ```
 
-Also a quote using `>`:
+You can access your concordances by using the command `dc@concordance[1]` or `dc@concordance['tcpNumber']`.  The concordance is most usefull for looking into the way the term is used contextually for a small number of documents (since you'll be seeing lots of instances of 11 words), but not as usefull for large-scale analysis.  Let's look at how 'just' is used contextually in Charles I's _Eikōn basilikē, The pourtraicture of His Sacred Majestie in his solitudes and sufferings_:
 
-> "He who gives up [code] safety for [code] speed deserves neither."
-([via](https://twitter.com/hadleywickham/status/504368538874703872))
+```r
+  > View(dc@concordance['A38258'])      # This will open a viewer window that you can use to view the whole list.
+  > length(dc@concordance[['A38258']])  # This will tell us how many times 'just' appears in the text.
+  > dc@concordance[['A38258']][1:10]    # We need double brackets so that we can access the interior values of the list
+                                        # and take the first 10 so it's more maneagable to view in the console.
+                                        
+  [[1]]
+   [1] "my"           "self"         "to"           "give"         "all"          "just"         "satisfaction" "to"           "modest"      
+  [10] "and"          "sober"       
+  
+  [[2]]
+   [1] "toward"      "my"          "peoples"     "good"        "and"         "just"        "contentment" "pleased"     "my"          "self"       
+  [11] "most"       
+  
+  [[3]]
+   [1] "left"     "to"       "the"      "ambition" "of"       "just"     "monarchs" "as"       "their"    "greatest" "honour"  
+  
+  [[4]]
+   [1] "was"        "safe"       "then"       "what"       "seemed"     "just"       "preferring" "the"        "outward"    "peace"      "of"        
+  
+  [[5]]
+   [1] "these"    "men"      "knew"     "not"      "the"      "just"     "motives"  "and"      "pregnant" "grounds"  "with"    
+  
+  [[6]]
+   [1] "houses"      "or"          "to"          "weaken"      "their"       "just"        "authority"   "by"          "any"         "violent"    
+  [11] "impressions"
+  
+  [[7]]
+   [1] "is"        "onely"     "i"         "believe"   "the"       "just"      "avenger"   "of"        "all"       "disorders" "will"     
+  
+  [[8]]
+   [1] "thee"        "o"           "lord"        "as"          "the"         "just"        "cause"       "of"          "these"       "popular"    
+  [11] "inundations"
+  
+  [[9]]
+   [1] "subjects"  "will"      "never"     "think"     "it"        "just"      "or"        "fit"       "that"      "my"        "condition"
+  
+  [[10]]
+   [1] "any"      "capacity" "to"       "have"     "taken"    "just"     "revenge"  "in"       "an"       "hostile"  "and"
+```
+
+The words listed here are very helpful in understanding Charles' employment of the term 'just' in his text.
+
