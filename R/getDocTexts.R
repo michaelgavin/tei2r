@@ -4,7 +4,7 @@
 #  by the corresponding ID in the index file (usually the file name
 #  sans extension).
 #====================================================================
-#' Get the texts of a collection
+#' Import a collection of texts into R
 #' 
 #' Imports a collection of documents into R and performs basic text processing
 #' 

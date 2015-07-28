@@ -30,7 +30,7 @@ Run \code{mallet} over a \code{tei2r} collection.
 \section{Description}{
 
 Trains a basic topic model using the 'mallet' package and saves the output
-into a single \code{docModel} object. For each viewing, the resulting object
+into a single \code{docModel} object. For easy viewing, the resulting object
 contains a data frame of each topic's top words and each document's most
 prevalent topics.
 }

@@ -14,6 +14,7 @@
 #' holds all of your text data in a structured list, controlled by an index.
 #' 
 #' @include docList.R
+#' @export
 docTexts <- setClass("docTexts",
                      slots = c(directory = "character",
                                indexFile = "character",

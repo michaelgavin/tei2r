@@ -12,6 +12,7 @@
 #' The docConcordance object is a structured list that holds all uses of a keyword
 #' found in a collection.
 #' @include docList.R
+#' @export
 docConcordance <- setClass("docConcordance",
                            slots = c(directory   = "character",
                                      indexFile   = "character",

@@ -5,8 +5,7 @@
 #  user's corpus.
 #====================================================================
 #'
-#' This function will build an \code{index} file from a \code{directory} of
-#' \code{xml} or \code{txt} files.
+#' Create a .csv index of your collection
 #' 
 #' @section Description:
 #' This function accepts a directory and reads the files in that directory
@@ -31,7 +30,7 @@
 #'
 #' @examples
 #' indexFile = buildIndex("~/path/to/corpus/documents")
-
+#' @export
 buildIndex = function(directory) {
   print("Building your index file.")
   filenames = c()

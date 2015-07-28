@@ -3,8 +3,7 @@
 \name{associations}
 \alias{associations}
 \alias{getDocAssociations}
-\title{Determine the associations (frequency of co-occurrance) for the
-\code{keyword} that was chosen when making the \code{docConcordance}.}
+\title{Count words that appear in a concordance}
 \usage{
 associations(dc, df)
 

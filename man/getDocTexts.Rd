@@ -3,7 +3,7 @@
 \name{texts}
 \alias{getDocTexts}
 \alias{texts}
-\title{Get the texts of a collection}
+\title{Import a collection of texts into R}
 \usage{
 texts(dl)
 

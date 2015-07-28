@@ -23,7 +23,12 @@
 #' dmod = buildModel(dl = dl, dt = dt, tnum = 50)
 #' View(dmod@@topics) # To view a table showing the words of each topic
 #' View(dmod@@frequencies) # To view the frequency of the topics in each document
+#' @export
 buildModel = function(dl, dt, tnum, train = 100, maximize = 10, listLength = 100 ) {
+  if (!requireNamespace("mallet", quietly = T)) {
+    stop("You need to install MALLET for this function to work. To install MALLET,
+         use install.packages('mallet') and then library(mallet).", call. = F)
+  }
   model = docModel()
   model@directory = dl@directory
   model@index = dl@index

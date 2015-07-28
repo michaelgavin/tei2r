@@ -16,8 +16,8 @@
 #'                      the file found at \code{filepath}.
 #'                      
 #' @examples
-#' nodes = parseXml("path/to/xml/file", node="hi") # Get values for all highlight nodes
-parseXml = function(filepath, node="") {
+#' nodes = parseTEI("path/to/xml/file", node="hi") # Get values for all highlight nodes
+parseTEI = function(filepath, node="") {
   parsedText = xmlTreeParse(filepath,useInternalNodes = TRUE)
   parsedText = xmlRoot(parsedText)
   if(length(node) > 1) {

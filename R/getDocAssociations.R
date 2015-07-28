@@ -1,3 +1,5 @@
+#' Count words that appear in a concordance
+#' 
 #' Determine the associations (frequency of co-occurrance) for the
 #' \code{keyword} that was chosen when making the \code{docConcordance}.
 #' 

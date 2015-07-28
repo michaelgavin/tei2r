@@ -39,6 +39,7 @@
 #' @section What it does:
 #' Placeholder
 #' @include docList.R docConcordance.R docFrequencies.R
+#' @export
 docAssociations <- setClass("docAssociations",
                             slots = c(directory    = "character",
                                       indexFile    = "character",

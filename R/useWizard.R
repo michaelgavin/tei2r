@@ -4,13 +4,8 @@
 # object to the buildDocList function.
 # Should only be accessed through the buildDocList function.
 #====================================================================
-#'
-#' This function walks the user through the process of building a
-#' \code{docList} object.  It preforms the same functionality of
-#' the \code{buildDocList} function, but is interactive and works
-#' in a more simple way.  This function should \emph{only} be called
-#' by using the \code{wizard = T} parameter of the \code{buildDocList}
-#' function.
+#' Setup wizard
+#' 
 #' 
 #' @param dl           The empty \code{docList} object that is created in
 #'                     the \code{buildDocList} function and that is constructed
@@ -20,6 +15,14 @@
 #'                     a value in for this parameter is optional and saves the user
 #'                     from being asked for their directory if they have already
 #'                     provided it.
+#'                     
+#' @section What it does:
+#' This function walks the user through the process of building a
+#' \code{docList} object.  It preforms the same functionality of
+#' the \code{buildDocList} function, but is interactive and works
+#' in a more simple way.  This function should \emph{only} be called
+#' by using the \code{wizard = T} parameter of the \code{buildDocList}
+#' function.
 useWizard <- function(dl, directory = "") {
   print("Thank you for choosing the wizard option. This wizard is designed to walk you through setting up your corpus and docList object.")
   if(directory == "") {

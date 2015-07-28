@@ -11,12 +11,13 @@ Description: This package provides humanities scholars with a simple
     set of tools for manipulating TEI files, importing text from them,
     and preparing text data for computational analysis.
 Imports:
-    XML,
-    tools,
-    mallet
+    XML
+Suggests:
+    NA
 License: CC0 (http://bit.ly/1F96Zgp)
 Collate:
     'aliases.R'
+    'buildConcordance.R'
     'buildDocList.R'
     'buildIndex.R'
     'buildModel.R'
@@ -28,20 +29,16 @@ Collate:
     'docModel.R'
     'findFilenames.R'
     'getDocAssociations.R'
-    'getDocConcordance.R'
     'getDocFrequencies.R'
     'getDocTexts.R'
     'getFiles.R'
     'getKwics.R'
-    'parseXml.R'
+    'parseTEI.R'
     'setStopwords.R'
     'tei2r.R'
     'textCleanup.R'
-    'tfidf_test.R'
     'useWizard.R'
     'writeDocFrequencies.R'
     'writeXML.R'
     'xmlToText.R'
-Suggests:
-    NA
 VignetteBuilder: NA

@@ -32,6 +32,7 @@
 #' dl = getFiles(ids=c("idOne", "idTwo"))
 #' dl = getFiles(dl=dl)
 #' dl = getFiles(dl=dl, append=T)
+#' @export
 getFiles = function(src = "TCP", ids = "", directory="", dl = NA, append=F, suppressWarnings=T){
   if (src == "TCP" || src == "tcp") {
     TCP = read.csv("./data/TCP.csv")

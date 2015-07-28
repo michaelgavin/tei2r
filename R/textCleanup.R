@@ -8,7 +8,7 @@
 # included in Jockers, "Text Analysis with R"
 #===========================================
 
-#' Convert a plain-text document into a character vector
+#' Convert a plain-text or TEI document into a character vector
 #' 
 #' @param filepath A path to the file that will be converted.
 #' @param removeCaps A logical condition. If "TRUE", all words will be converted to lower case.

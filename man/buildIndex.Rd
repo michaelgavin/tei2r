@@ -2,8 +2,7 @@
 % Please edit documentation in R/buildIndex.R
 \name{buildIndex}
 \alias{buildIndex}
-\title{This function will build an \code{index} file from a \code{directory} of
-\code{xml} or \code{txt} files.}
+\title{Create a .csv index of your collection}
 \usage{
 buildIndex(directory)
 }
@@ -19,8 +18,7 @@ indexFile The current path to the document that is stored in the
                   \code{docList} object.
 }
 \description{
-This function will build an \code{index} file from a \code{directory} of
-\code{xml} or \code{txt} files.
+Create a .csv index of your collection
 }
 \section{Description}{
 

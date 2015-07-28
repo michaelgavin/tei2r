@@ -16,6 +16,7 @@
 #' for each document in the collection, as well as summary data about the collection
 #' as a whole.
 #' @include docList.R docTexts.R
+#' @export
 docFrequencies <- setClass("docFrequencies",
                            slots = c(directory         = "character",
                                      indexFile         = "character",

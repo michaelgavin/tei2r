@@ -4,7 +4,7 @@
 \alias{cleanup}
 \alias{teiTextCleanup}
 \alias{textCleanup}
-\title{Convert a plain-text document into a character vector}
+\title{Convert a plain-text or TEI document into a character vector}
 \usage{
 cleanup(filepath, removeCaps = TRUE, stopwords = dl@stopwords,
   removeStopwords = TRUE)
@@ -24,7 +24,7 @@ teiTextCleanup(filepath, stopwords)
 \item{normalizeLongS}{A logical condition. If "TRUE", all instances of '∫' and 'ſ' will be converted to 's'.}
 }
 \description{
-Convert a plain-text document into a character vector
+Convert a plain-text or TEI document into a character vector
 }
 \examples{
 locke.path = "~/Desktop/locke2ndTreatise.txt"

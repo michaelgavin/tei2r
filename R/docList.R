@@ -32,6 +32,7 @@
 #' of information, the function automatically determines the
 #' \code{filenames} and \code{paths} for the collection's files.
 #' @seealso buildDocList, docTexts, docConcordance, docModel
+#' @export
 docList <- setClass("docList", 
                     slots = c(directory = "character",
                               filenames = "character",
