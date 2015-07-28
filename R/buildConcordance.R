@@ -21,6 +21,7 @@
 #' every use of the keyword in the collection.
 #' @examples
 #' dc = buildConcordance(dt, "justice", 5)
+#' @export
 buildConcordance = function(dt, keyword, context) {
   dc = docConcordance()
   dc@directory   = dt@directory
@@ -52,3 +53,10 @@ buildConcordance = function(dt, keyword, context) {
   names(dc@concordance) = names(dt@text)
   return(dc)
 }
+
+# #' @rdname buildConcordance
+# #' @export
+# concordance = function(dt, keyword, context) {
+#   dc = buildConcordance(dt, keyword, context)
+#   return(dc)
+# }

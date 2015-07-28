@@ -32,6 +32,9 @@
 #' @examples
 #' dt = texts(dl)
 #' dt = getDocTexts(dl)
+#' @name texts
+NULL
+
 getDocTexts <- function(dl, removeCaps = TRUE, removeStopwords = TRUE, normalizeLongS = TRUE) {
   dt = docTexts()
   indexFile = dl@index
@@ -54,5 +57,12 @@ getDocTexts <- function(dl, removeCaps = TRUE, removeStopwords = TRUE, normalize
     dt@text[[i]] = textCleanup(dl@paths[i],stopwords = dl@stopwords)
   }
   names(dt@text) = file_path_sans_ext(dl@filenames)
+  return(dt)
+}
+
+#' @rdname texts
+#' @export
+texts = function(dl) {
+  dt = getDocTexts(dl)
   return(dt)
 }

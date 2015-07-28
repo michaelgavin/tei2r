@@ -26,6 +26,9 @@
 #' df = getDocFrequencies(dt)
 #' df = getDocFrequencies(dt, 500)
 #' df = getDocFrequencies(dt=dt, limit=1000)
+#' @name frequencies
+NULL
+
 getDocFrequencies = function(dt, limit=0) {
   df = docFrequencies()
   df@directory         = dt@directory
@@ -59,5 +62,12 @@ getDocFrequencies = function(dt, limit=0) {
   print("Determining proportional frequency for each word in the vocabulary accross the whole corpus.  Accessible through df@proportionalVocab")
   total = sum(df@vocabulary)
   df@proportionalVocab = df@vocabulary / total
+  return(df)
+}
+
+#' @rdname frequencies
+#' @export
+frequencies = function(dt) {
+  df = getDocFrequencies(dt)
   return(df)
 }

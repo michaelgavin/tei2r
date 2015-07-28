@@ -16,7 +16,6 @@ Suggests:
     NA
 License: CC0 (http://bit.ly/1F96Zgp)
 Collate:
-    'aliases.R'
     'buildConcordance.R'
     'buildDocList.R'
     'buildIndex.R'

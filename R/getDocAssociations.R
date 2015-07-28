@@ -13,6 +13,9 @@
 #' the concordance.  It returns the raw frequencies for the term across
 #' each document in the collection, and it also provides the total
 #' across the collection as a whole.
+#' @name associations
+NULL
+
 getDocAssociations = function(dc, df) {
   da = docAssociations()
   da@directory    = df@directory
@@ -31,5 +34,12 @@ getDocAssociations = function(dc, df) {
   }
   names(da@associations) = names(dc@concordance)
   da@total = rev(sort(table(unlist(allText))))
+  return(da)
+}
+
+#' @rdname associations
+#' @export
+associations = function(dc, df) {
+  da = getDocAssociations(dc, df)
   return(da)
 }
