@@ -1,7 +1,7 @@
 Package: tei2r
 Type: Package
 Title: Import and parse TEI files in R
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Date: 2015-05-30
 Author: c(person("Michael","Gavin", email = "mgavin@mailbox.sc.edu", role =
     c("aut", "cre")), person("Travis","Mullen", email =
