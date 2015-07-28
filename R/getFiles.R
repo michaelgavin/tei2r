@@ -3,6 +3,7 @@
 # from the EEBO TCP based on a number of filters.
 #
 #====================================================================
+#' Download TCP files from Github
 #'
 #' This function acts as a wizard for the user for downloading
 #' files from the EEBO TCP based on a number of available filters.
