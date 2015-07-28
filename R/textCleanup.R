@@ -20,7 +20,7 @@
 #' cleanup(locke.path, removeCaps = TRUE, removeStopwords = FALSE)
 #' @name cleanup
 NULL
-#' @rdname cleanup
+# @rdname cleanup
 textCleanup = function(filepath, removeCaps = TRUE, stopwords = dl@stopwords, removeStopwords = TRUE, normalizeLongS = TRUE) {
   # Need to create a test that checks if stopwords are defined.
   #if(!is.na(stopwords) || length(stopwords) < 1) {
@@ -64,7 +64,7 @@ textCleanup = function(filepath, removeCaps = TRUE, stopwords = dl@stopwords, re
   return(text)
 }
 
-#' @rdname cleanup
+# @rdname cleanup
 teiTextCleanup = function(filepath, stopwords) {
   parsedText = xmlTreeParse(filepath,useInternalNodes = TRUE)
   nodes = getNodeSet(parsedText,"/d:TEI//d:text", 
@@ -80,4 +80,9 @@ teiTextCleanup = function(filepath, stopwords) {
   return(text)  
 }
 
-
+#' @rdname cleanup
+#' @export
+cleanup = function(filepath, removeCaps = TRUE, stopwords = dl@stopwords, removeStopwords = TRUE) {
+  text = textCleanup(filepath, removeCaps = TRUE, stopwords = dl@stopwords, removeStopwords = TRUE)
+  return(text)
+}
