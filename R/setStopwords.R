@@ -7,15 +7,15 @@
 #====================================================================
 #
 #
-#' Create or change a vector of stopwords
-#' 
-#' @param filepath A path to the file that will be converted.
-#' @param delimiter The kind of character used to delimit your file 
-#'   of stopwords. The default is "," for comma-separated files. Special 
-#'   characters are included here as regular expessions, such as "\\n" for
-#'   new lines (every word is on its own line) and "\\t" for tabs.
-#' @examples
-#' stopwords = setStopwords("~/Desktop/stopwords.txt",delimiter=",")
+# Create or change a vector of stopwords
+# 
+# @param filepath A path to the file that will be converted.
+# @param delimiter The kind of character used to delimit your file 
+#   of stopwords. The default is "," for comma-separated files. Special 
+#   characters are included here as regular expessions, such as "\\n" for
+#   new lines (every word is on its own line) and "\\t" for tabs.
+# @examples
+# stopwords = setStopwords("~/Desktop/stopwords.txt",delimiter=",")
 
 setStopwords = function(filepath,delimiter=",") {
   stopwords = scan(filepath,what="character",sep=delimiter)

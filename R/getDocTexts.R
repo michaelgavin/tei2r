@@ -30,9 +30,8 @@
 #' @seealso docTexts
 #' 
 #' @examples
-#' dt = texts(dl)
-#' dt = getDocTexts(dl)
-#' @name texts
+#' dt = importTexts(dl)
+#' @name importTexts
 NULL
 
 getDocTexts <- function(dl, removeCaps = TRUE, removeStopwords = TRUE, normalizeLongS = TRUE) {
@@ -60,9 +59,9 @@ getDocTexts <- function(dl, removeCaps = TRUE, removeStopwords = TRUE, normalize
   return(dt)
 }
 
-#' @rdname texts
+#' @rdname importTexts
 #' @export
-texts = function(dl) {
+importTexts = function(dl) {
   dt = getDocTexts(dl)
   return(dt)
 }

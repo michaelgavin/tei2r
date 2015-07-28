@@ -2,6 +2,7 @@
 # This function accepts one or more tei nodes and will return all
 # values that match those nodes within a given file.
 #====================================================================
+#' Extract part of a TEI document
 #'
 #' This function will return the values of given \code{nodes} in a
 #' given \code{filepath}.

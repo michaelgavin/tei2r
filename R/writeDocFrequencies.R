@@ -18,7 +18,7 @@
 #'        provided in the \code{docList} object.
 #' @param limit The number of words to include from each document.
 #' @export
-writeDocFrequencies = function(df, filename, limit=100) {
+frequencies2csv = function(df, filename, limit=100) {
   #write.table(as.matrix(t(names(df@raw))), file = paste(df@directory, filename, sep="/"), append=F, 
   #                          col.names=F)
   fullD = data.frame()

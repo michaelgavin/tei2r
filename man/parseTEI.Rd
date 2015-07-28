@@ -2,8 +2,7 @@
 % Please edit documentation in R/parseTEI.R
 \name{parseTEI}
 \alias{parseTEI}
-\title{This function will return the values of given \code{nodes} in a
-given \code{filepath}.}
+\title{Extract part of a TEI document}
 \usage{
 parseTEI(filepath, node = "")
 }
