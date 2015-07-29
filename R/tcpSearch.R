@@ -24,7 +24,7 @@
 #' The most common situation for using \code{tcpSearch} is when you
 #' want to find and download content from Text Creation Partnership. In this case, follow
 #' these steps.
-#' \enumerate {
+#' \enumerate{
 #'   \item 1. Create a folder where you'll store your XML files.
 #'   \item 2. Play with \code{tcpSearch} until you find results that look useful to you.
 #'   \item 3. Enter the command: \code{results = tcpSearch(YOUR SEARCH, write = T)}. This
@@ -34,12 +34,12 @@
 #' }
 #' 
 #' @examples
-#' tcpSearch(term = "Robinson Crusoe", field = "Title") # search by title
-#' tcpSearch(term = "Defoe", field = "Author") # search by author
-#' tcpSearch(term = "Travel", field = "Terms") # search by subject terms
-#' tcpSearch(range = 1700:1735, field = "Date") # search by date
-#' results = tcpSearch(term = "Defoe", field = "Author") # creates a 'results' data frame in R
-#' tcpSearch(term = "Robinson Crusoe", field = "Title", write = TRUE) # writes an index to .csv
+#'tcpSearch(term = "Robinson Crusoe", field = "Title")
+#'tcpSearch(term = "Defoe", field = "Author") # search by author
+#'tcpSearch(term = "Travel", field = "Terms") # search by subject terms
+#'tcpSearch(range = 1700:1735, field = "Date") # search by date
+#'results = tcpSearch(term = "Defoe", field = "Author") # creates a 'results' data frame in R
+#'tcpSearch(term = "Robinson Crusoe", field = "Title", write = TRUE) # writes an index to .csv
 #' 
 #' @export
 tcpSearch = function(term = NULL, range = NULL, field, free = TRUE, write = FALSE) {
