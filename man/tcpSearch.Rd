@@ -36,12 +36,12 @@ The most common situation for using \code{tcpSearch} is when you
 want to find and download content from Text Creation Partnership. In this case, follow
 these steps.
 \enumerate{
-  \item 1. Create a folder where you'll store your XML files.
-  \item 2. Play with \code{tcpSearch} until you find results that look useful to you.
-  \item 3. Enter the command: \code{results = tcpSearch(YOUR SEARCH, write = T)}. This
-           generates a 'results' object and writes it to .csv as "index.csv."
-  \item 4. Enter the command: \code{tcpDownload(results)}. This will download the selected
-           files.
+  \item Create a folder where you'll store your XML files.
+  \item Play with \code{tcpSearch} until you find results that look useful to you.
+  \item Enter the command: \code{results = tcpSearch(YOUR SEARCH, write = T)}. This
+        generates a 'results' object and writes it to .csv as "index.csv."
+  \item Enter the command: \code{tcpDownload(results)}. This will download the selected
+        files.
 }
 }
 \examples{
