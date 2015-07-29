@@ -24,7 +24,7 @@ tcpDownload = function(results) {
     stop("tei2r uses a package called 'httr' to download XML content from the web. Please install it
          using the command > install.packages('httr'), then re-try your download.")
   }
-  selection = index$TCP
+  selection = results$TCP
   urls = paste("https://raw.githubusercontent.com/textcreationpartnership/",
                selection,
                "/master/",
@@ -35,7 +35,7 @@ tcpDownload = function(results) {
   for (i in 1:length(urls)) {
     data.r = httr::GET(url = urls[i])
     data.v = httr::content(data.r)
-    filename = paste(dl@directory, selection[i],".xml",sep="")
+    filename = files[i]
     print(paste("Downloading file: ", selection[i], '.xml', sep=""))
     write.table(data.v,filename,quote = F,row.names = F, col.names = F)
   }
