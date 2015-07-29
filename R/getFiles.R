@@ -36,7 +36,8 @@
 #' @export
 getFiles = function(src = "TCP", ids = "", directory="", dl = NA, append=F, suppressWarnings=T){
   if (src == "TCP" || src == "tcp") {
-    TCP = read.csv("./data/TCP.csv")
+    data(tcp)
+    TCP = tcp
     TCP$Date = as.character(TCP$Date)
     TCP$Date = as.numeric(TCP$Date)
     if(ids == "") {
@@ -148,6 +149,9 @@ getFiles = function(src = "TCP", ids = "", directory="", dl = NA, append=F, supp
           return(dl)
         }
       } else {
+        if(is.na(dl)) {
+          dl = docList(directory=directory)
+        }
         index = TCP[which(TCP$TCP %in% selection),]
         write.csv(index, paste(dl@directory, "index.csv", sep=""))
         dl@indexFile = paste(dl@directory, "index.csv", sep="")

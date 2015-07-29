@@ -48,6 +48,9 @@
 #' @export
 buildDocList = function(directory = "", stopwordsFile = "", indexFile ="", wizard=FALSE) {
   dl = docList()
+  if(directory == "" && indexFile == "") {
+    wizard = TRUE
+  }
   if(wizard == FALSE) {
     dl@directory = directory
     if(indexFile == "") {
@@ -66,6 +69,8 @@ buildDocList = function(directory = "", stopwordsFile = "", indexFile ="", wizar
     dl@stopwordsFile = stopwordsFile
     if(stopwordsFile != "") {
       dl@stopwords = setStopwords(stopwordsFile)
+    } else {
+      dl@stopwords = data(stopwords)
     }
   } else {
     dl = useWizard(dl, directory)
