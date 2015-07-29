@@ -35,7 +35,7 @@ Performs basic keyword searching in the Text Creation Partnership index.
 The most common situation for using \code{tcpSearch} is when you
 want to find and download content from Text Creation Partnership. In this case, follow
 these steps.
-\enumerate {
+\enumerate{
   \item 1. Create a folder where you'll store your XML files.
   \item 2. Play with \code{tcpSearch} until you find results that look useful to you.
   \item 3. Enter the command: \code{results = tcpSearch(YOUR SEARCH, write = T)}. This
@@ -45,7 +45,7 @@ these steps.
 }
 }
 \examples{
-tcpSearch(term = "Robinson Crusoe", field = "Title") # search by title
+tcpSearch(term = "Robinson Crusoe", field = "Title")
 tcpSearch(term = "Defoe", field = "Author") # search by author
 tcpSearch(term = "Travel", field = "Terms") # search by subject terms
 tcpSearch(range = 1700:1735, field = "Date") # search by date
