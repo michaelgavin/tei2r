@@ -1,0 +1,26 @@
+---
+title: "Introduction: tei2r"
+author: "Michael Gavin, Travis Mullen"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{"Introduction"}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+# Introduction
+
+The `tei2r` package is designed for humanities scholars and students interested in using R for text analysis. Its creation was prompted by the recent public release of thousands of documents by the Text Creation Partnership, including Early English Books Online, Evans, and Eighteenth-Century Collections Online. `tei2r` has built-in functions that allow users easily to access and download TCP files from Github, \href{https://github.com/textcreationpartnership}{where they are freely available}.
+
+You don't need to be an experienced R programmer to use `tei2r`. Its most important functions require learning only a small handful of commands, which are explained below. `tei2r` makes it easy to measure word frequencies, build concordances, and train topic models. Each of these operations is explained in this introduction (which can be followed step-by-step in less than 20 minutes). For this reason, `tei2r` is ideal for DH-curious scholars with a strong interest in early modern literature and history.
+
+Scholars already comfortable doing text analysis with R or Python may still find `tei2r` useful, because its method for organizing objects in the R environment makes it extremely easy to work with small- to medium-sized collections. Forthcoming complementary packages -- `htn` for historical text network analysis and `empson` for vector-space modeling -- build on and extend the core `tei2r` functionalities with more complex techniques.
+
+Anyone using `tei2r` should feel free to email Michael Gavin at \email{mgavin@@mailbox.sc.edu} with questions, requests, bug reports, suggestions, or offers to help.
+
+***
+
+# Getting Started
+
+
+
