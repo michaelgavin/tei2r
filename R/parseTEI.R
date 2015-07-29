@@ -18,6 +18,7 @@
 #'                      
 #' @examples
 #' nodes = parseTEI("path/to/xml/file", node="hi") # Get values for all highlight nodes
+#' @export
 parseTEI = function(filepath, node="") {
   parsedText = xmlTreeParse(filepath,useInternalNodes = TRUE)
   parsedText = xmlRoot(parsedText)
