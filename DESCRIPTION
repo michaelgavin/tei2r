@@ -35,7 +35,10 @@ Collate:
     'getFiles.R'
     'getKwics.R'
     'parseTEI.R'
+    'stopwords.R'
     'setStopwords.R'
+    'tcpDownload.R
+    'tcpSearch.R
     'tei2r.R'
     'textCleanup.R'
     'useWizard.R'
