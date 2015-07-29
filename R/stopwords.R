@@ -5,7 +5,7 @@
 #' 
 #' @format A character vector with 300 common words.
 #' 
-#' @description Stopwords:
+#' @section Stopwords:
 #' have,has,d,his,which,l,ibid,s,sect,those,upon,one,a,able,about,across,after,
 #' all,almost,also,am,amon,an,and,any,are,as,at,be,because,been,but,by,can,
 #' cannot,could,dear,did,do,does,either,else,ever,every,for,from,get,got,had,

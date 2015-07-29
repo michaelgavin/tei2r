@@ -9,7 +9,11 @@
 stopwords
 }
 \description{
-Stopwords:
+A dataset containing a vector of common stopwords, including many that
+are appropriate for seventeenth-century prose.
+}
+\section{Stopwords}{
+
 have,has,d,his,which,l,ibid,s,sect,those,upon,one,a,able,about,across,after,
 all,almost,also,am,amon,an,and,any,are,as,at,be,because,been,but,by,can,
 cannot,could,dear,did,do,does,either,else,ever,every,for,from,get,got,had,
@@ -28,10 +32,6 @@ not,of,off,often,on,only,or,other,our,own,rather,said,say,says,she,should,
 since,so,some,than,that,the,their,them,then,there,these,they,this,tis,to,too,
 twas,us,wants,was,we,were,what,when,where,which,while,who,whom,why,will,with,
 would,yet,you,your,thus
-}
-\details{
-A dataset containing a vector of common stopwords, including many that
-are appropriate for seventeenth-century prose.
 }
 \keyword{datasets}
 

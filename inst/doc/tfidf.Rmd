@@ -1,0 +1,65 @@
+---
+title: "Term Frequency Inverse Document Frequency"
+author: "Travis Mullen"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{"Term Frequency Inverse Document Frequency"}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+# Introduction
+***
+
+Term Frequency Inverse Document Frequency (tf-idf) is a method of analysis that helps determine the importance of a term in a document.  The tf-idf value for a term increases proportionally to the number of times a word appears in a document in an inverse ratio to the number of times it appears in the corpus (as the frequency in of appearance in the corpus goes up, tf-idf goes down).  The ratio helps determine which words are important to a document across a corpus by effectively penalizing a word for appearing a lot in your corpus.  It's helpful for determining stopwords as well, as these words will likely have a tf-idf of zero ('the' for example will likely occur a lot in a document _and_ in all documents across the corpus, and so, is not very important).  Tf-idf will be less useful for words that are important and also occur frequently throughout your corpus because of this ratio.
+
+***
+# Using tf-idf in `tei2r`
+There are several ways to use tf-idf in the `tei2r` package. You will need to have created at least a `docConcordance`, a `docFrequencies`, or a `docAssociations` object (but you can use any one of the three).  Additionally, there are multiple ways to have tf-idf calculated:
+
+  - Using the `tfidf` function to calculate tf-idf for all words in a corpus.  For this, you will need to pass `tfidf` a `docFrequencies` object that has calculated the `vocabulary` for the entire corpus.  This type of tf-idf calculation also works with the `docConcordance` and `docAssociations` objects to calculate the tf-idf of all words within the conordance for a given `term`.
+  - Using the `tfidf` function for one or more terms.  Again, the `docFrequencies` object is the best way to complete this task.  For one term, run: `tf = tfidf(df, term='just', all=F)`. For more than one term, you'll need to create a vector to pass to the function: `tf = tfidf(df, term= c('just', 'right', 'rights'), all=F)`. This type of tf-idf calculation also works with the `docConcordance` and `docAssociations` objects to calculate the tf-idf of a word within the conordance for a given `term`.
+  - Using the `tfidf` function to calculate the tf-idf for `n` number of terms: `tf = tfidf(df, all=T, limit=n)`. (When running `all=T`, there's a limit already in place that is set to 1,000 words due to time and resource use). This type of tf-idf calculation also works with the `docConcordance` and `docAssociations` objects to calculate the tf-idf of `n` words within the conordance for a given `term`.
+
+***
+# Parameters
+`tfidf` has several optional parameters and one required parameter.
+  - `df` A `tei2r` object of class `docFrequencies`, `docAssociations`, or `docConcordance`.<span style="color: red">*</span>^[Required]
+  - `term` The term or terms that you want to find the tf-idf for.
+  - `all` A boolean value (`TRUE` or `FALSE`) that tells the function whether or not you want to calculate tf-idf for all words in the corpus (or concordance or association).
+  - `limit` A numerical limit for the number of words to calculate tf-idf for.  __default__ 1,000 words.
+
+# Returns
+`tfidf` returns a list of lists.  The length of the list will be equivalent to the number of terms or the limit that you pass into the function.  The length of the lists within the main list will be equivalent to the number of documents in your corpus.  Each interior list will contain the tf-idf value of `term` in each document in your corpus.  For example, `tf[1]` will return:^[The data here was calculated using the Locke corpus (sample set one)]
+
+```
+$people
+     A26092      A28298      A29968      A30402      A30442      A30483      A36581      A36643      A38258      A41307      A41308      A42231 
+ 0.27694493  0.76929147  2.03092947  0.03077166  0.09231498  0.00000000  0.49234654  0.03077166  5.81584349 24.74041357  4.70806378  0.09231498 
+     A42234      A43978      A43998      A45612      A45613      A48884      A48901      A50274      A50883      A50893      A50898      A50919 
+28.64841422  6.36973334 20.06312145  0.27694493 42.71106223  1.72321289 15.78586090 89.02240852  0.49234654 14.15496299  8.49297779  0.15385829 
+     A50948      A50949      A53044      A56253      A59474      A59475      A61556      A85746      A87137 
+ 1.41549630  0.98469308  0.43080322 14.61653787  0.06154332  0.40003156  0.33848825 10.33927731 32.31024160 
+```
+
+## Examples
+
+```r
+  > library(tools)
+  > library(XML)
+  
+  > dl = buildDocList(directory = "./data/sampleSetOne/", 
+                  indexFile="./data/sampleSetOne/index.csv", 
+                  stopwordsFile = "./data/stopword_list.txt")
+  > dt = getTexts(dl)
+  > dc = getConcordance(dt = dt, term = 'just', context = 5)
+  > df = getFrequencies(dt)
+  > da = getAssociations(df = df, dc = dc)
+  
+  > tf = tfidf(df, term='just', all=F)
+  > tf = tfidf(df, term= c('just', 'right', 'people'), all=F)
+  > tf = tfidf(df, term='', all=T, limit=2000) # Remember that limit is defaulted to 1,000
+  > tf = tfidf(dc, term='right', all=F) # Find the tf-idf for 'right' within concordance for 'just'
+  > tf = tfidf(dc, all=T)
+  > tf = tfidf(da, all=T) # This and the one above do the same thing.
+```

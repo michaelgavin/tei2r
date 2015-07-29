@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+<meta name="author" content="Travis Mullen" />
+
+<meta name="date" content="2015-07-29" />
+
+<title>Investigating Justness in the English Civil war and its Contexts Using tei2r</title>
+
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<link href="data:text/css,body%20%7B%0A%20%20background%2Dcolor%3A%20%23fff%3B%0A%20%20margin%3A%201em%20auto%3B%0A%20%20max%2Dwidth%3A%20700px%3B%0A%20%20overflow%3A%20visible%3B%0A%20%20padding%2Dleft%3A%202em%3B%0A%20%20padding%2Dright%3A%202em%3B%0A%20%20font%2Dfamily%3A%20%22Open%20Sans%22%2C%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0A%20%20font%2Dsize%3A%2014px%3B%0A%20%20line%2Dheight%3A%201%2E35%3B%0A%7D%0A%0A%23header%20%7B%0A%20%20text%2Dalign%3A%20center%3B%0A%7D%0A%0A%23TOC%20%7B%0A%20%20clear%3A%20both%3B%0A%20%20margin%3A%200%200%2010px%2010px%3B%0A%20%20padding%3A%204px%3B%0A%20%20width%3A%20400px%3B%0A%20%20border%3A%201px%20solid%20%23CCCCCC%3B%0A%20%20border%2Dradius%3A%205px%3B%0A%0A%20%20background%2Dcolor%3A%20%23f6f6f6%3B%0A%20%20font%2Dsize%3A%2013px%3B%0A%20%20line%2Dheight%3A%201%2E3%3B%0A%7D%0A%20%20%23TOC%20%2Etoctitle%20%7B%0A%20%20%20%20font%2Dweight%3A%20bold%3B%0A%20%20%20%20font%2Dsize%3A%2015px%3B%0A%20%20%20%20margin%2Dleft%3A%205px%3B%0A%20%20%7D%0A%0A%20%20%23TOC%20ul%20%7B%0A%20%20%20%20padding%2Dleft%3A%2040px%3B%0A%20%20%20%20margin%2Dleft%3A%20%2D1%2E5em%3B%0A%20%20%20%20margin%2Dtop%3A%205px%3B%0A%20%20%20%20margin%2Dbottom%3A%205px%3B%0A%20%20%7D%0A%20%20%23TOC%20ul%20ul%20%7B%0A%20%20%20%20margin%2Dleft%3A%20%2D2em%3B%0A%20%20%7D%0A%20%20%23TOC%20li%20%7B%0A%20%20%20%20line%2Dheight%3A%2016px%3B%0A%20%20%7D%0A%0Atable%20%7B%0A%20%20margin%3A%201em%20auto%3B%0A%20%20border%2Dwidth%3A%201px%3B%0A%20%20border%2Dcolor%3A%20%23DDDDDD%3B%0A%20%20border%2Dstyle%3A%20outset%3B%0A%20%20border%2Dcollapse%3A%20collapse%3B%0A%7D%0Atable%20th%20%7B%0A%20%20border%2Dwidth%3A%202px%3B%0A%20%20padding%3A%205px%3B%0A%20%20border%2Dstyle%3A%20inset%3B%0A%7D%0Atable%20td%20%7B%0A%20%20border%2Dwidth%3A%201px%3B%0A%20%20border%2Dstyle%3A%20inset%3B%0A%20%20line%2Dheight%3A%2018px%3B%0A%20%20padding%3A%205px%205px%3B%0A%7D%0Atable%2C%20table%20th%2C%20table%20td%20%7B%0A%20%20border%2Dleft%2Dstyle%3A%20none%3B%0A%20%20border%2Dright%2Dstyle%3A%20none%3B%0A%7D%0Atable%20thead%2C%20table%20tr%2Eeven%20%7B%0A%20%20background%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0A%0Ap%20%7B%0A%20%20margin%3A%200%2E5em%200%3B%0A%7D%0A%0Ablockquote%20%7B%0A%20%20background%2Dcolor%3A%20%23f6f6f6%3B%0A%20%20padding%3A%200%2E25em%200%2E75em%3B%0A%7D%0A%0Ahr%20%7B%0A%20%20border%2Dstyle%3A%20solid%3B%0A%20%20border%3A%20none%3B%0A%20%20border%2Dtop%3A%201px%20solid%20%23777%3B%0A%20%20margin%3A%2028px%200%3B%0A%7D%0A%0Adl%20%7B%0A%20%20margin%2Dleft%3A%200%3B%0A%7D%0A%20%20dl%20dd%20%7B%0A%20%20%20%20margin%2Dbottom%3A%2013px%3B%0A%20%20%20%20margin%2Dleft%3A%2013px%3B%0A%20%20%7D%0A%20%20dl%20dt%20%7B%0A%20%20%20%20font%2Dweight%3A%20bold%3B%0A%20%20%7D%0A%0Aul%20%7B%0A%20%20margin%2Dtop%3A%200%3B%0A%7D%0A%20%20ul%20li%20%7B%0A%20%20%20%20list%2Dstyle%3A%20circle%20outside%3B%0A%20%20%7D%0A%20%20ul%20ul%20%7B%0A%20%20%20%20margin%2Dbottom%3A%200%3B%0A%20%20%7D%0A%0Apre%2C%20code%20%7B%0A%20%20background%2Dcolor%3A%20%23f7f7f7%3B%0A%20%20border%2Dradius%3A%203px%3B%0A%20%20color%3A%20%23333%3B%0A%7D%0Apre%20%7B%0A%20%20white%2Dspace%3A%20pre%2Dwrap%3B%20%20%20%20%2F%2A%20Wrap%20long%20lines%20%2A%2F%0A%20%20border%2Dradius%3A%203px%3B%0A%20%20margin%3A%205px%200px%2010px%200px%3B%0A%20%20padding%3A%2010px%3B%0A%7D%0Apre%3Anot%28%5Bclass%5D%29%20%7B%0A%20%20background%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0A%0Acode%20%7B%0A%20%20font%2Dfamily%3A%20Consolas%2C%20Monaco%2C%20%27Courier%20New%27%2C%20monospace%3B%0A%20%20font%2Dsize%3A%2085%25%3B%0A%7D%0Ap%20%3E%20code%2C%20li%20%3E%20code%20%7B%0A%20%20padding%3A%202px%200px%3B%0A%7D%0A%0Adiv%2Efigure%20%7B%0A%20%20text%2Dalign%3A%20center%3B%0A%7D%0Aimg%20%7B%0A%20%20background%2Dcolor%3A%20%23FFFFFF%3B%0A%20%20padding%3A%202px%3B%0A%20%20border%3A%201px%20solid%20%23DDDDDD%3B%0A%20%20border%2Dradius%3A%203px%3B%0A%20%20border%3A%201px%20solid%20%23CCCCCC%3B%0A%20%20margin%3A%200%205px%3B%0A%7D%0A%0Ah1%20%7B%0A%20%20margin%2Dtop%3A%200%3B%0A%20%20font%2Dsize%3A%2035px%3B%0A%20%20line%2Dheight%3A%2040px%3B%0A%7D%0A%0Ah2%20%7B%0A%20%20border%2Dbottom%3A%204px%20solid%20%23f7f7f7%3B%0A%20%20padding%2Dtop%3A%2010px%3B%0A%20%20padding%2Dbottom%3A%202px%3B%0A%20%20font%2Dsize%3A%20145%25%3B%0A%7D%0A%0Ah3%20%7B%0A%20%20border%2Dbottom%3A%202px%20solid%20%23f7f7f7%3B%0A%20%20padding%2Dtop%3A%2010px%3B%0A%20%20font%2Dsize%3A%20120%25%3B%0A%7D%0A%0Ah4%20%7B%0A%20%20border%2Dbottom%3A%201px%20solid%20%23f7f7f7%3B%0A%20%20margin%2Dleft%3A%208px%3B%0A%20%20font%2Dsize%3A%20105%25%3B%0A%7D%0A%0Ah5%2C%20h6%20%7B%0A%20%20border%2Dbottom%3A%201px%20solid%20%23ccc%3B%0A%20%20font%2Dsize%3A%20105%25%3B%0A%7D%0A%0Aa%20%7B%0A%20%20color%3A%20%230033dd%3B%0A%20%20text%2Ddecoration%3A%20none%3B%0A%7D%0A%20%20a%3Ahover%20%7B%0A%20%20%20%20color%3A%20%236666ff%3B%20%7D%0A%20%20a%3Avisited%20%7B%0A%20%20%20%20color%3A%20%23800080%3B%20%7D%0A%20%20a%3Avisited%3Ahover%20%7B%0A%20%20%20%20color%3A%20%23BB00BB%3B%20%7D%0A%20%20a%5Bhref%5E%3D%22http%3A%22%5D%20%7B%0A%20%20%20%20text%2Ddecoration%3A%20underline%3B%20%7D%0A%20%20a%5Bhref%5E%3D%22https%3A%22%5D%20%7B%0A%20%20%20%20text%2Ddecoration%3A%20underline%3B%20%7D%0A%0A%2F%2A%20Class%20described%20in%20https%3A%2F%2Fbenjeffrey%2Ecom%2Fposts%2Fpandoc%2Dsyntax%2Dhighlighting%2Dcss%0A%20%20%20Colours%20from%20https%3A%2F%2Fgist%2Egithub%2Ecom%2Frobsimmons%2F1172277%20%2A%2F%0A%0Acode%20%3E%20span%2Ekw%20%7B%20color%3A%20%23555%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%2F%2A%20Keyword%20%2A%2F%0Acode%20%3E%20span%2Edt%20%7B%20color%3A%20%23902000%3B%20%7D%20%2F%2A%20DataType%20%2A%2F%0Acode%20%3E%20span%2Edv%20%7B%20color%3A%20%2340a070%3B%20%7D%20%2F%2A%20DecVal%20%28decimal%20values%29%20%2A%2F%0Acode%20%3E%20span%2Ebn%20%7B%20color%3A%20%23d14%3B%20%7D%20%2F%2A%20BaseN%20%2A%2F%0Acode%20%3E%20span%2Efl%20%7B%20color%3A%20%23d14%3B%20%7D%20%2F%2A%20Float%20%2A%2F%0Acode%20%3E%20span%2Ech%20%7B%20color%3A%20%23d14%3B%20%7D%20%2F%2A%20Char%20%2A%2F%0Acode%20%3E%20span%2Est%20%7B%20color%3A%20%23d14%3B%20%7D%20%2F%2A%20String%20%2A%2F%0Acode%20%3E%20span%2Eco%20%7B%20color%3A%20%23888888%3B%20font%2Dstyle%3A%20italic%3B%20%7D%20%2F%2A%20Comment%20%2A%2F%0Acode%20%3E%20span%2Eot%20%7B%20color%3A%20%23007020%3B%20%7D%20%2F%2A%20OtherToken%20%2A%2F%0Acode%20%3E%20span%2Eal%20%7B%20color%3A%20%23ff0000%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%2F%2A%20AlertToken%20%2A%2F%0Acode%20%3E%20span%2Efu%20%7B%20color%3A%20%23900%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%2F%2A%20Function%20calls%20%2A%2F%20%0Acode%20%3E%20span%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%20%2F%2A%20ErrorTok%20%2A%2F%0A%0A" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+
+
+<div id="header">
+<h1 class="title">Investigating Justness in the English Civil war and its Contexts Using <code>tei2r</code></h1>
+<h4 class="author"><em>Travis Mullen</em></h4>
+<h4 class="date"><em>2015-07-29</em></h4>
+</div>
+
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<hr />
+<p>This vignette will serve as a guide to working with a corpus of texts from scratch using the <code>tei2r</code> package. We’ll be walking through the process of using the <code>tei2r</code> package from the very basic steps like building a corpus to doing analysis. Our focus will be on the English Civil War (1642-1651) and the surrounding years. We’ll be using the EEBO TCP to obtain our texts and metadata. We’re going to use a buffer of ~5 years on each side of the war for context: 1635-1655.</p>
+<hr />
+</div>
+<div id="the-process" class="section level1">
+<h1>The Process</h1>
+<div id="building-our-corpus." class="section level2">
+<h2>Building our corpus.</h2>
+<p>Since we’re starting from scratch, I don’t have any files downloaded. I’m going to use <code>getFiles</code> to download them and get my <code>docList</code> object started.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<pre class="sourceCode r"><code class="sourceCode r">  &gt;<span class="st"> </span><span class="kw">library</span>(tei2r)
+  &gt;<span class="st"> </span>dl =<span class="st"> </span><span class="kw">getFiles</span>(<span class="dt">directory =</span> <span class="st">&quot;~/Desktop/.../data/justnessExample/&quot;</span>) <span class="co"># Takes some time to load as it must read in whole TCP metadata</span>
+  How would you like to subset the TCP Index? [date, authors, titles, status, subject] &gt;<span class="st"> </span>date
+  Would you also like to limit by status? [yes/no] &gt;<span class="st"> </span>yes      <span class="co"># I want to limit the status because I can only download free files.</span>
+  Which status do you want to limit your selection to? [free/restricted] &gt;<span class="st"> </span>free
+  Please enter the start year &gt;<span class="st"> </span><span class="dv">1635</span>
+  Please enter the end year &gt;<span class="st"> </span><span class="dv">1655</span>
+  [<span class="dv">1</span>] <span class="st">&quot;We have selected the following 5670 TCP numbers: &quot;</span>
+   [<span class="dv">1</span>] A00011 A00028 A00089 A00211 A00214 A00233 A00235 A00289 A00293 A00395 A00426 A00459 A00475 A00478 A00510 A00519 A00573 A00586 A00604 A00695 A00737 A00749 A00761
+  [<span class="dv">24</span>] A00816 A00926 A00958 A00959 A00960 A00966 A00967 A01011 A01025 A01038 A01039 A01049 A01052 A01059 A01084 A01089 A01108 A01139 A01158 A01210 A01234 A01253 A01342
+  ...  <span class="co"># Omitting for space</span>
+  Would you like to download these files? [yes/no] &gt;<span class="st"> </span>yes
+  [<span class="dv">1</span>] <span class="st">&quot;Saving in ~/Desktop/.../data/justnessExample/data&quot;</span>
+  [<span class="dv">1</span>] <span class="st">&quot;Downloading file: A00011.xml File number: 1 of 5670&quot;</span>
+  [<span class="dv">1</span>] <span class="st">&quot;Downloading file: A00028.xml File number: 2 of 5670&quot;</span>
+  [<span class="dv">1</span>] <span class="st">&quot;Downloading file: A00089.xml File number: 3 of 5670&quot;</span>
+  [<span class="dv">1</span>] <span class="st">&quot;Downloading file: A00211.xml File number: 4 of 5670&quot;</span>
+  [<span class="dv">1</span>] <span class="st">&quot;Downloading file: A00214.xml File number: 5 of 5670&quot;</span>
+  [<span class="dv">1</span>] <span class="st">&quot;Downloading file: A00233.xml File number: 6 of 5670&quot;</span>
+  [<span class="dv">1</span>] <span class="st">&quot;Downloading file: A00235.xml File number: 7 of 5670&quot;</span>
+  ...
+  <span class="co"># Now I can check out the metadata for the files that were retrieved:</span>
+  &gt;<span class="st"> </span><span class="kw">View</span>(dl@index)</code></pre>
+<p>Now that I have my <code>docList</code> object, I can get the <code>FACT</code>s about my corpus. We’ll start with <code>T</code> the texts of the corpus:</p>
+<pre class="sourceCode r"><code class="sourceCode r">  &gt;<span class="st"> </span>dt =<span class="st"> </span><span class="kw">texts</span>(dl)         <span class="co">#This will take some time since there are 5,670.</span>
+  [<span class="dv">1</span>] <span class="st">&quot;Compiling and cleaning up your texts.&quot;</span>
+  [<span class="dv">1</span>] <span class="st">&quot;10% complete! Document 539 of 5670.&quot;</span>
+  [<span class="dv">1</span>] <span class="st">&quot;20% complete! Document 1106 of 5670.&quot;</span>
+  ...
+  &gt;<span class="st"> </span>df =<span class="st"> </span><span class="kw">frequencies</span>(dt)
+  [<span class="dv">1</span>] <span class="st">&quot;Calculating raw frequencies for each text.  Accessible by df@raw&quot;</span>
+  [<span class="dv">1</span>] <span class="st">&quot;Have calculated raw frequencies, moving on to proportional for each term in each text. Accessible by df@proportional.&quot;</span>
+  Would you like to determine the vocabulary for the corpus? [yes/no] &gt;<span class="st"> </span>yes
+  [<span class="dv">1</span>] <span class="st">&quot;Determining vocabulary for corpus.  Accessible through df@vocabulary.&quot;</span>
+  Would you like to calculate the proportional frequency for each term across the corpus? (This may take quite some time) [yes/no] &gt;<span class="st"> </span>No
+  <span class="co"># We're skipping this part because for some reason R can't handle running this for a corpus this large.</span></code></pre>
+<p>Let’s take a look at some of our frequency data. We’ll start by picking a single year’s texts out of our set and view their top words:</p>
+<pre class="sourceCode r"><code class="sourceCode r">  &gt;<span class="st"> </span>wantedTCPs =<span class="st"> </span>dl@index$TCP[<span class="kw">which</span>(dl@index$Date ==<span class="st"> </span><span class="dv">1645</span>)]</code></pre>
+<p>We’ll break down this command so that it’s more useful to you. In order to select a single year’s (1645) texts, we’ll need to extract the <code>TCP</code> numbers from the <code>index</code> for those text since the frequency data will be labeled with the <code>TCP</code> number. Our <code>index</code> is stored in <code>dl</code>, so we’ll need to access <code>dl@index</code>’s <code>TCP</code> column. We do that by using the <code>$</code> symbol: <code>dl@index$TCP</code> mean’s look in <code>dl</code>’s <code>index</code> and extract values from it’s <code>TCP</code> column. The <code>[ ]</code> symbols refer to the indices of the values that we want to extract from <code>dl@index$TCP</code>. To find the ones that we’re specifically interested in, we’re using a <code>which()</code> statement. The <code>which()</code> statement takes a <code>conditional</code> inside it’s parenthases. A <code>conditional</code> is a statement that evaluates to either <code>true</code> or <code>false</code>. So the <code>which()</code> here will return the index (or location within the list) of each value of <code>dl@index$Date</code> (the values in the <code>Date</code> column of <code>dl@index</code>) that <code>==</code> (or is equal to) 1645. Having these values will tell us which <code>TCP</code> numbers to extract from <code>df@raw</code>.</p>
+<pre class="sourceCode r"><code class="sourceCode r">  &gt;<span class="st"> </span><span class="kw">View</span>(df@raw[wantedTCPs][<span class="dv">1</span>:<span class="dv">50</span>])</code></pre>
+<p>This command will open up a viewer tab (assuming you’re using RStudio (if you’re not, you should be!)) with a column for the top 50 words of each <code>df@raw</code> list in each document that was published in 1645. Viewing the top 50 words for each document printed in 1645 is really interesting, but less helpful for our investigation of the use of the term ‘just’ throughout this period. A concordance (or list of words that appear within a given context of a particular term) for ‘just’ in our corpus would be more helpful right now.</p>
+<p>Since we’re interested in the way that ‘just’ is being used, we’ll make a concordance using that as the <code>term</code> parameter. In this case, we’re interested in the words that appear with ‘just’ in or around the same sentence, so we’ll be using a context of 5. Feel free to adjust the context and to experiment on your own.</p>
+<pre class="sourceCode r"><code class="sourceCode r">  &gt;<span class="st"> </span>dc =<span class="st"> </span><span class="kw">concordance</span>(dt, <span class="st">'just'</span>, <span class="dv">5</span>)  <span class="co"># docText object, term, context</span>
+  &gt;<span class="st"> </span>dc@concordance[<span class="dv">1</span>]
+  $A00011
+  $A00011[[<span class="dv">1</span>]]
+   [<span class="dv">1</span>] <span class="st">&quot;beleeve&quot;</span>    <span class="st">&quot;that&quot;</span>       <span class="st">&quot;thou&quot;</span>       <span class="st">&quot;in&quot;</span>         <span class="st">&quot;thy&quot;</span>        <span class="st">&quot;just&quot;</span>       <span class="st">&quot;judgement&quot;</span>  <span class="st">&quot;restrained&quot;</span> <span class="st">&quot;and&quot;</span>        <span class="st">&quot;withheld&quot;</span>   <span class="st">&quot;from&quot;</span>      
+  
+  $A00011[[<span class="dv">2</span>]]
+   [<span class="dv">1</span>] <span class="st">&quot;ordinary&quot;</span>   <span class="st">&quot;rules&quot;</span>      <span class="st">&quot;of&quot;</span>         <span class="st">&quot;good&quot;</span>       <span class="st">&quot;and&quot;</span>        <span class="st">&quot;just&quot;</span>       <span class="st">&quot;government&quot;</span> <span class="st">&quot;of&quot;</span>         <span class="st">&quot;the&quot;</span>        <span class="st">&quot;subject&quot;</span>    <span class="st">&quot;the&quot;</span> 
+   ...</code></pre>
+<p>You can access your concordances by using the command <code>dc@concordance[1]</code> or <code>dc@concordance['tcpNumber']</code>. The concordance is most usefull for looking into the way the term is used contextually for a small number of documents (since you’ll be seeing lots of instances of 11 words), but not as usefull for large-scale analysis. Let’s look at how ‘just’ is used contextually in Charles I’s <em>Eikōn basilikē, The pourtraicture of His Sacred Majestie in his solitudes and sufferings</em>:</p>
+<pre class="sourceCode r"><code class="sourceCode r">  &gt;<span class="st"> </span><span class="kw">View</span>(dc@concordance[<span class="st">'A38258'</span>])      <span class="co"># This will open a viewer window that you can use to view the whole list.</span>
+  &gt;<span class="st"> </span><span class="kw">length</span>(dc@concordance[[<span class="st">'A38258'</span>]])  <span class="co"># This will tell us how many times 'just' appears in the text.</span>
+  &gt;<span class="st"> </span>dc@concordance[[<span class="st">'A38258'</span>]][<span class="dv">1</span>:<span class="dv">10</span>]    <span class="co"># We need double brackets so that we can access the interior values of the list</span>
+                                        <span class="co"># and take the first 10 so it's more maneagable to view in the console.</span>
+                                        
+  [[<span class="dv">1</span>]]
+   [<span class="dv">1</span>] <span class="st">&quot;my&quot;</span>           <span class="st">&quot;self&quot;</span>         <span class="st">&quot;to&quot;</span>           <span class="st">&quot;give&quot;</span>         <span class="st">&quot;all&quot;</span>          <span class="st">&quot;just&quot;</span>         <span class="st">&quot;satisfaction&quot;</span> <span class="st">&quot;to&quot;</span>           <span class="st">&quot;modest&quot;</span>      
+  [<span class="dv">10</span>] <span class="st">&quot;and&quot;</span>          <span class="st">&quot;sober&quot;</span>       
+  
+  [[<span class="dv">2</span>]]
+   [<span class="dv">1</span>] <span class="st">&quot;toward&quot;</span>      <span class="st">&quot;my&quot;</span>          <span class="st">&quot;peoples&quot;</span>     <span class="st">&quot;good&quot;</span>        <span class="st">&quot;and&quot;</span>         <span class="st">&quot;just&quot;</span>        <span class="st">&quot;contentment&quot;</span> <span class="st">&quot;pleased&quot;</span>     <span class="st">&quot;my&quot;</span>          <span class="st">&quot;self&quot;</span>       
+  [<span class="dv">11</span>] <span class="st">&quot;most&quot;</span>       
+  
+  [[<span class="dv">3</span>]]
+   [<span class="dv">1</span>] <span class="st">&quot;left&quot;</span>     <span class="st">&quot;to&quot;</span>       <span class="st">&quot;the&quot;</span>      <span class="st">&quot;ambition&quot;</span> <span class="st">&quot;of&quot;</span>       <span class="st">&quot;just&quot;</span>     <span class="st">&quot;monarchs&quot;</span> <span class="st">&quot;as&quot;</span>       <span class="st">&quot;their&quot;</span>    <span class="st">&quot;greatest&quot;</span> <span class="st">&quot;honour&quot;</span>  
+  
+  [[<span class="dv">4</span>]]
+   [<span class="dv">1</span>] <span class="st">&quot;was&quot;</span>        <span class="st">&quot;safe&quot;</span>       <span class="st">&quot;then&quot;</span>       <span class="st">&quot;what&quot;</span>       <span class="st">&quot;seemed&quot;</span>     <span class="st">&quot;just&quot;</span>       <span class="st">&quot;preferring&quot;</span> <span class="st">&quot;the&quot;</span>        <span class="st">&quot;outward&quot;</span>    <span class="st">&quot;peace&quot;</span>      <span class="st">&quot;of&quot;</span>        
+  
+  [[<span class="dv">5</span>]]
+   [<span class="dv">1</span>] <span class="st">&quot;these&quot;</span>    <span class="st">&quot;men&quot;</span>      <span class="st">&quot;knew&quot;</span>     <span class="st">&quot;not&quot;</span>      <span class="st">&quot;the&quot;</span>      <span class="st">&quot;just&quot;</span>     <span class="st">&quot;motives&quot;</span>  <span class="st">&quot;and&quot;</span>      <span class="st">&quot;pregnant&quot;</span> <span class="st">&quot;grounds&quot;</span>  <span class="st">&quot;with&quot;</span>    
+  
+  [[<span class="dv">6</span>]]
+   [<span class="dv">1</span>] <span class="st">&quot;houses&quot;</span>      <span class="st">&quot;or&quot;</span>          <span class="st">&quot;to&quot;</span>          <span class="st">&quot;weaken&quot;</span>      <span class="st">&quot;their&quot;</span>       <span class="st">&quot;just&quot;</span>        <span class="st">&quot;authority&quot;</span>   <span class="st">&quot;by&quot;</span>          <span class="st">&quot;any&quot;</span>         <span class="st">&quot;violent&quot;</span>    
+  [<span class="dv">11</span>] <span class="st">&quot;impressions&quot;</span>
+  
+  [[<span class="dv">7</span>]]
+   [<span class="dv">1</span>] <span class="st">&quot;is&quot;</span>        <span class="st">&quot;onely&quot;</span>     <span class="st">&quot;i&quot;</span>         <span class="st">&quot;believe&quot;</span>   <span class="st">&quot;the&quot;</span>       <span class="st">&quot;just&quot;</span>      <span class="st">&quot;avenger&quot;</span>   <span class="st">&quot;of&quot;</span>        <span class="st">&quot;all&quot;</span>       <span class="st">&quot;disorders&quot;</span> <span class="st">&quot;will&quot;</span>     
+  
+  [[<span class="dv">8</span>]]
+   [<span class="dv">1</span>] <span class="st">&quot;thee&quot;</span>        <span class="st">&quot;o&quot;</span>           <span class="st">&quot;lord&quot;</span>        <span class="st">&quot;as&quot;</span>          <span class="st">&quot;the&quot;</span>         <span class="st">&quot;just&quot;</span>        <span class="st">&quot;cause&quot;</span>       <span class="st">&quot;of&quot;</span>          <span class="st">&quot;these&quot;</span>       <span class="st">&quot;popular&quot;</span>    
+  [<span class="dv">11</span>] <span class="st">&quot;inundations&quot;</span>
+  
+  [[<span class="dv">9</span>]]
+   [<span class="dv">1</span>] <span class="st">&quot;subjects&quot;</span>  <span class="st">&quot;will&quot;</span>      <span class="st">&quot;never&quot;</span>     <span class="st">&quot;think&quot;</span>     <span class="st">&quot;it&quot;</span>        <span class="st">&quot;just&quot;</span>      <span class="st">&quot;or&quot;</span>        <span class="st">&quot;fit&quot;</span>       <span class="st">&quot;that&quot;</span>      <span class="st">&quot;my&quot;</span>        <span class="st">&quot;condition&quot;</span>
+  
+  [[<span class="dv">10</span>]]
+   [<span class="dv">1</span>] <span class="st">&quot;any&quot;</span>      <span class="st">&quot;capacity&quot;</span> <span class="st">&quot;to&quot;</span>       <span class="st">&quot;have&quot;</span>     <span class="st">&quot;taken&quot;</span>    <span class="st">&quot;just&quot;</span>     <span class="st">&quot;revenge&quot;</span>  <span class="st">&quot;in&quot;</span>       <span class="st">&quot;an&quot;</span>       <span class="st">&quot;hostile&quot;</span>  <span class="st">&quot;and&quot;</span></code></pre>
+<p>The words listed here are very helpful in understanding Charles’ employment of the term ‘just’ in his text.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>I’m truncating directories herein because your directories need to be specific to your filesystem.<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
