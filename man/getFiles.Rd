@@ -2,8 +2,7 @@
 % Please edit documentation in R/getFiles.R
 \name{getFiles}
 \alias{getFiles}
-\title{This function acts as a wizard for the user for downloading
-files from the EEBO TCP based on a number of available filters.}
+\title{Download TCP files from Github}
 \usage{
 getFiles(src = "TCP", ids = "", directory = "", dl = NA, append = F,
   suppressWarnings = T)

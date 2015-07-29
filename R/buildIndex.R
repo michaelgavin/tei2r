@@ -4,34 +4,33 @@
 #  compile meta-data and to serve as a reference or overview for the
 #  user's corpus.
 #====================================================================
-#'
-#' This function will build an \code{index} file from a \code{directory} of
-#' \code{xml} or \code{txt} files.
-#' 
-#' @section Description:
-#' This function accepts a directory and reads the files in that directory
-#' to build a spreadsheet of metadata for that collection.  It will work for
-#' either \code{.txt} or \code{.xml} files.  The resulting spreadsheet is
-#' more robust for \code{.xml} files, but these \emph{must} be encoded
-#' according to the \code{TEI} guidelines.  For \code{.txt} files,
-#' the algorithm assumes that the filenames (sans extension) are also
-#' the \code{id}s for the files and these will be used throughout the
-#' package to link data to particular documents.  The \code{.txt} based
-#' index will feature all of the same fields as the \code{.xml} one,
-#' but they will all be blank and the user may fill them accordingly.
-#' 
-#' @param directory The directory in which to search for documents and
-#'                  to store the index file.  If you are using the wizard,
-#'                  this function will create the file in the same directory
-#'                  as the documents and then move it to the path you supply
-#'                  through the wizard.
-#'                  
-#' @return indexFile The current path to the document that is stored in the
-#'                   \code{docList} object.
-#'
-#' @examples
-#' indexFile = buildIndex("~/path/to/corpus/documents")
-
+# 
+# Create a .csv index of your collection
+# 
+# @section Description:
+# This function accepts a directory and reads the files in that directory
+# to build a spreadsheet of metadata for that collection.  It will work for
+# either \code{.txt} or \code{.xml} files.  The resulting spreadsheet is
+# more robust for \code{.xml} files, but these \emph{must} be encoded
+# according to the \code{TEI} guidelines.  For \code{.txt} files,
+# the algorithm assumes that the filenames (sans extension) are also
+# the \code{id}s for the files and these will be used throughout the
+# package to link data to particular documents.  The \code{.txt} based
+# index will feature all of the same fields as the \code{.xml} one,
+# but they will all be blank and the user may fill them accordingly.
+# 
+# @param directory The directory in which to search for documents and
+#                  to store the index file.  If you are using the wizard,
+#                  this function will create the file in the same directory
+#                  as the documents and then move it to the path you supply
+#                  through the wizard.
+#                  
+# @return indexFile The current path to the document that is stored in the
+#                   \code{docList} object.
+# 
+# @examples
+# indexFile = buildIndex("~/path/to/corpus/documents")
+# @export
 buildIndex = function(directory) {
   print("Building your index file.")
   filenames = c()

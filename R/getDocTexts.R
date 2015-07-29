@@ -4,7 +4,7 @@
 #  by the corresponding ID in the index file (usually the file name
 #  sans extension).
 #====================================================================
-#' Get the texts of a collection
+#' Import a collection of texts into R
 #' 
 #' Imports a collection of documents into R and performs basic text processing
 #' 
@@ -30,8 +30,10 @@
 #' @seealso docTexts
 #' 
 #' @examples
-#' dt = texts(dl)
-#' dt = getDocTexts(dl)
+#' dt = importTexts(dl)
+#' @name importTexts
+NULL
+
 getDocTexts <- function(dl, removeCaps = TRUE, removeStopwords = TRUE, normalizeLongS = TRUE) {
   dt = docTexts()
   indexFile = dl@index
@@ -54,5 +56,12 @@ getDocTexts <- function(dl, removeCaps = TRUE, removeStopwords = TRUE, normalize
     dt@text[[i]] = textCleanup(dl@paths[i],stopwords = dl@stopwords)
   }
   names(dt@text) = file_path_sans_ext(dl@filenames)
+  return(dt)
+}
+
+#' @rdname importTexts
+#' @export
+importTexts = function(dl) {
+  dt = getDocTexts(dl)
   return(dt)
 }

@@ -1,16 +1,16 @@
-#' Find filenames in an index
-#' 
-#' Searches an index and returns the column that represents the names of each file.
-#' @param dl The \code{docList} representing the collection
-#' @param directory A string providing the filepath to the collection
-#' 
-#' @section What it does:
-#' Users should rarely, if ever, need to use \code{findFilenames} directly. The \code{findFilenames} 
-#' operation is a key component of the \code{buildDocList} function. Given an index in the form of
-#' a .csv file, \code{findFilenames} searches through the index to find which column has a unique
-#' identifier that matches the naming scheme of the files.
-#' @examples
-#' filenames = findFilenames(dl = dl, directory = "~/path/to/your/corpus/files")
+# Find filenames in an index
+# 
+# Searches an index and returns the column that represents the names of each file.
+# @param dl The \code{docList} representing the collection
+# @param directory A string providing the filepath to the collection
+# 
+# @section What it does:
+# Users should rarely, if ever, need to use \code{findFilenames} directly. The \code{findFilenames} 
+# operation is a key component of the \code{buildDocList} function. Given an index in the form of
+# a .csv file, \code{findFilenames} searches through the index to find which column has a unique
+# identifier that matches the naming scheme of the files.
+# @examples
+# filenames = findFilenames(dl = dl, directory = "~/path/to/your/corpus/files")
 findFilenames = function(dl,directory) {
   index = dl@index
   filenames = c()

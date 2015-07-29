@@ -1,7 +1,7 @@
 Package: tei2r
 Type: Package
 Title: Import and parse TEI files in R
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Date: 2015-05-30
 Author: c(person("Michael","Gavin", email = "mgavin@mailbox.sc.edu", role =
     c("aut", "cre")), person("Travis","Mullen", email =
@@ -11,34 +11,35 @@ Description: This package provides humanities scholars with a simple
     set of tools for manipulating TEI files, importing text from them,
     and preparing text data for computational analysis.
 Imports:
-    XML,
+    XML
+Suggests:
+    knitr,
+    mallet,
     tools
 License: CC0 (http://bit.ly/1F96Zgp)
 Collate:
-    'aliases.R'
+    'buildConcordance.R'
     'buildDocList.R'
     'buildIndex.R'
+    'buildModel.R'
+    'docAssociations.R'
     'docList.R'
+    'docConcordance.R'
     'docTexts.R'
     'docFrequencies.R'
-    'docConcordance.R'
-    'docAssociations.R'
+    'docModel.R'
     'findFilenames.R'
     'getDocAssociations.R'
-    'getDocConcordance.R'
     'getDocFrequencies.R'
     'getDocTexts.R'
     'getFiles.R'
     'getKwics.R'
-    'parseXml.R'
+    'parseTEI.R'
     'setStopwords.R'
     'tei2r.R'
     'textCleanup.R'
-    'tfidf_test.R'
     'useWizard.R'
     'writeDocFrequencies.R'
     'writeXML.R'
     'xmlToText.R'
-Suggests:
-    NA
-VignetteBuilder: NA
+VignetteBuilder: knitr

@@ -3,6 +3,7 @@
 # from the EEBO TCP based on a number of filters.
 #
 #====================================================================
+#' Download TCP files from Github
 #'
 #' This function acts as a wizard for the user for downloading
 #' files from the EEBO TCP based on a number of available filters.
@@ -32,6 +33,7 @@
 #' dl = getFiles(ids=c("idOne", "idTwo"))
 #' dl = getFiles(dl=dl)
 #' dl = getFiles(dl=dl, append=T)
+#' @export
 getFiles = function(src = "TCP", ids = "", directory="", dl = NA, append=F, suppressWarnings=T){
   if (src == "TCP" || src == "tcp") {
     TCP = read.csv("./data/TCP.csv")

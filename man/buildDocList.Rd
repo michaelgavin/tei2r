@@ -2,7 +2,7 @@
 % Please edit documentation in R/buildDocList.R
 \name{buildDocList}
 \alias{buildDocList}
-\title{This function constructs a \code{docList} object.}
+\title{Create a structured list of your collection's metadata}
 \usage{
 buildDocList(directory = "", stopwordsFile = "", indexFile = "",
   wizard = FALSE)
@@ -36,7 +36,7 @@ dl             The completed \code{docList} object for use with the other
                        functions of the \code{tei2r} package.
 }
 \description{
-This function constructs a \code{docList} object.
+Create a structured list of your collection's metadata
 }
 \section{Description}{
 

@@ -2,6 +2,8 @@
 # This funciton will write a docFrequencies object to a comma
 # seperated values (csv) file.
 #====================================================================
+#' Export word frequencies to .csv
+#' 
 #' This function will write a \code{docFrequencies} object to a comma
 #' seperated values \code{.csv} file.  The values are derived from a
 #' \code{docFrequencies} object and use the \code{raw} slot.  Each
@@ -15,7 +17,8 @@
 #'        \strong{requires} that the file eextension be a .csv file.  Stored in the \code{directory}
 #'        provided in the \code{docList} object.
 #' @param limit The number of words to include from each document.
-writeDocFrequencies = function(df, filename, limit=100) {
+#' @export
+frequencies2csv = function(df, filename, limit=100) {
   #write.table(as.matrix(t(names(df@raw))), file = paste(df@directory, filename, sep="/"), append=F, 
   #                          col.names=F)
   fullD = data.frame()

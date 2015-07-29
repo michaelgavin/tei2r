@@ -1,8 +1,7 @@
 #====================================================================
 # 
 #====================================================================
-#' Get the concordance for \code{keyword} across
-#' all texts in \code{dt}.
+#' Build a concordance for a keyword
 #' 
 #' @param dt A \code{docTexts} object that contains your collection
 #'        of texts.
@@ -21,9 +20,9 @@
 #' @return A \code{docConcordance} object: essentially a structured list that contains
 #' every use of the keyword in the collection.
 #' @examples
-#' dc = getDocConcordance(dt, "justice", 5)
-#'
-getDocConcordance = function(dt, keyword, context) {
+#' dc = buildConcordance(dt, "justice", 5)
+#' @export
+buildConcordance = function(dt, keyword, context) {
   dc = docConcordance()
   dc@directory   = dt@directory
   dc@indexFile   = dt@indexFile
@@ -54,3 +53,10 @@ getDocConcordance = function(dt, keyword, context) {
   names(dc@concordance) = names(dt@text)
   return(dc)
 }
+
+# #' @rdname buildConcordance
+# #' @export
+# concordance = function(dt, keyword, context) {
+#   dc = buildConcordance(dt, keyword, context)
+#   return(dc)
+# }

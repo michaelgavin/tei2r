@@ -6,7 +6,7 @@
 # corpus' home directory, filenames, and paths.
 #====================================================================
 #'
-#' This function constructs a \code{docList} object. 
+#' Create a structured list of your collection's metadata
 #' 
 #' @section Description:
 #' 
@@ -45,6 +45,7 @@
 #' dl = buildDocList(wizard = T)
 #' dl = buildDocList(directory="~/path/to/your/corpus/files", wizard=T)
 #' dl = buildDocList(directory = "~/path/to/your/corpus/files", stopwordsFile = "~/path/to/your/stopwords/file")
+#' @export
 buildDocList = function(directory = "", stopwordsFile = "", indexFile ="", wizard=FALSE) {
   dl = docList()
   if(wizard == FALSE) {
