@@ -70,7 +70,8 @@ buildDocList = function(directory = "", stopwordsFile = "", indexFile ="", wizar
     if(stopwordsFile != "") {
       dl@stopwords = setStopwords(stopwordsFile)
     } else {
-      dl@stopwords = data(stopwords)
+      data(stopwords)
+      dl@stopwords = stopwords
     }
   } else {
     dl = useWizard(dl, directory)
