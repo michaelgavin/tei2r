@@ -32,7 +32,6 @@ Collate:
     'getDocAssociations.R'
     'getDocFrequencies.R'
     'getDocTexts.R'
-    'getFiles.R'
     'getKwics.R'
     'parseTEI.R'
     'stopwords.R'
