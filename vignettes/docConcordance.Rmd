@@ -10,9 +10,16 @@ vignette: >
 ---
 # Introduction
 ***
-The `docConcordance` object is an essential part of the `tei2r` package and is important for the analysis of term use across a corpus. The `docConcordance` object holds the conocordance for single term in each document across the collection of documents.The concordance of a term is made up of the Key Words In Context (KWIC) for that word in each document.  This is determined by finding the term each time it occurs in the text and taking a certain number of words (the `context`) on each side of the term where it appears.  The result is a list of lists that is the length of the number of documents in your corpus.  
+The `docConcordance` object shows you the words that occur within a certain number of words (or `context`) of a key word (or `term`).  You can use the `docConcordance` object to explore the way that your key word is used in each of the documents in your corpus. For each document, you will see a list of words that occur on each side of your key term in the document. Looking at the data in this way can give you a good understaning of the key term's contextual meaning in its various appearances in each document.  Comparing the term's concordance between documents can help you discover differences in use of the key term between documents.
 
-Understanding a list of lists can be a little difficult.  It is helpful to see some R output.  For example, `dc@concordance[1]`^[dc was generated using `dc = getConcordance(df, 'just', 5)] will return:
+To use the `docConcordance` object, you'll need to have a `docList` and a `docText` object.  You can create the `docConcordance` object by simply running `dc = buildConcordance(dt, 'term', n)`.  To see the concordance for a particular document, you can run `dc@concordance$ID` where `ID` is the ID number from your `index` file.
+
+A more technical description can be found below in the 'What it is' section.
+
+##What it is
+The `docConcordance` object is an essential part of the `tei2r` package and is important for the analysis of term use across a corpus. The `docConcordance` object holds the concordance for single term in each document across the collection of documents.The concordance of a term is made up of the Key Words In Context (KWIC) for that word in each document.  This is determined by finding the term each time it occurs in the text and taking a certain number of words (the `context`) on each side of the term where it appears.  The result is a list of lists that is the length of the number of documents in your corpus.  
+
+Understanding a list of lists can be a little difficult.  It is helpful to see some R output.  For example, `dc@concordance[1]`^[dc was generated using `dc = buildConcordance(dt, 'just', 5)] will return:
 ```
 $A26092
 $A26092[[1]]
@@ -68,7 +75,7 @@ It is important to note that the `docConcordance` object and its algorithm will 
 
 ## Diagram
 
-![docFrequencies structure](./img/dc_diagram.png)  
+![docConcordance structure](./img/dc_diagram.png)  
 The object structure of the `docConcordance` object and how to access its elements.
 
 ## Examples

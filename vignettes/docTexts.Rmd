@@ -10,6 +10,13 @@ vignette: >
 ---
 # Introduction
 ***
+The `docTexts` object is a list that contains all of the text from each of the documents in your corpus.  When you run `dt = importTexts(dl)`, R 'reads' each of your documents and stores them in the `docTexts` object.  Having all of your texts in a `docTexts` object allows R to perform lots of different functions on the words that make up the texts, like counting term frequency.
+
+To create a `docTexts` object, you will need a `docList` object that has an `index` with file names inside it.  Making sure that the file names are present enables R to find your documents.  You can create a `docTexts` object by running `dt = importTexts(dl)` and can access the text of a document by running `dt@text$ID` where `ID` is the ID that corresponds to the document in your index.
+
+A more technical description can be found below in the 'What it is' section.
+
+##What it is
 The `docTexts` object, along with your `docList` object make up the core of the `tei2r` package.  Most other objects in the package require the `docTexts` object to perform their functions and to generate their data.  The `docTexts` object holds a list of all of the words (minus stopwords) in each of the documents included in your corpus.  
 
 The `docTexts` object has several slots:

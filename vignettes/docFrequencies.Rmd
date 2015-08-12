@@ -20,6 +20,13 @@ table th, table td {
 </style>
 # Introduction
 ***
+The `docFrequencies` object can tell you a lot about the composition of a document.  It will give you a list of all of the words that appear in each document and a count of the number of times that the words appear.  It's a good starting point for analysis because you can get a sense of what the document is concerned with by looking at the most common words.  After looking at the most frequent words, you might be able to find a key word that you want to investigate with a `docConcordance` or a `docAssociation`.
+
+To create a `docFrequencies` object, you will need a `docList` and a `docText` object.  From there, creating a `docFrequencies` object is simple: `df = frequencies(dt)`.  To see the frequencies of words in a given document, you can run: `df@raw[[N]]` where N is the number the document is in your `index`.
+
+A more technical description can be found below in the 'what it is' section.
+
+##What it is
 The `docFrequencies` object is an essential part of the `tei2r` package and a very useful tool in analyzing your corpus. The `docFrequencies` (`df`) object holds frequency data for terms in your corpus within each document and (optionally) the corpus as a whole.  `df` has several slots in which information is stored:^[Items marked with an <span style="color: red">*</span> are optional parts of these objects.]
 
   - `directory` a string that gives the full path to the main directory (folder) that houses your corpus of texts.

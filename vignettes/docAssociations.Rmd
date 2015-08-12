@@ -9,6 +9,13 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 # Introduction
+The `docAssociations` object is designed to help solve a number of problems.  It can provide a good overview of a term's use in a document by showing you the words that occur alongisde the term and the number of times that they occur with the term.  Analyzing this information can help you develop an understanding of the way that term functions in a given document and a given corpus.
+
+Say you wanted to find the words that occur most often alongside 'rights' in the Natural Law sample corpus.  Looking at the `docAssociations` object would be the best place to start exploring that problem.  To use the `docAssociations` object, you will need to have a `docConcordance` and a `docFrequencies` object.  Finding the associations for your corpus and term are simple; you just have to run `da = associations(dc, df)`.  To access the associations for your key term in a given document, you can run `da@associations$ID` where `ID` is the ID number of the document from your `index`.
+
+A more technical description can be found below in the 'What it is' section.
+
+## What it is:
 The `docAssociations` object holds the frequency of all words associated with a given `term` across all documents in your corpus.  It relies on the `docConcordance` and `docFrequencies` objects for its data.  The `docAssociations` object is especially helpful for helping to establish a definition of a term in your particular corpus or accross time.^[It's even better when combined with [Term Frequency Inverse Document Frequency]('tfidf.html').]  The object maintains the metadata with which the concordance was originally calculated like the `term` and `context`.  The `docAssociations` object takes each set of concordances for each document, combines them, and then calculates the frequency with which all the terms occur in the concordance.  It also holds a list of the proportional frequency of the associations.  That is, the frequency that the term occurs within the concordance for each document divided by the frequency with which the term occurs in the whole document (`f(xC)/f(xD)`).
 
 The `docAssociations` object has several slots that store information:
