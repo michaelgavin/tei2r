@@ -37,7 +37,7 @@ tcpDownload = function(results) {
     data.v = httr::content(data.r)
     filename = files[i]
     print(paste("Downloading file: ", selection[i], '.xml', sep=""))
-    write.table(data.v,filename,quote = F,row.names = F, col.names = F)
+    write.table(data.v,filename,quote = F,row.names = F, col.names = F, fileEncoding="UTF-8")
   }
   print("File download complete.")
 }
