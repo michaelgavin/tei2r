@@ -10,11 +10,37 @@
 
 <meta name="author" content="Michael Gavin, Travis Mullen" />
 
-<meta name="date" content="2015-07-29" />
+<meta name="date" content="2015-08-25" />
 
 <title>Introduction: tei2r</title>
 
 
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
 
 
 <link href="data:text/css,body%20%7B%0A%20%20background%2Dcolor%3A%20%23fff%3B%0A%20%20margin%3A%201em%20auto%3B%0A%20%20max%2Dwidth%3A%20700px%3B%0A%20%20overflow%3A%20visible%3B%0A%20%20padding%2Dleft%3A%202em%3B%0A%20%20padding%2Dright%3A%202em%3B%0A%20%20font%2Dfamily%3A%20%22Open%20Sans%22%2C%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0A%20%20font%2Dsize%3A%2014px%3B%0A%20%20line%2Dheight%3A%201%2E35%3B%0A%7D%0A%0A%23header%20%7B%0A%20%20text%2Dalign%3A%20center%3B%0A%7D%0A%0A%23TOC%20%7B%0A%20%20clear%3A%20both%3B%0A%20%20margin%3A%200%200%2010px%2010px%3B%0A%20%20padding%3A%204px%3B%0A%20%20width%3A%20400px%3B%0A%20%20border%3A%201px%20solid%20%23CCCCCC%3B%0A%20%20border%2Dradius%3A%205px%3B%0A%0A%20%20background%2Dcolor%3A%20%23f6f6f6%3B%0A%20%20font%2Dsize%3A%2013px%3B%0A%20%20line%2Dheight%3A%201%2E3%3B%0A%7D%0A%20%20%23TOC%20%2Etoctitle%20%7B%0A%20%20%20%20font%2Dweight%3A%20bold%3B%0A%20%20%20%20font%2Dsize%3A%2015px%3B%0A%20%20%20%20margin%2Dleft%3A%205px%3B%0A%20%20%7D%0A%0A%20%20%23TOC%20ul%20%7B%0A%20%20%20%20padding%2Dleft%3A%2040px%3B%0A%20%20%20%20margin%2Dleft%3A%20%2D1%2E5em%3B%0A%20%20%20%20margin%2Dtop%3A%205px%3B%0A%20%20%20%20margin%2Dbottom%3A%205px%3B%0A%20%20%7D%0A%20%20%23TOC%20ul%20ul%20%7B%0A%20%20%20%20margin%2Dleft%3A%20%2D2em%3B%0A%20%20%7D%0A%20%20%23TOC%20li%20%7B%0A%20%20%20%20line%2Dheight%3A%2016px%3B%0A%20%20%7D%0A%0Atable%20%7B%0A%20%20margin%3A%201em%20auto%3B%0A%20%20border%2Dwidth%3A%201px%3B%0A%20%20border%2Dcolor%3A%20%23DDDDDD%3B%0A%20%20border%2Dstyle%3A%20outset%3B%0A%20%20border%2Dcollapse%3A%20collapse%3B%0A%7D%0Atable%20th%20%7B%0A%20%20border%2Dwidth%3A%202px%3B%0A%20%20padding%3A%205px%3B%0A%20%20border%2Dstyle%3A%20inset%3B%0A%7D%0Atable%20td%20%7B%0A%20%20border%2Dwidth%3A%201px%3B%0A%20%20border%2Dstyle%3A%20inset%3B%0A%20%20line%2Dheight%3A%2018px%3B%0A%20%20padding%3A%205px%205px%3B%0A%7D%0Atable%2C%20table%20th%2C%20table%20td%20%7B%0A%20%20border%2Dleft%2Dstyle%3A%20none%3B%0A%20%20border%2Dright%2Dstyle%3A%20none%3B%0A%7D%0Atable%20thead%2C%20table%20tr%2Eeven%20%7B%0A%20%20background%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0A%0Ap%20%7B%0A%20%20margin%3A%200%2E5em%200%3B%0A%7D%0A%0Ablockquote%20%7B%0A%20%20background%2Dcolor%3A%20%23f6f6f6%3B%0A%20%20padding%3A%200%2E25em%200%2E75em%3B%0A%7D%0A%0Ahr%20%7B%0A%20%20border%2Dstyle%3A%20solid%3B%0A%20%20border%3A%20none%3B%0A%20%20border%2Dtop%3A%201px%20solid%20%23777%3B%0A%20%20margin%3A%2028px%200%3B%0A%7D%0A%0Adl%20%7B%0A%20%20margin%2Dleft%3A%200%3B%0A%7D%0A%20%20dl%20dd%20%7B%0A%20%20%20%20margin%2Dbottom%3A%2013px%3B%0A%20%20%20%20margin%2Dleft%3A%2013px%3B%0A%20%20%7D%0A%20%20dl%20dt%20%7B%0A%20%20%20%20font%2Dweight%3A%20bold%3B%0A%20%20%7D%0A%0Aul%20%7B%0A%20%20margin%2Dtop%3A%200%3B%0A%7D%0A%20%20ul%20li%20%7B%0A%20%20%20%20list%2Dstyle%3A%20circle%20outside%3B%0A%20%20%7D%0A%20%20ul%20ul%20%7B%0A%20%20%20%20margin%2Dbottom%3A%200%3B%0A%20%20%7D%0A%0Apre%2C%20code%20%7B%0A%20%20background%2Dcolor%3A%20%23f7f7f7%3B%0A%20%20border%2Dradius%3A%203px%3B%0A%20%20color%3A%20%23333%3B%0A%7D%0Apre%20%7B%0A%20%20white%2Dspace%3A%20pre%2Dwrap%3B%20%20%20%20%2F%2A%20Wrap%20long%20lines%20%2A%2F%0A%20%20border%2Dradius%3A%203px%3B%0A%20%20margin%3A%205px%200px%2010px%200px%3B%0A%20%20padding%3A%2010px%3B%0A%7D%0Apre%3Anot%28%5Bclass%5D%29%20%7B%0A%20%20background%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0A%0Acode%20%7B%0A%20%20font%2Dfamily%3A%20Consolas%2C%20Monaco%2C%20%27Courier%20New%27%2C%20monospace%3B%0A%20%20font%2Dsize%3A%2085%25%3B%0A%7D%0Ap%20%3E%20code%2C%20li%20%3E%20code%20%7B%0A%20%20padding%3A%202px%200px%3B%0A%7D%0A%0Adiv%2Efigure%20%7B%0A%20%20text%2Dalign%3A%20center%3B%0A%7D%0Aimg%20%7B%0A%20%20background%2Dcolor%3A%20%23FFFFFF%3B%0A%20%20padding%3A%202px%3B%0A%20%20border%3A%201px%20solid%20%23DDDDDD%3B%0A%20%20border%2Dradius%3A%203px%3B%0A%20%20border%3A%201px%20solid%20%23CCCCCC%3B%0A%20%20margin%3A%200%205px%3B%0A%7D%0A%0Ah1%20%7B%0A%20%20margin%2Dtop%3A%200%3B%0A%20%20font%2Dsize%3A%2035px%3B%0A%20%20line%2Dheight%3A%2040px%3B%0A%7D%0A%0Ah2%20%7B%0A%20%20border%2Dbottom%3A%204px%20solid%20%23f7f7f7%3B%0A%20%20padding%2Dtop%3A%2010px%3B%0A%20%20padding%2Dbottom%3A%202px%3B%0A%20%20font%2Dsize%3A%20145%25%3B%0A%7D%0A%0Ah3%20%7B%0A%20%20border%2Dbottom%3A%202px%20solid%20%23f7f7f7%3B%0A%20%20padding%2Dtop%3A%2010px%3B%0A%20%20font%2Dsize%3A%20120%25%3B%0A%7D%0A%0Ah4%20%7B%0A%20%20border%2Dbottom%3A%201px%20solid%20%23f7f7f7%3B%0A%20%20margin%2Dleft%3A%208px%3B%0A%20%20font%2Dsize%3A%20105%25%3B%0A%7D%0A%0Ah5%2C%20h6%20%7B%0A%20%20border%2Dbottom%3A%201px%20solid%20%23ccc%3B%0A%20%20font%2Dsize%3A%20105%25%3B%0A%7D%0A%0Aa%20%7B%0A%20%20color%3A%20%230033dd%3B%0A%20%20text%2Ddecoration%3A%20none%3B%0A%7D%0A%20%20a%3Ahover%20%7B%0A%20%20%20%20color%3A%20%236666ff%3B%20%7D%0A%20%20a%3Avisited%20%7B%0A%20%20%20%20color%3A%20%23800080%3B%20%7D%0A%20%20a%3Avisited%3Ahover%20%7B%0A%20%20%20%20color%3A%20%23BB00BB%3B%20%7D%0A%20%20a%5Bhref%5E%3D%22http%3A%22%5D%20%7B%0A%20%20%20%20text%2Ddecoration%3A%20underline%3B%20%7D%0A%20%20a%5Bhref%5E%3D%22https%3A%22%5D%20%7B%0A%20%20%20%20text%2Ddecoration%3A%20underline%3B%20%7D%0A%0A%2F%2A%20Class%20described%20in%20https%3A%2F%2Fbenjeffrey%2Ecom%2Fposts%2Fpandoc%2Dsyntax%2Dhighlighting%2Dcss%0A%20%20%20Colours%20from%20https%3A%2F%2Fgist%2Egithub%2Ecom%2Frobsimmons%2F1172277%20%2A%2F%0A%0Acode%20%3E%20span%2Ekw%20%7B%20color%3A%20%23555%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%2F%2A%20Keyword%20%2A%2F%0Acode%20%3E%20span%2Edt%20%7B%20color%3A%20%23902000%3B%20%7D%20%2F%2A%20DataType%20%2A%2F%0Acode%20%3E%20span%2Edv%20%7B%20color%3A%20%2340a070%3B%20%7D%20%2F%2A%20DecVal%20%28decimal%20values%29%20%2A%2F%0Acode%20%3E%20span%2Ebn%20%7B%20color%3A%20%23d14%3B%20%7D%20%2F%2A%20BaseN%20%2A%2F%0Acode%20%3E%20span%2Efl%20%7B%20color%3A%20%23d14%3B%20%7D%20%2F%2A%20Float%20%2A%2F%0Acode%20%3E%20span%2Ech%20%7B%20color%3A%20%23d14%3B%20%7D%20%2F%2A%20Char%20%2A%2F%0Acode%20%3E%20span%2Est%20%7B%20color%3A%20%23d14%3B%20%7D%20%2F%2A%20String%20%2A%2F%0Acode%20%3E%20span%2Eco%20%7B%20color%3A%20%23888888%3B%20font%2Dstyle%3A%20italic%3B%20%7D%20%2F%2A%20Comment%20%2A%2F%0Acode%20%3E%20span%2Eot%20%7B%20color%3A%20%23007020%3B%20%7D%20%2F%2A%20OtherToken%20%2A%2F%0Acode%20%3E%20span%2Eal%20%7B%20color%3A%20%23ff0000%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%2F%2A%20AlertToken%20%2A%2F%0Acode%20%3E%20span%2Efu%20%7B%20color%3A%20%23900%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%2F%2A%20Function%20calls%20%2A%2F%20%0Acode%20%3E%20span%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%20%2F%2A%20ErrorTok%20%2A%2F%0A%0A" rel="stylesheet" type="text/css" />
@@ -28,20 +54,140 @@
 <div id="header">
 <h1 class="title">Introduction: tei2r</h1>
 <h4 class="author"><em>Michael Gavin, Travis Mullen</em></h4>
-<h4 class="date"><em>2015-07-29</em></h4>
+<h4 class="date"><em>2015-08-25</em></h4>
 </div>
 
 
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>The <code>tei2r</code> package is designed for humanities scholars and students interested in using R for text analysis. Its creation was prompted by the recent public release of thousands of documents by the Text Creation Partnership, including Early English Books Online, Evans, and Eighteenth-Century Collections Online. <code>tei2r</code> has built-in functions that allow users easily to access and download TCP files from Github, .</p>
+<p>The <code>tei2r</code> package is designed for humanities scholars and students interested in using R for text analysis. Its creation was prompted by the recent public release of thousands of documents by the Text Creation Partnership, including Early English Books Online, Evans, and Eighteenth-Century Collections Online. <code>tei2r</code> has built-in functions that allow users easily to access and download TCP files from Github, <a href="https://github.com/textcreationpartnership">https://github.com/textcreationpartnership</a>, where they are freely available.</p>
 <p>You don’t need to be an experienced R programmer to use <code>tei2r</code>. Its most important functions require learning only a small handful of commands, which are explained below. <code>tei2r</code> makes it easy to measure word frequencies, build concordances, and train topic models. Each of these operations is explained in this introduction (which can be followed step-by-step in less than 20 minutes). For this reason, <code>tei2r</code> is ideal for DH-curious scholars with a strong interest in early modern literature and history.</p>
-<p>Scholars already comfortable doing text analysis with R or Python may still find <code>tei2r</code> useful, because its method for organizing objects in the R environment makes it extremely easy to work with small- to medium-sized collections. Forthcoming complementary packages – <code>htn</code> for historical text network analysis and <code>empson</code> for vector-space modeling – build on and extend the core <code>tei2r</code> functionalities with more complex techniques.</p>
-<p>Anyone using <code>tei2r</code> should feel free to email Michael Gavin at  with questions, requests, bug reports, suggestions, or offers to help.</p>
+<p>Scholars already comfortable doing text analysis with R or Python may still find <code>tei2r</code> useful, because its method for organizing objects in the R environment makes it easy to work with small- to medium-sized collections. Forthcoming complementary packages – <code>htn</code> for historical text network analysis and <code>empson</code> for vector-space modeling – build on and extend the core <code>tei2r</code> functionalities with more complex analytical techniques.</p>
+<p>Anyone using <code>tei2r</code> should feel free to email Michael Gavin at <a href="mailto:mgavin@mailbox.sc.edu">mgavin@mailbox.sc.edu</a> with questions, complaints, critiques, requests, bug reports, suggestions, or offers to collaborate.</p>
 <hr />
+<div id="installation" class="section level2">
+<h2>Installation</h2>
+<p>The initial development version of <code>tei2r</code> is released on Github. If you’re using RStudio, you’ll already have the <code>devtools</code> package installed and ready-to-use. (If you’re using R by itself, you may need to install <code>devtools</code> separately by running the command, <code>install.packages(&quot;devtools&quot;)</code>, followed by <code>library(devtools)</code>.)</p>
+<p>To install <code>tei2r</code> and activate its library:</p>
+<pre class="sourceCode r"><code class="sourceCode r">devtools::<span class="kw">install_github</span>(<span class="st">&quot;michaelgavin/tei2r&quot;</span>, <span class="dt">build_vignettes =</span> T)
+<span class="kw">library</span>(tei2r)</code></pre>
+<p>To browse the help files, look over the main page:</p>
+<pre class="sourceCode r"><code class="sourceCode r">?tei2r</code></pre>
 </div>
-<div id="getting-started" class="section level1">
-<h1>Getting Started</h1>
+<div id="getting-started-with-the-eebp-tcp" class="section level2">
+<h2>Getting started with the EEBP-TCP</h2>
+<p>(Readers most interested in learning about <code>tei2r</code>’s data structure may want to skip to the next section.)</p>
+<p><code>tei2r</code> has two functions that are designed solely for working with the EEBO-TCP corpus. They are called <code>tcpSearch</code> and <code>tcpDownload</code>, and, as their names imply, they allow you to search the TCP archive and download files from the TCP.</p>
+<p>If you’re just exploring and browsing EEBO, the already existing web interfaces will work better than R Studio, but if you have a good sense of the files you want to grab, <code>tcpSearch</code> will get you started. If you want all the books published in a given year, or everything attributed to an individual author, or everything with a certain term in the title or subject headings, run this command:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tcpSearch</span>(<span class="dt">term =</span> <span class="st">&quot;Dryden&quot;</span>, <span class="dt">field =</span> <span class="st">&quot;Author&quot;</span>)</code></pre>
+<p>This function does two things: it creates a special kind of table called a <code>data frame</code> in R, and it displays that data frame in your viewing window. The search results pop up in a format that looks very much like a spreadsheet and that contains all the EEBO metadata for every book that includes John Dryden as a contributing author.</p>
+<p>Of course you can search by any field. If searching by date, don’t use the <code>term</code> argument, instead use <code>range</code>.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tcpSearch</span>(<span class="dt">range =</span> <span class="dv">1580</span>:<span class="dv">1620</span>, <span class="dt">field =</span> <span class="st">&quot;Date&quot;</span>)</code></pre>
+<p>(Notice that you should not use quotation marks around the date range. This tells R to treat the dates like numbers, rather than like words.)</p>
+<p>To download the files, first you need to save the results of your search as a .csv index file. <strong>Create a folder to store the results! You don’t want to fill your desktop with hundreds of XML documents.</strong> After creating the folder, set it as your working directory. (The working directory is the folder that R looks to first for reading and writing files.) In R Studio, you can navigate to the folder in the “Files” pane on the lower right, then click “More –&gt; Set as working directory”. Otherwise, you can use the <code>setwd()</code> command, as in the example here:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dir.create</span>(<span class="dt">path =</span> <span class="st">&quot;testFolder&quot;</span>)
+<span class="kw">setwd</span>(<span class="st">&quot;testFolder&quot;</span>)</code></pre>
+<p>Now store the results:</p>
+<pre class="sourceCode r"><code class="sourceCode r">results =<span class="st"> </span><span class="kw">tcpSearch</span>(<span class="dt">term =</span> <span class="st">&quot;Dryden&quot;</span>, <span class="dt">field =</span> <span class="st">&quot;Author&quot;</span>, <span class="dt">write =</span> T)</code></pre>
+<p>In addition to performing the search, this command saves the results in two places. First, the data frame is stored as an object called <code>results</code> in your R environment. (You should see it in the upper right panel of R Studio.) Second, it saves a .csv file called <code>&quot;index.csv&quot;</code> in your working directory. (You should see it appear in the lower right.)</p>
+<p>Note that <code>tcpSearch</code> does not include advanced search functionality, nor does it include any special function for further filtering the results. If you want to drill down with some complex search and you’re comfortable with R, just filter the <code>results</code> data frame however you like, then re-save it using <code>write.csv()</code>. If you’re not yet comfortable with R’s syntax, you can open the index in Microsoft Excel, delete out the rows you don’t want, re-save it (remember to keep it in .csv format), and then upload it back into R like this:</p>
+<pre class="sourceCode r"><code class="sourceCode r">results =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;index.csv&quot;</span>)</code></pre>
+<p>This saves over the <code>results</code> object by reading the new contents of the index back into it. (Reading and writing files using R is really easy to do, once you’ve done it a few times.)</p>
+<p>Now, to download your files, run this:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tcpDownload</span>(results)</code></pre>
+<p>Depending on how big your index is and how strong your internet connection is, this may take awhile. If you’re just doing a few dozen or few hundred documents, it just takes a minute or so, usually.</p>
+<p>At the end, you’ll have everything you need to get started: a folder filled with EEBO-TCP XML files and a .csv index that holds the metadata for each.</p>
+<div id="how-to-download-the-entire-eebo-tcp-corpus" class="section level4">
+<h4>How to download the entire EEBO-TCP corpus</h4>
+<p>When working with students, you won’t want them downloading the entire corpus, but for your own research you’ll quickly find that it’s easier to do the download once, then just change the index file based on your interests at any given moment. To do this, run:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(tcp)
+tcp =<span class="st"> </span>tcp[<span class="kw">which</span>(tcp$Status ==<span class="st"> &quot;Free&quot;</span>),]
+<span class="kw">tcpDownload</span>(tcp)</code></pre>
+<p>This will download more than 32,000 documents directly to your hard drive. It’s several GB worth of data. Be sure you save it in a convenient place.</p>
+</div>
+<div id="importing-tei-documents-into-r" class="section level3">
+<h3>Importing TEI documents into R</h3>
+<p>When I’ve taught coding to humanities professors and graduate students, by far and away the biggest challenge has just been keeping track of all the steps. When you start defining variables and creating lists and tables of data, your workspace (your ‘environment’) quickly gets cluttered with objects. Really, the entire purpose of <code>tei2r</code> is to mitigate this problem by creating a structure in your R environment that mimics the results of a bibliographic search.</p>
+<p>Your index file, created above, provides your list of documents, and it is the blueprint for everything that happens in <code>tei2r</code>. You can use your index to create a <em>document list</em>, or <code>docList</code> in <code>tei2r</code>’s lingo, that holds all the metadata about your texts and it stores all the information R will need to analyze those documents in more complex operations.</p>
+<p>In this example, let’s return to the works of Dryden. If you haven’t done so, re-write your folder like this:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dir.create</span>(<span class="st">&quot;dryden&quot;</span>)
+<span class="kw">setwd</span>(<span class="st">&quot;dryden&quot;</span>)
+results =<span class="st"> </span><span class="kw">tcpSearch</span>(<span class="dt">term =</span> <span class="st">&quot;Dryden&quot;</span>, <span class="dt">field =</span> <span class="st">&quot;Author&quot;</span>, <span class="dt">write =</span> T)
+<span class="kw">tcpDownload</span>(results)</code></pre>
+<p>After the download completes (it’ll take about a minute), you’ll have a folder called “dryden” that has the index.csv file and a collection of 131 XML documents. Let’s get them into R.</p>
+<pre class="sourceCode r"><code class="sourceCode r">dl =<span class="st"> </span><span class="kw">buildDocList</span>(<span class="dt">directory =</span> <span class="kw">getwd</span>(), <span class="dt">indexFile =</span> <span class="st">&quot;index.csv&quot;</span>)</code></pre>
+<p>Now, look and see what’s in the document list:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(dl)</code></pre>
+<p>Each one of the <code>@</code> symbols corresponds to a different <em>slot</em> in the document list, and each slot holds a specific kind of data. To view the index, for example, you could run <code>View(dl@index)</code>. (Be sure to capitalize <code>View()</code>)</p>
+<p>As you can see, the <code>docList</code> object stores several bits of data:</p>
+<ol style="list-style-type: decimal">
+<li>The path to the source directory</li>
+<li>The filenames and the full paths to each file</li>
+<li>The path to the index .csv file</li>
+<li>The index itself, stored as a data frame in the R environment</li>
+<li>The path to your stopwords file, if you have one</li>
+<li>The stopwords themselves (<code>tei2r</code> has a default list), stored as a character vector</li>
+</ol>
+<p>Notice that you still haven’t imported the texts themselves. The document list is simply a structure that holds all the metadata for your collection in R, including the location of the folder (in case you change around your working directory), links and bibliographic data for each file, as well as the location and content of your stopwords list.</p>
+<p>Everything in <code>tei2r</code> and its complementary packages, <code>htn</code> and <code>empson</code>, is built on the basic document list structure. This way, you only have to enter the filepath, the index, and the stopwords once, and R will remember what your settings are.</p>
+<p>To import the texts, you’ll need to create one more object:</p>
+<pre class="sourceCode r"><code class="sourceCode r">dt =<span class="st"> </span><span class="kw">importTexts</span>(dl)</code></pre>
+<p>This operation will take about a minute or so. The <code>importTexts</code> function automates a number of very common operations in R – importing XML data, stripping the tags and converting to plain text, switching to lower-case, removing stopwords, and regularizing the long-S in EEBO data.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<p>If you wanted the text but didn’t want to remove stopwords, adjust the parameter:</p>
+<pre class="sourceCode r"><code class="sourceCode r">dt =<span class="st"> </span><span class="kw">importTexts</span>(<span class="dt">dl =</span> dl, <span class="dt">removeStopwords =</span> <span class="ot">FALSE</span>)</code></pre>
+<p>Note, too, that <code>importTexts</code> works with plain-text documents just fine. However, if you’re using XML, make sure it’s in proper TEI format. <code>tei2r</code> won’t work for XML encoded using other namespaces.</p>
+<p>When imported into R, your documents’ texts have a structure very similar to that of the list itself: it holds the name of the source directory and the index file, then a big list that holds each text as a <em>character vector</em>.</p>
+<p>To get a sense of the contours of the <code>docTexts</code> object, look at <code>dt</code>:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(dt)</code></pre>
+<p>You’ll see a couple pieces of metadata and the first several words for each document, usually from the title page. Notice that, by default, the texts are stored with their TCP number as the key. If you ever need to look a number up, remember that the index is stored in your environment. Just call <code>View(dl@index)</code>.</p>
+<p>To print out the character vector of any individual text, you can select it by number (that is, its place in the order of the collection) or by TCP number. For example, here are two different ways to access the word vectors that make up Dryden’s <em>Tyrannick Love</em>, which has the TCP number ‘A36708’ and is the 72nd item in the collection:</p>
+<pre class="sourceCode r"><code class="sourceCode r">dt@text$A36708
+
+dt@text[[<span class="dv">72</span>]]</code></pre>
+<p><code>tei2r</code> does not have many built-in analytical functions, but it does have a few. To see the word frequencies for each document in the collection, call</p>
+<pre class="sourceCode r"><code class="sourceCode r">df =<span class="st"> </span><span class="kw">frequencies</span>(dt)</code></pre>
+<p>To build a correspondence around any single term, try</p>
+<pre class="sourceCode r"><code class="sourceCode r">dc =<span class="st"> </span><span class="kw">buildConcordance</span>(<span class="dt">dt =</span> dt, <span class="dt">keyword =</span> <span class="st">&quot;wit&quot;</span>, <span class="dt">context =</span> <span class="dv">5</span>)</code></pre>
+<p>Each of these objects will have a structure very similar to the others: some metadata at the top, followed by a list of results for each document in your collection. Words frequency counts and concordances are very useful for text analysis of various kinds. The <code>empson</code> package uses them to perform various kinds of more advanced semantic analysis. But even on their own, they can be very useful for getting a picture of how the documents in your collection relate to each other.</p>
+</div>
+<div id="topic-modeling-with-mallet-and-tei2r" class="section level3">
+<h3>Topic modeling with <code>mallet</code> and <code>tei2r</code></h3>
+<p>Topic modeling with the <code>mallet</code> package is already pretty easy, but I’ve found that a number of steps need to be performed every time I ran a model. There are some constraints: using <code>mallet</code> in R Studio means that you’re constrained to R’s memory limitations. This is fine for small- to medium-sized collections. But if you want to model more than a few hundred texts, you’re likely to run into memory errors. (You’re also likely to run into rhetorical problems when trying to describe such a large collection, even if you get the model to run correctly.)</p>
+<p>First make sure you have the <code>mallet</code> package installed, then run this:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(mallet)
+tmod =<span class="st"> </span><span class="kw">buildModel</span>(<span class="dt">dl =</span> dl, <span class="dt">dt =</span> dt, <span class="dt">tnum =</span> <span class="dv">20</span>)</code></pre>
+<p>The <code>buildModel</code> function runs the model and stores the results in several different slots for easy viewing:</p>
+<ol style="list-style-type: decimal">
+<li><code>tmod@index</code>: the index containing all your documents’ metadata</li>
+<li><code>tmod@topics</code>: a table showing the top words in each topic</li>
+<li><code>tmod@frequencies</code>: a table showing how frequent each topic is in each document</li>
+<li><code>tmod@weights</code>: a table showing how frequent each word is in each topic</li>
+</ol>
+<p>The data in any of these slots can be viewed, written to csv, or plotted in any number of ways. The <code>mallet</code> package has a number of options, most of which can be controlled as parameters in <code>buildModel()</code>.</p>
+<p>I have generally found <code>mallet</code> to be very useful at summarizing medium-sized collections of documents. I actually believe <code>mallet</code> is more useful to the literary historian when used with smaller, targeted collections, rather than with big collections which are much harder to generalize about without writing nonsense, but that’s a discussion for another time.</p>
+</div>
+<div id="how-to-build-a-topic-model-from-eebo-in-5-commands" class="section level3">
+<h3>How to build a topic model from EEBO in 5 commands</h3>
+<ol style="list-style-type: decimal">
+<li><p>Search the EEBO-TCP for the files you want</p>
+<pre class="sourceCode r"><code class="sourceCode r">results =<span class="st"> </span><span class="kw">tcpSearch</span>(<span class="dt">range =</span> <span class="dv">1660</span>, <span class="dt">field =</span> <span class="st">&quot;Date&quot;</span>, <span class="dt">write =</span> T)</code></pre></li>
+<li><p>Download the results</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tcpDownload</span>(results)</code></pre></li>
+<li><p>Initialize your collection in R</p>
+<pre class="sourceCode r"><code class="sourceCode r">dl =<span class="st"> </span><span class="kw">buildDocList</span>(<span class="dt">directory =</span> <span class="kw">getwd</span>(), <span class="dt">indexFile =</span> <span class="st">&quot;index.csv&quot;</span>)</code></pre></li>
+<li><p>Pre-process the texts</p>
+<pre class="sourceCode r"><code class="sourceCode r">dt =<span class="st"> </span><span class="kw">importTexts</span>(dl)</code></pre></li>
+<li><p>Train the model and store the results in R</p>
+<pre class="sourceCode r"><code class="sourceCode r">tmod =<span class="st"> </span><span class="kw">buildModel</span>(<span class="dt">dl =</span> dl, <span class="dt">dt =</span> dt, <span class="dt">tnum =</span> <span class="dv">20</span>)</code></pre></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Right now, <code>importTexts</code> always cleans up the long-S and always converts XML into plain-text character vectors. The only adjustable parameters are <code>removeCaps</code> and <code>removeStopwords</code>. If you use <code>tei2r</code> and would like more options built into this or any function, please contact the developers.<a href="#fnref1">↩</a></p></li>
+</ol>
 </div>
 
 

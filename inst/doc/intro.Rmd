@@ -4,23 +4,238 @@ author: "Michael Gavin, Travis Mullen"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{"Introduction"}
+  %\VignetteIndexEntry{"Introduction: Getting Started with tei2r"}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 # Introduction
 
-The `tei2r` package is designed for humanities scholars and students interested in using R for text analysis. Its creation was prompted by the recent public release of thousands of documents by the Text Creation Partnership, including Early English Books Online, Evans, and Eighteenth-Century Collections Online. `tei2r` has built-in functions that allow users easily to access and download TCP files from Github, \href{https://github.com/textcreationpartnership}{where they are freely available}.
+The `tei2r` package is designed for humanities scholars and students interested in using R for text analysis. Its creation was prompted by the recent public release of thousands of documents by the Text Creation Partnership, including Early English Books Online, Evans, and Eighteenth-Century Collections Online. `tei2r` has built-in functions that allow users easily to access and download TCP files from Github, <https://github.com/textcreationpartnership>, where they are freely available.
 
 You don't need to be an experienced R programmer to use `tei2r`. Its most important functions require learning only a small handful of commands, which are explained below. `tei2r` makes it easy to measure word frequencies, build concordances, and train topic models. Each of these operations is explained in this introduction (which can be followed step-by-step in less than 20 minutes). For this reason, `tei2r` is ideal for DH-curious scholars with a strong interest in early modern literature and history.
 
-Scholars already comfortable doing text analysis with R or Python may still find `tei2r` useful, because its method for organizing objects in the R environment makes it extremely easy to work with small- to medium-sized collections. Forthcoming complementary packages -- `htn` for historical text network analysis and `empson` for vector-space modeling -- build on and extend the core `tei2r` functionalities with more complex techniques.
+Scholars already comfortable doing text analysis with R or Python may still find `tei2r` useful, because its method for organizing objects in the R environment makes it easy to work with small- to medium-sized collections. Forthcoming complementary packages -- `htn` for historical text network analysis and `empson` for vector-space modeling -- build on and extend the core `tei2r` functionalities with more complex analytical techniques.
 
-Anyone using `tei2r` should feel free to email Michael Gavin at \email{mgavin@@mailbox.sc.edu} with questions, requests, bug reports, suggestions, or offers to help.
+Anyone using `tei2r` should feel free to email Michael Gavin at mgavin@mailbox.sc.edu with questions, complaints, critiques, requests, bug reports, suggestions, or offers to collaborate.
 
 ***
 
-# Getting Started
+## Installation
+The initial development version of `tei2r` is released on Github. If you're using RStudio, you'll already have the `devtools` package installed and ready-to-use. (If you're using R by itself, you may need to install `devtools` separately by running the command, `install.packages("devtools")`, followed by `library(devtools)`.)
 
+To install `tei2r` and activate its library:
 
+```r
+devtools::install_github("michaelgavin/tei2r", build_vignettes = T)
+library(tei2r)
+```
 
+To browse the help files, look over the main page:
+
+```r
+?tei2r
+```
+
+## Getting started with the EEBP-TCP
+
+(Readers most interested in learning about `tei2r`'s data structure may want to skip to the next section.) 
+
+`tei2r` has two functions that are designed solely for working with the EEBO-TCP corpus. They are called `tcpSearch` and `tcpDownload`, and, as their names imply, they allow you to search the TCP archive and download files from the TCP.
+
+If you're just exploring and browsing EEBO, the already existing web interfaces will work better than R Studio, but if you have a good sense of the files you want to grab, `tcpSearch` will get you started. If you want all the books published in a given year, or everything attributed to an individual author, or everything with a certain term in the title or subject headings, run this command:
+
+```r
+tcpSearch(term = "Dryden", field = "Author")
+```
+
+This function does two things: it creates a special kind of table called a `data frame` in R, and it displays that data frame in your viewing window. The search results pop up in a format that looks very much like a spreadsheet and that contains all the EEBO metadata for every book that includes John Dryden as a contributing author.
+
+Of course you can search by any field. If searching by date, don't use the `term` argument, instead use `range`.
+
+```r
+tcpSearch(range = 1580:1620, field = "Date")
+```
+
+(Notice that you should not use quotation marks around the date range. This tells R to treat the dates like numbers, rather than like words.)
+
+To download the files, first you need to save the results of your search as a .csv index file. **Create a folder to store the results! You don't want to fill your desktop with hundreds of XML documents.** After creating the folder, set it as your working directory. (The working directory is the folder that R looks to first for reading and writing files.) In R Studio, you can navigate to the folder in the "Files" pane on the lower right, then click "More --> Set as working directory". Otherwise, you can use the `setwd()` command, as in the example here:
+
+```r
+dir.create(path = "testFolder")
+setwd("testFolder")
+```
+
+Now store the results:
+
+```r
+results = tcpSearch(term = "Dryden", field = "Author", write = T)
+```
+
+In addition to performing the search, this command saves the results in two places. First, the data frame is stored as an object called `results` in your R environment. (You should see it in the upper right panel of R Studio.) Second, it saves a .csv file called `"index.csv"` in your working directory. (You should see it appear in the lower right.)
+
+Note that `tcpSearch` does not include advanced search functionality, nor does it include any special function for further filtering the results. If you want to drill down with some complex search and you're comfortable with R, just filter the `results` data frame however you like, then re-save it using `write.csv()`. If you're not yet comfortable with R's syntax, you can open the index in Microsoft Excel, delete out the rows you don't want, re-save it (remember to keep it in .csv format), and then upload it back into R like this:
+
+```r
+results = read.csv("index.csv")
+```
+
+This saves over the `results` object by reading the new contents of the index back into it. (Reading and writing files using R is really easy to do, once you've done it a few times.)
+
+Now, to download your files, run this:
+
+```r
+tcpDownload(results)
+```
+
+Depending on how big your index is and how strong your internet connection is, this may take awhile. If you're just doing a few dozen or few hundred documents, it just takes a minute or so, usually.
+
+At the end, you'll have everything you need to get started: a folder filled with EEBO-TCP XML files and a .csv index that holds the metadata for each.
+
+#### How to download the entire EEBO-TCP corpus
+
+When working with students, you won't want them downloading the entire corpus, but for your own research you'll quickly find that it's easier to do the download once, then just change the index file based on your interests at any given moment. To do this, run:
+
+```r
+data(tcp)
+tcp = tcp[which(tcp$Status == "Free"),]
+tcpDownload(tcp)
+```
+
+This will download more than 32,000 documents directly to your hard drive. It's several GB worth of data. Be sure you save it in a convenient place.
+
+### Importing TEI documents into R
+
+When I've taught coding to humanities professors and graduate students, by far and away the biggest challenge has just been keeping track of all the steps. When you start defining variables and creating lists and tables of data, your workspace (your 'environment') quickly gets cluttered with objects. Really, the entire purpose of `tei2r` is to mitigate this problem by creating a structure in your R environment that mimics the results of a bibliographic search. 
+
+Your index file, created above, provides your list of documents, and it is the blueprint for everything that happens in `tei2r`. You can use your index to create a *document list*, or `docList` in `tei2r`'s lingo, that holds all the metadata about your texts and it stores all the information R will need to analyze those documents in more complex operations.
+
+In this example, let's return to the works of Dryden. If you haven't done so, re-write your folder like this:
+
+```r
+dir.create("dryden")
+setwd("dryden")
+results = tcpSearch(term = "Dryden", field = "Author", write = T)
+tcpDownload(results)
+```
+
+After the download completes (it'll take about a minute), you'll have a folder called "dryden" that has the index.csv file and a collection of 131 XML documents. Let's get them into R.
+
+```r
+dl = buildDocList(directory = getwd(), indexFile = "index.csv")
+```
+
+Now, look and see what's in the document list:
+
+```r
+print(dl)
+```
+Each one of the `@` symbols corresponds to a different *slot* in the document list, and each slot holds a specific kind of data. To view the index, for example, you could run `View(dl@index)`. (Be sure to capitalize `View()`)
+
+As you can see, the `docList` object stores several bits of data: 
+
+1. The path to the source directory
+2. The filenames and the full paths to each file
+3. The path to the index .csv file
+4. The index itself, stored as a data frame in the R environment
+5. The path to your stopwords file, if you have one
+6. The stopwords themselves (`tei2r` has a default list), stored as a character vector
+
+Notice that you still haven't imported the texts themselves. The document list is simply a structure that holds all the metadata for your collection in R, including the location of the folder (in case you change around your working directory), links and bibliographic data for each file, as well as the location and content of your stopwords list.
+
+Everything in `tei2r` and its complementary packages, `htn` and `empson`, is built on the basic document list structure. This way, you only have to enter the filepath, the index, and the stopwords once, and R will remember what your settings are.
+
+To import the texts, you'll need to create one more object:
+
+```r
+dt = importTexts(dl)
+```
+
+This operation will take about a minute or so. The `importTexts` function automates a number of very common operations in R -- importing XML data, stripping the tags and converting to plain text, switching to lower-case, removing stopwords, and regularizing the long-S in EEBO data.[^1] 
+
+If you wanted the text but didn't want to remove stopwords, adjust the parameter:
+
+```r
+dt = importTexts(dl = dl, removeStopwords = FALSE)
+```
+
+Note, too, that `importTexts` works with plain-text documents just fine. However, if you're using XML, make sure it's in proper TEI format. `tei2r` won't work for XML encoded using other namespaces.
+
+When imported into R, your documents' texts have a structure very similar to that of the list itself: it holds the name of the source directory and the index file, then a big list that holds each text as a *character vector*. 
+
+To get a sense of the contours of the `docTexts` object, look at `dt`:
+
+```r
+print(dt)
+```
+
+You'll see a couple pieces of metadata and the first several words for each document, usually from the title page. Notice that, by default, the texts are stored with their TCP number as the key. If you ever need to look a number up, remember that the index is stored in your environment. Just call `View(dl@index)`.
+
+To print out the character vector of any individual text, you can select it by number (that is, its place in the order of the collection) or by TCP number. For example, here are two different ways to access the word vectors that make up Dryden's *Tyrannick Love*, which has the TCP number 'A36708' and is the 72nd item in the collection:
+
+```r
+dt@text$A36708
+
+dt@text[[72]]
+```
+
+`tei2r` does not have many built-in analytical functions, but it does have a few. To see the word frequencies for each document in the collection, call
+
+```r
+df = frequencies(dt)
+```
+
+To build a correspondence around any single term, try
+
+```r
+dc = buildConcordance(dt = dt, keyword = "wit", context = 5)
+```
+
+Each of these objects will have a structure very similar to the others: some metadata at the top, followed by a list of results for each document in your collection. Words frequency counts and concordances are very useful for text analysis of various kinds. The `empson` package uses them to perform various kinds of more advanced semantic analysis. But even on their own, they can be very useful for getting a picture of how the documents in your collection relate to each other.
+
+### Topic modeling with `mallet` and `tei2r`
+
+Topic modeling with the `mallet` package is already pretty easy, but I've found that a number of steps need to be performed every time I ran a model. There are some constraints: using `mallet` in R Studio means that you're constrained to R's memory limitations. This is fine for small- to medium-sized collections. But if you want to model more than a few hundred texts, you're likely to run into memory errors. (You're also likely to run into rhetorical problems when trying to describe such a large collection, even if you get the model to run correctly.)
+
+First make sure you have the `mallet` package installed, then run this:
+
+```r
+library(mallet)
+tmod = buildModel(dl = dl, dt = dt, tnum = 20)
+```
+The `buildModel` function runs the model and stores the results in several different slots for easy viewing:
+
+1. `tmod@index`: the index containing all your documents' metadata
+2. `tmod@topics`: a table showing the top words in each topic
+3. `tmod@frequencies`: a table showing how frequent each topic is in each document
+4. `tmod@weights`: a table showing how frequent each word is in each topic
+
+The data in any of these slots can be viewed, written to csv, or plotted in any number of ways. The `mallet` package has a number of options, most of which can be controlled as parameters in `buildModel()`. 
+
+I have generally found `mallet` to be very useful at summarizing medium-sized collections of documents. I actually believe `mallet` is more useful to the literary historian when used with smaller, targeted collections, rather than with big collections which are much harder to generalize about without writing nonsense, but that's a discussion for another time.
+
+### How to build a topic model from EEBO in 5 commands
+
+1. Search the EEBO-TCP for the files you want
+```r
+results = tcpSearch(range = 1660, field = "Date", write = T)
+```
+
+2. Download the results
+```r
+tcpDownload(results)
+```
+
+3. Initialize your collection in R
+```r
+dl = buildDocList(directory = getwd(), indexFile = "index.csv")
+```
+4. Pre-process the texts
+```r
+dt = importTexts(dl)
+```
+5. Train the model and store the results in R
+```r
+tmod = buildModel(dl = dl, dt = dt, tnum = 20)
+```
+
+[^1]: Right now, `importTexts` always cleans up the long-S and always converts XML into plain-text character vectors. The only adjustable parameters are `removeCaps` and `removeStopwords`. If you use `tei2r` and would like more options built into this or any function, please contact the developers.  
