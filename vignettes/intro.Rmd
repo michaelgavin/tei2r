@@ -107,7 +107,7 @@ This will download more than 32,000 documents directly to your hard drive. It's 
 
 When I've taught coding to humanities professors and graduate students, by far and away the biggest challenge has just been keeping track of all the steps. When you start defining variables and creating lists and tables of data, your workspace (your 'environment') quickly gets cluttered with objects. Really, the entire purpose of `tei2r` is to mitigate this problem by creating a structure in your R environment that mimics the results of a bibliographic search. 
 
-Your index file, created above, provides your list of documents, and it is the blueprint for everything that happens in `tei2r`. You can use your index to create a *document list*, or `docList` in `tei2r`'s lingo, that holds all the metadata about your texts and it stores all the information R will need to analyze those documents in more complex operations.
+Your index file, created above, provides your list of documents, and it is the blueprint for everything that happens in `tei2r`. You can use your index to create a document list, or `docList`, that holds all the metadata about your texts, as well as all the information R will need to analyze those documents in more complex operations.
 
 In this example, let's return to the works of Dryden. If you haven't done so, re-write your folder like this:
 
@@ -194,7 +194,7 @@ Each of these objects will have a structure very similar to the others: some met
 
 ### Topic modeling with `mallet` and `tei2r`
 
-Topic modeling with the `mallet` package is already pretty easy, but I've found that a number of steps need to be performed every time I ran a model. There are some constraints: using `mallet` in R Studio means that you're constrained to R's memory limitations. This is fine for small- to medium-sized collections. But if you want to model more than a few hundred texts, you're likely to run into memory errors. (You're also likely to run into rhetorical problems when trying to describe such a large collection, even if you get the model to run correctly.)
+Topic modeling with the `mallet` package is already pretty easy, but I've found that a number of steps need to be performed every time I ran a model. There are some constraints: using `mallet` in R Studio means that you're constrained to R's memory limitations. This is fine for small- to medium-sized collections. But if you want to model more than a few hundred texts, you're likely to run into memory errors.
 
 First make sure you have the `mallet` package installed, then run this:
 
@@ -209,9 +209,8 @@ The `buildModel` function runs the model and stores the results in several diffe
 3. `tmod@frequencies`: a table showing how frequent each topic is in each document
 4. `tmod@weights`: a table showing how frequent each word is in each topic
 
-The data in any of these slots can be viewed, written to csv, or plotted in any number of ways. The `mallet` package has a number of options, most of which can be controlled as parameters in `buildModel()`. 
+The data in any of these slots can be viewed, written to csv, or plotted in any number of ways. The `mallet` package has a number of options, most of which can be controlled as parameters in `buildModel()`. Users interested in delving deeper into `mallet` are encouraged to consult its documentation and work with its functions directly.
 
-I have generally found `mallet` to be very useful at summarizing medium-sized collections of documents. I actually believe `mallet` is more useful to the literary historian when used with smaller, targeted collections, rather than with big collections which are much harder to generalize about without writing nonsense, but that's a discussion for another time.
 
 ### How to build a topic model from EEBO in 5 commands
 
