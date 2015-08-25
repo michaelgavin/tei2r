@@ -35,6 +35,7 @@ Collate:
     'getKwics.R'
     'natlaw.R'
     'parseTEI.R'
+    'print.docList.R'
     'richardson.R'
     'stopwords.R'
     'setStopwords.R'
