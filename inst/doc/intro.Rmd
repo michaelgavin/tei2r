@@ -190,7 +190,7 @@ To build a correspondence around any single term, try
 dc = buildConcordance(dt = dt, keyword = "wit", context = 5)
 ```
 
-Each of these objects will have a structure very similar to the others: some metadata at the top, followed by a list of results for each document in your collection. Words frequency counts and concordances are very useful for text analysis of various kinds. The `empson` package uses them to perform various kinds of more advanced semantic analysis. But even on their own, they can be very useful for getting a picture of how the documents in your collection relate to each other.
+Each of these objects will have a structure very similar to the others: some metadata at the top, followed by a list of results for each document in your collection. Words frequency counts and concordances are very useful for text analysis of various kinds. The `empson` package uses them to perform various kinds of more advanced semantic analysis, for example. But even on their own, they can be very useful for getting a picture of how the documents in your collection relate to each other.
 
 ### Topic modeling with `mallet` and `tei2r`
 
@@ -209,9 +209,7 @@ The `buildModel` function runs the model and stores the results in several diffe
 3. `tmod@frequencies`: a table showing how frequent each topic is in each document
 4. `tmod@weights`: a table showing how frequent each word is in each topic
 
-The data in any of these slots can be viewed, written to csv, or plotted in any number of ways. The `mallet` package has a number of options, most of which can be controlled as parameters in `buildModel()`. 
-
-I have generally found `mallet` to be very useful at summarizing medium-sized collections of documents. I actually believe `mallet` is more useful to the literary historian when used with smaller, targeted collections, rather than with big collections which are much harder to generalize about without writing nonsense, but that's a discussion for another time.
+The data in any of these slots can be viewed, written to csv, or plotted in any number of ways. The `mallet` package has a number of options, most of which can be controlled as parameters in `buildModel()`. Users who want finer control over the results should consult the documentation for `mallet` and experiment with its functions directly.
 
 ### How to build a topic model from EEBO in 5 commands
 
