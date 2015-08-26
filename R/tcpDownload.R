@@ -2,7 +2,7 @@
 #' 
 #' Download raw XML files from the Text Creation Partnership's Github repository.
 #' 
-#' @slot results A dataframe, usually the search results generated using 
+#' @param results A dataframe, usually the search results generated using 
 #'               \code{searchTCP}. Must contain a column of TCP numbers with the 
 #'               name 'TCP'.
 #'               

@@ -3,7 +3,9 @@
 #' A \code{docList} object containing metadata for a sample dataset
 #' of Samuel Richardson's novels.
 #' 
-#' @format A docList with an index of 33 items.
+#' @format A docList with an index of 17 items. The novels of Samuel Richardson,
+#'         including Sir Charles Grandison (7 vols), Clarissa (7 vols), and
+#'         Pamela (3 vols).
 #' 
 #' @examples
 #' # Load the collection, then import the texts

@@ -4,7 +4,9 @@
 \name{richardson}
 \alias{richardson}
 \title{Data - Collection: Novels of Samuel Richardson}
-\format{A docList with an index of 33 items.}
+\format{A docList with an index of 17 items. The novels of Samuel Richardson,
+        including Sir Charles Grandison (7 vols), Clarissa (7 vols), and
+        Pamela (3 vols).}
 \usage{
 richardson
 }

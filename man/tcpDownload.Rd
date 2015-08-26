@@ -6,16 +6,14 @@
 \usage{
 tcpDownload(results)
 }
+\arguments{
+\item{results}{A dataframe, usually the search results generated using
+              \code{searchTCP}. Must contain a column of TCP numbers with the
+              name 'TCP'.}
+}
 \description{
 Download raw XML files from the Text Creation Partnership's Github repository.
 }
-\section{Slots}{
-
-\describe{
-\item{\code{results}}{A dataframe, usually the search results generated using
-              \code{searchTCP}. Must contain a column of TCP numbers with the
-              name 'TCP'.}
-}}
 \section{To download the entire TCP corpus}{
 
 If you'd like to download the entire TCP corpus, run two commands:

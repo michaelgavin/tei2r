@@ -6,30 +6,28 @@
 \usage{
 tcpSearch(term = NULL, range = NULL, field, free = TRUE, write = FALSE)
 }
-\description{
-Performs basic keyword searching in the Text Creation Partnership index.
-}
-\section{Slots}{
+\arguments{
+\item{term}{A character string (i.e., the search term).}
 
-\describe{
-\item{\code{term}}{A character string (i.e., the search term).}
-
-\item{\code{range}}{A numeric vector representing the desired date range, usually
+\item{range}{A numeric vector representing the desired date range, usually
             provided in the form 1600:1610. For a single year, just enter
             the year number.}
 
-\item{\code{field}}{A character string (i.e., the search field). Must be identical
+\item{field}{A character string (i.e., the search field). Must be identical
             to the name of a column in the TCP index. Valid field names include
             "TCP","EEBO","VID","STC","Status","Author","Date","Title",
             "Terms",and "Pages" (case-sensitive).}
 
-\item{\code{free}}{A logical value. If TRUE, will limit results to freely available texts.
+\item{free}{A logical value. If TRUE, will limit results to freely available texts.
             To see "Restricted" items, set this argument to FALSE.}
 
-\item{\code{write}}{A logical value. If TRUE, will write the results to a .csv file, called
+\item{write}{A logical value. If TRUE, will write the results to a .csv file, called
             "index.csv" in your working directory. BE CAREFUL WHEN USING, because
             it will over-write any existing "index.csv" file.}
-}}
+}
+\description{
+Performs basic keyword searching in the Text Creation Partnership index.
+}
 \section{How to use it}{
 
 The most common situation for using \code{tcpSearch} is when you

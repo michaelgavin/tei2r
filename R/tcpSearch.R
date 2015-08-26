@@ -2,21 +2,21 @@
 #' 
 #' Performs basic keyword searching in the Text Creation Partnership index.
 #' 
-#' @slot term A character string (i.e., the search term).
+#' @param term A character string (i.e., the search term).
 #' 
-#' @slot range A numeric vector representing the desired date range, usually 
+#' @param range A numeric vector representing the desired date range, usually 
 #'             provided in the form 1600:1610. For a single year, just enter
 #'             the year number.
 #' 
-#' @slot field A character string (i.e., the search field). Must be identical
+#' @param field A character string (i.e., the search field). Must be identical
 #'             to the name of a column in the TCP index. Valid field names include
 #'             "TCP","EEBO","VID","STC","Status","Author","Date","Title",
 #'             "Terms",and "Pages" (case-sensitive).
 #'             
-#' @slot free  A logical value. If TRUE, will limit results to freely available texts.
+#' @param free  A logical value. If TRUE, will limit results to freely available texts.
 #'             To see "Restricted" items, set this argument to FALSE.
 #'             
-#' @slot write A logical value. If TRUE, will write the results to a .csv file, called
+#' @param write A logical value. If TRUE, will write the results to a .csv file, called
 #'             "index.csv" in your working directory. BE CAREFUL WHEN USING, because
 #'             it will over-write any existing "index.csv" file.
 #'             
