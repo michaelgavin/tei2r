@@ -32,35 +32,43 @@ findFilenames = function(dl,directory) {
     #    locmat[i,j] = loc
     #  }
     loc = grep(index[i,colNum],dir(directory),value=T,fixed = T)
+    loc_no_ext = file_path_sans_ext(loc)
     if (length(loc) == 1) {
       #browser()
       filenames[i] = loc
-    }
-  }
-  errors = c()
-  for(i in 1:length(filenames)) {
-    if (all(is.na(filenames[i]) == T)) {
-      # Will fail if 'filenames' is not complete.
-      #browser()
-      errors = c(errors, index[i,colNum])
-    }
-  }
-  if(length(errors) > 0) {
-    print("We seem to be missing the following files: ")
-    for(i in 1:length(errors)) {
-      print(errors[i])
-    }
-    download = readline("Would you like to download them? [yes/no] > ")
-    if(download == "yes" || download == "Yes") {
-      getFiles(dl=dl, ids = errors)
-      convert = readline("Would you like to convert from XML to txt? [yes/no] > ")
-      if(convert == "yes" || convert == "Yes") {
-        for(i in 1:length(errors)) {
-          xmlToText(paste(dl@directory, errors[i], ".xml", sep=""), dl@directory)
-        }
+    } 
+    if (length(loc) > 1 ) {
+      if (index[i,colNum] %in% loc_no_ext) {
+        filenames[i] = loc[which(loc_no_ext == index[i,colNum])]
+      } else {
+        stop("There was an error in your index. Be sure each of your file IDs are unique.")
       }
     }
   }
+#   errors = c()
+#   for(i in 1:length(filenames)) {
+#     if (all(is.na(filenames[i]) == T)) {
+#       # Will fail if 'filenames' is not complete.
+#       #browser()
+#       errors = c(errors, index[i,colNum])
+#     }
+#   }
+#   if(length(errors) > 0) {
+#     print("We seem to be missing the following files: ")
+#     for(i in 1:length(errors)) {
+#       print(errors[i])
+#     }
+#     download = readline("Would you like to download them? [yes/no] > ")
+#     if(download == "yes" || download == "Yes") {
+#       getFiles(dl=dl, ids = errors)
+#       convert = readline("Would you like to convert from XML to txt? [yes/no] > ")
+#       if(convert == "yes" || convert == "Yes") {
+#         for(i in 1:length(errors)) {
+#           xmlToText(paste(dl@directory, errors[i], ".xml", sep=""), dl@directory)
+#         }
+#       }
+#     }
+#   }
   return(filenames)
 }
 
