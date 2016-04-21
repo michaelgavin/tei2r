@@ -26,9 +26,10 @@ cleanup = function(filepath, stopwords = c(), removeCaps = TRUE, removeStopwords
     
   } else if (length(grep(".xml",filepath)) == 1) {
     parsedText = xmlTreeParse(filepath,useInternalNodes = TRUE)
-    nodes = getNodeSet(parsedText,"/d:TEI//d:text", 
+    nodes = getNodeSet(parsedText,"/d:TEI//d:text//text()", 
                        namespace = c(d = "http://www.tei-c.org/ns/1.0"))
-    text = getChildrenStrings(nodes[[1]])
+    text = lapply(nodes,xmlValue)
+    text = paste(text, collapse = ",")
     names(text) = NULL
   }
   if (removeCaps == TRUE) text = tolower(text)
