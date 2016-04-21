@@ -81,7 +81,7 @@ detectColumn <- function(index, directory) {
         loc = grep(index[i,j], dir(directory), value=T, fixed=T)
       }
       
-      if(length(loc == 1) && !is.na(loc)) {
+      if(length(loc) == 1 && !is.na(loc)) {
         #print(paste("LOCATION ", loc, " J: ", j, sep=""))
         #if(colNum != j && colNum > 0) {
         #  print(paste("Conflicting columns detected: ", colNum, " vs. ", j, sep=""))
@@ -90,7 +90,7 @@ detectColumn <- function(index, directory) {
         #}
         fName = file_path_sans_ext(loc)
         #print(paste(" FNAME:  ", fName, sep=""))
-        if(!is.na(index[i,j]) && index[i,j] == fName) {
+        if(!is.na(index[i,j]) && index[i,j] %in% c(loc, fName)) {
           colNum = j
         }
       }
