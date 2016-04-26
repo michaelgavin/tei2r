@@ -21,7 +21,7 @@
 #' @name cleanup
 cleanup = function(filepath, stopwords = c(), removeCaps = TRUE, removeStopwords = TRUE, normalizeLongS = TRUE) {
   if (length(grep(".txt",filepath)) == 1) {
-    text = scan(filepath,what="character",sep="\n")
+    text = scan(filepath,what="character",sep="\n", fileEncoding = "UTF-8")
     text = paste(text, collapse= " ")
     
   } else if (length(grep(".xml",filepath)) == 1) {
