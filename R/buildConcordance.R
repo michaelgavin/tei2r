@@ -51,6 +51,7 @@ buildConcordance = function(dt, keyword, context) {
     #print(length(dc@concordance))
   }
   names(dc@concordance) = names(dt@text)
+  dc@frequencies = table(unlist(dc@concordance))
   return(dc)
 }
 

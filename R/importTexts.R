@@ -32,9 +32,8 @@
 #' @examples
 #' dt = importTexts(dl)
 #' @name importTexts
-NULL
-
-getDocTexts <- function(dl, removeCaps = TRUE, removeStopwords = TRUE, normalizeLongS = TRUE) {
+#' @export
+importTexts <- function(dl, removeCaps = TRUE, removeStopwords = TRUE, normalizeLongS = TRUE) {
   dt = docTexts()
   indexFile = dl@index
   fileNames = dl@filenames
@@ -53,15 +52,9 @@ getDocTexts <- function(dl, removeCaps = TRUE, removeStopwords = TRUE, normalize
       last = round(percent)
     }
     #print(paste("Importing Document: ", i, " of ", total, sep=""))
-    dt@text[[i]] = textCleanup(dl@paths[i],stopwords = dl@stopwords)
+    dt@text[[i]] = cleanup(dl@paths[i],stopwords = dl@stopwords)
   }
   names(dt@text) = file_path_sans_ext(dl@filenames)
   return(dt)
 }
 
-#' @rdname importTexts
-#' @export
-importTexts = function(dl) {
-  dt = getDocTexts(dl)
-  return(dt)
-}

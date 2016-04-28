@@ -18,7 +18,8 @@ docConcordance <- setClass("docConcordance",
                                      indexFile   = "character",
                                      keyword     = "character",
                                      context     = "numeric",
-                                     concordance = "list"
+                                     concordance = "list",
+                                     frequencies = "table"
                            )
 )
 

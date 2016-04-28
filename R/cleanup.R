@@ -19,22 +19,18 @@
 #' locke.path = "~/Desktop/locke2ndTreatise.txt"
 #' cleanup(locke.path, removeCaps = TRUE, removeStopwords = FALSE)
 #' @name cleanup
-NULL
-# @rdname cleanup
-textCleanup = function(filepath, removeCaps = TRUE, stopwords = dl@stopwords, removeStopwords = TRUE, normalizeLongS = TRUE) {
-  # Need to create a test that checks if stopwords are defined.
-  #if(!is.na(stopwords) || length(stopwords) < 1) {
-  #  stopwords = setStopwords("defaultPath")
-  #}
+cleanup = function(filepath, stopwords = c(), removeCaps = TRUE, removeStopwords = TRUE, normalizeLongS = TRUE) {
   if (length(grep(".txt",filepath)) == 1) {
-    text = scan(filepath,what="character",sep="\n")
+    text = scan(filepath,what="character",sep="\n", fileEncoding = "UTF-8")
     text = paste(text, collapse= " ")
     
   } else if (length(grep(".xml",filepath)) == 1) {
     parsedText = xmlTreeParse(filepath,useInternalNodes = TRUE)
-    nodes = getNodeSet(parsedText,"/d:TEI//d:text", 
+    nodes = getNodeSet(parsedText,"/d:TEI//d:text//text()", 
                        namespace = c(d = "http://www.tei-c.org/ns/1.0"))
-    text = sapply(nodes,xmlValue)
+    text = lapply(nodes,xmlValue)
+    text = paste(text, collapse = ",")
+    names(text) = NULL
   }
   if (removeCaps == TRUE) text = tolower(text)
   text = strsplit(text,"\\W")
@@ -50,7 +46,7 @@ textCleanup = function(filepath, removeCaps = TRUE, stopwords = dl@stopwords, re
   #text = gsub("f((['t','n','p','i','c', 'h', 'o', 'u')[^'ff','oo']))$", "s\\1", text, fixed=F)
   #text = gsub("((['n'|'r'])f)+", "\\2s", text, fixed=F)
   #text = gsub("(^[f])([^'a','oo','ee'])", "s\\2", text, fixed=F)
-  text = gsub("([ionud])+f(([tnpichou]))", "\\1s\\2", text, fixed=F) #change all fs that are out of place inside word.
+  #text = gsub("([ionud])+f(([tnpichou]))", "\\1s\\2", text, fixed=F) #change all fs that are out of place inside word.
   #text = gsub("(.)f$", "\\1s", text, fixed=F) # change fs at end of words
   #text = gsub("[f]([^aeiouf])", "s\\1", text, fixed=F) # change fs at beginning of words..removed, no word should start with long s.
   # Unless removeCaps == true, this will likely not work.
@@ -61,28 +57,5 @@ textCleanup = function(filepath, removeCaps = TRUE, stopwords = dl@stopwords, re
   # remove stopwords accurately while not messing with the capitalization
   # for the rest of the file.
   if (removeStopwords == TRUE) text = text[tolower(text) %in% stopwords ==FALSE ]
-  return(text)
-}
-
-# @rdname cleanup
-teiTextCleanup = function(filepath, stopwords) {
-  parsedText = xmlTreeParse(filepath,useInternalNodes = TRUE)
-  nodes = getNodeSet(parsedText,"/d:TEI//d:text", 
-                     namespace = c(d = "http://www.tei-c.org/ns/1.0"))
-  text = sapply(nodes,xmlValue)
-  text = unlist(text)
-  text = paste(text, collapse= " ")
-  text = tolower(text)
-  text = strsplit(text,"\\W")
-  text = unlist(text)
-  text = text[text!=""]
-  text = text[text %in% stopwords ==FALSE ]
-  return(text)  
-}
-
-#' @rdname cleanup
-#' @export
-cleanup = function(filepath, removeCaps = TRUE, stopwords = dl@stopwords, removeStopwords = TRUE) {
-  text = textCleanup(filepath, removeCaps = TRUE, stopwords = dl@stopwords, removeStopwords = TRUE)
   return(text)
 }

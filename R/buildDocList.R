@@ -21,60 +21,52 @@
 #'                        files that make up your corpus are located.
 #' @param stopwordsFile   A string that is the path to the file that contains
 #'                        the words that are to be removed from the text in the
-#'                        \code{cleanup} function.
+#'                        \code{cleanup} function. If left blank, the default 
+#'                        stopwords will be provided.
 #' @param indexFile       A string that is the path to the index file for the
-#'                        corpus.  This function expects to find a .csv file
-#'                        that contains the metadata for your corpus.  At the
-#'                        very least, it needs to have a column with \code{id}
-#'                        numbers that correspond to filenames or vice versa.
-#'                        If you do not have an index file, this parameter can
-#'                        be left blank and the \code{buildIndex} function will
-#'                        be called to construct one based on the files found in
-#'                        \code{directory}.
-#' @param wizard          A boolean value that determines whether the wizard function
-#'                        will be used.  If this value is true, you will be prompted
-#'                        for your corpus' directory, asked if you would like to build
-#'                        an index, and if you have a stopwords file.  You may provide
-#'                        the directory in addition to activating the wizard.
+#'                        collection.  This function expects to find a .csv file
+#'                        that contains the metadata for your collection, including
+#'                        a column that points to the names of the files (with or
+#'                        without the file extensions). If you do not have an index 
+#'                        file, this parameter can be left blank and the collection will
+#'                        take all files in the directory.
+#' 
 #'                        
 #' @return dl             The completed \code{docList} object for use with the other
 #'                        functions of the \code{tei2r} package.
 #' 
 #' @examples
-#' dl = buildDocList(directory = "~/path/to/your/corpus/files", stopwordsFile = "~/path/to/your/stopwords/file", indexFile = "~/path/to/your/index/File/")
-#' dl = buildDocList(wizard = T)
-#' dl = buildDocList(directory="~/path/to/your/corpus/files", wizard=T)
-#' dl = buildDocList(directory = "~/path/to/your/corpus/files", stopwordsFile = "~/path/to/your/stopwords/file")
+#' dl = buildDocList(directory="~/path/to/your/collection/files")
+#' dl = buildDocList(directory = "~/path/to/your/collection/files", stopwordsFile = "~/path/to/your/stopwords/file", indexFile = "~/path/to/your/index/File/")
 #' @export
-buildDocList = function(directory = "", stopwordsFile = "", indexFile ="", wizard=FALSE) {
+buildDocList = function(directory = "", stopwordsFile = "", indexFile ="") {
   dl = docList()
-  if(directory == "" && indexFile == "") {
-    wizard = TRUE
-  }
-  if(wizard == FALSE) {
-    dl@directory = directory
-    if(indexFile == "") {
-      print("It seems like we don't have an index file for you.  Building one now.")
-      dl@indexFile = buildIndex(dl@directory)
-      dl@index = read.csv(dl@indexFile,stringsAsFactors=FALSE)
-      dl@filenames = dl@index$filenames
-      dl@paths = dl@index$paths
-    } else {
-      dl@indexFile = indexFile
-      #browser()
-      dl@index = read.csv(dl@indexFile,stringsAsFactors=FALSE)
-      dl@filenames = findFilenames(dl = dl, directory = directory)
-      dl@paths = paste(dl@directory,"/",dl@filenames,sep="")
-    }
-    dl@stopwordsFile = stopwordsFile
-    if(stopwordsFile != "") {
-      dl@stopwords = setStopwords(stopwordsFile)
-    } else {
-      data(stopwords)
-      dl@stopwords = stopwords
-    }
+  if(directory == "") {
+    stop("You must enter the correct path to your directory; that is, the
+         folder that contains your document collection. Be sure to have
+         the path correct.")
   } else {
-    dl = useWizard(dl, directory)
+    dl@directory = directory    
   }
-  return(dl)
+  if(indexFile == "") {
+    print("No index file provided. Using file names as identifiers.")
+    dl@indexFile = ""
+    dl@index = data.frame(dir(directory))
+    dl@filenames = dir(directory)
+    dl@paths = paste(directory,dl@filenames,sep="")
+  } else {
+    dl@indexFile = indexFile
+    #browser()
+    dl@index = read.csv(dl@indexFile,stringsAsFactors=FALSE)
+    dl@filenames = findFilenames(dl = dl, directory = directory)
+    dl@paths = paste(dl@directory,"/",dl@filenames,sep="")
+  }
+  dl@stopwordsFile = stopwordsFile
+  if(stopwordsFile != "") {
+    dl@stopwords = setStopwords(stopwordsFile)
+  } else {
+    data(stopwords)
+    dl@stopwords = stopwords
+  }
+return(dl)
 }
