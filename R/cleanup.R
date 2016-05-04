@@ -32,30 +32,15 @@ cleanup = function(filepath, stopwords = c(), removeCaps = TRUE, removeStopwords
     text = paste(text, collapse = ",")
     names(text) = NULL
   }
-  if (removeCaps == TRUE) text = tolower(text)
-  text = strsplit(text,"\\W")
-  text = unlist(text)
-  text = text[text!=""]
+  text = gsub("non-Latin alphabet", " ", text)
   if (normalizeLongS == TRUE) {
     text= gsub("∫", "s", text)
     text = gsub('ſ', "s", text) 
   }
-  # gsub("(*<=[^'f'])+f(((['t','n','p','i','c', 'h', 'o', 'u'])*)([^'ff','oo']))", "s\\1", text, fixed=F)
-  # or gsub("(['i','o','n','u','d'])+f((['t'|'n'|'p'|'i'|'c'|'h'|'o'|'u']+))", "\\1s\\2", text, fixed=F)
-  # Think I solved it: gsub("([ionud])+f(([tnpichou]))", "\\1s\\2", text, fixed=F)
-  #text = gsub("f((['t','n','p','i','c', 'h', 'o', 'u')[^'ff','oo']))$", "s\\1", text, fixed=F)
-  #text = gsub("((['n'|'r'])f)+", "\\2s", text, fixed=F)
-  #text = gsub("(^[f])([^'a','oo','ee'])", "s\\2", text, fixed=F)
-  #text = gsub("([ionud])+f(([tnpichou]))", "\\1s\\2", text, fixed=F) #change all fs that are out of place inside word.
-  #text = gsub("(.)f$", "\\1s", text, fixed=F) # change fs at end of words
-  #text = gsub("[f]([^aeiouf])", "s\\1", text, fixed=F) # change fs at beginning of words..removed, no word should start with long s.
-  # Unless removeCaps == true, this will likely not work.
-  # I propose we amend this line to read:
-  # if (removeStopwords == TRUE) text = text[tolower(text) %in% stopwords ==FALSE ]
-  # This will cause the comparison of lowercase text to stopwords without
-  # actually modifying the capitalization of the text object.  That way it'll
-  # remove stopwords accurately while not messing with the capitalization
-  # for the rest of the file.
+  text = strsplit(text,"\\W")
+  text = unlist(text)
+  text = text[text!=""]
+  if (removeCaps == TRUE) text = tolower(text)
   if (removeStopwords == TRUE) text = text[tolower(text) %in% stopwords ==FALSE ]
   return(text)
 }
