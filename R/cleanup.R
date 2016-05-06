@@ -36,10 +36,15 @@ cleanup = function(filepath, stopwords = c(), normalize = TRUE) {
   text = gsub("non-Latin alphabet", " ", text)
   
   if (normalize == TRUE) {
+    text = gsub("Å¿", "s", text)
     text = gsub("∫", "s", text)
     text = gsub('ſ', "s", text)
-    text = gsub("ã", "", text)
     text = gsub("[0-9]", "", text)
+    text = gsub("vv", "w", text)
+    #text = gsub("[ã]", "", text)
+    #text = gsub("[â]", "", text)
+    #text = gsub("â", "", text)
+    #text = gsub("[0-9]", "", text)
   }
   
   text = strsplit(text,"\\W")
@@ -50,5 +55,9 @@ cleanup = function(filepath, stopwords = c(), normalize = TRUE) {
     text = tolower(text)
     text = text[text %in% stopwords == FALSE]
   }
+
+  bad_hits = grep("[ì|â|ã]", text)
+  if (length(bad_hits) > 0) { text = text[-bad_hits] }
+  
   return(text)
 }
