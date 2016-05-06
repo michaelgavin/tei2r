@@ -19,28 +19,36 @@
 #' locke.path = "~/Desktop/locke2ndTreatise.txt"
 #' cleanup(locke.path, removeCaps = TRUE, removeStopwords = FALSE)
 #' @name cleanup
-cleanup = function(filepath, stopwords = c(), removeCaps = TRUE, removeStopwords = TRUE, normalizeLongS = TRUE) {
+cleanup = function(filepath, stopwords = c(), normalize = TRUE) {
   if (length(grep(".txt",filepath)) == 1) {
     text = scan(filepath,what="character",sep="\n", fileEncoding = "UTF-8")
     text = paste(text, collapse= " ")
     
   } else if (length(grep(".xml",filepath)) == 1) {
     parsedText = xmlTreeParse(filepath,useInternalNodes = TRUE)
-    nodes = getNodeSet(parsedText,"/d:TEI//d:text//text()", 
+    nodes = getNodeSet(parsedText,"/d:TEI//d:text", 
                        namespace = c(d = "http://www.tei-c.org/ns/1.0"))
     text = lapply(nodes,xmlValue)
-    text = paste(text, collapse = ",")
+    text = paste(text, collapse = "")
     names(text) = NULL
   }
+  
   text = gsub("non-Latin alphabet", " ", text)
-  if (normalizeLongS == TRUE) {
-    text= gsub("∫", "s", text)
-    text = gsub('ſ', "s", text) 
+  
+  if (normalize == TRUE) {
+    text = gsub("∫", "s", text)
+    text = gsub('ſ', "s", text)
+    text = gsub("ã", "", text)
+    text = gsub("[0-9]", "", text)
   }
+  
   text = strsplit(text,"\\W")
   text = unlist(text)
   text = text[text!=""]
-  if (removeCaps == TRUE) text = tolower(text)
-  if (removeStopwords == TRUE) text = text[tolower(text) %in% stopwords ==FALSE ]
+
+  if (normalize == TRUE) {
+    text = tolower(text)
+    text = text[text %in% stopwords == FALSE]
+  }
   return(text)
 }
