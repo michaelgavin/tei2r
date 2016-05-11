@@ -26,38 +26,29 @@ cleanup = function(filepath, stopwords = c(), normalize = TRUE) {
     
   } else if (length(grep(".xml",filepath)) == 1) {
     parsedText = xmlTreeParse(filepath,useInternalNodes = TRUE)
-    nodes = getNodeSet(parsedText,"/d:TEI//d:text", 
-                       namespace = c(d = "http://www.tei-c.org/ns/1.0"))
+    nodes = getNodeSet(parsedText,"/d:TEI//d:text", namespace = c(d = "http://www.tei-c.org/ns/1.0"))
     text = lapply(nodes,xmlValue)
-    text = paste(text, collapse = "")
-    names(text) = NULL
   }
   
   text = gsub("non-Latin alphabet", " ", text)
+  text = gsub("1 page duplicate", " ", text)
   
   if (normalize == TRUE) {
-    text = gsub("Å¿", "s", text)
-    text = gsub("∫", "s", text)
-    text = gsub('ſ', "s", text)
+    text = gsub("ſ", "s", text)
     text = gsub("[0-9]", "", text)
     text = gsub("vv", "w", text)
-    #text = gsub("[ã]", "", text)
-    #text = gsub("[â]", "", text)
-    #text = gsub("â", "", text)
-    #text = gsub("[0-9]", "", text)
+    text = gsub("'d ", "ed", text)
+    text = gsub("'ring ", "ring", text)
+    text = gsub("[^\x20-\x7E]", " ",text)
   }
   
   text = strsplit(text,"\\W")
   text = unlist(text)
   text = text[text!=""]
-
+  
   if (normalize == TRUE) {
     text = tolower(text)
     text = text[text %in% stopwords == FALSE]
   }
-
-  bad_hits = grep("[ì|â|ã]", text)
-  if (length(bad_hits) > 0) { text = text[-bad_hits] }
-  
   return(text)
 }
