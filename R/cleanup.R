@@ -37,9 +37,8 @@ cleanup = function(filepath, stopwords = c(), normalize = TRUE) {
     text = gsub("ſ", "s", text)
     text = gsub("[0-9]", "", text)
     text = gsub("vv", "w", text)
-    text = gsub("'d ", "ed", text)
-    text = gsub("'ring ", "ring", text)
-    text = gsub("[^\x20-\x7E]", " ",text)
+    text = gsub("'d ", "ed ", text)
+    text = gsub("'ring ", "ring ", text)
   }
   
   text = strsplit(text,"\\W")
@@ -49,6 +48,7 @@ cleanup = function(filepath, stopwords = c(), normalize = TRUE) {
   if (normalize == TRUE) {
     text = tolower(text)
     text = text[text %in% stopwords == FALSE]
+    if (any(grep("[^\x20-\x7E]",text))) text = text[-grep("[^\x20-\x7E]",text)]
   }
   return(text)
 }
