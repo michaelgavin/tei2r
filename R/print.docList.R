@@ -7,7 +7,7 @@ setMethod(f = "show", signature = "docList",
   cat("@index of", nrow(object@index), "rows and", ncol(object@index), "columns.", "\n")
   cat(".... index columns:", colnames(object@index), "\n")
   cat("@stopwords: Character vector of", length(object@stopwords), "words.", "\n")
-  cat("@text: List of imported character data.", length(object@text), "texts.")
+  cat("@texts: List of imported character data.", length(object@texts), "texts.")
           }
 )
 
@@ -20,7 +20,7 @@ setMethod(f = "summary", signature = "docList",
             cat("@index of", nrow(object@index), "rows and", ncol(object@index), "columns.", "\n")
             cat(".... index columns:", colnames(object@index), "\n")
             cat("@stopwords: Character vector of", length(object@stopwords), "words.", "\n")
-            cat("@text: List of imported character data.", length(object@text), "texts.")
+            cat("@texts: List of imported character data.", length(object@texts), "texts.")
           }
 )
 
@@ -35,12 +35,3 @@ ViewTexts = function(dl) {
   print(xy)
 }
 
-print.docTexts = function(dt) {
-  print("Document texts summary:")
-  cat("Source: @directory",dt@directory,"\n")
-  cat("..@indexFile", dt@indexFile,"\n")
-  cat("..@text, 'list':", length(dt@text), "documents","\n")
-  for (i in 1:length(dt@text)) {
-    cat("..$", names(dt@text)[i], ":", dt@text[[i]][1:8], "... \n")
-  }
-}

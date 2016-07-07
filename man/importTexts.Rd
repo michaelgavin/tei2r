@@ -12,9 +12,9 @@ the \code{paths} to the files for each text.}
 
 \item{normalize}{A logical condition. If "TRUE", text will be converterd to 
 all lower case and stopwords will be removed. Also, all 
-instances of '∫' and 'ſ' will be convertedto 's', all 
-numeric characters will be removed, 'vv' will be converted to 'w', 
-and ''d' and ''ring' will be converted to 'ed' and 'ering'
+instances of the long-S will be converted to s, all 
+numeric characters will be removed, vv will be converted to w, 
+and 'd and 'ring will be converted to 'ed' and 'ering'
 respectively, and all special characters will be removed.}
 }
 \value{

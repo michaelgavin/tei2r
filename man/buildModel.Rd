@@ -33,7 +33,7 @@ contains a data frame of each topic's top words and each document's most
 prevalent topics.
 }
 \examples{
-dmod = buildModel(dl = dl, dt = dt, tnum = 50)
+dmod = buildModel(dl = dl, tnum = 50)
 View(dmod@topics) # To view a table showing the words of each topic
 View(dmod@frequencies) # To view the frequency of the topics in each document
 }

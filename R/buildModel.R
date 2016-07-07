@@ -19,7 +19,7 @@
 #' @return dmod           The completed \code{docModel} object for viewing and simple analysis.
 #' 
 #' @examples
-#' dmod = buildModel(dl = dl, dt = dt, tnum = 50)
+#' dmod = buildModel(dl = dl, tnum = 50)
 #' View(dmod@@topics) # To view a table showing the words of each topic
 #' View(dmod@@frequencies) # To view the frequency of the topics in each document
 #' @export
