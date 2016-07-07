@@ -25,7 +25,7 @@
 #' want to find and download content from Text Creation Partnership. In this case, follow
 #' these steps.
 #' \enumerate{
-#'   \item Create a folder where you'll store your XML files.
+#'   \item Create a folder where you'll store your XML files and \strong{set it as your working directory}.
 #'   \item Play with \code{tcpSearch} until you find results that look useful to you.
 #'   \item Enter the command: \code{results = tcpSearch(YOUR SEARCH, write = T)}. This
 #'         generates a 'results' object and writes it to .csv as "index.csv."

@@ -6,10 +6,13 @@
 #' @format A docList with an index of 33 items.
 #' 
 #' @examples
-#' # Load the collection, then import the texts
+#' # Load the collection, then setup on your computer
 #' data(natlaw)
-#' dt = importTexts(natlaw)
+#' setup(natlaw)
 #' 
+#' # Note that the setup function renames the dataset as "dl" for \code{docList}
+#' # To view the index
+#' View(dl@index)
 #' 
 #' @section What it contains:
 #' \itemize{

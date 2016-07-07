@@ -10,7 +10,7 @@
 #' If you'd like to download the entire TCP corpus, run two commands: 
 #' \enumerate{
 #'     \item \code{data(tcp)} (Activates the TCP data in your R environment.)
-#'     \item \code{tcpDownload(tcp)} (Begins the download.)
+#'     \item \code{\link{tcpDownload(tcp)}} (Begins the download.)
 #' }
 #' 
 #' Be careful: the entire TCP is several GBs, so the download will take awhile.

@@ -121,13 +121,13 @@ tcpDownload(results)
 After the download completes (it'll take about a minute), you'll have a folder called "dryden" that has the index.csv file and a collection of 131 XML documents. Let's get them into R.
 
 ```r
-dl = buildDocList(directory = getwd(), indexFile = "index.csv")
+dl = buildDocList(directory = getwd(), indexFile = "index.csv", import = FALSE)
 ```
 
 Now, look and see what's in the document list:
 
 ```r
-print(dl)
+show(dl)
 ```
 Each one of the `@` symbols corresponds to a different *slot* in the document list, and each slot holds a specific kind of data. To view the index, for example, you could run `View(dl@index)`. (Be sure to capitalize `View()`)
 
@@ -139,38 +139,37 @@ As you can see, the `docList` object stores several bits of data:
 4. The index itself, stored as a data frame in the R environment
 5. The path to your stopwords file, if you have one
 6. The stopwords themselves (`tei2r` has a default list), stored as a character vector
-7. An empty slot, named "text." This is where the text data will be stored.
+7. An empty slot, named "texts." This is where the text data will be stored.
 
 Notice that you still haven't imported the texts themselves. The document list is simply a structure that holds all the metadata for your collection in R, including the location of the folder (in case you change around your working directory), links and bibliographic data for each file, as well as the location and content of your stopwords list.
 
 Everything in `tei2r` and its complementary packages, `htn` and `empson`, is built on the basic document list structure. This way, you only have to enter the filepath, the index, and the stopwords once, and R will remember what your settings are.
 
-To import the texts, you'll need to import the texts to the `@text` slot. If it seems confusing that `tei2r` requires this as a separate
-step, it's only because importing the texts can be a time-consuming process, especially for slower machines.:
+To import the texts, you'll need to import the texts to the `@texts` slot. `tei2r` doesn't requires this as a separate step -- in fact, import defaults to TRUE when building a docList, but importing the Dryden texts can be a time-consuming process, especially for slower machines, so we made it a separate action for this tutorial.
 
 ```r
-dt = importTexts(dl)
+dl = importTexts(dl)
 ```
 
-This operation will take about a minute or so. The `importTexts` function automates a number of very common operations in R -- importing XML data, stripping the tags and converting to plain text, switching to lower-case, removing stopwords, and regularizing the long-S in EEBO data.[^1] 
+This operation will take about a minute or so. The `importTexts` function automates a number of very common operations in R -- importing XML data, stripping the tags and converting to plain text, switching to lower-case, removing stopwords, and regularizing the long-S in EEBO data.
 
-If you wanted the text but didn't want to remove stopwords, adjust the parameter:
+If you wanted the text but didn't want to normalize the texts, adjust the parameter:
 
 ```r
-dt = importTexts(dl = dl, removeStopwords = FALSE)
+dl = importTexts(dl = dl, normalize = FALSE)
 ```
 
-Note, too, that `importTexts` works with plain-text documents just fine. However, if you're using XML, make sure it's in proper TEI format. `tei2r` won't work for XML encoded using other namespaces.
+Note, too, that `importTexts` works with plain-text documents just fine.
 
 When imported into R, your documents' texts have a structure very similar to that of the list itself: it holds the name of the source directory and the index file, then a big list that holds each text as a *character vector*. 
 
-To get a sense of the contours of the `docTexts` object, look at `dt`:
+To get a sense of the contours of the `docList` object, look at `dl@texts`:
 
 ```r
-print(dt)
+dl@texts
 ```
 
-You'll see a couple pieces of metadata and the first several words for each document, usually from the title page. Notice that, by default, the texts are stored with their TCP number as the key. If you ever need to look a number up, remember that the index is stored in your environment. Just call `View(dl@index)`.
+This will print out the full character vector for each text, so it'll be pretty much unreadable. Notice that, by default, the texts are stored with their TCP number as the key. If you ever need to look a number up, remember that the index is stored in your environment. Just call `View(dl@index)`.
 
 To print out the character vector of any individual text, you can select it by number (that is, its place in the order of the collection) or by TCP number. For example, here are two different ways to access the word vectors that make up Dryden's *Tyrannick Love*, which has the TCP number 'A36708' and is the 72nd item in the collection:
 
@@ -202,7 +201,7 @@ First make sure you have the `mallet` package installed, then run this:
 
 ```r
 library(mallet)
-tmod = buildModel(dl = dl, dt = dt, tnum = 20)
+tmod = buildModel(dl = dl, tnum = 20)
 ```
 The `buildModel` function runs the model and stores the results in several different slots for easy viewing:
 
@@ -214,7 +213,7 @@ The `buildModel` function runs the model and stores the results in several diffe
 The data in any of these slots can be viewed, written to csv, or plotted in any number of ways. The `mallet` package has a number of options, most of which can be controlled as parameters in `buildModel()`. Users interested in delving deeper into `mallet` are encouraged to consult its documentation and work with its functions directly.
 
 
-### How to build a topic model from EEBO in 5 commands
+### How to build a topic model from EEBO in 4 commands
 
 1. Search the EEBO-TCP for the files you want
 ```r
@@ -230,13 +229,7 @@ tcpDownload(results)
 ```r
 dl = buildDocList(directory = getwd(), indexFile = "index.csv")
 ```
-4. Pre-process the texts
-```r
-dt = importTexts(dl)
-```
-5. Train the model and store the results in R
+4. Train the model and store the results in R
 ```r
 tmod = buildModel(dl = dl, dt = dt, tnum = 20)
 ```
-
-[^1]: Right now, `importTexts` always cleans up the long-S and always converts XML into plain-text character vectors. The only adjustable parameters are `removeCaps` and `removeStopwords`. If you use `tei2r` and would like more options built into this or any function, please contact the developers.  

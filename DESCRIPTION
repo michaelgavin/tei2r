@@ -31,6 +31,7 @@ Collate:
     'parseTEI.R'
     'print.docList.R'
     'richardson.R'
+    'setup.R'
     'stopwords.R'
     'tcp.R'
     'tcpDownload.R'
