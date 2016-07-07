@@ -139,12 +139,14 @@ As you can see, the `docList` object stores several bits of data:
 4. The index itself, stored as a data frame in the R environment
 5. The path to your stopwords file, if you have one
 6. The stopwords themselves (`tei2r` has a default list), stored as a character vector
+7. An empty slot, named "text." This is where the text data will be stored.
 
 Notice that you still haven't imported the texts themselves. The document list is simply a structure that holds all the metadata for your collection in R, including the location of the folder (in case you change around your working directory), links and bibliographic data for each file, as well as the location and content of your stopwords list.
 
 Everything in `tei2r` and its complementary packages, `htn` and `empson`, is built on the basic document list structure. This way, you only have to enter the filepath, the index, and the stopwords once, and R will remember what your settings are.
 
-To import the texts, you'll need to create one more object:
+To import the texts, you'll need to import the texts to the `@text` slot. If it seems confusing that `tei2r` requires this as a separate
+step, it's only because importing the texts can be a time-consuming process, especially for slower machines.:
 
 ```r
 dt = importTexts(dl)

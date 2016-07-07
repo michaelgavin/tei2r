@@ -1,0 +1,667 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>The medall a satyre against sedition / by the authour of Absalom and Achitophel.</title>
+            <author>Dryden, John, 1631-1700.</author>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>1682</date>
+            </edition>
+         </editionStmt>
+         <extent>Approx. 35 KB of XML-encoded text transcribed from 11 1-bit group-IV TIFF page images.</extent>
+         <publicationStmt>
+            <publisher>Text Creation Partnership,</publisher>
+            <pubPlace>Ann Arbor, MI ; Oxford (UK) :</pubPlace>
+            <date when="2008-09">2008-09 (EEBO-TCP Phase 1).</date>
+            <idno type="DLPS">A36648</idno>
+            <idno type="STC">Wing D2312</idno>
+            <idno type="STC">ESTC R27309</idno>
+            <idno type="EEBO-CITATION">09808350</idno>
+            <idno type="OCLC">ocm 09808350</idno>
+            <idno type="VID">44131</idno>
+            <availability>
+               <p>This keyboarded and encoded edition of the
+	       work described above is co-owned by the institutions
+	       providing financial support to the Early English Books
+	       Online Text Creation Partnership. This Phase I text is
+	       available for reuse, according to the terms of <ref target="https://creativecommons.org/publicdomain/zero/1.0/">Creative
+	       Commons 0 1.0 Universal</ref>. The text can be copied,
+	       modified, distributed and performed, even for
+	       commercial purposes, all without asking permission.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title>Early English books online.</title>
+         </seriesStmt>
+         <notesStmt>
+            <note>(EEBO-TCP ; phase 1, no. A36648)</note>
+            <note>Transcribed from: (Early English Books Online ; image set 44131)</note>
+            <note>Images scanned from microfilm: (Early English books, 1641-1700 ; 1355:13)</note>
+         </notesStmt>
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title>The medall a satyre against sedition / by the authour of Absalom and Achitophel.</title>
+                  <author>Dryden, John, 1631-1700.</author>
+               </titleStmt>
+               <extent>[8], 12 [i.e. 10] p.   </extent>
+               <publicationStmt>
+                  <publisher>[s.n.],</publisher>
+                  <pubPlace>Edinburgh :</pubPlace>
+                  <date>1682.</date>
+               </publicationStmt>
+               <notesStmt>
+                  <note>A satire in verse on Shaftesbury.</note>
+                  <note>Reproduction of original in the Cambridge University Library.</note>
+               </notesStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Created by converting TCP files to TEI P5 using tcp2tei.xsl,
+      TEI @ Oxford.
+      </p>
+         </projectDesc>
+         <editorialDecl>
+            <p>EEBO-TCP is a partnership between the Universities of Michigan and Oxford and the publisher ProQuest to create accurately transcribed and encoded texts based on the image sets published by ProQuest via their Early English Books Online (EEBO) database (http://eebo.chadwyck.com). The general aim of EEBO-TCP is to encode one copy (usually the first edition) of every monographic English-language title published between 1473 and 1700 available in EEBO.</p>
+            <p>EEBO-TCP aimed to produce large quantities of textual data within the usual project restraints of time and funding, and therefore chose to create diplomatic transcriptions (as opposed to critical editions) with light-touch, mainly structural encoding based on the Text Encoding Initiative (http://www.tei-c.org).</p>
+            <p>The EEBO-TCP project was divided into two phases. The 25,363 texts created during Phase 1 of the project have been released into the public domain as of 1 January 2015. Anyone can now take and use these texts for their own purposes, but we respectfully request that due credit and attribution is given to their original source.</p>
+            <p>Users should be aware of the process of creating the TCP texts, and therefore of any assumptions that can be made about the data.</p>
+            <p>Text selection was based on the New Cambridge Bibliography of English Literature (NCBEL). If an author (or for an anonymous work, the title) appears in NCBEL, then their works are eligible for inclusion. Selection was intended to range over a wide variety of subject areas, to reflect the true nature of the print record of the period. In general, first editions of a works in English were prioritized, although there are a number of works in other languages, notably Latin and Welsh, included and sometimes a second or later edition of a work was chosen if there was a compelling reason to do so.</p>
+            <p>Image sets were sent to external keying companies for transcription and basic encoding. Quality assurance was then carried out by editorial teams in Oxford and Michigan. 5% (or 5 pages, whichever is the greater) of each text was proofread for accuracy and those which did not meet QA standards were returned to the keyers to be redone. After proofreading, the encoding was enhanced and/or corrected and characters marked as illegible were corrected where possible up to a limit of 100 instances per text. Any remaining illegibles were encoded as &lt;gap&gt;s. Understanding these processes should make clear that, while the overall quality of TCP data is very good, some errors will remain and some readable characters will be marked as illegible. Users should bear in mind that in all likelihood such instances will never have been looked at by a TCP editor.</p>
+            <p>The texts were encoded and linked to page images in accordance with level 4 of the TEI in Libraries guidelines.</p>
+            <p>Copies of the texts have been issued variously as SGML (TCP schema; ASCII text with mnemonic sdata character entities); displayable XML (TCP schema; characters represented either as UTF-8 Unicode or text strings within braces); or lossless XML (TEI P5, characters represented either as UTF-8 Unicode or TEI g elements).</p>
+            <p>Keying and markup guidelines are available at the <ref target="http://www.textcreationpartnership.org/docs/.">Text Creation Partnership web site</ref>.</p>
+         </editorialDecl>
+         <listPrefixDef>
+            <prefixDef ident="tcp"
+                       matchPattern="([0-9\-]+):([0-9IVX]+)"
+                       replacementPattern="http://eebo.chadwyck.com/downloadtiff?vid=$1&amp;page=$2"/>
+            <prefixDef ident="char"
+                       matchPattern="(.+)"
+                       replacementPattern="https://raw.githubusercontent.com/textcreationpartnership/Texts/master/tcpchars.xml#$1"/>
+         </listPrefixDef>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="eng">eng</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="http://authorities.loc.gov/">
+               <term>Shaftesbury, Anthony Ashley Cooper, --  Earl of, 1621-1683 --  Anecdotes</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change>
+            <date>2007-06</date>
+            <label>TCP</label>Assigned for keying and markup</change>
+         <change>
+            <date>2007-07</date>
+            <label>Apex CoVantage</label>Keyed and coded from ProQuest page images</change>
+         <change>
+            <date>2007-10</date>
+            <label>Elspeth Healey</label>Sampled and proofread</change>
+         <change>
+            <date>2007-10</date>
+            <label>Elspeth Healey</label>Text and markup reviewed and edited</change>
+         <change>
+            <date>2008-02</date>
+            <label>pfs</label>Batch review (QC) and XML conversion</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="eng">
+      <front>
+         <div type="title_page">
+            <pb facs="tcp:44131:1"/>
+            <pb facs="tcp:44131:1"/>
+            <p>THE MEDALL.
+A SATYRE AGAINST SEDITION.</p>
+            <p>By the Authour of <hi>Ab<U+017F>alom</hi> and <hi>Achitophel.</hi>
+            </p>
+            <p>
+               <hi>Per</hi> Graiùm <hi>populos, mediae<expan>
+                     <am>
+                        <g ref="char:abque"/>
+                     </am>
+                     <ex>que</ex>
+                  </expan> per</hi> Elidis <hi>
+                  <g ref="char:V"><U+01B2></g>rbem Ibat ovans;</hi> Divumque <hi><U+017F>ibi po<U+017F>cebat Honores.</hi>
+            </p>
+            <p>
+               <hi>EDINB<g ref="char:V"><U+01B2></g>RGH,</hi> Re-Printed Anno DOM. 1682;</p>
+         </div>
+         <div type="dedication">
+            <pb facs="tcp:44131:2" rendition="simple:additions"/>
+            <pb facs="tcp:44131:2"/>
+            <head>EPISTLE To the WHIGS.</head>
+            <p>FOR to whom can I dedicate this Poem, with <U+017F>o much ju<U+017F>tice as to you? 'Tis the repre<U+017F>entation of your own Heroe: 'tis the Picture drawen at length, which you admire and prize <U+017F>o much in little. None of your Ornaments are wanting; neither the Land<U+017F>cap of the Tower, nor the Ri<U+017F>ing Sun; nor the <hi>Anno Domini</hi> of your New Soveraign's Goronation. This mu<U+017F>t needs be a gratefull undertaking to your whole Party: e<U+017F>pecially to tho<U+017F>e who have not been <U+017F>o happy as to purcha<U+017F>e the Original. I hear the <hi>Graver</hi> has made a good Market of it: all his Kings are bought up already; or the value of the remainder <U+017F>o inhanc'd, that many a poor <hi>Polander</hi> who would be glad to wor<U+017F>hip the Image, is not able to go to the co<U+017F>t of him: But mu<U+017F>t be content to <U+017F>ee him here. I mu<U+017F>t confe<U+017F>s I am no great Arti<U+017F>t; but Sign-po<U+017F>t painting will <U+017F>erve the turn to remember a Friend by; e<U+017F>pecially when better is not to be had. Yet for your comfort the lineaments are true: and though he <U+017F>ate not five times to me, as he did to <hi>B.</hi> yet I have con<U+017F>ulted Hi<U+017F>tory; as <hi>Italian</hi> Painters do, when they wou'd draw a <hi>Nero</hi> or a <hi>Caligula;</hi> though they have not <U+017F>een the Man; they can help their Imagination by a Statue of him, and find out the Colour<g ref="char:EOLhyphen"/>ing from <hi>S<gap reason="illegible: blotted" extent="3 letters">
+                     <desc>•••</desc>
+                  </gap>onius</hi> and <hi>Tacitus.</hi> Truth is, you might have <U+017F>par'd one <U+017F>ide of your Medall: the Head wou'd be <U+017F>een to more advantage, if it were plac'd on a Spike of the Tower; a little nearer to the Sun.
+<pb facs="tcp:44131:3"/>
+Which wou'd then break out to better purpo<U+017F>e. You tell us in your Preface to the <hi>No-prote<U+017F>tant Plot,</hi> that you <U+017F>hall be forc'd hereaf<g ref="char:EOLhyphen"/>ter to leave off your Mode<U+017F>tie: I <U+017F>uppo<U+017F>e you mean that little which is left you: for it was morn to rags when you put out this Medall. Never was there practis'd <U+017F>uch a piece of notorious Impudence in the face of an E<U+017F>tabli<U+017F>h'd Government. <hi>I</hi> believe, when he is dead, you will wear him in Thumb-Rings, as the <hi>Turks</hi> did <hi>Scanderbeg;</hi> as if there were vertue in his Bones to pre<U+017F>erve you again<U+017F>t Monarchie. Yet all this while you pretend not only zeal for the Publick good; but a due veneration for the per<U+017F>on of the King. But all men who can <U+017F>ee an inch before them, may ea<U+017F>ily detect tho<U+017F>e gro<U+017F>s fallacies. That it is nece<U+017F><U+017F>arie for men in your circum<U+017F>tances to pretend both, is granted you: for without them there could be no ground to rai<U+017F>e a Faction. But I would ask you one civil que<U+017F>tion, what right has any man among you, or any A<U+017F><U+017F>ociation of men, (to come nearer to you) who out of Parliament, cannot be con<U+017F>ider'd in a publick Capacity, to meet, as you daily doe, in Factious Clubs, to vilify the Government in your Di<U+017F>cour<U+017F>es, and to libel it in all your Writings? who made you Judges in <hi>I<U+017F>rael?</hi> or how is it con<U+017F>i<U+017F>tent with your Zeal of the publick welfare, to promote Sedition? Does your definition of loyal, which is to <U+017F>erve the King according to the Laws, allow you the licence of traducing the Executive Power, with which you own he is inve<U+017F>ted? You complain that his Maje<U+017F>tie has lo<U+017F>t the love and confidence of his People: and by your very urging it, you endeavour what, in you lies, to make him lo<U+017F>e them. All good Subjects abhor the thought of Arbi<g ref="char:EOLhyphen"/>trary Power, whether it be in one or many: if you were the Patriots you would <U+017F>eem, you would not at this rate incen<U+017F>e the Multitude to a<U+017F><U+017F>ume it: for no <U+017F>ober man can fear it, either from the King's Di<U+017F><g ref="char:EOLhyphen"/>po<U+017F>ition, or his Practice: or even, where you would odiou<U+017F>ly lay it, from his Mini<U+017F>ters. Give us leave to enjoy the Government and the benefit of Laws under which we were born, and which we de<U+017F>ire to tran<U+017F>mit to our Po<U+017F>terity. You are not the Tru<U+017F>tees of the publick Li<g ref="char:EOLhyphen"/>berty: and if you have not right to petition in a Crowd, much le<U+017F>s have you to intermeddle in the management of Affairs:
+<pb facs="tcp:44131:3"/>
+or to arraign what you do not like: which in effect is every thing that is done by the King and Council. Can you imagine that any rea<U+017F>onable man will believe you re<U+017F>pect the per<U+017F>on of his Maje<U+017F>ty, when 'tis apparent that your Seditious Pamphlets are <U+017F>tuff'd with particular Reflexions on him? If you have the confidence to deny this, 'tis ea<U+017F>y to be evinc'd from a thou<U+017F>and Pa<U+017F><U+017F>ages, which I only forbear to quote, becau<U+017F>e I de<U+017F>ire they <U+017F>hould die and be forgotten. I bave perus'd many of your Papers: and to <U+017F>how you that I have, the third part of your <hi>No-ptote<U+017F>tant Plot</hi> is much of it <U+017F>tolen, from your dead Author's Pamphlet call'd, the <hi>Growth of Popery:</hi> as manife<U+017F>tly as <hi>Milton's</hi> defence of the <hi>Engli<U+017F>h</hi> People, is from <hi>Bu<g ref="char:EOLhyphen"/>chanan, de jure regni apud Scotos:</hi> or your fir<U+017F>t Covenant, and new A<U+017F><U+017F>ociation, from the holy League of the <hi>French Gui<U+017F>ards.</hi> Any one who reads <hi>Davila,</hi> may trace your Practices all along. There were the <U+017F>ame pretences for Reformation, and Loyalty, the <U+017F>ame A<U+017F>per<g ref="char:EOLhyphen"/><U+017F>ions of the King, and the <U+017F>ame grounds of a Rebellion. <hi>I</hi> know not whether you will take the Hi<U+017F>torian's word, who <U+017F>ays it was reported, that <hi>Poltrot</hi> a <hi>Hugonot,</hi> murther'd <hi>Francis</hi> Duke of <hi>Gui<U+017F>e</hi> by the in<g ref="char:EOLhyphen"/><U+017F>tigations of <hi>Theodore Beza:</hi> or that it was a <hi>Hugonot</hi> Mini<U+017F>ter, otherwi<U+017F>e call'd a <hi>Presbyterian<g ref="char:punc"><U+25AA></g>
+               </hi> (for our Church abhors <U+017F>o devili<U+017F>h a Tenent) who fir<U+017F>t writ a Treati<U+017F>e of the lawfulne<U+017F>s of depo<U+017F>ing and murthering Kings, of a different Per<U+017F>wa<U+017F>ion in Religion: But <hi>I</hi> am able to prove from the Doctrine of <hi>Calvin,</hi> and Principles of <hi>Bu<g ref="char:EOLhyphen"/>chanan,</hi> that they <U+017F>et the People above the Magi<U+017F>trate: which if I mi<U+017F>take not, is your own Fundamental: and which carries your Loy<g ref="char:EOLhyphen"/>alty no further than your likeing. When a Vote of the Hou<U+017F>e of Com<g ref="char:EOLhyphen"/>mons goes on your <U+017F>ide, you are as ready to ob<U+017F>erve it, as if it were pa<U+017F>s'd into a Law: But when you are pinch'd with any former, and yet unrepealed <hi>Act of Paliament,</hi> you declare that in <U+017F>ome ca<U+017F>es, you will not be oblig'd by it. The Pa<U+017F>sage is in the <U+017F>ame third part of the <hi>No-prote<U+017F>tant Plot:</hi> &amp; is too plain to be denied. The late Copy of your intended A<U+017F><U+017F>ociation, you neither wholly ju<U+017F>tify nor condemn; But, as the Papi<U+017F>ts, when they are unoppos'd, fly out into all the Pageantry's of Wor<U+017F>hip; but in times of War, when they are hard pre<U+017F>s'd by Argu<g ref="char:EOLhyphen"/>ments,
+<pb facs="tcp:44131:4"/>
+lie clo<U+017F>s intrinch'd behind the <hi>Council of Trent:</hi> So, now, when your Affairs are in a low condition, you dare not pretend that to be a legal Combination, but when<U+017F>oever you are afloat, <hi>I</hi> doubt not but it will be maintain'd and ju<U+017F>tify'd to purpo<U+017F>e. For indeed there is nothing to defend it but the Sword: 'tis the proper time to <U+017F>ay any thing, when men have all things in their power.</p>
+            <p>In the mean time you wou'd fain be nibbling at a parallel betwixt this A<U+017F><U+017F>ociation, and that in the time of Queen <hi>Elizabeth.</hi> But there is this <U+017F>mall difference betwixt them, that the ends of the one are directly oppo<U+017F>ite to the other: one with the Queens approbation, and conjunction, as head of it: the other without either the con<U+017F>ent, or knowledge of the King, again<U+017F>t who<U+017F>e Authority it is manife<U+017F>tly de<g ref="char:EOLhyphen"/><U+017F>igned. Therefore you do well to have recour<U+017F>e to your la<U+017F>t Eva<U+017F>ion, that it was contriv'd by your Enemies, and <U+017F>huffled into the Papers that were <U+017F>eiz'd: which yet you <U+017F>ee the Nation is not <U+017F>o ea<U+017F>y to believe as your own Jury; But the matter is not difficult, to find twelve men in <hi>New-gate,</hi> who wou'd acquit a Malefactour.</p>
+            <p>
+               <hi>I</hi> have one onely favour to de<U+017F>ire of you at parting, that when you think of an<U+017F>wering this <hi>Poem,</hi> you wou'd employ the <U+017F>ame Pens a<g ref="char:EOLhyphen"/>gain<U+017F>t it, who have combated with <U+017F>o much <U+017F>ucce<U+017F>s again<U+017F>t <hi>Ab<U+017F>alom</hi> and <hi>Achitophel:</hi> for then you may a<U+017F><U+017F>ure your <U+017F>elves of a clear Vi<g ref="char:EOLhyphen"/>ctory, without the lea<U+017F>t reply. Raile at me abundantly; and, not to break a Cu<U+017F>tome, doe it without wit: By this method you will gain a con<U+017F>iderable point, which is wholly to wave the an<U+017F>wer of my Ar<g ref="char:EOLhyphen"/>guments. Never own the botome of your Principles, for fear they <U+017F>hou'd be Trea<U+017F>on. Fall <U+017F>everly on the mi<U+017F>carriages of Government for if <U+017F>candal be not allow'd, you are no freeborn <U+017F>ubjects. If God has not ble<U+017F><U+017F>'d you with the Talent of Rhiming, make u<U+017F>e of my poor Stock and welcom: let your Ver<U+017F>es run upon my feet: and for the ut<g ref="char:EOLhyphen"/>mo<U+017F>t refuge of notorious Block-heads, reduc'd to the la<U+017F>t extremity of <U+017F>en<U+017F>e, turn my own lines upon me, and in utter de<U+017F>paire of your own Satyre, make me Satyrize my <U+017F>elf. Some of you have been driven to this Bay alreadie; But above all the re<U+017F>t commend me to the Non<g ref="char:EOLhyphen"/>conformi<U+017F>t Par<U+017F>on, who writ the <hi>VVhip and Key.</hi> I am afraid it is
+<pb facs="tcp:44131:4"/>
+not read <U+017F>o much as the Piece de<U+017F>erves becau<U+017F>e the Book<U+017F>eller is every week crying help at the end of his <hi>Gazette,</hi> to get it off. You <U+017F>ee I am charitable enough to doe him a kindne<U+017F>s, that it may be publi<U+017F>h'd as well as printed; and that <U+017F>o much skill in Hebrew Derivations, ma not lie for wa<U+017F>t-paper in the Shop. Yet I half <U+017F>u<U+017F>pect he went no far<g ref="char:EOLunhyphen"/>ther for his learning, than the Index of Hebrew Names and Etymo<g ref="char:EOLunhyphen"/>logies, which is printed at the end of <U+017F>ome <hi>Engli<U+017F>h</hi> Bibles. If <hi>A<g ref="char:EOLhyphen"/>chitophel</hi> <U+017F>ignify the Brother of a Fool, the Author of that Poem will pa<U+017F>s with his Readers for the next of kin; perhaps' tis the Relation that makes the kindne<U+017F>s. Whatever the Ver<U+017F>es are; buy 'em up I be<g ref="char:EOLhyphen"/><U+017F>eech you out of pity; for <hi>I</hi> hear the Conventicle is <U+017F>hut up, and the Brother of <hi>Achitophel</hi> out of <U+017F>ervice.</p>
+            <p>Now Footmen, you know, have the genero<U+017F>itie to make a Pur<U+017F>e, for a member of their Society, who has had his Livery pull'd over his Ears: and even Protestant Socks are bought up among you, out of veneration to the name. A Di<U+017F><U+017F>enter in Poetry from Sen<U+017F>e and Eng<g ref="char:EOLhyphen"/>li<U+017F>h, will make as good a Prote<U+017F>tant Rhymer, as a Di<U+017F><U+017F>enter from the Church of <hi>England</hi> a Prote<U+017F>tant Par<U+017F>on. Be<U+017F>ides if you encourage ayoung Beginner, who knows but he may elevate his <U+017F>tilea little, above the vulgar Epithets of prophane, and <U+017F>awcy Jack, and Athei<U+017F>tick Scribler, with which he treats me, when the fit of Enthu<U+017F>iam is <U+017F>trong upon him: by which well-mannerd and charitable Expre<U+017F>sions, <hi>I</hi> was certain of his Sect, before <hi>I</hi> knew his name. What wou'd you have more of a man? he has damn'd me in your Cau<U+017F>e from <hi>Gene<U+017F>is</hi> to the <hi>Revelations:</hi> And has half the Texts of both the <hi>Te<U+017F>taments</hi> again<U+017F>t me, if you will be <U+017F>o civil to your <U+017F>elves as to take him for your interpreter; and not to take them for <hi>Iri<U+017F>h</hi> Witne<U+017F><U+017F>es. After all, perhaps you will tell me, that you retain'd him only for the opening of your Cau<U+017F>e, and that your main Lawyer is yet behind. Now if it <U+017F>o happen he meet with no more reply than his Predece<U+017F>sours, you may either conclude, that <hi>I</hi> tru<U+017F>t to the goodne<U+017F>s of my Cau<U+017F>e, or fear my Adver<U+017F>ary or di<U+017F>dain him, or what you plea<U+017F>e, for the <U+017F>hort on't is, 'tis indifferent to your humble <U+017F>ervant, whatever your Party <U+017F>ays or thinks of him.</p>
+         </div>
+         <div type="encomium">
+            <pb facs="tcp:44131:5"/>
+            <head>UPON THE <hi>AUTHOUR of the following POEM</hi>
+            </head>
+            <l>ONCE more our awfull Poet Arms, t'engage</l>
+            <l>The threatning Hydra-Faction of the Age:</l>
+            <l>Once more prepares his dreadful Pen to wield,</l>
+            <l>And ev'ry Mu<U+017F>e attends him to the Field:</l>
+            <l>
+               <hi>By Art</hi> and Nature for this Task de<U+017F>ign'd,</l>
+            <l>Yet mode<U+017F>tly the Fight He long declin'd;</l>
+            <l>Forbore the Torrent of his Ver<U+017F>e to pour,</l>
+            <l>Nor loos'd his Satyre till the needful Hour:</l>
+            <l>His Sov'raigns Right by Patience half betray'd,</l>
+            <l>VVak'd his Avenging Genius to it's Aid.</l>
+            <l>Ble<U+017F>t Mu<U+017F>e, who<U+017F>e VVit with <U+017F>uch a Cau<U+017F>e was Crown'd,</l>
+            <l>And ble<U+017F>t the Cau<U+017F>e that <U+017F>uch a Champion found.</l>
+            <l>VVith cho<U+017F>en Ver<U+017F>e upon the Foe he falls,</l>
+            <l>And black Sedition in each Quarter galls;</l>
+            <l>Yet, like a Prince with Subjects forc't t'engage,</l>
+            <l>Secure of Conque<U+017F>t He rebates his Rage:</l>
+            <l>His Fury not without Di<U+017F>tinction <U+017F>heds.</l>
+            <l>Hurls mortal Bolts but on devoted Heads:</l>
+            <l>To le<U+017F>s infected Members gentle found,</l>
+            <l>Or <U+017F>pares or el<U+017F>e pours Balm into the VVound.</l>
+            <l>Such gen'rous Grace th' ingrateful Tribe abu<U+017F>e,</l>
+            <l>And tre<U+017F>pa<U+017F>s on the Mercy of his Mu<U+017F>e;</l>
+            <l>Their wretched dogrell Rhymers forth they bring</l>
+            <l>To Snarl and Bark again<U+017F>t the Poet's King:</l>
+            <l>A Crew, that <U+017F>candalize the Nation more</l>
+            <l>Than all their Trea<U+017F>on-canting Prie<U+017F>ts before!</l>
+            <l>On the<U+017F>e He <U+017F>carce vouch<U+017F>afes a <U+017F>cornful <U+017F>mile,</l>
+            <l>But on their Pow'rful Patrons turns his Stile.</l>
+            <l>A Stile <U+017F>o keen<g ref="char:punc"><U+25AA></g> as ev'n from Faction draws</l>
+            <l>The Vital Poy<U+017F>on, <U+017F>tabs to th' Heart their Cau<U+017F>e.</l>
+            <l>Take then, great Bard, what Tribute we can rai<U+017F>e:</l>
+            <l>Accept our Thanks, for you tran<U+017F>cend our Prai<U+017F>e.</l>
+         </div>
+         <div type="encomium">
+            <pb facs="tcp:44131:5"/>
+            <head>
+               <hi>To the Unknown Authour of the following Poem, and that of</hi> Ab<U+017F>alom <hi>and</hi> Achitophel.</head>
+            <lg>
+               <l>THUS pious ignorance, with dubious prai<U+017F>e,</l>
+               <l>Altars of old to Gods unknown did rai<U+017F>e;</l>
+               <l>They knew not the lov'd Deity, they knew</l>
+               <l>Divine effects a cau<U+017F>e Divine did <U+017F>hew;</l>
+               <l>Nor can we doubt, when <U+017F>uch the<U+017F>e Numbers are,</l>
+               <l>Such is their cau<U+017F>e, tho the wor<U+017F>t Mu<U+017F>e <U+017F>hall dare</l>
+               <l>Their <U+017F>acred worth in humble Ver<U+017F>e declare.</l>
+            </lg>
+            <lg>
+               <l>As gentle <hi>Thames</hi> charm'd with thy tuneful Song</l>
+               <l>Glides in a peaceful Maje<U+017F>ty along,</l>
+               <l>No rebell Stone, no lofty Bank does brave</l>
+               <l>The ea<U+017F>ie pa<U+017F><U+017F>age of his <U+017F>ilent wave,</l>
+               <l>So <U+017F>acred Poet, <U+017F>o thy Numbers flow,</l>
+               <l>Sinewy, yet mild as happy Lovers woe;</l>
+               <l>Strong, yet harmonious too as Planets move,</l>
+               <l>Yet <U+017F>oft as Down upon the Wings of Love.</l>
+               <l>How <U+017F>weet do's Vertue in your dre<U+017F>s appear,</l>
+               <l>How much more charming, when much le<U+017F>s <U+017F>evere</l>
+               <l>Whil<U+017F>t you our <U+017F>en<U+017F>es harmlesly beguile,</l>
+               <l>With all th' allurements of your happy Stile,</l>
+               <l>Y' in<U+017F>inuate Loyalty with kind deceit,</l>
+               <l>And into <U+017F>ence th' unthinking Many cheat:</l>
+               <l>So the <U+017F>weet <hi>Trhacian</hi> with his charming lyre</l>
+               <l>Into rude Nature virtue did in<U+017F>pire,</l>
+               <l>So he the <U+017F>avage herd to rea<U+017F>on drew,</l>
+               <l>Yet <U+017F>carce <U+017F>o <U+017F>weet, <U+017F>o charmingly as you,</l>
+               <l>O that you would with <U+017F>ome <U+017F>uch powerful Charm</l>
+               <l>Enervate <hi>Albion</hi> to ju<U+017F>t valour warm!</l>
+               <l>Whether much <U+017F>uffering <hi>Charles</hi> <U+017F>hall Theam afford</l>
+               <l>Or the great Deeds of God-like <hi>James</hi>'s Sword,</l>
+               <l>Again fair Gallià might be ours, again</l>
+               <l>Another Fleet might Pa<U+017F>s the <U+017F>ubject main.</l>
+               <l>
+                  <pb facs="tcp:44131:6"/>
+Another <hi>Edward</hi> 
+                  <gap reason="illegible" extent="1 letter">
+                     <desc>•</desc>
+                  </gap>ead the <hi>Britains</hi> o<gap reason="illegible" extent="1 letter">
+                     <desc>•</desc>
+                  </gap>,</l>
+               <l>Or <U+017F>uch an <hi>O<U+017F><U+017F>ory</hi> as you did moan;</l>
+               <l>While in <U+017F>uch Numbers you, in <U+017F>uch a <U+017F>train</l>
+               <l>Inflame their courage, and reward their pain.</l>
+            </lg>
+            <lg>
+               <l>Let fal<U+017F>e <hi>Achitophel</hi> the rout engage,</l>
+               <l>Talk ea<U+017F>ie <hi>Ab<U+017F>alom</hi> to rebel rage;</l>
+               <l>Let frugal <hi>Shimei</hi> cur<U+017F>e in holy Zeal,</l>
+               <l>Or mode<U+017F>t <hi>Corah</hi> more new Plots reveal,</l>
+               <l>Whil<U+017F>t con<U+017F>tant to him<U+017F>elf, <U+017F>ecure of fate,</l>
+               <l>Good <hi>David</hi> <U+017F>till maintains the Royal State,</l>
+               <l>Tho each in vain <U+017F>uch various ills employs,</l>
+               <l>Firmly he <U+017F>tands<g ref="char:punc"><U+25AA></g> and even tho<U+017F>e ills enjoys;</l>
+               <l>Firm as fair <hi>Albion</hi> mid<U+017F>t the raging Main</l>
+               <l>Surveys encircling danger with di<U+017F>dain.</l>
+               <l>In vain the waves a<U+017F><U+017F>ault the unmov'd <U+017F>hore,</l>
+               <l>In vain the winds with mingled fury rore.</l>
+               <l>Fair <hi>Albiòn</hi>'s beaureous Cliffs <U+017F>hine whiter than before.</l>
+            </lg>
+            <lg>
+               <l>Nor <U+017F>halt thou move, tho Hell thy fall con<U+017F>pire,</l>
+               <l>Tho the wor<U+017F>e rage of zeal's Fanatick Fire,</l>
+               <l>Thou be<U+017F>t, thou greate<U+017F>t of the <hi>Briti<U+017F>h</hi> race,</l>
+               <l>Thou only fit to fill Great <hi>Charles</hi>'s his place.</l>
+            </lg>
+            <lg>
+               <l>Ah wratched <hi>Britains:</hi> ah too <U+017F>tubborn I<U+017F>le,</l>
+               <l>Ah <U+017F>tiff-neck't <hi>I<U+017F>rael</hi> on ble<U+017F>t <hi>Canaan's, <U+017F>oyl</hi>
+               </l>
+               <l>Are tho<U+017F>e dear proofs of Heaven's Indulgence vain,</l>
+               <l>Re<U+017F>toring <hi>David</hi> and his gentle raign.</l>
+               <l>Is it in vain thou all the Goods do<U+017F>t know</l>
+               <l>Au<U+017F>picious Stars on Mortals <U+017F>hed below</l>
+               <l>VVhile all thy <U+017F>treams with Milk, thy Lands with Honey flow</l>
+               <l>No more fond Isle, no more they <U+017F>elf engage,</l>
+               <l>In civil fury, and inte<U+017F>tine rage;</l>
+               <l>No rebel zeal thy duteous Land mole<U+017F>t,</l>
+               <l>But a <U+017F>mooth Calm <U+017F>ooth every peacefull brea<U+017F>t,</l>
+               <l>While in <U+017F>uch Charming notes Divinely <U+017F>ings,</l>
+               <l>The be<U+017F>t of Poets, of the be<U+017F>t of Kings,</l>
+            </lg>
+         </div>
+      </front>
+      <body>
+         <div type="poem">
+            <pb n="1" facs="tcp:44131:6"/>
+            <head>The Medall.
+A SATYRE AGAINST SEDITION</head>
+            <lg>
+               <l>OF all our Antick Sights, and Pageantry</l>
+               <l>Which <hi>Engli<U+017F>h</hi> Ideots run in crowds to <U+017F>ee,</l>
+               <l>The <hi>Poli<U+017F>h Medall</hi> bears the prize alone:</l>
+               <l>A Mon<U+017F>ter, more the Favourite of the Town</l>
+               <l>Than either Fayrs or Theatres have <U+017F>hown</l>
+               <l>Never did Art <U+017F>o well with Nature <U+017F>trive;</l>
+               <l>Nor ever Idol <U+017F>eem'd <U+017F>o much alive:</l>
+               <l>So like the Man; <U+017F>o golden to the <U+017F>ight,</l>
+               <l>So ba<U+017F>e within, <U+017F>o counterfeit and light.</l>
+               <l>One <U+017F>ide is fill'd with Title and with Face,</l>
+               <l>And, le<U+017F>t the King <U+017F>hou'd want a regal Place,</l>
+               <l>On the rever<U+017F>e, a Tow'r the Town <U+017F>urveys,</l>
+               <l>O'er which our mounting Sun his beams di<U+017F>plays,</l>
+               <l>The Word, pronounc'd aloud by Shrieval voice,</l>
+               <l>
+                  <hi>Laetamur</hi> which, in <hi>Poli<U+017F>h,</hi> is <hi>rejoice,</hi>
+               </l>
+               <l>The Day, Month, Year, to the great Act are join'd</l>
+               <l>And a new Canting Holiday de<U+017F>ign'd.</l>
+               <l>Five daies he <U+017F>ate, for everie ca<U+017F>t and look,</l>
+               <l>
+                  <pb n="4" facs="tcp:44131:7"/>
+Four more than God to fini<U+017F>h <hi>Adam</hi> took.</l>
+               <l>But who can tell what E<U+017F><U+017F>ence Angels are,</l>
+               <l>Or how long Heav'n was making <hi>Lucifer?</hi>
+               </l>
+               <l>Oh, cou'd the Style that copy'd every grace,</l>
+               <l>And plough'd <U+017F>uch furrows for an Eunuch face,</l>
+               <l>Cou'd it have form'd his ever-changing will</l>
+               <l>The various Piece had tir'd the Graver's Skill!</l>
+               <l>A Martial Heroe fir<U+017F>t, with early care,</l>
+               <l>Blown, like a Pigmee by the VVinds, to war.</l>
+               <l>A beardle<U+017F>s Chief, a Rebel, e'r a Man,</l>
+               <l>(So young his hatred to his Prince began)</l>
+               <l>Next this, (How wildly will Ambition <U+017F>teer.)</l>
+               <l>A Vermin wriggling in the th' U<U+017F>urper's Ear.</l>
+               <l>Bart'ring his venal wit for <U+017F>ums of gold</l>
+               <l>He ca<U+017F>t him<U+017F>elf into the Saint-like mould;</l>
+               <l>Groan'd, <U+017F>igh'd and pray'd, while Godline<U+017F>s was gain</l>
+               <l>The lowde<U+017F>t Bagpipe of the <U+017F>queaking Train</l>
+               <l>But, as 'tis hard to cheat a Juggler's eyes,</l>
+               <l>His open lewdne<U+017F>s he cou'd ne'er di<U+017F>gui<U+017F>e.</l>
+               <l>There <U+017F>plit the Saint: for Hypocritique zeal</l>
+               <l>Allows no Sins but tho<U+017F>e it can conceal.</l>
+               <l>Whoring to <U+017F>candal gives too large a <U+017F>cope:</l>
+               <l>Saints mu<U+017F>t not trade, but they may interlope.</l>
+               <l>Th' ungodly Principle was all the <U+017F>ame;</l>
+               <l>But a gro<U+017F>s Cheat betrays his Partner's Game.</l>
+               <l>Be<U+017F>ides, their pace was formal, grave and <U+017F>lack<g ref="char:punc"><U+25AA></g>
+               </l>
+               <l>His nimble Wit outran the heavy Pack.</l>
+               <l>Yet <U+017F>till he found his Fortune at a <U+017F>tay</l>
+               <l>Whole droves of Block heads choaking up his way;</l>
+               <l>They took, but not rewarded, his advice,</l>
+               <l>Villain and Wit exact a double price.</l>
+               <l>Pow'r was his aym: but, thrown from that pretence,</l>
+               <l>The wretch turn'd loyal in his own defence,</l>
+               <l>And Malice reconcil'd him to his Prince.</l>
+               <l>Him, in the angui<U+017F>h of his Soul he <U+017F>erv'd,</l>
+               <l>
+                  <pb n="5" facs="tcp:44131:7"/>
+Rewarded fa<U+017F>ter <U+017F>till than he de<U+017F>erv'd</l>
+               <l>Behold him now exalted into tru<U+017F>t,</l>
+               <l>His Coun<U+017F>el's oft convenient, <U+017F>eldom ju<U+017F>t.</l>
+               <l>Ev'n in the mo<U+017F>t <U+017F>incere advice he gave</l>
+               <l>He had a grudging <U+017F>till to be a Knave.</l>
+               <l>The Frauds he learnt in his Fanatique years</l>
+               <l>Made him unea<U+017F>y in his lawful gears.</l>
+               <l>At be<U+017F>t as little hone<U+017F>t as he cou'd.</l>
+               <l>And, like white Witches, mi<U+017F>chievou<U+017F>ly good<g ref="char:punc"><U+25AA></g>
+               </l>
+               <l>To his fir<U+017F>t bya<U+017F>s, longingly he leans,</l>
+               <l>And <hi>rather</hi> wou'd be great by wicked means.</l>
+               <l>Thus, fram'd for ill, he loos'd our Triple hold.</l>
+               <l>(Advice un<U+017F>afe, precipitous, and bold.)</l>
+               <l>From hence tho<U+017F>e tears! that <hi>Ilium</hi> of our woe!</l>
+               <l>Who helps a powr'ful Friend, fore-arms a Foe</l>
+               <l>What wonder if the waves prevail <U+017F>o far</l>
+               <l>VVhen He cut down the Banks that made the bar?</l>
+               <l>Seas follow but their Nature to invade.</l>
+               <l>But He by Art our native Strength betray'd</l>
+               <l>So <hi>Samp<U+017F>on</hi> to his Foe his force confe<U+017F>t.</l>
+               <l>And, to be <U+017F>horn, lay <U+017F>lumb'ring on her brea<U+017F>t</l>
+               <l>But, when this fatal Coun<U+017F>el, found too late,</l>
+               <l>Expos'd its Authour to the publique hate.</l>
+               <l>When his ju<U+017F>t Sovereign, by no impious way,</l>
+               <l>Cou'd be <U+017F>educ'd to Arbitrary <U+017F>way.</l>
+               <l>For<U+017F>aken of that hope. he <U+017F>hifts the <U+017F>ayle:</l>
+               <l>Drives down the Current with a pop'lar gale.</l>
+               <l>And <U+017F>hews the Fiend confe<U+017F>s'd without a vaile.</l>
+               <l>He preaches to the Crowd, that Pow'r is lent,</l>
+               <l>But not convey'd to Kingly Government.</l>
+               <l>That Claimes <U+017F>ucce<U+017F><U+017F>ive bear no binding force.</l>
+               <l>That Coronation Oaths are things of cour<U+017F>e.</l>
+               <l>Maintains the Multitude can never err.</l>
+               <l>And <U+017F>ets the People in the Papal Chair.</l>
+               <l>
+                  <pb n="6" facs="tcp:44131:8"/>
+The rea<U+017F>on's obvious; <hi>Int're<U+017F>t never lyes</hi>
+               </l>
+               <l>The mo<U+017F>t have <U+017F>till their Int're<U+017F>t in their eyes,</l>
+               <l>The pow'r is alwaies theirs, and pow'r is ever wi<U+017F>e,</l>
+               <l>Almighty Crowd, thou <U+017F>horten'<U+017F>t all di<U+017F>pute,</l>
+               <l>Pow'r is thy E<U+017F><U+017F>ence, Wit thy Attribute.</l>
+               <l>Nor Faith nor Rea<U+017F>on make thee at a <U+017F>tay,</l>
+               <l>Thou leap<U+017F>t o'r all eternal truths, in thy <hi>Pinbarique</hi> way.</l>
+               <l>
+                  <hi>Athens,</hi> no doubt, did righteouslie decide,</l>
+               <l>Whem <hi>Phocion</hi> and when <hi>Socrates</hi> were try'd:</l>
+               <l>As righteouslie they did tho<U+017F>e dooms repent,</l>
+               <l>Still they were wi<U+017F>e, what ever way they went.</l>
+               <l>Crowds err not, though to both extremes they run,</l>
+               <l>To kill the Father, and recall the Son.</l>
+               <l>Some think the Fools were mo<U+017F>t, as times went then</l>
+               <l>But now the World's o'r <U+017F>tock'd with prudentmen.</l>
+               <l>The common Cry is ev'n Religion's Te<U+017F>t,</l>
+               <l>The <hi>Turk</hi>'s is, at <hi>Con<U+017F>tantinople,</hi> be<U+017F>t,</l>
+               <l>Idols in <hi>India,</hi> Poperie at <hi>Rome,</hi>
+               </l>
+               <l>And our own Wor<U+017F>hip onelie true at home.</l>
+               <l>And true, but for the time, 'tis hard to know</l>
+               <l>How long we plea<U+017F>e it <U+017F>hall continue <U+017F>o.</l>
+               <l>This <U+017F>ide to day, and that to morrow burns,</l>
+               <l>So all are God-a'mighties in their turns.</l>
+               <l>A Tempting Doctrine, plau<U+017F>ible and new:</l>
+               <l>What Fools our Fathers were, if this be true.</l>
+               <l>Who, to de<U+017F>troy the <U+017F>eeds of Civil War,</l>
+               <l>Inherent right in Monarchs did declare:</l>
+               <l>And, that a lawful Pow'r might never cea<U+017F>e.</l>
+               <l>Secur'd Succe<U+017F><U+017F>ion, to <U+017F>ecure our Peace.</l>
+               <l>Thus, Property and Soveraign Sway, at la<U+017F>t</l>
+               <l>In equal Balances were ju<U+017F>tly ca<U+017F>t</l>
+               <l>But this new <hi>Jehu</hi> <U+017F>purs the hot mouth'd hor<U+017F>e,</l>
+               <l>In<U+017F>t<gap reason="illegible: faint" extent="1 letter">
+                     <desc>•</desc>
+                  </gap>ucts the Bea<U+017F>t to know his native force,</l>
+               <l>To take the Bit between his teeth and fly</l>
+               <l>To the next headlong Steep of Anarchy.</l>
+               <l>
+                  <pb n="7" facs="tcp:44131:8"/>
+Too happie <hi>England,</hi> if our good we knew,</l>
+               <l>Wou'd we po<U+017F><U+017F>e<U+017F>s the freedom we pur<U+017F>ue,</l>
+               <l>The lavi<U+017F>h Government can give no more:</l>
+               <l>Yet we repine, and plenty makes us poor.</l>
+               <l>God try'd us once, our Rebel-fathers fought,</l>
+               <l>He glutted'em with all the pow'r they <U+017F>ought,</l>
+               <l>Till, ma<U+017F>ter'd by their own u<U+017F>urping Brave,</l>
+               <l>The free-born Subject <U+017F>unk into a slave.</l>
+               <l>We loath our Manna, and we long for Quails.</l>
+               <l>Ah, what is man, when his own wi<U+017F>h prevails.</l>
+               <l>How ra<U+017F>h, how <U+017F>wift to plunge him<U+017F>elf in ill,</l>
+               <l>Proud of his pow'r, and boundle<U+017F>s in his Will:</l>
+               <l>That Kings can doe no wrong we mu<U+017F>t believe,</l>
+               <l>None can they doe, and mu<U+017F>t they all receive.</l>
+               <l>Help heaven. or <U+017F>adlie we <U+017F>hall <U+017F>ee an hour,</l>
+               <l>When neither wrong nor right are in their pow'r</l>
+               <l>Alreadie they have lo<U+017F>t their be<U+017F>t defence,</l>
+               <l>The benefit of Laws, which they di<U+017F>pence</l>
+               <l>No ju<U+017F>tice to their righteous Cau<U+017F>e allow'd;</l>
+               <l>But baffled by an Arbitrarie Crowd.</l>
+               <l>And Medalls grav'd, their Conque<U+017F>t to record,</l>
+               <l>The Stamp and Coyn of their adopted Lord</l>
+            </lg>
+            <lg>
+               <l>The Man who laugh'd but once, to <U+017F>ee an A<U+017F>s</l>
+               <l>Mumbling to make the cro<U+017F>s-grain'd Thi<U+017F>tles pa<U+017F>s,</l>
+               <l>Might laugh again, to <U+017F>ee a Jurie chaw</l>
+               <l>The prickles of unpalatable Law.</l>
+               <l>The witne<U+017F><U+017F>es, that, Leech-like, liv'd on bloud,</l>
+               <l>Sucking for them were med'cinallie good,</l>
+               <l>But, when they fa<U+017F>ten'd on <hi>their</hi> fe<U+017F>ter'd Sore,</l>
+               <l>Then, Ju<U+017F>tice and Religion they for<U+017F>wore,</l>
+               <l>Their Mayden Oaths debauch'd into a whore.</l>
+               <l>Thus Men are rais'd by Factions, and decry'd,</l>
+               <l>And Rogue and Saint di<U+017F>tingui<U+017F>h'd by their Side.</l>
+               <l>They rack ev'n Scripture to confe<U+017F>s their Cau<U+017F>e,</l>
+               <l>
+                  <pb n="8" facs="tcp:44131:9"/>
+And plead a Call to preach, in <U+017F>pight of Laws.</l>
+               <l>But that's <gap reason="illegible: blotted" extent="1 letter">
+                     <desc>•</desc>
+                  </gap>o news to the poor injur'd Page:</l>
+               <l>It has been us'd as ill in every Age:</l>
+               <l>And is con<U+017F>train'd, with patience, all to take;</l>
+               <l>For what defence can Greek and Hebrew make?</l>
+               <l>Happy who can this talking Trumpet <U+017F>eize;</l>
+               <l>They make it <U+017F>peak whatever Sen<U+017F>e they plea<U+017F>e!</l>
+               <l>'Twas fram'd, at fir<U+017F>t, our Oracle t' enquire:</l>
+               <l>But, <U+017F>ince our Sects in prophecy grow higher,</l>
+               <l>The Text in<U+017F>pires not them; but they the Text in<U+017F>pire.</l>
+            </lg>
+            <lg>
+               <l>
+                  <hi>London,</hi> thou great <hi>Emporium</hi> of our I<U+017F>le,</l>
+               <l>O, thou too bounteous, thou too fruitful <hi>Nile,</hi>
+               </l>
+               <l>How <U+017F>hal I prai<U+017F>e or cur<U+017F>e to thy de<U+017F>ert!</l>
+               <l>Or <U+017F>eparate thy <U+017F>ound, from thy corrupted part!</l>
+               <l>I call'd thee <hi>Nile;</hi> the parallel will <U+017F>tand:</l>
+               <l>Thy tydes of wealth o'rflow the fattend Land;</l>
+               <l>Yet Mon<U+017F>ters from thy large increa<U+017F>e we find;</l>
+               <l>Engender'd on the Slyme thou leav'<U+017F>t behind.</l>
+               <l>Sedition has not wholly <U+017F>eiz'd on thee;</l>
+               <l>Thy nobler Parts are from infection free.</l>
+               <l>Of <hi>I<U+017F>rael</hi>'s Tribes thou ha<U+017F>t a numerous band!</l>
+               <l>But <U+017F>till the <hi>Canaanite</hi> is in the Land.</l>
+               <l>Thy military Chiefs are brave and true:</l>
+               <l>Nor are thy di<U+017F>inchanted Burghers few.</l>
+               <l>The Head is loyal which thy Heart commands:</l>
+               <l>But what's a Head with two <U+017F>uch gouty Hands?</l>
+               <l>The wi<U+017F>e and wealthy love the <U+017F>ure<U+017F>t way:</l>
+               <l>And are content to thrive and to obey.</l>
+               <l>But Wi<U+017F>edom is to Sloath too great a Slave,</l>
+               <l>None are <U+017F>o bu<U+017F>y as the Fool and Knave.</l>
+               <l>Tho<U+017F>e let me cur<U+017F>e<g ref="char:punc"><U+25AA></g> what vengeance will they urge,</l>
+               <l>Who<U+017F>e Ordures neither Plague nor Fire can purge:</l>
+               <l>Nor <U+017F>harp Experience can to duty bring,</l>
+               <l>Nor angry Heav'n, nor a forgiving King!</l>
+               <l>
+                  <pb n="9" facs="tcp:44131:9"/>
+In Go<U+017F>pel phraze their Chapmen they betray:</l>
+               <l>Their Shops are Dens, the Buyer is their Prey.</l>
+               <l>The Knack of Trades is living on the Spoyl;</l>
+               <l>They boa<U+017F>t, ev'n when each other they beguile.</l>
+               <l>Cu<U+017F>tomes to <U+017F>teal is <U+017F>uch a trivial thing,</l>
+               <l>That 'tis their Charter, to defraud their King.</l>
+               <l>All hands unite of every jarring Sect;</l>
+               <l>They cheat the Country fir<U+017F>t, and then infect.</l>
+               <l>They, for God's Cau<U+017F>e their Monarch dare dethrone;</l>
+               <l>And they'll be <U+017F>ure to make his Cau<U+017F>e their own.</l>
+               <l>VVhether the plotting Je<U+017F>uite lay'd the plan</l>
+               <l>Of murth'ring Kings, or the <hi>French</hi> Puritan,</l>
+               <l>Our Sacrilegious Sects their Guids outgo;</l>
+               <l>And Kings and Kingly Pow'r wou'd murther too.</l>
+               <l>VVhat means their Trait'rous Combination le<U+017F>s,</l>
+               <l>Too plain t' evade, too <U+017F>hameful to confe<U+017F>s.</l>
+               <l>But Trea<U+017F>on is not own'd when tis de<U+017F>cry'd;</l>
+               <l>Succe<U+017F>sfull Crimes alone are ju<U+017F>tify'd.</l>
+               <l>The Men, who no Con<U+017F>piracy wou'd find,</l>
+               <l>VVho doubts, but had it taken, they had joyn'd.</l>
+               <l>Joyn'd, in a murual Cov'nant of defence;</l>
+               <l>At fir<U+017F>t without, at la<U+017F>t again<U+017F>t their Prince.</l>
+               <l>If Soveraign Right by Soveraign Pow'r they <U+017F>can,</l>
+               <l>The <U+017F>ame bold Maxime holds in God and Man:</l>
+               <l>God were not <U+017F>afe, his Thunder cou'd they <U+017F>hun,</l>
+               <l>He <U+017F>hou'd be forc'd to crown another Son.</l>
+               <l>Thus, when the Heir was from the Vineyard thrown,</l>
+               <l>The rich Po<U+017F><U+017F>e<U+017F><U+017F>ion was the Murth'rers own.</l>
+               <l>In vain to Sophi<U+017F>try they have recour<U+017F>e:</l>
+               <l>By proving theirs no Plot, they prove 'tis wor<U+017F>e;</l>
+               <l>Unmask'd Rebellion, and audacious Force.</l>
+               <l>Which, though not Actual, yet all Eyes may <U+017F>ee</l>
+               <l>'Tis working, in the immediate Pow'r to be;</l>
+               <l>For, from pretended Grievances they ri<U+017F>e,</l>
+               <l>
+                  <pb n="10" facs="tcp:44131:10"/>
+Fir<U+017F>t to di<U+017F>lik, and after to de<U+017F>pi<U+017F>e</l>
+               <l>Then, <hi>Cyclop-</hi>like in humane Fle<U+017F>h to deal:</l>
+               <l>Chop up a Mini<U+017F>ter, at every meal:</l>
+               <l>Perhaps not wholly to melt down the King:</l>
+               <l>But clip his regal Rights within the Ring.</l>
+               <l>From thence, t' a<U+017F><U+017F>ume the pow'r of Peace and VVar:</l>
+               <l>And ea<U+017F>e him by degrees of publique Care.</l>
+               <l>Yet, to con<U+017F>ult his Dignity and Fame,</l>
+               <l>He <U+017F>hou'd have leave to exerci<U+017F>e the Name:</l>
+               <l>And hold the Cards, while Commons play'd the game</l>
+               <l>For what can Pow'r give more than Food and Drink,</l>
+               <l>To live at ea<U+017F>e, and not to be bound to think?</l>
+               <l>The<U+017F>e are the cooler methods of their Crime;</l>
+               <l>But their hot Zealots think 'tis lo<U+017F>s of time:</l>
+               <l>On utmo<U+017F>t bounds of Loyalty rhey <U+017F>tand:</l>
+               <l>And grinn and whet like a <hi>Croatian</hi> band,</l>
+               <l>That waits impatient for the la<U+017F>t Command.</l>
+               <l>Thus Out-laws open-Villany maintain:</l>
+               <l>They <U+017F>teal not, but in Squadrons <U+017F>coure the Plain,</l>
+               <l>And, if their pow'r the Pa<U+017F><U+017F>engers <U+017F>ubdue,,</l>
+               <l>The Mo<U+017F>t have right, the wrong is in the Few.</l>
+               <l>Such impious Axiomes fooli<U+017F>hly they <U+017F>how,</l>
+               <l>For, in <U+017F>ome <U+017F>oyls Republiques will not grow,</l>
+               <l>Our Temp'rate Isle will no extremes <U+017F>u<U+017F>tain,</l>
+               <l>Of pop'lar <U+017F>way, or Arbitrary Reign,</l>
+               <l>But slides between them both into the be<U+017F>t,</l>
+               <l>Secure in freedom, in a Monarch ble<U+017F>t.</l>
+               <l>And though the Clymate, vex't with various winds</l>
+               <l>Works through our yielding Bodies, on our Minds,</l>
+               <l>The whol<U+017F>ome Tempe<U+017F>t purges what it breeds,</l>
+               <l>To recommend the Calmne<U+017F>s that <U+017F>ucceeds.</l>
+            </lg>
+            <lg>
+               <l>But thou the pander of the peoples hearts,</l>
+               <l>O Crooked Soul, and <U+017F>erpentine in arts.</l>
+               <l>VVho<U+017F>e blandi<U+017F>hments, a Loyal Land have whor'd,</l>
+               <l>
+                  <pb n="11" facs="tcp:44131:10"/>
+And broke the Bonds <U+017F>he plighted to her Lord;</l>
+               <l>What Cur<U+017F>es on thy bla<U+017F>ted Name will fall!</l>
+               <l>Which Age to Age their Legacy <U+017F>hall call;</l>
+               <l>For all mu<U+017F>t cur<U+017F>e the Woes rhat mu<U+017F>t de<U+017F>cend on all.</l>
+               <l>Religion thou ha<U+017F>t none: rhy <hi>Mercury</hi>
+               </l>
+               <l>Has pa<U+017F>s'd through every Sect, or theirs through Thee.</l>
+               <l>But what thou giv'<U+017F>t, that Venom <U+017F>till remains;</l>
+               <l>And the pox'd Nation feels Thee in their Brains<g ref="char:punc"><U+25AA></g>
+               </l>
+               <l>What el<U+017F>e in<U+017F>pires the Tongues, and <U+017F>wells the Brea<U+017F>ts</l>
+               <l>Of all rhy Bellowing Renegado Prie<U+017F>ts,</l>
+               <l>That preach up Thee for God: di<U+017F>pence thy Laws:</l>
+               <l>And with thy S<gap reason="illegible: blotted" extent="2 letters">
+                     <desc>••</desc>
+                  </gap>mm ferment their fainting Cau<U+017F>e?</l>
+               <l>Fre<U+017F>h Fumes of madne<U+017F>s rai<U+017F>e; and to ile and <U+017F>weat</l>
+               <l>To make the formidable Cripple great.</l>
+               <l>Yet, <U+017F>hou'd thy Crimes <U+017F>ucced. <U+017F>hou'd lawle<U+017F>s Pow'r</l>
+               <l>Compa<U+017F>s tho<U+017F>e Ends thy greedy Hopes devour,</l>
+               <l>Thy Canting Friends thy Mortal Foes wou'd be;</l>
+               <l>Thy God and theirs will never <U+017F>ong agree.</l>
+               <l>For thine, (if thou ha<U+017F>t any,) mu<U+017F>t be one</l>
+               <l>That lets the World and Humane-kind alone:</l>
+               <l>A jolly God, that pa<U+017F><U+017F>es hours too well</l>
+               <l>To promi<U+017F>e Heav'n, or threatn us with Hell.</l>
+               <l>That unconcern'd can at Rebellion <U+017F>it;</l>
+               <l>And wink at Crimes he did him<U+017F>elf commit.</l>
+               <l>A Tyrant theirs; the Heav'n their Prie<U+017F>thood paints</l>
+               <l>A Conventicle of gloomy <U+017F>ullen Saints;</l>
+               <l>A Heav'n, like <hi>Bedlam,</hi> <U+017F>lovenly and <U+017F>ad;</l>
+               <l>Fore-doom'd for Souls, with fal<U+017F>e Religion, mad.</l>
+            </lg>
+            <lg>
+               <l>Without a Vi<U+017F>ion Poets can fore-<U+017F>how</l>
+               <l>What all but Fools, by common Sen<U+017F>e may know:</l>
+               <l>If true Succe<U+017F><U+017F>ion from our Ifle <U+017F>hou'd fail.</l>
+               <l>And Crowds profane, with impious Arms prevail,</l>
+               <l>Not Thou<g ref="char:punc"><U+25AA></g> nor tho<U+017F>e thy Factious Arts ingage</l>
+               <l>Shall reap that Harve<U+017F>t of Rebellious Rage,</l>
+               <l>With which thou flatter'<U+017F>t thy decrept Age.</l>
+               <l>
+                  <pb n="12" facs="tcp:44131:11"/>
+The <U+017F>welling Poy<U+017F>on of the <U+017F>ev'ral Sects.</l>
+               <l>Whlch wanting vent, the Nations Health infects</l>
+               <l>Shall bur<U+017F>t its Bag; and fighting out their way</l>
+               <l>The various Venoms on<g ref="char:punc"><U+25AA></g> each other prey<g ref="char:punc"><U+25AA></g>
+               </l>
+               <l>The <hi>Presbyter,</hi> puft up with <U+017F>piritual Pride,</l>
+               <l>Shall on the Necks of the lewd Nobles ride:</l>
+               <l>His Brethren damn, the Civil Pow'r defy;</l>
+               <l>And parcel out Republique Prelacy.</l>
+               <l>But <U+017F>hort <U+017F>hall be his Reign: his rigid Yoke</l>
+               <l>An Tyrant Pow'r will puny Sects provoke;</l>
+               <l>And Frogs and Toads, and all the Tadpole Train.</l>
+               <l>Will croak to Heav'n for help, from this devouring Crane.</l>
+               <l>The Cut-throat Sword and clamorous Gown <U+017F>hal jar,</l>
+               <l>In <U+017F>hareing their ill-gotten Spoiles of War:</l>
+               <l>Chiefs <U+017F>hal be grudg'd the part which they pretend;</l>
+               <l>Lords envy Lords, and Priends with every Friend</l>
+               <l>About their impious Merit <U+017F>hall contend.</l>
+               <l>The <U+017F>urly Commons <U+017F>hall re<U+017F>pect deny;</l>
+               <l>And ju<U+017F>tle Peerage out with Property.</l>
+               <l>Their Gen'ral either <U+017F>hal his Tru<U+017F>t betray,</l>
+               <l>And force the Crowd to Arbitrary <U+017F>way;</l>
+               <l>Or they <U+017F>u<U+017F>pecting his ambitious Aym.</l>
+               <l>In hate of Kings <U+017F>hall ca<U+017F>t anew the Frame;</l>
+               <l>And thru<U+017F>t out <hi>Collatine</hi> that bore their Name.</l>
+            </lg>
+            <lg>
+               <l>Thus inborn Broyles the Factions wou'd ingage;</l>
+               <l>Or Wars of Exil'd Heirs, or Foreign Rage,</l>
+               <l>Till halting Vengeance overtook our Age:</l>
+               <l>And our wild labours, wearied into Re<U+017F>t,</l>
+               <l>Reclin'd us on a rightfull Monarch's Brea<U+017F>t.</l>
+            </lg>
+            <trailer>FINIS.</trailer>
+            <pb facs="tcp:44131:11"/>
+         </div>
+      </body>
+   </text>
+</TEI>
+

@@ -1,0 +1,984 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>The revoltex [sic]. A trage-comedy acted between the Hind and panther, and Religio laici, &amp;c.</title>
+            <title>Revolter</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>1687</date>
+            </edition>
+         </editionStmt>
+         <extent>Approx. 47 KB of XML-encoded text transcribed from 20 1-bit group-IV TIFF page images.</extent>
+         <publicationStmt>
+            <publisher>Text Creation Partnership,</publisher>
+            <pubPlace>Ann Arbor, MI ; Oxford (UK) :</pubPlace>
+            <date when="2009-03">2009-03 (EEBO-TCP Phase 1).</date>
+            <idno type="DLPS">A91719</idno>
+            <idno type="STC">Wing R1207</idno>
+            <idno type="STC">ESTC R229936</idno>
+            <idno type="EEBO-CITATION">99895739</idno>
+            <idno type="PROQUEST">99895739</idno>
+            <idno type="VID">153287</idno>
+            <availability>
+               <p>This keyboarded and encoded edition of the
+	       work described above is co-owned by the institutions
+	       providing financial support to the Early English Books
+	       Online Text Creation Partnership. This Phase I text is
+	       available for reuse, according to the terms of <ref target="https://creativecommons.org/publicdomain/zero/1.0/">Creative
+	       Commons 0 1.0 Universal</ref>. The text can be copied,
+	       modified, distributed and performed, even for
+	       commercial purposes, all without asking permission.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title>Early English books online.</title>
+         </seriesStmt>
+         <notesStmt>
+            <note>(EEBO-TCP ; phase 1, no. A91719)</note>
+            <note>Transcribed from: (Early English Books Online ; image set 153287)</note>
+            <note>Images scanned from microfilm: (Early English books, 1641-1700 ; 2358:5)</note>
+         </notesStmt>
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title>The revoltex [sic]. A trage-comedy acted between the Hind and panther, and Religio laici, &amp;c.</title>
+                  <title>Revolter</title>
+                  <author>Dryden, John, 1631-1700. Hind and panther. Selections.</author>
+                  <author>Dryden, John, 1631-1700. Religio laici. Selections.</author>
+               </titleStmt>
+               <extent>[2], 32 p.   </extent>
+               <publicationStmt>
+                  <publisher>[s.n.],</publisher>
+                  <pubPlace>London :</pubPlace>
+                  <date>printed in the year 1687.</date>
+               </publicationStmt>
+               <notesStmt>
+                  <note>A satire on John Dryden, with extracts from his poems.</note>
+                  <note>In verse.</note>
+                  <note>Running title reads: The revolter. A trage-comedy.</note>
+                  <note>A variant, presumably later, has "Revolter" in place of "Revoltex" in line 2 of title.</note>
+                  <note>Reproduction of original in the Folger Shakespeare Library.</note>
+               </notesStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Created by converting TCP files to TEI P5 using tcp2tei.xsl,
+      TEI @ Oxford.
+      </p>
+         </projectDesc>
+         <editorialDecl>
+            <p>EEBO-TCP is a partnership between the Universities of Michigan and Oxford and the publisher ProQuest to create accurately transcribed and encoded texts based on the image sets published by ProQuest via their Early English Books Online (EEBO) database (http://eebo.chadwyck.com). The general aim of EEBO-TCP is to encode one copy (usually the first edition) of every monographic English-language title published between 1473 and 1700 available in EEBO.</p>
+            <p>EEBO-TCP aimed to produce large quantities of textual data within the usual project restraints of time and funding, and therefore chose to create diplomatic transcriptions (as opposed to critical editions) with light-touch, mainly structural encoding based on the Text Encoding Initiative (http://www.tei-c.org).</p>
+            <p>The EEBO-TCP project was divided into two phases. The 25,363 texts created during Phase 1 of the project have been released into the public domain as of 1 January 2015. Anyone can now take and use these texts for their own purposes, but we respectfully request that due credit and attribution is given to their original source.</p>
+            <p>Users should be aware of the process of creating the TCP texts, and therefore of any assumptions that can be made about the data.</p>
+            <p>Text selection was based on the New Cambridge Bibliography of English Literature (NCBEL). If an author (or for an anonymous work, the title) appears in NCBEL, then their works are eligible for inclusion. Selection was intended to range over a wide variety of subject areas, to reflect the true nature of the print record of the period. In general, first editions of a works in English were prioritized, although there are a number of works in other languages, notably Latin and Welsh, included and sometimes a second or later edition of a work was chosen if there was a compelling reason to do so.</p>
+            <p>Image sets were sent to external keying companies for transcription and basic encoding. Quality assurance was then carried out by editorial teams in Oxford and Michigan. 5% (or 5 pages, whichever is the greater) of each text was proofread for accuracy and those which did not meet QA standards were returned to the keyers to be redone. After proofreading, the encoding was enhanced and/or corrected and characters marked as illegible were corrected where possible up to a limit of 100 instances per text. Any remaining illegibles were encoded as &lt;gap&gt;s. Understanding these processes should make clear that, while the overall quality of TCP data is very good, some errors will remain and some readable characters will be marked as illegible. Users should bear in mind that in all likelihood such instances will never have been looked at by a TCP editor.</p>
+            <p>The texts were encoded and linked to page images in accordance with level 4 of the TEI in Libraries guidelines.</p>
+            <p>Copies of the texts have been issued variously as SGML (TCP schema; ASCII text with mnemonic sdata character entities); displayable XML (TCP schema; characters represented either as UTF-8 Unicode or text strings within braces); or lossless XML (TEI P5, characters represented either as UTF-8 Unicode or TEI g elements).</p>
+            <p>Keying and markup guidelines are available at the <ref target="http://www.textcreationpartnership.org/docs/.">Text Creation Partnership web site</ref>.</p>
+         </editorialDecl>
+         <listPrefixDef>
+            <prefixDef ident="tcp"
+                       matchPattern="([0-9\-]+):([0-9IVX]+)"
+                       replacementPattern="http://eebo.chadwyck.com/downloadtiff?vid=$1&amp;page=$2"/>
+            <prefixDef ident="char"
+                       matchPattern="(.+)"
+                       replacementPattern="https://raw.githubusercontent.com/textcreationpartnership/Texts/master/tcpchars.xml#$1"/>
+         </listPrefixDef>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="eng">eng</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="http://authorities.loc.gov/">
+               <term>Dryden, John, 1631-1700 --  Early works to 1800.</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change>
+            <date>2007-06</date>
+            <label>TCP</label>Assigned for keying and markup</change>
+         <change>
+            <date>2007-07</date>
+            <label>Apex CoVantage</label>Keyed and coded from ProQuest page images</change>
+         <change>
+            <date>2008-02</date>
+            <label>Elspeth Healey</label>Sampled and proofread</change>
+         <change>
+            <date>2008-02</date>
+            <label>Elspeth Healey</label>Text and markup reviewed and edited</change>
+         <change>
+            <date>2008-09</date>
+            <label>pfs</label>Batch review (QC) and XML conversion</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="eng">
+      <front>
+         <div type="title_page">
+            <pb facs="tcp:153287:1" rendition="simple:additions"/>
+            <pb facs="tcp:153287:1"/>
+            <pb facs="tcp:153287:2"/>
+            <pb facs="tcp:153287:2"/>
+            <p>THE REVOLTEX A TRAGE-COMEDY Acted between the Hind and Panther, AND <hi>RELIGIO LAICI,</hi> &amp;c.</p>
+            <p>
+               <hi>London,</hi> Printed in the Year 1687.</p>
+         </div>
+      </front>
+      <body>
+         <div type="text">
+            <pb facs="tcp:153287:3"/>
+            <pb facs="tcp:153287:3"/>
+            <head>THE REVOLTER.  A Trage-Comedy.</head>
+            <p>THE <hi>Hind</hi> and the <hi>Panther—</hi>Certainly the Au<g ref="char:EOLhyphen"/>thor of this Poem, de<U+017F>erves to be reckon'd in the number of the Heathen Gods; For he has out-done all <hi>Natales Comes</hi>'s Deities, and has made new Metamorpho<g ref="char:EOLhyphen"/><U+017F>es's to make a <U+017F>econd <hi>Ovid</hi> more work, far more wonder<g ref="char:EOLhyphen"/>ful then tho<U+017F>e of the Ancient Pagan Divinities. For he has chang'd the Church of <hi>Rome</hi> into a <hi>Hind,</hi> the Church of <hi>England</hi> into a <hi>Panther,</hi> the <hi>Presbyterians</hi> into <hi>Wolves,</hi> the <hi>Inde<g ref="char:EOLhyphen"/>pendents</hi> into <hi>Bears,</hi> the <hi>Quakers</hi> into <hi>Hares, Libertines</hi> into <hi>Apes,</hi> the <hi>Anabapti<U+017F>ts</hi> into <hi>Boares,</hi> the <hi>Socinians</hi> into <hi>Foxes.</hi> And now the Bea<U+017F>ts begin to talk and parley together again, and the <hi>Hind</hi> and the <hi>Panther</hi> enter into a long and <U+017F>erious Debate, as in the Days of <hi>Ae<U+017F>op;</hi> only with this difference, that <hi>Ae<U+017F>op</hi>'s Bea<U+017F>ts were all <hi>Morali<U+017F>ts,</hi> but the<U+017F>e Poetical <hi>Fi<g ref="char:EOLhyphen"/>ctions</hi> are all Chri<U+017F>tians, and di<U+017F>pute and contend about things of a higher Nature. Truly, one would think the <hi>Author</hi>
+               <pb n="2" facs="tcp:153287:4"/>
+might have bethought him<U+017F>elf of Allu<U+017F>ions much more pro<g ref="char:EOLhyphen"/>per for his purpo<U+017F>e than <U+017F>uch Bea<U+017F>tial <hi>Pro<U+017F>opopeia's</hi> as the<U+017F>e; now altogether Antiquated, notwith<U+017F>tanding his idle Apo<g ref="char:EOLhyphen"/>logy for what he has done, and his mi<U+017F>erable Pre<U+017F>ident of Mother <hi>Hubbard,</hi> as much out of fa<U+017F>hion, as <hi>Hellen</hi> of <hi>Troys</hi> Wardrobe, or his Eye-<U+017F>ore of Q. <hi>Eli<U+017F>abeth</hi>'s Fardingale. Nor do we find that ever Chri<U+017F>t, who <U+017F>poke <U+017F>o much in Learned Parables, ever in<U+017F>pir'd the Brutes with Language to colour his In<U+017F>tructions. But the Poet's over-ha<U+017F>ty, which made it the more Officious Malice, having engag'd him to turn all the <hi>Di<U+017F><U+017F>enters</hi> into <hi>Bea<U+017F>ts;</hi> and not being able to pur<U+017F>ue his Allegory, unle<U+017F>s he made Bea<U+017F>ts of the <hi>Church</hi> of <hi>Rome,</hi> and the <hi>Church</hi> of <hi>England</hi> likewi<U+017F>e, has re<U+017F>olv'd to <U+017F>train a Com<g ref="char:EOLhyphen"/>plement with both; and rather than lo<U+017F>e the plea<U+017F>ing Con<g ref="char:EOLhyphen"/>ception of his Brain, like a compa<U+017F><U+017F>ionate <hi>Numen,</hi> to change the one into a <hi>Hind;</hi> and like an irritated <hi>Daemon,</hi> to tran<U+017F><g ref="char:EOLhyphen"/>form the other into a <hi>Panther.</hi>
+            </p>
+            <p>But while he <U+017F>ate thus in his Poetical Throne, or rather acting upon the Stage of Fable and Pagan Muthologie, and transfiguring into Bea<U+017F>ts almo<U+017F>t all Mankind but <hi>Turks</hi> and <hi>Infidels,</hi> that were out of his Road, he never con<U+017F>ider'd what a <hi>Mon<U+017F>ter</hi> he was him<U+017F>elf; a <U+017F>econd <hi>Geryon</hi> with three Heads: for each of which he had a particular Employment; with the one to fawn upon the mo<U+017F>t <hi>infamous</hi> of <hi>U<U+017F>urpers;</hi> with the other, at one time to lick the Beneficent Hands of his <hi>Prote<g ref="char:EOLhyphen"/><U+017F>tant Mother;</hi> and by and by to court the Charity of his Ca<g ref="char:EOLhyphen"/>tholick <hi>Mamma;</hi> while with the third, he bark'd and <U+017F>narl'd, not only at his fir<U+017F>t de<U+017F>erted Female Parent, but al<U+017F>o at all other differing Sentiments and Opinions, which his Soveraign had <U+017F>o graciou<U+017F>ly and generou<U+017F>ly indulg'd.</p>
+            <pb n="3" facs="tcp:153287:4"/>
+            <lg>
+               <l>BUT 'twas his Wrath, becau<U+017F>e his Native Church</l>
+               <l>Left his <hi>high Expectations</hi> in the lurch:</l>
+               <l>And well <U+017F>he might; for well <U+017F>he knew how <U+017F>oon</l>
+               <l>His <hi>Mu<U+017F>e</hi> her early <hi>Whoredoms</hi> had begun;</l>
+               <l>And thought it brave to be a <hi>Cromwel</hi>'s Jade,</l>
+               <l>Like <hi>Pathic Cae<U+017F>ar</hi> under <hi>Nicomede.</hi>
+               </l>
+               <l>She <U+017F>aw the <hi>Play-wright Laureate</hi> debau<U+017F>h'd</l>
+               <l>By the Times Vices which him<U+017F>elf reproach'd:</l>
+               <l>And by his Grand Reform of Stage-pit Fools,</l>
+               <l>Judg'd his Ability to manage Souls.</l>
+               <l>The <hi>Comedy,</hi> to <U+017F>ee him preach, for ought</l>
+               <l>She knew, might <hi>Tragic</hi> prove to tho<U+017F>e he taught;</l>
+               <l>By ill In<U+017F>tructions to their lo<U+017F>s beguil'd,</l>
+               <l>Or <U+017F>corning Precepts from a Tongue defil'd,</l>
+               <l>With Stage-Ob<U+017F>cenity—</l>
+               <l>For who could have refrain'd from <U+017F>portive Mirth,</l>
+               <l>To hear the Nation's Poet <hi>Bayes</hi> hold forth?</l>
+               <l>Or who would ever practi<U+017F>e by the Rule</l>
+               <l>Of one they could not chu<U+017F>e but ridicule?</l>
+               <l>The Scandal was the greater, the more rare;</l>
+               <l>An ordain'd <hi>Play-wright</hi> in the Hou<U+017F>e of Prayer.</l>
+               <l>While People only flock to hear him Chime</l>
+               <l>A rampant Sermon forth in <hi>Bully</hi> Rhime:</l>
+               <l>
+                  <pb n="4" facs="tcp:153287:5" rendition="simple:additions"/>
+Or el<U+017F>e his gaping Auditors he Fea<U+017F>ts,</l>
+               <l>With bold <hi>I<U+017F>aiah</hi>'s <hi>Raptures,</hi> and <hi>Ezekiel</hi>'s <hi>Bea<U+017F>ts.</hi>
+               </l>
+               <l>All this the <hi>Church</hi> fore<U+017F>aw, nor could endure</l>
+               <l>Polluted Lips <U+017F>hould handle Things mo<U+017F>t pure.</l>
+            </lg>
+            <lg>
+               <l>At the<U+017F>e Rebuffs th'offended <hi>Bayes</hi> retires,</l>
+               <l>Summons together his Poetic Fires,</l>
+               <l>And all the rage that frantic Spite in<U+017F>pires.</l>
+               <l>Did I for this, quo he, (for Anger is the Soul</l>
+               <l>Of Pa<U+017F><U+017F>ion, and mu<U+017F>t all my <hi>Chri<U+017F>tian Thoughts</hi> controul)</l>
+               <l>Did I for this expo<U+017F>e upon the Stage</l>
+               <l>My <hi>Roman Mother,</hi> not regarding Age,</l>
+               <l>Or Sex, (I call her Mother now, and <U+017F>o</l>
+               <l>I could the <hi>Aba<U+017F>sinian Patriarch</hi> too,</l>
+               <l>To <U+017F>erve my Turn)? Did I for this, I <U+017F>ay,</l>
+               <l>Expo<U+017F>e Her naked as the Sun<U+017F>hine day;</l>
+               <l>And by the Crimes I fa<U+017F>ten'd on one Prie<U+017F>t,</l>
+               <l>Inculcate boldly what were all the Re<U+017F>t?</l>
+               <l>Did I not paint'em wor<U+017F>e, in all their clo<U+017F>e Debau<U+017F>hes,</l>
+               <l>Than the lew'd Prie<U+017F>ts of <hi>I<U+017F>is,</hi> or the <hi>Gelt Reproaches</hi>
+               </l>
+               <l>Of <hi>Phrygian</hi> Rites to <hi>Phrygian Godde<U+017F>s</hi> due?</l>
+               <l>Let the incredulous read my Play; 'tis new.</l>
+               <l>Under the Colour of Confe<U+017F><U+017F>ion, <U+017F>ee,</l>
+               <l>See how my <hi>Fryar</hi> pimps for Golden Fee;</l>
+               <l>
+                  <pb n="5" facs="tcp:153287:5"/>
+See how I laid my Plot to bring him to't;</l>
+               <l>And made the Knave for<U+017F>wear him<U+017F>elf to boot.</l>
+               <l>Nor whether true or fal<U+017F>e did I e're mind,</l>
+               <l>Re<U+017F>olving to my <hi>Mother</hi> to be kind.</l>
+            </lg>
+            <lg>
+               <l>Say, was not this good Service to my Church,</l>
+               <l>But after all to leave me in the Lurch,</l>
+               <l>As if I'had laid Defilement in her Porch!</l>
+               <l>(Thus raving, the embitter'd <hi>Bayes</hi> went on,)</l>
+               <l>Could a more vile Ingratitude be <U+017F>hown?</l>
+               <l>I will not bate thy Crime, <hi>Laomedon,</hi>
+               </l>
+               <l>Unthankful to the Gods: for if the Gods</l>
+               <l>Were mercenary, where's the Pagan odds</l>
+               <l>Twixt Me and Them? Theirs was corporeal Pain,</l>
+               <l>Mine the more noble Labour of the Brain.</l>
+            </lg>
+            <lg>
+               <l>I was their <hi>Neptune;</hi> I their great <hi>Apollo,</hi>
+               </l>
+               <l>Repair'd their <hi>Trojan</hi> Walls, when crack'd &amp; hollow.</l>
+               <l>To me were the<U+017F>e <hi>Laomedons</hi> unju<U+017F>t,</l>
+               <l>So kind to toyl and labour upon Tru<U+017F>t.</l>
+               <l>But now I'le <U+017F>pout whole Seas upon the Main,</l>
+               <l>And with a Deluge bring down all again.</l>
+               <l>And all their dear <hi>He<U+017F>ione</hi>'s deflower;</l>
+               <l>At lea<U+017F>t I'le <U+017F>trive what lies within my power,</l>
+               <l>
+                  <pb n="6" facs="tcp:153287:6"/>
+And u<U+017F>e all Charms that in my<U+017F>terious Fury lurk.</l>
+               <l>This <U+017F>aid, the proud <hi>Revolter</hi> fell to work;</l>
+               <l>And a whole Winter and a Spring be<U+017F>tow'd</l>
+               <l>The Burthen of his <hi>Cranium</hi> to unload.</l>
+            </lg>
+            <lg>
+               <l>Now Heaven forbid that we <U+017F>hould e're a<U+017F><U+017F>ail</l>
+               <l>Real Conver<U+017F>ion; Man is prone to fail:</l>
+               <l>
+                  <hi>For Thoughtle<U+017F>s Youth, oft wing'd with vain De<U+017F>ires,</hi>
+               </l>
+               <l>
+                  <hi>And Manhood too, mi<U+017F>led by wandring Fires,</hi>
+               </l>
+               <l>
+                  <hi>Follow fal<U+017F>e Lights; and when their Glimps is gon,</hi>
+               </l>
+               <l>
+                  <hi>His Pride <U+017F>trikes out new Sparkles of his own.</hi>
+               </l>
+            </lg>
+            <lg>
+               <l>Howe're by happy chance when <hi>thoughtle<U+017F>s</hi> Youth,</l>
+               <l>Has once de<U+017F>cry'd the Sacred Paths of Truth,</l>
+               <l>And wandring Manhood has regain'd the Way</l>
+               <l>Whence tho<U+017F>e fal<U+017F>e Meteors led him once a<U+017F>tray,</l>
+               <l>The Path is free, when Con<U+017F>cience <U+017F>atisfy'd,</l>
+               <l>To tread the Tracks of its <hi>unerring Guide,</hi>
+               </l>
+               <l>'Tis Con<U+017F>cience only, Con<U+017F>cience can convince,</l>
+               <l>Con<U+017F>cience un<U+017F>potted and without pretence:</l>
+               <l>What Con<U+017F>cience then calls bad before, is bad</l>
+               <l>To him whom <U+017F>uch a Con<U+017F>cience does per<U+017F>wade,</l>
+               <l>And whither <U+017F>he directs, mu<U+017F>t be obey'd.</l>
+            </lg>
+            <lg>
+               <l>But when with Charms <hi>Circean</hi> woo'd, <U+017F>he yields</l>
+               <l>To what Preferment and Ambition guilds;</l>
+               <l>When di<U+017F>appointed Hopes, and con<U+017F>equent Revenge</l>
+               <l>Pu<U+017F>h on the Malecontent to frequent Change,</l>
+               <l>
+                  <pb n="7" facs="tcp:153287:6"/>
+There, Con<U+017F>cience, <U+017F>tript of her Cele<U+017F>tial part;</l>
+               <l>Proves a Di<U+017F>ea<U+017F>e, the Pa<U+017F><U+017F>ion of the Heart:</l>
+               <l>A Phren<U+017F>y of the Mind, as when the Maid</l>
+               <l>Runs mad, to find her Virgin Love betray'd.</l>
+               <l>The Helm of Fools, that <U+017F>erves in merry Gales,</l>
+               <l>But in the ruder Storms and <U+017F>udden <U+017F>trokes,</l>
+               <l>Of boy<U+017F>t'rou<U+017F>ly contending Pa<U+017F><U+017F>ions, fails,</l>
+               <l>And throws unrudder'd Man upon the Rocks.</l>
+            </lg>
+            <lg>
+               <l>He then who with a rambling Con<U+017F>cience moves</l>
+               <l>From his fir<U+017F>t Choice, a wild <hi>Cimmerian</hi> roves,</l>
+               <l>And only changes Seats for better Pa<U+017F>ture.</l>
+               <l>If one Religion will not feed him, he's the Ma<U+017F>ter</l>
+               <l>Of his own Rea<U+017F>on, and another <U+017F>hall;</l>
+               <l>Indifferent which way the Cane may fall,</l>
+               <l>Or toward <hi>Italy,</hi> or the <hi>Levant.</hi>
+               </l>
+               <l>He'l <hi>Mecca</hi>'s Plenty change for <hi>Roman Want,</hi>
+               </l>
+               <l>Still ready for the Turn; for all along</l>
+               <l>He's always in the right, but when he's wrong.</l>
+            </lg>
+            <lg>
+               <l>But let him ramble on; <U+017F>uch roaming <hi>Tartars</hi>
+               </l>
+               <l>No <hi>Converts</hi> are, but po<U+017F>itive <hi>De<U+017F>erters:</hi>
+               </l>
+               <l>Chang'd in Opinion, not in Principles;</l>
+               <l>Religion's <hi>Vagabonds,</hi> and <hi>Gyp<U+017F>ie-Scrowlers;</hi>
+               </l>
+               <l>To all Opinions <hi>pro<U+017F>tituted Tools,</hi>
+               </l>
+               <l>And <hi>Pilgrims</hi> to the <hi>Shrines</hi> of <hi>Crowns</hi> and <hi>Dollers.</hi>
+               </l>
+            </lg>
+            <lg>
+               <pb n="8" facs="tcp:153287:7"/>
+               <l>A <U+017F>ort of Craven Cocks that always Crow</l>
+               <l>On their own Dunghils, guarded from the blow</l>
+               <l>Of free Reply, their mainly dreaded Foe;</l>
+               <l>And ne're their Teeth, but <U+017F>till in <U+017F>afety, <U+017F>how.</l>
+            </lg>
+            <lg>
+               <l>
+                  <hi>Conver<U+017F>ion</hi> <U+017F>ilently retires, and aw'd</l>
+               <l>With her pa<U+017F>t Errors, hides her Head,</l>
+               <l>Only <hi>Contrition</hi> waits Her, mur'd within,</l>
+               <l>While <U+017F>he compleats the days of mourning for her Sin.</l>
+            </lg>
+            <lg>
+               <l>But here's a Ramping Infant <hi>Pro<U+017F>elyte,</hi>
+               </l>
+               <l>No <U+017F>ooner turn'd, but he hath Teeth to bite,</l>
+               <l>And <U+017F>ets up <hi>Champion</hi> e're half taught to fight.</l>
+               <l>Such certain Marks of tainted Con<U+017F>cience,</l>
+               <l>He ne're can vail his cloven Innocence,</l>
+               <l>With all his <hi>Uly<U+017F><U+017F>ean</hi> Eloquence.</l>
+            </lg>
+            <lg>
+               <l>Had he thus wrote when rudely he be<U+017F>meard</l>
+               <l>His <hi>pur<U+017F>y Fryar;</hi> or for a cur<U+017F>t Reward,</l>
+               <l>Ca<U+017F>t an officious Grin in <hi>Cromwel</hi>'s Face,</l>
+               <l>His daring Ver<U+017F>e had won him generous prai<U+017F>e.</l>
+               <l>But when his Mother flouri<U+017F>h'd, to write <hi>Pro,</hi>
+               </l>
+               <l>And <hi>Con</hi> again<U+017F>t her, when he thought her low,</l>
+               <l>Shews him a meer <hi>Probationer,</hi> on Tryal,</l>
+               <l>Either for kind Reception, or denial.</l>
+               <l>
+                  <pb n="9" facs="tcp:153287:7"/>
+For he has <U+017F>till with cunning Men to do,</l>
+               <l>Men that have rea<U+017F>on to <U+017F>u<U+017F>pect it too,</l>
+               <l>That who has twice been fal<U+017F>e, can n're prove true.</l>
+               <l>The Sinner therefore mu<U+017F>t him<U+017F>elf out-rime,</l>
+               <l>And toil his be<U+017F>t for Expiation of his Crime;</l>
+               <l>Public Atonement, publick Expiation,</l>
+               <l>As well as private Sobs, and Whipcord Recreation,</l>
+               <l>Mu<U+017F>t purge his Sins, &amp; cure his rotten Reputation.</l>
+            </lg>
+            <lg>
+               <l>Commanded thus, an Altar up he rears,</l>
+               <l>Poetic Fires, and <U+017F>harpen'd Knives prepares,</l>
+               <l>Renews the Ancient Laws of Sacrifice,</l>
+               <l>And for the Slaughter Victims new Supplies.</l>
+               <l>
+                  <hi>Hares, Foxes, Apes,</hi> ne're offer'd yet before,</l>
+               <l>To the<U+017F>e the <hi>Panther</hi> add, the <hi>Wolf</hi> and <hi>Boar;</hi>
+               </l>
+               <l>The Sacrificing Age had ne're <U+017F>uch <U+017F>tore.</l>
+               <l>A wond'rous Holocau<U+017F>t, and <U+017F>uch as might befit</l>
+               <l>The burning Rage of <U+017F>uch an <hi>Aetna</hi> Wit:</l>
+               <l>And the more meritorious, <U+017F>ince the Bigot</l>
+               <l>Would not exempt her Mother from the Fagot.</l>
+               <l>All this to <hi>Molach</hi>'s Int're<U+017F>t he de<U+017F>ign'd:</l>
+               <l>For by his Medley Offerings now we find,</l>
+               <l>Which was the Idol of his ravenous Mind.</l>
+            </lg>
+            <lg>
+               <pb n="10" facs="tcp:153287:8"/>
+               <l>But <U+017F>hame on all ill Luck, th'Oblation came too late;</l>
+               <l>Indulgence, far more potent than his Hate,</l>
+               <l>Indulgence <U+017F>topp'd the hideous Blaze: For why?</l>
+               <l>The harmle<U+017F>s Bea<U+017F>ts were <hi>fated not to die.</hi>
+               </l>
+               <l>And all his murdering Characters, the Cream</l>
+               <l>Of his Stage-Wit, prov'd but the Forger's <U+017F>hame.</l>
+               <l>A Winter's Toil in Rapture <U+017F>o ill <U+017F>pent,</l>
+               <l>As made that Scandal, which for Harm was meant.</l>
+               <l>For when Revenge and Malice <U+017F>pout forth Rime,</l>
+               <l>'Tis all but Libel, never <U+017F>o <U+017F>ublime.</l>
+            </lg>
+            <lg>
+               <l>Poor ill-tim'd Poem! thou might'<U+017F>t pity find,</l>
+               <l>Had'<U+017F>t thou not <U+017F>uch a Ma<U+017F><U+017F>acre de<U+017F>ign'd;</l>
+               <l>Had'<U+017F>t thou not toil'd for general di<U+017F>ta<U+017F>t,</l>
+               <l>And '<U+017F>tead of large applau<U+017F>e, to be by all di<U+017F>grac't.</l>
+               <l>U<U+017F>urping Bards, <U+017F>o boldly to a<U+017F>pire,</l>
+               <l>To Sacred fore<U+017F>ight and Prophetick Fire,</l>
+               <l>And Ours the mo<U+017F>t unhappy of the Quire.</l>
+               <l>
+                  <pb n="11" facs="tcp:153287:8"/>
+For had he had but half the <hi>Delphic</hi> Art</l>
+               <l>Of <hi>Bacon</hi>'s <hi>Head,</hi> he might have <U+017F>par'd a Quart</l>
+               <l>Of <hi>Groyneland Oyl</hi> at lea<U+017F>t, con<U+017F>um'd in Cotten,</l>
+               <l>To form a <hi>Brat,</hi> no <U+017F>ooner Born but Rotten.</l>
+            </lg>
+            <lg>
+               <l>And let it <hi>rot,</hi> a <hi>Babe</hi> of vile <hi>Di<U+017F>grace,</hi>
+               </l>
+               <l>The Sire's Reproach, and <U+017F>hame of all the Race,</l>
+               <l>From a wor<U+017F>e Fate, perhaps thereby redeem'd,</l>
+               <l>When the <gap reason="illegible" resp="#UOM" extent="1 letter">
+                     <desc>•</desc>
+                  </gap>oul Father of the <hi>Cub</hi> contemn'd</l>
+               <l>By all he has with <U+017F>o much Spite condemn'd,</l>
+               <l>And by his own detected, <U+017F>hall be forc'd</l>
+               <l>To hide a Head by both his <hi>Mothers</hi> Curs'd.</l>
+               <l>Bearing their Proverb in his <hi>Pia Mater,</hi>
+               </l>
+               <l>They love the Treacherie that hate the Traytour<g ref="char:punc"><U+25AA></g>
+               </l>
+            </lg>
+            <p>Thus much in reference to the Authors de<U+017F>ign in general. For as for his particular di<U+017F>putes which are <U+017F>o involv'd in Characters, and muffl'd up in Notion and Poetical Darkne<U+017F>s; 'tis intended that <hi>Him<U+017F>elf,</hi> as be<U+017F>t under<U+017F>tanding his own meaning, <U+017F>hall mo<g ref="char:EOLhyphen"/>de<U+017F>tly and civilly be his own Interpreter and An<U+017F>wer him<U+017F>elf. Only by the way, before we bring <hi>D.</hi> again<U+017F>t <hi>D.</hi> to the Stake, I would fain know how Mr. <hi>Bays,</hi> that <U+017F>o well under<U+017F>tood the Nature of Bea<U+017F>ts, came to pitch upon the <hi>Hind</hi> and the <hi>Panther,</hi> to <U+017F>ign ifie the Church of <hi>Rome</hi> and the Church of <hi>England.</hi> Doubtle<U+017F>s his Reply will be, becau<U+017F>e the <hi>Hind</hi> is a Creature <hi>harmle<U+017F>s</hi> and <hi>Innocent:</hi> the <hi>Panther mi<U+017F>chievous</hi> and <hi>inexocrable.</hi> Let all this be granted; what is this to the Authors ab<U+017F>urdity in the choice of his Bea<U+017F>ts? For the Scene of the Per<U+017F>ecution is <hi>Eu<g ref="char:EOLhyphen"/>rope,</hi> a part of the World which never bred <hi>Panthers</hi> <U+017F>ince the Creation of the Univer<U+017F>e. On the other <U+017F>ide, grant his allu<U+017F>ion pa<U+017F><U+017F>able, and then he <U+017F>tigmatizes the <hi>Church of England</hi> to be the mo<U+017F>t Cruel, and mo<U+017F>t voracious Creature that Ranges all the <hi>Ly<g ref="char:EOLhyphen"/>bean</hi> De<U+017F>erts. A Character which <U+017F>hews him to have a <U+017F>trange mi<U+017F>t before his Eyes when he reads Eccle<U+017F>ia<U+017F>tical Hi<U+017F>tory. And then <U+017F>aies he,
+
+<q>
+                  <pb n="12" facs="tcp:153287:9"/>
+                  <l>
+                     <hi>The</hi> Panther, <hi><U+017F>ure the Noble<U+017F>t next the</hi> Hind,</l>
+                  <l>
+                     <hi>And faire<U+017F>t Creature of the <U+017F>potted Kind.</hi>
+                  </l>
+               </q>
+Which is another Blunder; <hi>cujus Coutrarium verum e<U+017F>t,</hi> For if Beauty, Strength and Courage advance the value of the <U+017F>everal parts of the Creation, without Que<U+017F>tion the <hi>Panther</hi> is far to be preferred before the <hi>Hind,</hi> a poor <U+017F>illy timorous ill-<U+017F>hap'd, bob<g ref="char:EOLhyphen"/>tail'd Creature, of which a Score will hardly purcha<U+017F>e the Skin of a true <hi>Panther.</hi> Had he lookd a little farther, <hi>Ludolphus</hi> would have furni<U+017F>h'd him with a <hi>Zecora,</hi> the mo<U+017F>t beautiful of all the Four-footed Creatures in the World, to have <note place="margin">
+                  <hi>L.</hi> 1. <hi>c</hi> 10. <hi>Hi<U+017F>t. Aethiop.</hi>
+               </note> Cop'd with his <hi>Panther</hi> for Spots, and with his <hi>Hind</hi> for gentlene<U+017F>s and mildne<U+017F>s: of which one was Sold <U+017F>ingly to the Turki<U+017F>h Governor of <hi>Suaquena</hi> for two thou<U+017F>and <hi>Venetian</hi> Ducats. There had been a Bea<U+017F>t for him, as pat as a Pudding for a Fryers Mouth. But to couple the <hi>Hind</hi> and the <hi>Panther,</hi> was ju<U+017F>t like <hi>Sic parvis componere.</hi> And therefore he had better have put his <hi>Hind</hi> in a good Pa<U+017F>ty, or re<U+017F>erv'd her for <U+017F>ome more proper Allu<g ref="char:EOLhyphen"/><U+017F>ion; for this, tho' his nimble bea<U+017F>t have four Feet, will by no means run <hi>quatuor pedibus,</hi> tho' <U+017F>he had a whole Kennel of Hounds at her Heels.</p>
+            <p>But this was the <hi>Church of Englands</hi> Misfortune: rather than a true Poet will loo<U+017F>e his Conceit, he'l be<U+017F>patter the be<U+017F>t friends he has. For you mu<U+017F>t know the <hi>Church of England</hi> was made a <hi>Pan<g ref="char:EOLhyphen"/>ther</hi> for two Rea<U+017F>ons. Fir<U+017F>t at the ea<U+017F>ily granted reque<U+017F>t of a <hi>Thought,</hi> which was this,
+<q>
+                  <l>Oh! could her inborn Stains be wa<U+017F>h'd away,</l>
+                  <l>She were too good to be a Bea<U+017F>t of Prey.</l>
+               </q>
+               <hi>Dii te Dama<U+017F>ippe decaeq.—Donent Ton<U+017F>ore,</hi> for the<U+017F>e <U+017F>mall Remainders of Pity.</p>
+            <p>The next was to <U+017F>hew ye that he could tame a <hi>Panther,</hi> while you <U+017F>ee the <hi>Hind</hi> and the <hi>Panther</hi> <U+017F>o lovingly di<U+017F>cour<U+017F>ing together. A miracle ile a<U+017F><U+017F>ure ye equal if not <U+017F>uperior to the choice<U+017F>t in all
+<pb n="13" facs="tcp:153287:9"/>
+               <hi>Ribadenira,</hi> if you con<U+017F>ider how difficult a thing it is to dome<U+017F>ti<g ref="char:EOLhyphen"/>cate that wild Animal.</p>
+            <p>In <U+017F>hort the whole Poem, if it may de<U+017F>erve that Name, is a piece of Deformed arrogant Non<U+017F>ence, and <U+017F>elf-contradiction, dre<U+017F>t up in fine Language, like an ugly Brazen fac'd Whore peeping through the Co<U+017F>tly Trappings of a Point <hi>de Veni<U+017F>e</hi> Cornet. I call it Non<g ref="char:EOLhyphen"/><U+017F>ence, becau<U+017F>e un<U+017F>ea<U+017F>onable; and Arrogant, becau<U+017F>e Impertinent; For could Mr. <hi>Bayes</hi> have <U+017F>o little Wit, to think him<U+017F>elf a <U+017F>ufficient Champion to decide the High My<U+017F>teries of <hi>Faith</hi> and <hi>Tran<U+017F>ub<U+017F>tan<g ref="char:EOLhyphen"/>tiation,</hi> and the nice di<U+017F>putes concerning <hi>Traditions</hi> and <hi>infallibility</hi> in a Di<U+017F>cour<U+017F>e between the <hi>Hind</hi> and the <hi>Panther,</hi> which undeter<g ref="char:EOLhyphen"/>min'd hitherto, have exerci<U+017F>'d all the Learning in the World. Or could he think the Grand Arcana of <hi>Divinity</hi> a Subject fit to be hand<g ref="char:EOLhyphen"/>led in flouri<U+017F>hing Rhime by the Author of the <hi>Duke of Gui<U+017F>e,</hi> or the <hi>Conque<U+017F>t of Peru,</hi> or the <hi>Spani<U+017F>h Fryar:</hi> Doubts which Mr. <hi>Bayes</hi> is no more able to unfold, then <hi>Saffold</hi> to re<U+017F>olve a Que<U+017F>tion in A<U+017F>trology. And all this only as a Tale to u<U+017F>her in his beloved <hi>Character,</hi> and to <U+017F>hew the excellency of his Wit in abu<U+017F>ing Hone<U+017F>t Men. If the<U+017F>e were his thoughts, as we cannot rationally otherwi<U+017F>e believe, <U+017F>eeing that no man of under<U+017F>tanding will undertake an en<g ref="char:EOLhyphen"/>terpri<U+017F>e wherein he does not think him<U+017F>elf to have <U+017F>ome advantage of his Predece<U+017F><U+017F>ors; then does this <hi>Romance,</hi> I <U+017F>ay, of the <hi>Panther</hi> and the <hi>Hind</hi> fall under the mo<U+017F>t fatal Cen<U+017F>ure of unrea<U+017F>onable folly and <U+017F>awcy Impertinence. Nor can I think that the more So<g ref="char:EOLhyphen"/>lid, Prudent and Learned Per<U+017F>ons of the <hi>Roman</hi> Church Con him any Thanks for laying the Prophane Fingers of a Turn-Coat upon the Altar of their Sacred Debates.</p>
+            <p>And <U+017F>o much for the <hi>Hind</hi> and <hi>Panther.</hi> Now you <U+017F>hall hear Mr. <hi>D.</hi> di<U+017F>puting again<U+017F>t Mr <hi>D.</hi> Mr. <hi>D.</hi> the <hi>Romani<U+017F>t</hi> again<U+017F>t Mr. <hi>D.</hi> the <hi>Prote<U+017F>tant.</hi> As if he thought the controverted Points of Re<g ref="char:EOLhyphen"/>ligion between differing Judgments were only Paradoxes for acute Ingenuities to play with, and <U+017F>hew the Dexterity of Wit to manage the Cau<U+017F>e of Plaintiff or Defendant.</p>
+            <p>
+               <pb n="14" facs="tcp:153287:10"/>
+Mr. <hi>D.</hi> the <hi>Romani<U+017F>t</hi> di<U+017F>cour<U+017F>ing of <hi>Traditions</hi> thus begins, 
+
+<q>
+                  <bibl>
+                     <hi>Hind</hi> and <hi>Panther,</hi> p. 41.</bibl>
+                  <l>—But the Rule you lay</l>
+                  <l>Has lead whole Flocks, and leads them <U+017F>till a<U+017F>tray;</l>
+                  <l>For did not <hi>Arrius</hi> fir<U+017F>t, <hi>Socinus</hi> now</l>
+                  <l>The Sons Eternal Glory di<U+017F>avow?</l>
+                  <l>And did not they by Go<U+017F>pel Texts alone,</l>
+                  <l>Condemn our Doctrine and maintain their own?</l>
+                  <l>Have not all Heretic's the <U+017F>ame pretence,</l>
+                  <l>To plead the Scriptures in their own defence?</l>
+                  <l>How did the <hi>Nicene</hi> Council then decide</l>
+                  <l>That <U+017F>trong debate, was it by Scripture try'd</l>
+
+                  <bibl>
+                     <hi>Page</hi> 42.</bibl>
+
+                  <l>No <U+017F>ure, to tho<U+017F>e the Rebel would not yield,</l>
+                  <l>Squadrons of Texts he Mar<U+017F>hall'd in the Field:</l>
+                  <l>The good old Bi<U+017F>hops took a <U+017F>impler way;</l>
+                  <l>Each ask'd but what he heard his Father <U+017F>ay,</l>
+                  <l>Or how he was in<U+017F>tructed in his Youth,</l>
+                  <l>And by Traditions Force upheld the Truth.</l>
+               </q>
+            </p>
+            <p>To this after he has put a frivolous An<U+017F>wer of his own into the <hi>Panthers</hi> Mouth, he goes on;
+
+<q>
+                  <l>I <U+017F>ee Tradition then is di<U+017F>allow'd,</l>
+                  <l>When not evinc'd by Scripture to be true,</l>
+                  <l>And Scripture, as interpreted by you:</l>
+                  <l>But here you tread upon unfaithful Ground,</l>
+                  <l>Unle<U+017F>s you could infallibly expound</l>
+
+                  <pb n="15" facs="tcp:153287:10"/>
+                  <bibl>
+                     <hi>p.</hi> 44.</bibl>
+
+                  <lg>
+                     <l>Which you reject as odious Poperie,</l>
+                     <l>And throw the Doctrine back with <U+017F>corn on me;</l>
+                     <l>Thus when you <U+017F>ay Traditions mu<U+017F>t be try'd,</l>
+                     <l>By Sacred Writ, who<U+017F>e Sen<U+017F>e your <U+017F>elves decide;</l>
+                     <l>You <U+017F>aid no more, but that your <U+017F>elves mu<U+017F>t be</l>
+                     <l>The Judges of the Scripture Sen<U+017F>e not we.</l>
+                  </lg>
+                  <lg>
+                     <l>If not by Scripture, how can we be <U+017F>ure</l>
+                     <l>Reply'd the <hi>Panther,</hi> what Tradition's <U+017F>ure?</l>
+                     <l>For you may <note n="*" place="bottom">A <hi>proper Expre<U+017F><U+017F>ion, to put into the Mouth of the Church of</hi> England; <hi>as if <U+017F>he were a common Gam<U+017F>ter.</hi>
+                        </note> Palm upon us now for old,</l>
+                     <l>All as they <U+017F>ay that Glitter is not Gold.</l>
+                  </lg>
+                  <lg>
+                     <l>How, but by following her, reply'd the Dame,</l>
+                     <l>To whom deriv'd from Sire to Son they came;</l>
+                     <l>Where every Age does one another move,</l>
+                     <l>And tru<U+017F>ts no farther than the next above,</l>
+                     <l>Where all the Rounds like <hi>Jacob's</hi> Ladder ri<U+017F>e,</l>
+                     <l>The lowe<U+017F>t in the Earth, the Top-mo<U+017F>t in the Skies.</l>
+                     <l>
+                        <bibl>46.</bibl> You mu<U+017F>t evince Traditions to be forg'd:</l>
+                     <l>Produce plain Proofs: Unblemi<U+017F>h'd Authors u<U+017F>e,</l>
+                     <l>As antient as tho<U+017F>e Authors they accu<U+017F>e</l>
+                     <l>Till when, 'tis not <U+017F>ufficient to defame,</l>
+                     <l>And old po<U+017F><U+017F>e<U+017F><U+017F>ion <U+017F>tands, till Elder quits the claim.</l>
+                  </lg>
+               </q>
+            </p>
+            <p>This was the Opinion of Mr. <hi>D.</hi> the <hi>Romani<U+017F>t</hi> upon the Ca<U+017F>e of Tra<g ref="char:EOLhyphen"/>ditions: now you <U+017F>hall hear the Judgment of Mr. <hi>D.</hi> the Prote<U+017F>tant upon the <U+017F>ame Subject.
+
+<pb n="16" facs="tcp:153287:11"/>
+               <q>
+                  <bibl>
+                     <hi>Relig. Lai. p.</hi> 20.</bibl>
+                  <lg>
+                     <l>We hold and <U+017F>ay, we prove from Scripture plain,</l>
+                     <l>That Chri<U+017F>t is God; the bold <hi>Socinian:</hi>
+                     </l>
+                     <l>From the <U+017F>ame Scripture urges he's but Man.</l>
+                     <l>Now what appeal can end th' impatient <U+017F>uite?</l>
+                     <l>Both parts talk loudly, but the Rule is mute?</l>
+                  </lg>
+                  <lg>
+                     <l>Shall I <U+017F>peak plain, and in a Nation <hi>Free,</hi>
+                     </l>
+                     <l>A<U+017F><U+017F>ume an hone<U+017F>t Laymans Libertie.</l>
+                     <l>I think according to my little skill,</l>
+                     <l>To my own <note n="*" place="bottom">
+                           <hi>Meaning the Church of</hi> England.</note> Mother Church <U+017F>ubmitting <U+017F>till,</l>
+                     <l>That many have been <U+017F>av'd, and many may</l>
+                     <l>That never heard the Que<U+017F>tion brought in play.</l>
+                     <l>For the Streight Gate would be made <U+017F>treighter yet,</l>
+                     <l>Were none admitted there but Men of Wit.</l>
+                     <l>The Few by Nature form'd, with learning fraught,</l>
+                     <l>Born to in<U+017F>truct, as others to be taught,</l>
+                     <l>Mu<U+017F>t <U+017F>tuddy well the <U+017F>acred Page, and <U+017F>ee</l>
+                     <l>Which Doctrine, this or that, does be<U+017F>t agree</l>
+                     <l>With the whole Tenour of the work Divine<g ref="char:punc"><U+25AA></g>
+                     </l>
+                     <l>And plainlie<U+017F>t points to Heavens reveal'd de<U+017F>ign.</l>
+                     <l>Which Expo<U+017F>ition flows from genuine <U+017F>en<U+017F>e,</l>
+                     <l>And which is forc'd by Wit and Eloquence,</l>
+                     <l>And then Traditions parts are u<U+017F>eful here</l>
+                     <l>When general, old, di<U+017F>intere<U+017F>t and clear.</l>
+                     <l>That antient Fathers thus expound the Page.</l>
+                     <l>Give Truth, the Reverend Maje<U+017F>ty of Age;</l>
+                     <l>For <U+017F>till, the nearer to the Spring we go<g ref="char:punc"><U+25AA></g>
+                     </l>
+                     <l>More limpid, more un<U+017F>oil'd the Waters flow.</l>
+                     <l>Thus fir<U+017F>t Traditions were a Proof alone,</l>
+                     <l>Could we be certain <U+017F>uch they were, <U+017F>o known,</l>
+                     <l>
+                        <pb n="17" facs="tcp:153287:11"/>
+But <U+017F>ince <U+017F>ome flaws in long de<U+017F>cent may be,</l>
+                     <l>They make not truth, but probability.</l>
+                     <l>Tradition written, therefore more Commends</l>
+                     <l>Authority than what from Voice de<U+017F>cends:</l>
+                     <l>And this as perfect as its kind may be,</l>
+                     <l>Rowls down to us the <U+017F>acred Hi<U+017F>torie.</l>
+                     <l>Which from the Univer<U+017F>al Church receiv'd,</l>
+                     <l>Is try'd, and afterward believ'd.</l>
+                  </lg>
+               </q>
+            </p>
+            <p>
+               <hi>And</hi>
+
+               <q>
+                  <bibl>p. 16</bibl>
+                  <l>If Scripture, tho deriv'd from Heavenly Birth</l>
+                  <l>Has been but carele<U+017F>ly pre<U+017F>erv'd on Earth.</l>
+                  <l>If Gods own people—</l>
+                  <l>—Who did neither time nor <U+017F>tuddy <U+017F>pare.</l>
+                  <l>To keep this Book untainted, unperplex'd</l>
+                  <l>Let in gro<U+017F>s Errors to Corrupt the Text.</l>
+                  <l>Omitted Paragraphs, embroil'd the <U+017F>en<U+017F>e,</l>
+                  <l>With vain Traditions <U+017F>topt the gaping Fence,</l>
+                  <l>Which every common hand pull'd up with ea<U+017F>e,</l>
+                  <l>What <U+017F>a<U+017F>ety from <U+017F>uch <hi>Bru<U+017F>hwood</hi> helps as the<U+017F>e<g ref="char:punc"><U+25AA></g>
+                  </l>
+                  <l>If Written Words from time are not <U+017F>ecur'd,</l>
+                  <l>How can we think; have, Orall <U+017F>ounds endur'd.</l>
+                  <l>Which thus tran<U+017F>mitted, if one Mouth has fail'd,</l>
+                  <l>Immortal lies on Age are entail'd;</l>
+                  <l>And that <U+017F>ome <U+017F>uch have been is prov'd too plin,</l>
+                  <l>If we con<U+017F>ider <note n="*" place="bottom">
+                        <hi>Meaning the</hi> Roman <hi>Intre<U+017F>t, Church, and Profit.</hi>
+                     </note> 
+                     <hi>Intere<U+017F>t, Church and Gain.</hi>
+                  </l>
+               </q>
+            </p>
+            <p>In the Second place Mr. <hi>D.</hi> the Romani<U+017F>t is for proving the Infal<g ref="char:EOLhyphen"/>libility of his New Mother, which he thus E<U+017F><U+017F>aies to accompli<U+017F>h.
+
+<q>
+                  <bibl>
+                     <hi>Hind</hi> and <hi>Panth.</hi> p 52.</bibl>
+
+                  <l>And w<gap reason="illegible" resp="#UOM" extent="1 letter">
+                        <desc>•</desc>
+                     </gap>at one Saint has <U+017F>aid of Holy <hi>Paul,</hi>
+                  </l>
+                  <l>He <hi>darkly</hi> Writ is true apply'd to all.</l>
+                  <l>
+                     <pb n="18" facs="tcp:153287:12"/>
+For this ob<U+017F>curity could Heaven provide,</l>
+                  <l>More prudently than by a living Guide,</l>
+                  <l>As doubts aro<U+017F>e the difference to decide?</l>
+                  <l>
+                     <note n="*" place="bottom">The Hind begs the Que<U+017F>tion.</note> A Guide was therefore needful, therefore made,</l>
+                  <l>And if appointed, <U+017F>ure to be obeyd.</l>
+                  <l>Thus with due Rev'rence, to th' Apo<U+017F>tles Writ<g ref="char:punc"><U+25AA></g>
+                  </l>
+                  <l>By which my Sons are taught, to which <U+017F>ubmit:</l>
+                  <l>I think tho<U+017F>e truths their <U+017F>acred works conrain,</l>
+                  <l>The Church alone can certainly explain,</l>
+                  <l>That following Ages leaning on the Pa<U+017F>t,</l>
+                  <l>May re<U+017F>t upon the primitive at la<U+017F>t,</l>
+                  <l>Nor wou'd I thence the word no Rule inferr,</l>
+                  <l>But none without the Church Interpreter.</l>
+                  <bibl>P 59.</bibl>
+                  <l>Then granting that unerring Guide we want,</l>
+                  <l>That <U+017F>uch there is, you <U+017F>tand oblig'd to grant,</l>
+                  <l>Our Saviour el<U+017F>e were wanting to <U+017F>upply</l>
+                  <l>Our needs, and obviate that nece<U+017F><U+017F>ity.</l>
+                  <l>It then remains that Church can only be</l>
+                  <l>The Guide which owns unfailing certainty.</l>
+                  <bibl>p. 60.</bibl>
+                  <l>All which the <note n="*" place="bottom">His new Mother.</note> Mother Church a<U+017F><U+017F>erts her own</l>
+                  <l>And with unrivall'd claim a<U+017F>cends the Thrown.</l>
+               </q>
+            </p>
+            <p>[Exit. <hi>Hind. Now Enter</hi> Panther <hi>in the Per<U+017F>on of</hi> D. <hi>the Prote<U+017F>tant </hi>
+
+               <q>
+                  <bibl>
+                     <hi>Relig. Laic.</hi> p. 18.</bibl>
+                  <l>Such an Omni<U+017F>cient Church we wi<U+017F>h indeed</l>
+                  <l>'Twere worth both Te<U+017F>taments, and ca<U+017F>t in the Creed,</l>
+                  <l>But if this Mother be a Guide <U+017F>o <U+017F>ure,</l>
+                  <l>As can all Doubts re<U+017F>olve, all Truth <U+017F>ecure,</l>
+                  <l>
+                     <pb n="19" facs="tcp:153287:12"/>
+Then her Infallibility, as well</l>
+                  <l>Where Copies are corrupt or lame, can tell;</l>
+                  <l>Re<U+017F>tore lo<U+017F>t Canon with as little Pains,</l>
+                  <l>And truly explicate what <U+017F>till remains.</l>
+                  <l>Which yet no Councils dare pretend to do,</l>
+                  <l>Unle<U+017F>s, like <hi>E<U+017F>dras,</hi> they could write a new;</l>
+                  <l>Strange Confidence <U+017F>till to interpret true,</l>
+                  <l>Yet not be <U+017F>ure, That all they have explain'd</l>
+                  <l>Is in the ble<U+017F>t Original contain'd.</l>
+                  <l>More <U+017F>afe, and much more mode<U+017F>t 'tis to <U+017F>ay</l>
+                  <l>
+                     <hi>God would not leave mankind without a Way.</hi>
+                  </l>
+                  <l>And that the <hi>Scriptures,</hi> tho not every where</l>
+                  <l>Free from corruption, or entire and clear,</l>
+                  <l>Are uncorrupt, <U+017F>ufficient, clear, and entire</l>
+                  <l>In all things which our needful Faith require;</l>
+                  <l>If others in the fame Gla<U+017F>s better <U+017F>ee</l>
+                  <l>'Tis for them<U+017F>elves they look, but not for me;</l>
+                  <l>For my Salvation mu<U+017F>t its doom receive,</l>
+                  <l>Not from what Others, but what I believe.</l>
+               </q>
+            </p>
+            <p>
+               <pb n="18" facs="tcp:153287:13"/>
+And <bibl>p. 16.</bibl>  <U+017F>peaking in commendation of the Tran<g ref="char:EOLhyphen"/><U+017F>lation of Father <hi>Simon,</hi> he has the<U+017F>e words:
+
+<q>
+                  <l>Where we may <U+017F>ee what Errors have been made,</l>
+                  <l>Both in the <hi>Copier</hi>'s, and <hi>Tran<U+017F>lator</hi>'s Trade;</l>
+                  <l>How <hi>Jewi<U+017F>h,</hi> Popi<U+017F>h Intere<U+017F>ts have prevail'd,</l>
+                  <l>And where <hi>Infallibility</hi> has fail'd.</l>
+               </q>
+            </p>
+            <p>
+               <bibl>P. 24. </bibl> 
+               <hi>He goes on thus.</hi>
+
+               <q>
+                  <l>In tho<U+017F>e dark times they learn'd the Knack <U+017F>o well,</l>
+                  <l>That by long u<U+017F>e they grew Infallible;</l>
+                  <l>At la<U+017F>t, a knowing Age began t' enquire</l>
+                  <l>If they the Book, or That did them in<U+017F>pire?</l>
+                  <l>And making narrower <U+017F>earch they found, tho late,</l>
+                  <l>That what they thought the Prie<U+017F>ts, was their E<U+017F>tate;</l>
+                  <l>Taught by the <hi>Will</hi> produc'd, the Written Word,</l>
+                  <l>How long they had been cheated on Record.</l>
+               </q>
+            </p>
+            <p>
+               <bibl>P. 22.</bibl>  
+               <hi>He has moreover the<U+017F>e Lines.</hi>
+
+               <q>
+                  <l>The Partial Papi<U+017F>ts would infer from hence,</l>
+                  <l>Their Church, in la<U+017F>t re<U+017F>ort, <U+017F>hould judg the <U+017F>ence;</l>
+                  <l>
+                     <pb n="21" facs="tcp:153287:13"/>
+But fir<U+017F>t they would a<U+017F><U+017F>ume, with wondrous Art,</l>
+                  <l>Them<U+017F>elves to be the whole, who are but part</l>
+                  <l>Of that va<U+017F>t Frame, the Church——</l>
+               </q>
+            </p>
+            <p>
+               <hi>And in his Preface to his</hi> Relig. Laic. <hi>he has this Ex<g ref="char:EOLhyphen"/>pre<U+017F><U+017F>ion upon the <U+017F>ame Subject.</hi>
+
+               <q>
+                  <p>But by a<U+017F><U+017F>erting the Scripture to be the Canon of our Faith, I have unavoidably created to my <U+017F>elf two <U+017F>ort of Enemies: The <hi>Papi<U+017F>ts</hi> indeed more directly, becau<U+017F>e they have kept the Scripture from us what they could, and have re<U+017F>erv'd to them<U+017F>elves a right of Interpreting what they have deliver'd, under pretence of Infallibility.</p>
+               </q>
+            </p>
+            <p>After this Mr. <hi>D.</hi> the <hi>Romani<U+017F>t</hi> falls into a Rapture, and extolls his new <hi>Mother</hi> to that degree, as if he were <U+017F>triving to outdo the <hi>Canticles.</hi> Saies he,
+
+<q>
+                  <bibl>
+                     <hi>Hind and Panther,</hi> p. 61.</bibl>
+                  <lg>
+                     <l>Behold! what marks of Maje<U+017F>ty <U+017F>he brings,</l>
+                     <l>Richer than Ancient Heirs of Ea<U+017F>tern Kings;</l>
+                     <l>Her right hand holds the Scepter and the Keys</l>
+                     <l>To <U+017F>hew whom <U+017F>he commands, and who obeys,</l>
+                     <l>
+                        <pb n="22" facs="tcp:153287:14"/>
+With the<U+017F>e to bind, or <U+017F>et the <U+017F>inner free,</l>
+                     <l>With that t' a<U+017F><U+017F>ert <U+017F>piritual Royalty.</l>
+                  </lg>
+                  <lg>
+                     <l>One in her <U+017F>elf, not rent by Schi<U+017F>m, but <U+017F>ound,</l>
+                     <l>Entire, one <U+017F>olid <U+017F>hining Diamond,</l>
+                     <l>One central Principle of Unity</l>
+                     <l>As undivided, <U+017F>o from Errors free,</l>
+                     <l>As one in Faith, <U+017F>o one in Sanctity.</l>
+                     <l>Thus one, thus pure, behold her largely <U+017F>pread.</l>
+                     <l>Like the fair Ocean, from her Mother-Bed.</l>
+                     <l>From <hi>Ea<U+017F>t</hi> to <hi>We<U+017F>t</hi> triumphantly <U+017F>he rides,</l>
+                     <l>All Shores are water'd by her wealthy Tides.</l>
+                     <l>The Go<U+017F>pel's <U+017F>ound diffus'd from Pole to Pole,</l>
+                     <l>Where Winds can carry, and where Waves can roll,</l>
+                     <l>The <U+017F>elf <U+017F>ame Doctrine of the Sacred Page,</l>
+                     <l>Conveigh'd to every Clime, in every Age<g ref="char:punc"><U+25AA></g>
+                     </l>
+                  </lg>
+               </q>
+            </p>
+            <p>But Mr. <hi>D</hi> the <hi>Prote<U+017F>tant</hi> talks at another rate, as for Example, 
+<q>
+                  <bibl>
+                     <hi>Relig. Laic.</hi> p. 23.</bibl>
+                  <l>In Times o'regrown with Ru<U+017F>t and Ignorance,</l>
+                  <l>A Gainful Trade their Clergy did advance,</l>
+                  <l>When want of Learning kept the Lay-men low,</l>
+                  <l>And none but Prie<U+017F>ts were authoriz'd to know.</l>
+                  <l>
+                     <pb n="23" facs="tcp:153287:14"/>
+When what <U+017F>mall Knowledg was, in them did dwell,</l>
+                  <l>And he a <hi>God,</hi> who could but <hi>Read</hi> or <hi>Spell;</hi>
+                  </l>
+                  <l>Then <hi>Mother Church</hi> did mightily prevail,</l>
+                  <l>She parcell'd out the <hi>Bible</hi> by Retail;</l>
+                  <l>But <U+017F>till expounded what <U+017F>he <U+017F>old or gave,</l>
+                  <l>To keep it in her power to damn or <U+017F>ave:</l>
+                  <l>Scripture was <U+017F>carce, and as the Market went,</l>
+                  <l>Poor Lay-men took Salvation on Content.</l>
+                  <l>As needy men take Money, good or bad,</l>
+                  <l>Gods Word they had not, but the Prie<U+017F>ts they had;</l>
+                  <l>Yet whate're fal<U+017F>e Conveyances they made,</l>
+                  <l>The Lawyer <U+017F>till was certain to be paid.</l>
+               </q>
+            </p>
+            <p>When he comes to the Panegyrick upon his pre<U+017F>ent Maje<U+017F>ty, where he had <U+017F>o tran<U+017F>ending a Subject, and ought, tho it had been by way of Digre<U+017F><U+017F>ion, to have expended the whole Trea<U+017F>ure of his Genius, Heaven's! what a difference there is between the feminine Encomiums of Mr. <hi>D.</hi> the <hi>Romani<U+017F>t,</hi> upon His pre<U+017F>ent <hi>Maje<U+017F>ty,</hi> and the ranting Raptures of Mr. <hi>D.</hi> the <hi>Independent</hi> upon a Mon<U+017F>ter of a Tyrant, as if the very Noi<U+017F>e of <hi>Olivers</hi> <U+017F>ilver Prize had in<U+017F>pir'd him.</p>
+            <p>The choice<U+017F>t of Mr. <hi>D.</hi> the <hi>Romani<U+017F>t's</hi> thoughts, which he had to be<U+017F>tow upon his Soveraign, are only the<U+017F>e.
+<q>
+                  <l>A plain good man, who<U+017F>e name is under<U+017F>tood</l>
+                  <l>(So few de<U+017F>erve the Name of Plain and Good)</l>
+                  <l>
+                     <pb n="24" facs="tcp:153287:15"/>
+Of three fair Lineal Lord<U+017F>hips <U+017F>tood po<U+017F><U+017F>e<U+017F>s'd,</l>
+                  <l>And livd, as rea<U+017F>on was, upon the Be<U+017F>t,</l>
+                  <l>Inur'd to Hard<U+017F>hips from his early Youth;</l>
+                  <l>Much had he done, and <U+017F>uffer'd for his Truth:</l>
+                  <l>
+                     <gap reason="illegible" resp="#UOM" extent="1 letter">
+                        <desc>•</desc>
+                     </gap>t Land and Sea in many a doubtful fight,</l>
+                  <l>Was never known a more Advent'rous Knight,</l>
+                  <l>Who oftner drew his Sword, and always for the Right<g ref="char:punc"><U+25AA></g>
+                  </l>
+               </q>
+            </p>
+            <p>But this is nothing to the lofty <U+017F>train, wherein Mr. <hi>D.</hi> the <hi>Indepen<g ref="char:EOLhyphen"/>dent</hi> Courts the fortune of a pro<U+017F>perous Rebel, in his Poem upon the Death of <hi>Oliver Cromwell,</hi> where he has the<U+017F>e towring Expre<U+017F><g ref="char:EOLhyphen"/><U+017F>ions.
+
+<q>
+                  <l>His Grandeur he deriv'd from Heav'n alone,</l>
+                  <l>For he was great e're Fortune made him <U+017F>o:</l>
+                  <l>And Wars, like Mi<U+017F>ts that ri<U+017F>e again<U+017F>t the Sun,</l>
+                  <l>Made him but greater <U+017F>eem, not greater grow.</l>
+                  <l>And yet Dominion was not his De<U+017F>ign,</l>
+                  <l>We owe that Ble<U+017F><U+017F>ing not to him, but Heav'n,</l>
+                  <l>Which to fair Acts un<U+017F>ought Rewards did joyn,</l>
+                  <l>Rewards that le<U+017F>s to us than him were giv'n.</l>
+                  <l>
+                     <pb n="25" facs="tcp:153287:15"/>
+Swift and re<U+017F>i<U+017F>tle<U+017F>s through the Land be pa<U+017F>t,</l>
+                  <l>Like that bold <hi>Greek</hi> that did the Ea<U+017F>t <U+017F>ubdue,</l>
+                  <l>And made to Battels <U+017F>uch Heroic ha<U+017F>t,</l>
+                  <l>As if on Wings of Victory he flew.</l>
+                  <l>He fought <U+017F>ecure of Fortune as of Fame,</l>
+                  <l>Till by new Maps, the I<U+017F>land might be <U+017F>hown,</l>
+                  <l>Of Conque<U+017F>ts which he <U+017F>trew'd where ere he came;</l>
+                  <l>Thick as the Galaxie with Stars is <U+017F>own.</l>
+               </q>
+            </p>
+            <p>Nay the Tyrants No<U+017F>e, that was the Laughter and Contempt of that time, could not <U+017F>cape the Adoration of his <hi>Independent</hi> Mu<U+017F>e.
+
+<q>
+                  <l>'Tis true his Count'nance did imprint an awe,</l>
+                  <l>And nat'rally all Souls to his did bow,</l>
+                  <l>As Wands of Divination downward draw,</l>
+                  <l>And point to Beds where <U+017F>overaign Gold doth grow.</l>
+               </q>
+            </p>
+            <p>By the way, take notice what a Yerk he gives his Mother the Church of <hi>Rome</hi> in the <U+017F>ame Panegyrick, for then it was convenient <U+017F>o to do.
+
+<q>
+                  <l>That Old unque<U+017F>tion'd Pyrate of the Land,</l>
+                  <l>Proud <hi>Rome,</hi> with dread the Fate of <hi>Dunkirk</hi> hear'd;</l>
+                  <l>
+                     <pb n="26" facs="tcp:153287:16"/>
+And trembling, wi<U+017F>h'd behind more Alps to <U+017F>tand,</l>
+                  <l>Altho an <hi>Alexander</hi> were her Guard.</l>
+               </q>
+            </p>
+            <p>By all which the Reader may perceive how much the Enthu<U+017F>ia<U+017F>m of tho<U+017F>e days <U+017F>urmounted the flagging Wit of the<U+017F>e times.</p>
+            <p>But now you will find Mr. <hi>D.</hi> the <hi>Romani<U+017F>t,</hi> and Mr. <hi>D.</hi> the <hi>Pro<g ref="char:EOLhyphen"/>te<U+017F>tant</hi> at Dagger's drawing about the Plot, and the <hi>Papi<U+017F>ts</hi> too, which is more; <U+017F>o po<U+017F>itively oppo<U+017F>ite one to the other, as if he had two Seats of Judgment, the one in his forehead, and the other in the Nape of his Neck.</p>
+            <p>Mr. <hi>D.</hi> the <hi>Romani<U+017F>t</hi> upbraids the Church-men of <hi>England,</hi> and gives her good In<U+017F>tructions in the<U+017F>e Lines.
+
+<q>
+                  <bibl>
+                     <hi>Hind</hi> and <hi>Panther.</hi> p. 112.</bibl>
+                  <l>To name the Te<U+017F>t, would put you in a Rage,</l>
+                  <l>You charge not that on any former Age:</l>
+                  <l>But <U+017F>mile to think how Innocent you <U+017F>tand,</l>
+                  <l>Arm'd by a weapon put into your hand;</l>
+                  <l>Yet <U+017F>till remember that you weild a Sword</l>
+                  <l>Forg'd by your Foes again<U+017F>t your <U+017F>ov'raign Lord,</l>
+                  <l>De<U+017F>ign'd to hew th' Imperial Cedar down,</l>
+                  <l>Defraud Succe<U+017F><U+017F>ion, and disheir the Crown.</l>
+               </q>
+            </p>
+            <p>
+               <pb n="27" facs="tcp:153287:16"/>
+               <hi>And thence tran<U+017F>porting him<U+017F>elf to the Plot.</hi>
+
+               <q>
+                  <l>What more could you have done than now you do,</l>
+                  <l>Had <hi>Oates</hi> and <hi>Bedlow,</hi> and their Plot been true?</l>
+                  <l>Some <U+017F>pecious Rea<U+017F>ons for tho<U+017F>e wrongs were found,</l>
+                  <l>The Dire Magicians threw their Mi<U+017F>ts around,</l>
+                  <l>And wi<U+017F>emen walk'd as on inchanted Ground:</l>
+                  <l>But now when Time has made th' Impo<U+017F>ture plain,</l>
+                  <l>What new Delu<U+017F>ion charms your cheated Eyes again?</l>
+                  <l>The painted Harlot might a while bewitch,</l>
+                  <l>But why the Hagg uncas'd, and all ob<U+017F>cene with itch?</l>
+               </q>
+            </p>
+            <p>Had Mr. <hi>D.</hi> the <hi>Romanist</hi> but whi<U+017F>per'd the<U+017F>e words at <hi>Will's Coffee-hou<U+017F>e,</hi> time was when, Mr. <hi>D.</hi> the <hi>Prote<U+017F>tant</hi> had certainly in<g ref="char:EOLhyphen"/>form'd again<U+017F>t him, and procur'd him corporal Puni<U+017F>hment: For, do but hear Mr. <hi>D.</hi> the <hi>Prote<U+017F>tants</hi> Opinion at that time in <U+017F>teady Pro<U+017F>e, in his <hi>Prote<U+017F>tant</hi> Epi<U+017F>tle to <hi>Religio Laici.</hi>
+
+               <q>
+                  <p>A General and uninterrupted Plot of their Clergy (meaning the <hi>Papi<U+017F>ts)</hi> ever <U+017F>ince the Reformation, I <U+017F>uppo<U+017F>e all <hi>Prote<U+017F>tants</hi> believe. For 'tis not rea<U+017F>onable to believe but that <U+017F>o many of their Orders, as were outed from their Fat Po<U+017F><U+017F>e<U+017F><U+017F>ions, wou'd endeavour a Re-en<g ref="char:EOLhyphen"/>trance again<U+017F>t tho<U+017F>e whom they account Hereticks. As for the late de<U+017F>ign, Mr. <hi>Coleman's Letters,</hi> for ought I know, are the be<U+017F>t evi<g ref="char:EOLhyphen"/>dence; and what they di<U+017F>cover without Wire-drawing their Sence, or malicious Glo<U+017F><U+017F>es, all Men of Rea<U+017F>on conclude Credible. If there be any more than this required of me, I mu<U+017F>t believe it as well as I am able in <U+017F>pite of the Witne<U+017F><U+017F>es, and out of a decent Conformity to the Votes of Parliament. For I <U+017F>uppo<U+017F>e the Fanaticks will not
+<pb n="28" facs="tcp:153287:17"/>
+allow the private Spirit in this Ca<U+017F>e. Here the Infallibillity is in one part of the Goverment, and our Under<U+017F>tanding as well as our Wills are repre<U+017F>ented.</p>
+                  <p>But to return to the <hi>Roman</hi> Catholicks. How can we be <U+017F>ecure from the Practice of the Je<U+017F>uited <hi>Papi<U+017F>ts</hi> in that Religion? For not two or three of that Order, as <U+017F>ome would impo<U+017F>e upon us; but almo<U+017F>t the whole Body of them are of Opinion that their Infallible Ma<U+017F>ter has a Right over Kings, not only in <U+017F>pirituals, but in tem<g ref="char:EOLhyphen"/>porals. Not to Name <hi>Mariana, Bellarmin, Emanuel Sa, Molina, San<g ref="char:EOLhyphen"/>tarel, Simancha,</hi> and at lea<U+017F>t twenty others of forreign Countries, we can produce of our own Nation, <hi>Campian,</hi> and <hi>Doleman,</hi> or <hi>Par<g ref="char:EOLhyphen"/><U+017F>ons;</hi> be<U+017F>ides, many are nam'd whom I have not read, who all of them atte<U+017F>t, That the Pope can give away the Right of any Sove<g ref="char:EOLhyphen"/>raign Prince, if he <U+017F>hall warp never <U+017F>o little; but if he once comes to be excommunicated, then the Bond of Obedience is taken off from his Subjects, and they may and ought to drive him like another <hi>Nebuchaduezzar</hi> from exerci<U+017F>ing Dominion over Chri<U+017F>tians: And to this they are bound by Virtue of Divine Precept, and by all the ties of Con<U+017F>cience, under no le<U+017F>s Penalty than Damnation. And their Champion <hi>Bellarmin</hi> has told the World, that the King of <hi>Eng<g ref="char:EOLhyphen"/>land</hi> is a Va<U+017F><U+017F>al to the Pope, and that he holds in Villenage of his <hi>Roman</hi> Landlord.</p>
+               </q>
+            </p>
+            <p>Here is Contradiction upon Contradiction. A Plot believ'd, and a Plot denied: Loyal <hi>Roman</hi> Catholick Subjects, that hold it Law<g ref="char:EOLhyphen"/>ful to depo<U+017F>e tho<U+017F>e Soveraigns, are branded with his mark of <hi>Wicklifs</hi> Brood, <hi>innate Antipathy to Kings.</hi> 
+               <note place="margin">
+                  <hi>Hind. and P.</hi> p. 11.</note> Which makes me wonder that Mr. <hi>D.</hi> the <hi>Prote<U+017F>tant,</hi> did not call in all his Heretical Writings, and burn 'em by the hand of the Common Hangman, before he revolted to write his <hi>Hind</hi> and <hi>Panther.</hi>
+            </p>
+            <p>Now, by the way of <hi>Corollary,</hi> a little more of your Chri<U+017F>tian Patience gentle Reader, and hear his low Opinion of the Martyrs of the <hi>Roman</hi> Faith, as he owns it in his <hi>Religio Laici,</hi> p. 13. where undertaking to prove,
+
+<q>
+                  <l>
+                     <pb n="29" facs="tcp:153287:17"/>
+That if the Gentiles whom no Law in<U+017F>pir'd</l>
+                  <l>By nature did what was by Law requir'd.</l>
+                  <p>They might be <U+017F>ay'd, <hi>He goes on thus.</hi>
+                  </p>
+                  <l>Mo<U+017F>t righteous Doom; becau<U+017F>e a <hi>Rule reveal'd</hi>
+                  </l>
+                  <l>Is none to <hi>tho<U+017F>e</hi> from whom it was <hi>conceal'd.</hi>
+                  </l>
+                  <l>Then tho<U+017F>e who follow'd Rea<U+017F>ons Dictates right,</l>
+                  <l>Liv'd up, and lifted high their Natural Light,</l>
+                  <l>With <hi>Socrates,</hi> may <U+017F>ee their Maker's Face,</l>
+                  <l>While Thou<U+017F>and <hi>Rubrick Martyrs</hi> want a place.</l>
+               </q>
+            </p>
+            <p>Nor could ever <hi>Shimei</hi> be thought to have curs'd <hi>David</hi> more bit<g ref="char:EOLhyphen"/>terly than he permits his Friend to Bla<U+017F>pheme the <hi>Roman</hi> Prie<U+017F>t-hood in his Epilogue to the <hi>Spani<U+017F>h</hi> Fryer; In which Play he him<U+017F>elf has acted his own Part like a true <hi>younger Son of</hi> Noah, as may be ea<U+017F>i<g ref="char:EOLhyphen"/>ly <U+017F>een in the fir<U+017F>t Edition of that Comedy, which would not pa<U+017F>s Mu<U+017F>ter a <U+017F>econd time without Emendations and Corrections. And as for the <hi>Epilogue,</hi> affix'd by his allowance to the Play, which in ef<g ref="char:EOLhyphen"/>fect is the <U+017F>ame thing, as if he had done it him<U+017F>elf; after the Author had <U+017F>tigmatiz'd the <hi>Roman</hi> Clergy for Per<U+017F>ons that would pimp and perjure them<U+017F>elves, and con<U+017F>equently commit any other Villanies for Money, his Friend thus concludes.
+
+<q>
+                  <l>There's none I'me <U+017F>ure who is a friend to love,</l>
+                  <l>But will our Fryers Character approve.</l>
+                  <l>
+                     <pb n="30" facs="tcp:153287:18"/>
+The able<U+017F>t <U+017F>park among you, <U+017F>ometimes needs</l>
+                  <l>Such pious helps for Charitable Deeds.</l>
+                  <l>Our Church, alas, as <hi>Rome</hi> objects, does want</l>
+                  <l>The Gho<U+017F>tly Comforts for the falling Saint;</l>
+                  <l>This gains them their Whore-converts, and may be</l>
+                  <l>The rea<U+017F>on of the Growth of Popery.</l>
+                  <l>So <hi>Mahomets</hi> Religion came in Fa<U+017F>hion,</l>
+                  <l>By the large leave it gave to Fornication.</l>
+                  <l>Fear not the Guilt, if you can pay for't well;</l>
+                  <l>There is no <hi>Dives</hi> in the <hi>Roman</hi> Hell.</l>
+                  <l>Gold opens the <U+017F>treight Gate, and lets him in,</l>
+                  <l>But want of Money is a mortal <U+017F>in;</l>
+                  <l>How are men cozen'd <U+017F>till with <U+017F>hews of Good?</l>
+                  <l>The Bawds be<U+017F>t Mask is the grave Fryers Hood.</l>
+                  <l>'Tis a mock War between the Prie<U+017F>t and Devil,</l>
+                  <l>VVhen they think fit, they can be very civil.</l>
+                  <l>They boa<U+017F>t the Gift of Heaven is in their power,</l>
+                  <l>Well may they give the God they can devour</l>
+                  <l>
+                     <pb n="31" facs="tcp:153287:18"/>
+Still to the <U+017F>ick and dead their Claims they lay,</l>
+                  <l>For 'tis on Carrion that the Vermin prey.</l>
+                  <l>Nor have they le<U+017F>s Dominion on our Life;</l>
+                  <l>They trot the Husband, and they pace Wife.</l>
+                  <l>Rouze up you Cuckcolds of the Northern Climes,</l>
+                  <l>And learn from <hi>Sweden</hi> to prevent <U+017F>uch Crimes;</l>
+                  <l>Unman the Fryer, and leave the Holy Drone,</l>
+                  <l>To hum in his for<U+017F>aken Hive alone:</l>
+                  <l>He'l work no Honey, when his <U+017F>ting is gone.</l>
+                  <l>Your Wives and Daughters <U+017F>oon will leave the Cells,</l>
+                  <l>When <hi>they</hi> have lo<U+017F>t the <U+017F>ound of <hi>Aaron</hi>'s Bells.</l>
+               </q>
+            </p>
+            <p>Now that you may <U+017F>ee his Friend and he were both agreed, you <U+017F>hall find the Author him<U+017F>elf concluding his <U+017F>econd Act of his <hi>Spani<U+017F>h</hi> Fryer to the <U+017F>ame tune, where he brings in the tempted <hi>Elvira,</hi> commending the Fryer for managing his bu<U+017F>ine<U+017F>s <U+017F>o well in the<U+017F>e words.
+
+<q>
+                  <sp>
+                     <speaker>Elv.</speaker>
+                     <p>This Fryer is a comfortable Man, he will know nothing of the bu<U+017F>ine<U+017F>s, but does it all:
+        <q>
+                           <l>Pray Wives and Virgins at your time of need,</l>
+                           <l>For a true Guide, of my good Fathers breed.</l>
+                        </q>
+                     </p>
+                  </sp>
+               </q>
+            </p>
+            <p>And in the very fir<U+017F>t Scene of the third Act, the <U+017F>ame Lady cries out,
+
+<q>
+                  <sp>
+                     <p>Well, if I prove frail,—never Woman had <U+017F>uch an Husband
+<pb n="32" facs="tcp:153287:19"/>
+to provoke her, <U+017F>uch a Lover to allure her, or <U+017F>uch a Confe<U+017F><U+017F>or to ab<g ref="char:EOLhyphen"/><U+017F>olve her.</p>
+                  </sp>
+               </q>
+            </p>
+            <p>And a little farther, <U+017F>ays <hi>Gomez,</hi> the jealous Husband,
+
+         <q>
+                  <sp>
+                     <p>—When a <U+017F>winging Sin is to be committed, nothing will cover it <U+017F>o clo<U+017F>e as a Fryers Hood, for there the Devil plays at Bo-peep; puts out his Horns to do mi<U+017F>cheif, and then <U+017F>hrinks 'em back for <U+017F>afety, like a Snale into her <U+017F>hell.</p>
+                  </sp>
+               </q>
+
+The <U+017F>ence of the Epilogue all along: And enough to <U+017F>hew how <U+017F>oon a Gentleman may alter his Opinion in point of Reli<g ref="char:EOLhyphen"/>gion.</p>
+            <trailer>FINIS.</trailer>
+            <pb facs="tcp:153287:19"/>
+            <pb facs="tcp:153287:20"/>
+            <pb facs="tcp:153287:20" rendition="simple:additions"/>
+         </div>
+      </body>
+   </text>
+</TEI>
+

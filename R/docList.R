@@ -20,6 +20,9 @@
 #' @slot stopwords      A vector derived from the \code{stopwordsFile} that is passed
 #'                      to the text cleanup functions in order for them to be removed
 #'                      from the text.
+#'                      
+#' @slot texts         A list of character vectors, each drawn from documents in the collection, and 
+#'                      each placed in the order provided by the index.
 #' 
 #' @section What it does:
 #' The \code{docList} is the foundation of the \code{tei2r}
@@ -31,7 +34,7 @@
 #' the stopwords file (\code{stopwordsFile}).  From these pieces
 #' of information, the function automatically determines the
 #' \code{filenames} and \code{paths} for the collection's files.
-#' @seealso buildDocList, docTexts, docConcordance, docModel
+#' @seealso buildDocList
 #' @export
 docList <- setClass("docList", 
                     slots = c(directory = "character",
@@ -40,7 +43,8 @@ docList <- setClass("docList",
                               indexFile = "character",
                               index = "data.frame",
                               stopwordsFile = "character",
-                              stopwords = "character"
+                              stopwords = "character",
+                              texts = "list"
                             ))
 
 

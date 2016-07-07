@@ -1,9 +1,3 @@
-#====================================================================
-#  This function collects, cleans up, and stores the text of the
-#  corpus' documents in a single object in which the text is labeled
-#  by the corresponding ID in the index file (usually the file name
-#  sans extension).
-#====================================================================
 #' Import a collection of texts into R
 #' 
 #' Imports a collection of documents into R and performs basic text processing
@@ -11,34 +5,33 @@
 #' @param dl The \code{docList} object that contains the \code{index} with
 #'           the \code{paths} to the files for each text.
 #'           
-#' @param removeCaps Option to remove capitalization. Default is 'TRUE'.
+#' @param normalize A logical condition. If "TRUE", text will be converterd to 
+#'                  all lower case and stopwords will be removed. Also, all 
+#'                  instances of '∫' and 'ſ' will be convertedto 's', all 
+#'                  numeric characters will be removed, 'vv' will be converted to 'w', 
+#'                  and ''d' and ''ring' will be converted to 'ed' and 'ering'
+#'                  respectively, and all special characters will be removed.
 #' 
-#' @param removeStopwords Option to remove stopwords, stored in the corresponding \code{docList} object. Default is 'TRUE'.
-#' 
-#' @param normalizeLongS Option to normalize '∫' and 'ſ' to 's'. Default is 'TRUE'. 
-#' 
-#' @return dt The \code{docTexts} object that contains the texts of the corpus,
+#' @return dl The \code{docList} object that contains the texts of the corpus,
 #'            the path to the \code{indexFile} and the original \code{directory}
 #'            that the \code{docList} object was built from.
 #' 
 #' @section What it does:
 #' This function collects, cleans up, and stores
-#' the text of the collection's documents in a single object. The texts are held as
+#' the text of the collection's documents in a single object. Essentially, it
+#' runs the \code{\link{cleanup}} function over a folder of documents. The texts are held as
 #' vectors in a single list, labeled by the corresponding id 
 #' in the index file.  The id is usually the filename or the Text Creation Partnership number.
 #' 
-#' @seealso docTexts
+#' @seealso cleanup
 #' 
 #' @examples
 #' dt = importTexts(dl)
 #' @name importTexts
 #' @export
-importTexts <- function(dl, removeCaps = TRUE, removeStopwords = TRUE, normalizeLongS = TRUE) {
-  dt = docTexts()
+importTexts <- function(dl, normalize = TRUE) {
   indexFile = dl@index
   fileNames = dl@filenames
-  dt@directory = dl@directory
-  dt@indexFile = dl@indexFile
   prog = 1
   last = 0
   print("Compiling and cleaning up your texts.")
@@ -52,9 +45,9 @@ importTexts <- function(dl, removeCaps = TRUE, removeStopwords = TRUE, normalize
       last = round(percent)
     }
     #print(paste("Importing Document: ", i, " of ", total, sep=""))
-    dt@text[[i]] = cleanup(dl@paths[i],stopwords = dl@stopwords)
+    dl@texts[[i]] = cleanup(dl@paths[i],stopwords = dl@stopwords, normalize = normalize)
   }
-  names(dt@text) = file_path_sans_ext(dl@filenames)
-  return(dt)
+  names(dl@texts) = file_path_no_ext(dl@filenames)
+  return(dl)
 }
 

@@ -22,15 +22,15 @@
 #' @examples
 #' dc = buildConcordance(dt, "justice", 5)
 #' @export
-buildConcordance = function(dt, keyword, context) {
+buildConcordance = function(dl, keyword, context) {
   dc = docConcordance()
-  dc@directory   = dt@directory
-  dc@indexFile   = dt@indexFile
+  dc@directory   = dl@directory
+  dc@indexFile   = dl@indexFile
   dc@keyword     = keyword
   dc@context     = context
   dc@concordance = list()
-  for(i in 1:length(dt@text)) {
-    text = dt@text[[i]]
+  for(i in 1:length(dl@texts)) {
+    text = dl@texts[[i]]
     hits = which(text == keyword)
     concordance = list()
     #browser()
@@ -50,7 +50,7 @@ buildConcordance = function(dt, keyword, context) {
     dc@concordance[[i]] = concordance
     #print(length(dc@concordance))
   }
-  names(dc@concordance) = names(dt@text)
+  names(dc@concordance) = names(dl@texts)
   dc@frequencies = table(unlist(dc@concordance))
   return(dc)
 }

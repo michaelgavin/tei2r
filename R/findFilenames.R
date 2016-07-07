@@ -32,7 +32,7 @@ findFilenames = function(dl,directory) {
     #    locmat[i,j] = loc
     #  }
     loc = grep(index[i,colNum],dir(directory),value=T,fixed = T)
-    loc_no_ext = file_path_sans_ext(loc)
+    loc_no_ext = file_path_no_ext(loc)
     if (length(loc) == 1) {
       #browser()
       filenames[i] = loc
@@ -88,7 +88,7 @@ detectColumn <- function(index, directory) {
         #} else {
         #  colNum = j
         #}
-        fName = file_path_sans_ext(loc)
+        fName = file_path_no_ext(loc)
         #print(paste(" FNAME:  ", fName, sep=""))
         if(!is.na(index[i,j]) && index[i,j] %in% c(loc, fName)) {
           colNum = j

@@ -1,0 +1,736 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>The songs in the Indian Queen as it is now compos'd into an opera. By Mr. Henry Purcell, composer in ordinary to his Majesty. And one of the organists of his Majesty's Chapel-Royal.</title>
+            <title>Indian Queen. selections.</title>
+            <author>Dryden, John, 1631-1700.</author>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>1695</date>
+            </edition>
+         </editionStmt>
+         <extent>Approx. 17 KB of XML-encoded text transcribed from 9 1-bit group-IV TIFF page images.</extent>
+         <publicationStmt>
+            <publisher>Text Creation Partnership,</publisher>
+            <pubPlace>Ann Arbor, MI ; Oxford (UK) :</pubPlace>
+            <date when="2008-09">2008-09 (EEBO-TCP Phase 1).</date>
+            <idno type="DLPS">A36691</idno>
+            <idno type="STC">Wing D2367</idno>
+            <idno type="STC">ESTC R215472</idno>
+            <idno type="EEBO-CITATION">99827334</idno>
+            <idno type="PROQUEST">99827334</idno>
+            <idno type="VID">31752</idno>
+            <availability>
+               <p>This keyboarded and encoded edition of the
+	       work described above is co-owned by the institutions
+	       providing financial support to the Early English Books
+	       Online Text Creation Partnership. This Phase I text is
+	       available for reuse, according to the terms of <ref target="https://creativecommons.org/publicdomain/zero/1.0/">Creative
+	       Commons 0 1.0 Universal</ref>. The text can be copied,
+	       modified, distributed and performed, even for
+	       commercial purposes, all without asking permission.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title>Early English books online.</title>
+         </seriesStmt>
+         <notesStmt>
+            <note>(EEBO-TCP ; phase 1, no. A36691)</note>
+            <note>Transcribed from: (Early English Books Online ; image set 31752)</note>
+            <note>Images scanned from microfilm: (Early English books, 1641-1700 ; 1864:13)</note>
+         </notesStmt>
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title>The songs in the Indian Queen as it is now compos'd into an opera. By Mr. Henry Purcell, composer in ordinary to his Majesty. And one of the organists of his Majesty's Chapel-Royal.</title>
+                  <title>Indian Queen. selections.</title>
+                  <author>Dryden, John, 1631-1700.</author>
+                  <author>Purcell, Henry, 1659-1695.</author>
+               </titleStmt>
+               <extent>[2], 14 p. : music  </extent>
+               <publicationStmt>
+                  <publisher>printed by J. Heptinstall; and are to be sold by John May, at his shop under St. Dunstan's Church: and for John Hudgbutt at Tho. Dring's, Bookseller; at the Harrow at Clifford's-lane-end in Fleetstreet,</publisher>
+                  <pubPlace>London :</pubPlace>
+                  <date>1695.</date>
+               </publicationStmt>
+               <notesStmt>
+                  <note>Reproduction of the original in the British Library.</note>
+               </notesStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Created by converting TCP files to TEI P5 using tcp2tei.xsl,
+      TEI @ Oxford.
+      </p>
+         </projectDesc>
+         <editorialDecl>
+            <p>EEBO-TCP is a partnership between the Universities of Michigan and Oxford and the publisher ProQuest to create accurately transcribed and encoded texts based on the image sets published by ProQuest via their Early English Books Online (EEBO) database (http://eebo.chadwyck.com). The general aim of EEBO-TCP is to encode one copy (usually the first edition) of every monographic English-language title published between 1473 and 1700 available in EEBO.</p>
+            <p>EEBO-TCP aimed to produce large quantities of textual data within the usual project restraints of time and funding, and therefore chose to create diplomatic transcriptions (as opposed to critical editions) with light-touch, mainly structural encoding based on the Text Encoding Initiative (http://www.tei-c.org).</p>
+            <p>The EEBO-TCP project was divided into two phases. The 25,363 texts created during Phase 1 of the project have been released into the public domain as of 1 January 2015. Anyone can now take and use these texts for their own purposes, but we respectfully request that due credit and attribution is given to their original source.</p>
+            <p>Users should be aware of the process of creating the TCP texts, and therefore of any assumptions that can be made about the data.</p>
+            <p>Text selection was based on the New Cambridge Bibliography of English Literature (NCBEL). If an author (or for an anonymous work, the title) appears in NCBEL, then their works are eligible for inclusion. Selection was intended to range over a wide variety of subject areas, to reflect the true nature of the print record of the period. In general, first editions of a works in English were prioritized, although there are a number of works in other languages, notably Latin and Welsh, included and sometimes a second or later edition of a work was chosen if there was a compelling reason to do so.</p>
+            <p>Image sets were sent to external keying companies for transcription and basic encoding. Quality assurance was then carried out by editorial teams in Oxford and Michigan. 5% (or 5 pages, whichever is the greater) of each text was proofread for accuracy and those which did not meet QA standards were returned to the keyers to be redone. After proofreading, the encoding was enhanced and/or corrected and characters marked as illegible were corrected where possible up to a limit of 100 instances per text. Any remaining illegibles were encoded as &lt;gap&gt;s. Understanding these processes should make clear that, while the overall quality of TCP data is very good, some errors will remain and some readable characters will be marked as illegible. Users should bear in mind that in all likelihood such instances will never have been looked at by a TCP editor.</p>
+            <p>The texts were encoded and linked to page images in accordance with level 4 of the TEI in Libraries guidelines.</p>
+            <p>Copies of the texts have been issued variously as SGML (TCP schema; ASCII text with mnemonic sdata character entities); displayable XML (TCP schema; characters represented either as UTF-8 Unicode or text strings within braces); or lossless XML (TEI P5, characters represented either as UTF-8 Unicode or TEI g elements).</p>
+            <p>Keying and markup guidelines are available at the <ref target="http://www.textcreationpartnership.org/docs/.">Text Creation Partnership web site</ref>.</p>
+         </editorialDecl>
+         <listPrefixDef>
+            <prefixDef ident="tcp"
+                       matchPattern="([0-9\-]+):([0-9IVX]+)"
+                       replacementPattern="http://eebo.chadwyck.com/downloadtiff?vid=$1&amp;page=$2"/>
+            <prefixDef ident="char"
+                       matchPattern="(.+)"
+                       replacementPattern="https://raw.githubusercontent.com/textcreationpartnership/Texts/master/tcpchars.xml#$1"/>
+         </listPrefixDef>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="eng">eng</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change>
+            <date>2007-06</date>
+            <label>TCP</label>Assigned for keying and markup</change>
+         <change>
+            <date>2007-07</date>
+            <label>Apex CoVantage</label>Keyed and coded from ProQuest page images</change>
+         <change>
+            <date>2007-09</date>
+            <label>Emma (Leeson) Huber</label>Sampled and proofread</change>
+         <change>
+            <date>2007-09</date>
+            <label>Emma (Leeson) Huber</label>Text and markup reviewed and edited</change>
+         <change>
+            <date>2008-02</date>
+            <label>pfs</label>Batch review (QC) and XML conversion</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="eng">
+      <front>
+         <div type="title_page">
+            <pb facs="tcp:31752:1"/>
+            <pb facs="tcp:31752:1" rendition="simple:additions"/>
+            <p>THE SONGS IN THE Indian QUEEN: As it is now Compos'd into an OPERA. By Mr. <hi>HENRY PURCELL,</hi> Compo<U+017F>er in Ordinary to his Maje<U+017F>ty. And one of the Organi<U+017F>ts of his Maje<U+017F>ty's Chapel-Royal.</p>
+            <p>
+               <hi>LONDON,</hi> Printed by <hi>J. Heptin<U+017F>tall;</hi> and are to be Sold by <hi>John May,</hi> at his Shop under St. <hi>Dun<U+017F>tan</hi>'s Church: And for <hi>John Hudgbutt</hi> at <hi>Tho. Dring</hi>'s, Book<U+017F>eller, at the <hi>Harrow</hi> at <hi>Clifford's-lane-end</hi> in <hi>Fleet<U+017F>treet.</hi> 1695.</p>
+         </div>
+         <div type="publishers_to_the_composer">
+            <pb facs="tcp:31752:2"/>
+            <head>
+               <hi>The Publi<U+017F>hers, to Mr.</hi> Henry Purcell.</head>
+            <opener>
+               <salute>SIR,</salute>
+            </opener>
+            <p>HAving had the good Fortune to meet with the Score or Original Draught of your Incomparable E<U+017F><U+017F>ay of Mu<U+017F>ick compos'd for the Play, call'd <hi>The Indian Queen.</hi> It <U+017F>oon appear'd that we had found a Jewel of very great Value; on which account we were un<g ref="char:EOLhyphen"/>willing that <U+017F>o rich a Trea<U+017F>ure <U+017F>hould any longer lie bury'd in Oblivion; and that the Common-wealth of Mu<U+017F>ick <U+017F>hould be depriv'd of <U+017F>o con<U+017F>iderable a Benefit. Indeed we well knew your innate Mode<U+017F>ty to be <U+017F>uch, as not to be ea<U+017F>ily pre<g ref="char:EOLhyphen"/>vail'd upon to <U+017F>et forth any thing in Print, much le<U+017F>s to Patronize your own Works, although in <U+017F>ome re<U+017F>pects In<g ref="char:EOLhyphen"/>imitable. But in regard that (the Pre<U+017F>s being now open) any one might print an imperfect Copy of the<U+017F>e admirable Songs, or publi<U+017F>h them in the nature of a Common Ballad, We were <U+017F>o much the more emboldned to make this Attempt, even without acquainting you with our De<U+017F>ign; not doubting but your accu<U+017F>tomed Candor and Genero<U+017F>ity will induce you to pardon this Pre<U+017F>umption: As for our parts, if you <U+017F>hall think fit to conde<U+017F>cend <U+017F>o far, we <U+017F>hall always endeavour to approve our <U+017F>elves,</p>
+            <closer>
+               <signed>Your Obedient Servants, J. May, J. Hudgebutt.</signed>
+            </closer>
+         </div>
+      </front>
+      <body>
+         <div type="song">
+            <pb n="1" facs="tcp:31752:2" rendition="simple:additions"/>
+            <head>A Song in the fir<U+017F>t Act, Sung by Mr. <hi>Freeman.</hi>
+            </head>
+            <p>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> WAke,<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> wake, wake <hi>Qui—</hi>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+               <hi>—-ve—ra,</hi> wake, our <U+017F>oft————re<U+017F>t mu<U+017F>t<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> cea<U+017F>e; wake, wake,<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> wake, <hi>Qui—ve—ra,</hi> wake,—our<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> <U+017F>oft—————re<U+017F>t mu<U+017F>t cea<U+017F>e, and fly—-—to—gether,<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+               <pb n="2" facs="tcp:31752:3"/>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> and fly————————to—ge—ther<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> with our Country's peace; no<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> more, no more, no more, no more, no more, no more, no more, no more, no,——no<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> more mu<U+017F>t we <U+017F>leep, mu<U+017F>t we <U+017F>leep under Plan——tain <U+017F>hade, which neither<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> Heat could peirce, nor Cold in-vade; where bount'ous Nature never, never, never,<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> never, never, never feels de-cay, and op'-—ning Buds, and op'—ning<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+               <pb n="3" facs="tcp:31752:3"/>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> Buds drive——fall—-——-——ing Fruits a—way.<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+            </p>
+         </div>
+         <div type="song">
+            <head>A Song in the fir<U+017F>t Act, Sung by the Boy with <hi>Flutes.</hi>
+            </head>
+            <p>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> WHY,<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> why, why <U+017F>hou'd men quarrel, why, why <U+017F>hou'd men quarrel here, where all,<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> all, all, where all———po<U+017F>—<U+017F>e<U+017F>s as much as they can hope for<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> by <U+017F>uc—ce<U+017F>s; none, none can have mo<U+017F>t none can have mo<U+017F>t, where<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> Nature is <U+017F>o kind, as to ex-ceed, as to ex—cee————<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+               <pb n="4" facs="tcp:31752:4"/>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>—-d<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> Man's u<gap reason="illegible" resp="#OXF" extent="2 letters">
+                  <desc>••</desc>
+               </gap> tho' not his Mind; why, why,<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> why <U+017F>hou'd Men quarrel, why, why <U+017F>hou'd Men quarrel here, where all, all,<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> all, where all————po<U+017F>—<U+017F>e<U+017F>s as much as they can hope for<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> by <U+017F>uc-ce<U+017F>s, as much as they can hope for by <U+017F>uc——ce<U+017F>s,<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> as much as they can hope, as much as they can hope for by <U+017F>uc—ce<U+017F>s.<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+            </p>
+            <l>
+               <hi>By antient Prophecyes we have been told,</hi>
+            </l>
+            <l>
+               <hi>Our Land <U+017F>hall be <U+017F>ubdu'd by one more old,</hi>
+            </l>
+            <l>
+               <hi>And <U+017F>ee that world's already hither come,</hi>
+            </l>
+            <l>
+               <hi>If the<U+017F>e be they, we welcome then our doom.</hi>
+            </l>
+         </div>
+         <div type="song">
+            <pb n="5" facs="tcp:31752:4"/>
+            <head>A Song Sung by Mr. <hi>Freeman.</hi>
+            </head>
+            <p>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> THeir looks are <U+017F>uch that Mercy flow—————-—s<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> from thence, more gen—tle, gen—tle than our Na-—tive in—nocence:<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> By their pro—tec—tion let us, let us, let us beg to live, they come not<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> here to con—quer but for—give; by their pro—tec—tion let us, let us,<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> let us beg to live, they come not here to con—quer but for—<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> —give, they come not here to con—quer but for—give.<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+            </p>
+            <l>
+               <hi>If <U+017F>o your goodne<U+017F>s may your power expre<U+017F>s,</hi>
+            </l>
+            <l>
+               <hi>And we <U+017F>hall judge both be<U+017F>t by our Succe<U+017F>s.</hi>
+            </l>
+         </div>
+         <div type="song">
+            <pb n="6" facs="tcp:31752:5"/>
+            <head>A Song in the Second Act, Sung by Mr. <hi>Freeman.</hi>
+            </head>
+            <p>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> I come to Sing great <hi>Zem———po—al-la</hi>'s <U+017F>to—ry, who<U+017F>e beaut'ous <U+017F>ight, <U+017F>o<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> Charming bright, out-<U+017F>hines the Lu—<U+017F>tre of glory; who<U+017F>e beaut'ons <U+017F>ight, <U+017F>o<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> charming bright, out—<U+017F>hines the Lu—<U+017F>tre of glo-ry.<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+            </p>
+            <stage>Sung by <hi>Envy</hi> and his followers with-In<U+017F>truments.</stage>
+            <lg>
+               <l>What Flat'ring noi<U+017F>e is this,</l>
+               <l>At which my <hi>Snakes</hi> all hi<U+017F>s;</l>
+               <l>I hate to <U+017F>ee fond Tongues advance,</l>
+               <l>High as the Gods, the <U+017F>laves of Chance.</l>
+            </lg>
+         </div>
+         <div type="song">
+            <head>A Song Sung by Mr. <hi>Freeman.</hi>
+            </head>
+            <p>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> SCorn'd Envy here's nothing, here's nothing that thou, that thou can<U+017F>t bla<U+017F>t; Her<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> glo—ries, her glo—ries are too bright, to be o'er—<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+               <pb n="7" facs="tcp:31752:5"/>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>——ca<U+017F>t; her glo—ries, her glo—ries are too brigh———<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> —t to be o'er—-ca<U+017F>t.<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+            </p>
+            <stage>Sung by <hi>Envy</hi> and his followers with In<U+017F>truments.</stage>
+            <lg>
+               <l>I fly from the place where Flaterry reigns,</l>
+               <l>See tho<U+017F>e mighty things that before,</l>
+               <l>Such <U+017F>laves like Gods did adore,</l>
+               <l>Contemn'd and unpitty'd in Chains.</l>
+            </lg>
+         </div>
+         <div type="song">
+            <head>A Song Sung by Mr. <hi>Freeman.</hi>
+            </head>
+            <p>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> BE—gone, begone, be—gone cur<U+017F>t Feinds of Hell, <U+017F>ink down, <U+017F>ink<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> down where Noi<U+017F>ome Vapers dwell; While I, while I her<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> tri———————-—-—umph <U+017F>ound,<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+               <stage>Turn over.</stage>
+               <pb n="8" facs="tcp:31752:6"/>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> while I, while I her Try—————————<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> ——umph <U+017F>ound, to fill, to fill the U—ni—ver—<U+017F>al Round.<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+            </p>
+         </div>
+         <div type="song">
+            <stage>Sung by a Conjurer.</stage>
+            <lg>
+               <l>YOu twice ten hundred Deities,</l>
+               <l>To whom we daily Sacrifice;</l>
+               <l>Ye Powr's that dwell with Fates below,</l>
+               <l>And <U+017F>ee what Men are doom'd to doe;</l>
+               <l>Where Elements in Di<U+017F>cord dwell,</l>
+               <l>Thou God of Sleep, ari<U+017F>e, and tell,</l>
+               <l>Great <hi>Zempoalla</hi> what <U+017F>trange Fate,</l>
+               <l>Mu<U+017F>t on <hi>her</hi> di<U+017F>mall Vi<U+017F>ion wait.</l>
+            </lg>
+            <lg>
+               <head>The Conjurer's Charm.</head>
+               <l>BY the Croaking of the <hi>Toad,</hi>
+               </l>
+               <l>In their Caves that make abode;</l>
+               <l>Earthy <hi>Dun</hi> that pants for breath,</l>
+               <l>With her <U+017F>well'd <U+017F>ides full of death;</l>
+               <l>By the Cre<U+017F>ted <hi>Adder's</hi> Pride,</l>
+               <l>That along the Cliffs do glide;</l>
+               <l>By the Vi<U+017F>age fierce and black,</l>
+               <l>By the death's Head on thy back;</l>
+               <l>By the twi<U+017F>ted <hi>Serpents</hi> plac'd,</l>
+               <l>For a Girdle round thy Wa<U+017F>te;</l>
+               <l>By the <hi>Hearts</hi> of Gold that deck,</l>
+               <l>Thy Brea<U+017F>t, thy Shoulders, and thy Neck;</l>
+               <l>From thy <U+017F>leeping Man<U+017F>ion ri<U+017F>e,</l>
+               <l>And open thy unwilling Eyes;</l>
+               <l>While bubling Springs their Mu<U+017F>ick keep,</l>
+               <l>That u<U+017F>e to lull thee in thy <U+017F>leep.</l>
+            </lg>
+            <stage>
+
+
+Sung by the God of Dreams.</stage>
+            <lg>
+               <l>SEek not to know, what mu<U+017F>t not be reveal'd,</l>
+               <l>Joys only flow where Fate is mo<U+017F>t conceal'd;</l>
+               <l>Too bu<U+017F>y Man would find his Sorrows more,</l>
+               <l>If future Fortune He <U+017F>hou'd know before;</l>
+               <l>For by that knowledge of his De<U+017F>tiny,</l>
+               <l>He wou'd not live at all, but always dye;</l>
+               <l>Enquire not then who <U+017F>hall from Bonds be freed,</l>
+               <l>Who 'tis <U+017F>hall wear a Crown, and who <U+017F>hall bleed;</l>
+               <l>All mu<U+017F>t <U+017F>ubmit to their appointed doom,</l>
+               <l>Fate and Misfortunes will too quickly come;</l>
+               <l>Let me no more with powerfull Charms be pre<U+017F>t,</l>
+               <l>I am forbid by Fate to tell the re<U+017F>t.</l>
+            </lg>
+         </div>
+         <div type="song">
+            <pb n="9" facs="tcp:31752:6"/>
+            <head>A Song in the Third Act, Sung by Mr. <hi>Freeman,</hi> and Mr. <hi>Church.</hi>
+            </head>
+            <p>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> AH!—ah!—how hap-py are we, are we, are<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> Ah!—ah!—ah! how hap—py are we, are we,<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> we, ah! ah! how hap-py are we, from humane pa<U+017F><U+017F>ions, from humane<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> are we, ah! ah! how hap-py are we, from humane<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> pa<U+017F><U+017F>ions free:<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> pa<U+017F><U+017F>ions free:<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> ah! ah! ah! ah! how hap—py are<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> ah!—ah!—ah!—how hap—py are<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+               <pb n="10" facs="tcp:31752:7"/>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> we, tho<U+017F>e wil——————————<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> we, tho<U+017F>e wil——————————<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>—-—d Tenants of the Brea<U+017F>t; no never, never, no never, never, no never,<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>——d Tenants of the Brea<U+017F>t; no never, never, no never,<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> never, never can di<U+017F>turb our re<U+017F>t; ah!—<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> never, never can di<U+017F>turb our re<U+017F>t; ah!—ah!—<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> ah! how hap—py are we, are we, are we, ah! ah! how<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> ah! how hap—py are we, are we, are we, ah! ah! how<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+               <pb n="11" facs="tcp:31752:7"/>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> happy are we: Yet we pit—ty, we pit—ty, we<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> happy are we: Yet we pit—ty, we<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> pitty, tender Souls whom the Tyrant Love, whom the Tyrant Love, whom the Tyrant<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> pitty, tender Souls whom the Tyrant Love, whom the Tyrant Love, whom the<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> Love con—trouls; ah! ah! how<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> Tyrant Love con—trouls; ah! ah! ah! how<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> happy are we from humane Pa<U+017F><U+017F>ion, from humane Pa<U+017F>————<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> happy are we, from humane Pa<U+017F>————<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+               <stage>Turn over.</stage>
+               <pb n="12" facs="tcp:31752:8"/>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>————————————<U+017F>ion free.<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>———-—————————<U+017F>ion free.<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+            </p>
+         </div>
+         <div type="song">
+            <head>A Song Sung by Mrs. <hi>Cro<U+017F>s.</hi>
+            </head>
+            <p>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> I Attempt from Love's <U+017F>ickne<U+017F>s to fly———in vain, <U+017F>ince I am<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> my <U+017F>elf my own Feaver, <U+017F>ince I am my <U+017F>elf my own Feaver and Pain; No<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> more now, no more now fond Heart with Pride, no more <U+017F>well, thou can'<U+017F>t not rai<U+017F>e<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>  Forces, thou can'<U+017F>t not rai<U+017F>e Forces enough to re—bell:<stage>Fir<U+017F>t <U+017F>train again.</stage> For<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <pb n="13" facs="tcp:31752:8"/>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> Love has more pow'r and le<U+017F>s mercy than fate, to make us <U+017F>eek ru—in,<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>  to make us <U+017F>eek ru—ine, and love tho<U+017F>e that hate. <stage>End with the fir<U+017F>t Strain</stage>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+            </p>
+            <sp>
+               <speaker>Vers. Then Cho.</speaker>
+               <l>We the Spirits of the Air,</l>
+               <l>That of Humane Things take Care,</l>
+               <l>Out of Pity now de<U+017F>cend,</l>
+               <l>To forewarn what Woes attend;</l>
+            </sp>
+            <sp>
+               <speaker>Vers.</speaker>
+               <l>Greatne<U+017F>s clogg'd with Scorn decays,</l>
+               <l>With the Slave no Empire <U+017F>tay's,</l>
+            </sp>
+            <sp>
+               <speaker>Cho.</speaker>
+               <l>We the Spirits <hi>&amp;c.</hi>
+               </l>
+            </sp>
+            <sp>
+               <speaker>Vers.</speaker>
+               <l>Cea<U+017F>e to langui<U+017F>h then in vain,</l>
+               <l>Since never to be lov'd again.</l>
+            </sp>
+            <sp>
+               <speaker>Cho.</speaker>
+               <l>We the Spirits, <hi>&amp;c.</hi>
+               </l>
+            </sp>
+         </div>
+         <div type="song">
+            <head>A Song in the Fourth Act, Sung by Mrs. <hi>Cro<U+017F>s.</hi>
+            </head>
+            <p>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> THey tell us that you migh—ty Powers a—bove, make perfect your<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> Joys and your ble<U+017F><U+017F>ings by Love; Ah! why do you fuffer, ah!<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> why do you <U+017F>uf-fer the ble<U+017F><U+017F>ing that's there; to give a poor Lover <U+017F>uch<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+               <stage>Turn over.</stage>
+               <pb n="14" facs="tcp:31752:9"/>
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> <U+017F>ad torments here, yet tho' for my pa<U+017F>-—<U+017F>ion <U+017F>uch greif I en—dure,<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> 
+               <gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap> my love <U+017F>hall like yours <U+017F>till be con—<U+017F>tant and pure.<gap reason="music">
+                  <desc><<U+266B>></desc>
+               </gap>
+            </p>
+            <lg n="2">
+               <head>II.</head>
+               <l>To <U+017F>uffer for him gives an ea<U+017F>e to my pains,</l>
+               <l>There's joy in my grief, and there's freedom in Chains.</l>
+               <l>If I were divine he cou'd love me no more,</l>
+               <l>And I in return my adorer adore;</l>
+               <l>Oh! let his dear life then (kind Gods) be your care,</l>
+               <l>For I in your ble<U+017F><U+017F>ings have no other <U+017F>hare.</l>
+            </lg>
+         </div>
+         <div type="song">
+            <head>A Sacrifice, Sung by the Chief Prie<U+017F>t.</head>
+            <l>WHile thus we bow before your Shrine,</l>
+            <l>That you may hear great Powers Divine,</l>
+            <l>All living things <U+017F>hall in your Prai<U+017F>es joyne;</l>
+            <l>You who at the Altars <U+017F>tand,</l>
+            <l>Waiting for the Dread command,</l>
+            <l>The fatal Word <U+017F>hall <U+017F>oon be hear'd,</l>
+            <l>An<U+017F>wer then is all prepar'd,</l>
+            <sp>
+               <speaker>Chorus.</speaker>
+               <l>—All's prepar'd.</l>
+            </sp>
+            <sp>
+               <speaker>Prie<U+017F>t.</speaker>
+               <l>Let all unhallow'd Souls be gone,</l>
+               <l>Before our Sacred Rites come on,</l>
+               <l>Take care that this be al<U+017F>o done,</l>
+            </sp>
+            <sp>
+               <speaker>Chorus.</speaker>
+               <l>—All is done.</l>
+            </sp>
+            <sp>
+               <speaker>Prie<U+017F>t.</speaker>
+               <l>Now in proce<U+017F><U+017F>ion walk along,</l>
+               <l>And then begin your <U+017F>olemn Song.</l>
+            </sp>
+            <sp>
+               <speaker>Chorus.</speaker>
+               <l>All di<U+017F>mal <U+017F>ounds thus on this Offering wait,</l>
+               <l>Your power's <U+017F>hown by their untimely Fate;</l>
+               <l>While by <U+017F>uch various Fate's we learn to know,</l>
+               <l>There's nothing to be tru<U+017F>ted here below.</l>
+            </sp>
+         </div>
+         <trailer>FINIS.</trailer>
+      </body>
+      <back>
+         <div type="publishers_advertisement">
+            <p>
+               <hi>BOOKS Printed for, and Sold by</hi> John Hudgebutt.</p>
+            <p>
+               <hi>The<U+017F>aurus Mu<U+017F>icus</hi> the <hi>1<U+017F>t. 2d. 3d.</hi> and <hi>4th.</hi> Books.</p>
+            <p>A Collection of New <hi>A<gap reason="illegible" resp="#OXF" extent="1 letter">
+                     <desc>•</desc>
+                  </gap>RS,</hi> Compo<U+017F>ed for Two <hi>Flutes</hi> with <hi>Sonata's,</hi> by <U+017F>everal of the mo<U+017F>t Ingenious Ma<U+017F>ters of this Age. Price One Shilling Sixpence.</p>
+            <p>At <hi>John May</hi>'s Shop under St. <hi>Dun<U+017F>tans-Church</hi> in <hi>Fleet<U+017F>treet,</hi> you may have all New Songs, and Sets of <hi>AIRS</hi> that's Sung or Play'd at either of the <hi>Theatres,</hi> fairly Writ-out for any In<U+017F>trument, and all other Mu<U+017F>ical-Goods.</p>
+         </div>
+      </back>
+   </text>
+</TEI>
+

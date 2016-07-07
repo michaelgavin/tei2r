@@ -1,0 +1,297 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Prologue, to the Duke of Guise written by Mr. Dryden ; spoken by Mr. Smith.</title>
+            <title>Duke of Guise. Prologue</title>
+            <author>Dryden, John, 1631-1700.</author>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>1683</date>
+            </edition>
+         </editionStmt>
+         <extent>Approx. 8 KB of XML-encoded text transcribed from 3 1-bit group-IV TIFF page images.</extent>
+         <publicationStmt>
+            <publisher>Text Creation Partnership,</publisher>
+            <pubPlace>Ann Arbor, MI ; Oxford (UK) :</pubPlace>
+            <date when="2008-09">2008-09 (EEBO-TCP Phase 1).</date>
+            <idno type="DLPS">A36668</idno>
+            <idno type="STC">Wing D2338</idno>
+            <idno type="STC">ESTC R10910</idno>
+            <idno type="EEBO-CITATION">12277141</idno>
+            <idno type="OCLC">ocm 12277141</idno>
+            <idno type="VID">58487</idno>
+            <availability>
+               <p>This keyboarded and encoded edition of the
+	       work described above is co-owned by the institutions
+	       providing financial support to the Early English Books
+	       Online Text Creation Partnership. This Phase I text is
+	       available for reuse, according to the terms of <ref target="https://creativecommons.org/publicdomain/zero/1.0/">Creative
+	       Commons 0 1.0 Universal</ref>. The text can be copied,
+	       modified, distributed and performed, even for
+	       commercial purposes, all without asking permission.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title>Early English books online.</title>
+         </seriesStmt>
+         <notesStmt>
+            <note>(EEBO-TCP ; phase 1, no. A36668)</note>
+            <note>Transcribed from: (Early English Books Online ; image set 58487)</note>
+            <note>Images scanned from microfilm: (Early English books, 1641-1700 ; 625:14)</note>
+         </notesStmt>
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title>Prologue, to the Duke of Guise written by Mr. Dryden ; spoken by Mr. Smith.</title>
+                  <title>Duke of Guise. Prologue</title>
+                  <author>Dryden, John, 1631-1700.</author>
+               </titleStmt>
+               <extent>[4] p.   </extent>
+               <publicationStmt>
+                  <publisher>Printed for Jacob Tonson ...,</publisher>
+                  <pubPlace>[London :</pubPlace>
+                  <date>1683]</date>
+               </publicationStmt>
+               <notesStmt>
+                  <note>Advertisement: p. [4].</note>
+                  <note>First edition.</note>
+                  <note>Caption title.</note>
+                  <note>"Epilogue, written by the same authour ; spoken by Mrs. Cooke": p. [2-3]; and "Another epilogue intended to have been spoken to the play, before it was forbidden, last summer, written by Mr. Dryden": p. [3-4].</note>
+                  <note>Reproduction of original in Bodleian Library.</note>
+               </notesStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Created by converting TCP files to TEI P5 using tcp2tei.xsl,
+      TEI @ Oxford.
+      </p>
+         </projectDesc>
+         <editorialDecl>
+            <p>EEBO-TCP is a partnership between the Universities of Michigan and Oxford and the publisher ProQuest to create accurately transcribed and encoded texts based on the image sets published by ProQuest via their Early English Books Online (EEBO) database (http://eebo.chadwyck.com). The general aim of EEBO-TCP is to encode one copy (usually the first edition) of every monographic English-language title published between 1473 and 1700 available in EEBO.</p>
+            <p>EEBO-TCP aimed to produce large quantities of textual data within the usual project restraints of time and funding, and therefore chose to create diplomatic transcriptions (as opposed to critical editions) with light-touch, mainly structural encoding based on the Text Encoding Initiative (http://www.tei-c.org).</p>
+            <p>The EEBO-TCP project was divided into two phases. The 25,363 texts created during Phase 1 of the project have been released into the public domain as of 1 January 2015. Anyone can now take and use these texts for their own purposes, but we respectfully request that due credit and attribution is given to their original source.</p>
+            <p>Users should be aware of the process of creating the TCP texts, and therefore of any assumptions that can be made about the data.</p>
+            <p>Text selection was based on the New Cambridge Bibliography of English Literature (NCBEL). If an author (or for an anonymous work, the title) appears in NCBEL, then their works are eligible for inclusion. Selection was intended to range over a wide variety of subject areas, to reflect the true nature of the print record of the period. In general, first editions of a works in English were prioritized, although there are a number of works in other languages, notably Latin and Welsh, included and sometimes a second or later edition of a work was chosen if there was a compelling reason to do so.</p>
+            <p>Image sets were sent to external keying companies for transcription and basic encoding. Quality assurance was then carried out by editorial teams in Oxford and Michigan. 5% (or 5 pages, whichever is the greater) of each text was proofread for accuracy and those which did not meet QA standards were returned to the keyers to be redone. After proofreading, the encoding was enhanced and/or corrected and characters marked as illegible were corrected where possible up to a limit of 100 instances per text. Any remaining illegibles were encoded as &lt;gap&gt;s. Understanding these processes should make clear that, while the overall quality of TCP data is very good, some errors will remain and some readable characters will be marked as illegible. Users should bear in mind that in all likelihood such instances will never have been looked at by a TCP editor.</p>
+            <p>The texts were encoded and linked to page images in accordance with level 4 of the TEI in Libraries guidelines.</p>
+            <p>Copies of the texts have been issued variously as SGML (TCP schema; ASCII text with mnemonic sdata character entities); displayable XML (TCP schema; characters represented either as UTF-8 Unicode or text strings within braces); or lossless XML (TEI P5, characters represented either as UTF-8 Unicode or TEI g elements).</p>
+            <p>Keying and markup guidelines are available at the <ref target="http://www.textcreationpartnership.org/docs/.">Text Creation Partnership web site</ref>.</p>
+         </editorialDecl>
+         <listPrefixDef>
+            <prefixDef ident="tcp"
+                       matchPattern="([0-9\-]+):([0-9IVX]+)"
+                       replacementPattern="http://eebo.chadwyck.com/downloadtiff?vid=$1&amp;page=$2"/>
+            <prefixDef ident="char"
+                       matchPattern="(.+)"
+                       replacementPattern="https://raw.githubusercontent.com/textcreationpartnership/Texts/master/tcpchars.xml#$1"/>
+         </listPrefixDef>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="eng">eng</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change>
+            <date>2007-06</date>
+            <label>TCP</label>Assigned for keying and markup</change>
+         <change>
+            <date>2007-07</date>
+            <label>Apex CoVantage</label>Keyed and coded from ProQuest page images</change>
+         <change>
+            <date>2007-10</date>
+            <label>Elspeth Healey</label>Sampled and proofread</change>
+         <change>
+            <date>2007-10</date>
+            <label>Elspeth Healey</label>Text and markup reviewed and edited</change>
+         <change>
+            <date>2008-02</date>
+            <label>pfs</label>Batch review (QC) and XML conversion</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="eng">
+      <body>
+         <div type="prologue">
+            <pb facs="tcp:58487:1"/>
+            <head>PROLOGUE, TO THE Duke of GUISE.</head>
+            <byline>Written by Mr. <hi>Dryden:</hi> Spoken by Mr. <hi>Smith.</hi>
+            </byline>
+            <l>OUR Play's a Parallel: The Holy League</l>
+            <l>Begot our Cov'nant: Gui<U+017F>ards got the Whigg:</l>
+            <l>Whate'er our hot-brain'd Sheriffs did advance,</l>
+            <l>Was, like our Fa<U+017F>hions, fir<U+017F>t produc'd in <hi>France:</hi>
+            </l>
+            <l>And, when worn out, well <U+017F>courg'd, and bani<U+017F>h'd there,</l>
+            <l>Sent over, like their godly Beggars here.</l>
+            <l>Cou'd the <U+017F>ame Trick, twice play'd, our Nation gull?</l>
+            <l>It looks as if the Devil were grown dull;</l>
+            <l>Or <U+017F>erv'd us up, in <U+017F>corn, his broken Meat,</l>
+            <l>And thought we were not worth a better Cheat.</l>
+            <l>The ful<U+017F>ome Cov'nant, one wou'd think in rea<U+017F>on,</l>
+            <l>Had giv'n us all our Bellys-full of Trea<U+017F>on:</l>
+            <l>And yet, the Name but chang'd, our na<U+017F>ty Nation</l>
+            <l>Chaws its own Excrement, th'A<U+017F><U+017F>ociation.</l>
+            <l>'Tis true we have not learn'd their pois'ning way,</l>
+            <l>For that's a mode but newly come in play;</l>
+            <l>Be<U+017F>ides, your Drug's uncertain to prevail;</l>
+            <l>But your true Prote<U+017F>tant can never fail,</l>
+            <l>With that compendious In<U+017F>trument, a Flail.</l>
+            <l>Go on; and bite, ev'n though the Hook lies bare;</l>
+            <l>Twice in one Age expell the lawfull Heir:</l>
+            <l>Once more decide Religion by the Sword;</l>
+            <l>And purcha<U+017F>e for us a new Tyrant Lord.</l>
+            <l>Pray for your King; but yet your Pur<U+017F>es <U+017F>pare;</l>
+            <l>Make him not two-Pence richer by your Prayer.</l>
+            <l>To <U+017F>how you love him much, cha<U+017F>ti<U+017F>e him more;</l>
+            <l>And make him very Great, and very Poor.</l>
+            <l>Pu<U+017F>h him to Wars, but <U+017F>till no Pence advance;</l>
+            <l>Let him lo<U+017F>e <hi>England</hi> to recover <hi>France.</hi>
+            </l>
+            <l>Cry Freedom up with Popular noi<U+017F>y Votes:</l>
+            <l>And get enough to cut each others Throats,</l>
+            <l>
+               <pb facs="tcp:58487:2"/>
+Lop all the Rights that fence your Monarch's Throne;</l>
+            <l>For fear of too much Pow'r, pray leave him none.</l>
+            <l>A noi<U+017F>e was made of Arbitrary Sway;</l>
+            <l>But in Revenge, you Whiggs, have found a way,</l>
+            <l>An Arbitrary Duty now to pay.</l>
+            <l>Let his own Servants turn, to <U+017F>ave their <U+017F>take;</l>
+            <l>Glean from his plenty, and his wants for<U+017F>ake.</l>
+            <l>But let <U+017F>ome <hi>Judas</hi> near his Per<U+017F>on <U+017F>tay,</l>
+            <l>To <U+017F>wallow the la<U+017F>t Sop, and then betray.</l>
+            <l>Make <hi>London</hi> independant of the Crown:</l>
+            <l>A Realm apart; the Kingdom of the Town.</l>
+            <l>Let <hi>Ignoramus</hi> Juries find no Traitors:</l>
+            <l>And <hi>Ignoramus</hi> Poets <U+017F>cribble Satyres.</l>
+            <l>And, that your meaning none may fail to <U+017F>can,</l>
+            <l>Doe, what in Coffee-hou<U+017F>es you began;</l>
+            <l>Pull down the Ma<U+017F>ter, and Set up the Man.</l>
+         </div>
+         <div type="epilogue">
+            <head>EPILOGUE.</head>
+            <byline>Written by the <U+017F>ame Authour: Spoken by Mrs. <hi>Cooke.</hi>
+            </byline>
+            <l>MUCH Time and Trouble this poor Play has co<U+017F>t;</l>
+            <l>And, faith, I doubted once the Cau<U+017F>e was lo<U+017F>t.</l>
+            <l>Yet no one Man was meant; nor Great nor Small;</l>
+            <l>Our Poets, like frank Game<U+017F>ters, threw at all.</l>
+            <l>They took no <U+017F>ingle Aim:—</l>
+            <l>But, like bold Boys, true to their Prince and hearty,</l>
+            <l>Huzza'd, and fir'd Broad-<U+017F>ides at the whole Party.</l>
+            <l>Duells are Crimes; but when the Cau<U+017F>e is right,</l>
+            <l>In Battel, every Man is bound to fight.</l>
+            <l>For what <U+017F>hou'd hinder Me to <U+017F>ell my Skin</l>
+            <l>Dear as I cou'd, if once my hand were in?</l>
+            <l>
+               <hi>Se defendendo</hi> never was a Sin.</l>
+            <l>'Tis a fine World, my Ma<U+017F>ters, right or wrong,</l>
+            <l>The Whiggs mu<U+017F>t talk, and Tories hold their tongue.</l>
+            <l>They mu<U+017F>t doe all they can—</l>
+            <l>But We, for<U+017F>ooth, mu<U+017F>t bear a Chri<U+017F>tian mind;</l>
+            <l>And fight, like Boys, with one Hand ty'd behind;</l>
+            <l>Nay, and when one Boy's down, 'twere wondrous wi<U+017F>e,</l>
+            <l>To cry, Box fair, and give him time to ri<U+017F>e.</l>
+            <l>
+               <pb facs="tcp:58487:2"/>
+When Fortune favours, none but Fools will dally:</l>
+            <l>Wou'd any of you Sparks, if <hi>Nan</hi> or <hi>Mally</hi>
+            </l>
+            <l>Tipt you th'inviting Wink, <U+017F>tand <U+017F>hall I, <U+017F>hall I?</l>
+            <l>A <hi>Trimmer</hi> cry'd, (that heard me tell this Story)</l>
+            <l>Fie, Mi<U+017F>tre<U+017F>s <hi>Cooke!</hi> faith you're too rank a Tory!</l>
+            <l>Wi<U+017F>h not Whiggs hang'd, but pity their hard Ca<U+017F>es;</l>
+            <l>You Women love to <U+017F>ee Men make wry Faces.</l>
+            <l>Pray, Sir, <U+017F>aid I, don't think me <U+017F>uch a <hi>Jew;</hi>
+            </l>
+            <l>I <U+017F>ay no more, but give the Dev'l his due.</l>
+            <l>Lenitives, <U+017F>ays he, <U+017F>uit be<U+017F>t with our Condition.</l>
+            <l>
+               <hi>Jack Ketch,</hi> <U+017F>ays I,'s an excellent Phy<U+017F>ician.</l>
+            <l>I love no Bloud—Nor I, Sir, as I breath;</l>
+            <l>But hanging is a fine dry kind of Death.</l>
+            <l>We <hi>Trimmers</hi> are for holding all things even:</l>
+            <l>Yes—ju<U+017F>t like him that hung 'twixt Hell and Heaven.</l>
+            <l>Have we not had Mens Lives enow already?</l>
+            <l>Yes <U+017F>ure:—but you're for holding all things <U+017F>teddy:</l>
+            <l>Now <U+017F>ince the Weight hangs all on one <U+017F>ide, Brother,</l>
+            <l>You <hi>Trimmers</hi> <U+017F>hou'd, to poize it, hang on t'other.</l>
+            <l>Damn'd Neuters, in theri middle way of <U+017F>teering,</l>
+            <l>Are neither Fi<U+017F>h, nor Fle<U+017F>h, nor good Red-Herring:</l>
+            <l>Not Whiggs, nor Tories they; nor this, nor that;</l>
+            <l>Not Birds, nor Bea<U+017F>ts; but ju<U+017F>t a kind of Bat:</l>
+            <l>A Twilight Animal<g ref="char:punc"><U+25AA></g> true to neither Cau<U+017F>e,</l>
+            <l>With Tory Wings, but Whiggi<U+017F>h Teeth and Claws.</l>
+         </div>
+         <div type="epilogue">
+            <head>ANOTHER EPILOGUE Intended to have been Spoken to the PLAY, before it was forbidden, la<U+017F>t Summer.</head>
+            <byline>Written by Mr. <hi>Dryden.</hi>
+            </byline>
+            <l>TWO Hou<U+017F>es joyn'd, two Poets to a Play?</l>
+            <l>You noi<U+017F>y Whiggs will <U+017F>ure be pleas'd to day;</l>
+            <l>It looks <U+017F>o like two Shrieves the City way.</l>
+            <l>But <U+017F>ince our Di<U+017F>cords and Divi<U+017F>ions cea<U+017F>e,</l>
+            <l>You, Bilbo Gallants, learn to keep the Peace:</l>
+            <l>
+               <pb facs="tcp:58487:3"/>
+Make here no Tilts: let our Poor Stage alone;</l>
+            <l>Or if a decent Murther mu<U+017F>t be done,</l>
+            <l>Pray take a Civil turn to <hi>Marybone.</hi>
+            </l>
+            <l>If not, I <U+017F>wear we'll pull up all our Benches;</l>
+            <l>Not for your <U+017F>akes, but for our Orange-Wenches:</l>
+            <l>For you thru<U+017F>t wide <U+017F>ometimes; and many a Spark,</l>
+            <l>That mi<U+017F><U+017F>es one, can hit the other Mark.</l>
+            <l>This makes our Boxes full; for Men of Sen<U+017F>e</l>
+            <l>Pay their four Shillings in their own defence:</l>
+            <l>That <U+017F>afe behind the Ladies they may <U+017F>tay;</l>
+            <l>Peep o'er the Fan, and Judg the bloudy Fray.</l>
+            <l>But other Foes give Beauty wor<U+017F>e alarms;</l>
+            <l>The <hi>Po<U+017F><U+017F>e Poetarum</hi>'s up in Arms:</l>
+            <l>No Womans Fame their Libells has e<U+017F>cap'd;</l>
+            <l>Their Ink runs Venome, and their Pens are Clap'd.</l>
+            <l>When Sighs and Pray'rs their Ladies cannot move,</l>
+            <l>They Rail, write Trea<U+017F>on, and turn Whiggs to love.</l>
+            <l>Nay, and I fear they wor<U+017F>e De<U+017F>igns advance, </l>
+            <l>There's a damn'd Love-trick new brought o'er from <hi>France,</hi>
+            </l>
+            <l>We charm in vain, and dre<U+017F>s, and keep a Pother,</l>
+            <l>While tho<U+017F>e fal<U+017F>e Rogues are Ogling one another.</l>
+            <l>All Sins be<U+017F>ides, admit <U+017F>ome expiation;</l>
+            <l>But this again<U+017F>t our Sex is plain Damnation.</l>
+            <l>They joyn for Libells too, the<U+017F>e Women-haters;</l>
+            <l>And as they club for Love, they club for Satyrs:</l>
+            <l>The be<U+017F>t on't is they hurt not: for they wear</l>
+            <l>Stings in their Tayls; their onely Venom's there.</l>
+            <l>'Tis true, <U+017F>ome Shot at fir<U+017F>t the Ladies hit,</l>
+            <l>Which able Marke<U+017F>men made and Men of Wit:</l>
+            <l>But now the Fools give fire, who<U+017F>e Bounce is louder;</l>
+            <l>And ye<gap reason="illegible: blotted" extent="1 letter">
+                  <desc>•</desc>
+               </gap>, like mere Train bands, they <U+017F>hoot but Powder.</l>
+            <l>Libells, like Plots, <U+017F>weep all in their fir<U+017F>t Fury;</l>
+            <l>Then dwindle like an <hi>Ignoramus</hi> Jury:</l>
+            <l>Thus Age begins with Towzing and with Tumbling;</l>
+            <l>But Grunts, and Groans, and ends at la<U+017F>t in Fumbling.</l>
+            <trailer>FINIS.</trailer>
+         </div>
+      </body>
+      <back>
+         <div type="publishers_advertisement">
+            <p>Newly Printed, The Prologue and Epilogue to the King and Queen, at the Opening of their Theatre.</p>
+            <p>
+               <hi>Religio Laici,</hi> or a Lay-man's Faith. A Poem. Both Written by Mr. <hi>Dryden.</hi>
+            </p>
+         </div>
+         <div type="colophon">
+            <p>
+               <hi>LONDON,</hi> Printed for <hi>Jacob Ton<U+017F>on,</hi> at the <hi>Judge's Head</hi> in <hi>Chancery-lane.</hi> 1683.</p>
+         </div>
+      </back>
+   </text>
+</TEI>
+

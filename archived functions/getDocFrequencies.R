@@ -2,11 +2,12 @@
 #' 
 #' Get the frequencies of all words in a collection.
 #' 
-#' @param dt      A \code{docTexts} object that contains the full
+#' @param dl      A \code{docList} object that contains the full
 #'                text of each document in your corpus.
+#'                
 #' @param limit   A numeric value that limits the number of words
 #'                to find the frequency of in each document in
-#'                \code{dt}. Defaults to all terms.
+#'                \code{dl}. Defaults to all terms.
 #'                
 #' @return df     a \code{docFrequencies} object with frequency
 #'                data for the corpus.
@@ -29,33 +30,33 @@
 #' @name frequencies
 NULL
 
-getDocFrequencies = function(dt, limit=0) {
+getDocFrequencies = function(dl, limit=0) {
   df = docFrequencies()
-  df@directory         = dt@directory
-  df@indexFile         = dt@indexFile
+  df@directory         = dl@directory
+  df@indexFile         = dl@indexFile
   df@raw               = list()
   df@proportional      = list()
   df@vocabulary        = array()
   df@proportionalVocab = array()
   print("Calculating raw frequencies for each text.  Accessible by df@raw")
-  for (i in 1:length(dt@text)) {
+  for (i in 1:length(dl@texts)) {
     if (limit == 0) {
-      df@raw[[i]] = rev(sort(table(dt@text[i])))
+      df@raw[[i]] = rev(sort(table(dl@texts[i])))
     } else {
-      df@raw[[i]] = rev(sort(table(dt@text[i])))[1:limit]
+      df@raw[[i]] = rev(sort(table(dl@texts[i])))[1:limit]
     }
   }
-  names(df@raw) = names(dt@text)
+  names(df@raw) = names(dl@texts)
   print("Have calculated raw frequencies, moving on to proportional for each term in each text. Accessible by df@proportional.")
   for (i in 1:length(df@raw)) {
     total = sum(df@raw[[i]])
     df@proportional[[i]] = ((df@raw[[i]]) / total) #* 100
   }
-  names(df@proportional) = names(dt@text)
+  names(df@proportional) = names(dl@texts)
   
   # Get the vocabulary
   print("Determining vocabulary for corpus.  Accessible through df@vocabulary.")
-  freqs = rev(sort(table(unlist(dt@text))))
+  freqs = rev(sort(table(unlist(dl@texts))))
   df@vocabulary = freqs
 
   # Get proportional vocab
@@ -67,7 +68,7 @@ getDocFrequencies = function(dt, limit=0) {
 
 #' @rdname frequencies
 #' @export
-frequencies = function(dt) {
-  df = getDocFrequencies(dt)
+frequencies = function(dl) {
+  df = getDocFrequencies(dl)
   return(df)
 }

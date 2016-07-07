@@ -16,8 +16,6 @@
 # @include docList.R
 # @export
 docTexts <- setClass("docTexts",
-                     slots = c(directory = "character",
-                               indexFile = "character",
-                               text = "list"
-                     ))
+                     slots = c(text = "list")
+                     )
 

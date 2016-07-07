@@ -13,7 +13,7 @@
 # either \code{.txt} or \code{.xml} files.  The resulting spreadsheet is
 # more robust for \code{.xml} files, but these \emph{must} be encoded
 # according to the \code{TEI} guidelines.  For \code{.txt} files,
-# the algorithm assumes that the filenames (sans extension) are also
+# the algorithm assumes that the filenames (no extension) are also
 # the \code{id}s for the files and these will be used throughout the
 # package to link data to particular documents.  The \code{.txt} based
 # index will feature all of the same fields as the \code{.xml} one,
@@ -53,7 +53,7 @@ buildIndex = function(directory) {
       last = round(percent)
     }
     if (length(grep(".txt",files[i])) == 1) {
-      id[i] = file_path_sans_ext(files[i])
+      id[i] = file_path_no_ext(files[i])
       filenames[i] = files[i]
       paths[i] = paste(directory, files[i], sep="/")
       author[i] = ""
@@ -132,7 +132,7 @@ buildIndex = function(directory) {
       }
       
       # Set ID
-      id[i] = file_path_sans_ext(files[i])
+      id[i] = file_path_no_ext(files[i])
     }
   }
   index = data.frame(id, stc, tcp, eebo, author, date, title, filenames, paths)

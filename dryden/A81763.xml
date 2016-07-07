@@ -1,0 +1,515 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Astræa redux A poem on the happy restoration &amp; return of His sacred Majesty Charles the Second. By John Driden.</title>
+            <author>Dryden, John, 1631-1700.</author>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>1660</date>
+            </edition>
+         </editionStmt>
+         <extent>Approx. 19 KB of XML-encoded text transcribed from 7 1-bit group-IV TIFF page images.</extent>
+         <publicationStmt>
+            <publisher>Text Creation Partnership,</publisher>
+            <pubPlace>Ann Arbor, MI ; Oxford (UK) :</pubPlace>
+            <date when="2008-09">2008-09 (EEBO-TCP Phase 1).</date>
+            <idno type="DLPS">A81763</idno>
+            <idno type="STC">Wing D2244</idno>
+            <idno type="STC">Thomason E1080_6</idno>
+            <idno type="STC">ESTC R26913</idno>
+            <idno type="EEBO-CITATION">99897334</idno>
+            <idno type="PROQUEST">99897334</idno>
+            <idno type="VID">135049</idno>
+            <availability>
+               <p>This keyboarded and encoded edition of the
+	       work described above is co-owned by the institutions
+	       providing financial support to the Early English Books
+	       Online Text Creation Partnership. This Phase I text is
+	       available for reuse, according to the terms of <ref target="https://creativecommons.org/publicdomain/zero/1.0/">Creative
+	       Commons 0 1.0 Universal</ref>. The text can be copied,
+	       modified, distributed and performed, even for
+	       commercial purposes, all without asking permission.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title>Early English books online.</title>
+         </seriesStmt>
+         <notesStmt>
+            <note>(EEBO-TCP ; phase 1, no. A81763)</note>
+            <note>Transcribed from: (Early English Books Online ; image set 135049)</note>
+            <note>Images scanned from microfilm: (Early English Books, 1641-1700 ; 2482:7)</note>
+         </notesStmt>
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title>Astræa redux A poem on the happy restoration &amp; return of His sacred Majesty Charles the Second. By John Driden.</title>
+                  <author>Dryden, John, 1631-1700.</author>
+               </titleStmt>
+               <extent>15, [1] p.   </extent>
+               <publicationStmt>
+                  <publisher>printed by J.M. for Henry Herringman, and are to be sold at his shop, at the Blew-Anchor, in the lower walk of the New-Exchange,</publisher>
+                  <pubPlace>London :</pubPlace>
+                  <date>1660.</date>
+               </publicationStmt>
+               <notesStmt>
+                  <note>In verse.</note>
+                  <note>The first leaf bears royal arms on verso.</note>
+                  <note>C2r line 30 begins "Like glass we clearness mixt". Variant: line begins "And glass-like clearness mixt".</note>
+                  <note>Reproduction of original in the Folger Shakespeare Library.</note>
+               </notesStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Created by converting TCP files to TEI P5 using tcp2tei.xsl,
+      TEI @ Oxford.
+      </p>
+         </projectDesc>
+         <editorialDecl>
+            <p>EEBO-TCP is a partnership between the Universities of Michigan and Oxford and the publisher ProQuest to create accurately transcribed and encoded texts based on the image sets published by ProQuest via their Early English Books Online (EEBO) database (http://eebo.chadwyck.com). The general aim of EEBO-TCP is to encode one copy (usually the first edition) of every monographic English-language title published between 1473 and 1700 available in EEBO.</p>
+            <p>EEBO-TCP aimed to produce large quantities of textual data within the usual project restraints of time and funding, and therefore chose to create diplomatic transcriptions (as opposed to critical editions) with light-touch, mainly structural encoding based on the Text Encoding Initiative (http://www.tei-c.org).</p>
+            <p>The EEBO-TCP project was divided into two phases. The 25,363 texts created during Phase 1 of the project have been released into the public domain as of 1 January 2015. Anyone can now take and use these texts for their own purposes, but we respectfully request that due credit and attribution is given to their original source.</p>
+            <p>Users should be aware of the process of creating the TCP texts, and therefore of any assumptions that can be made about the data.</p>
+            <p>Text selection was based on the New Cambridge Bibliography of English Literature (NCBEL). If an author (or for an anonymous work, the title) appears in NCBEL, then their works are eligible for inclusion. Selection was intended to range over a wide variety of subject areas, to reflect the true nature of the print record of the period. In general, first editions of a works in English were prioritized, although there are a number of works in other languages, notably Latin and Welsh, included and sometimes a second or later edition of a work was chosen if there was a compelling reason to do so.</p>
+            <p>Image sets were sent to external keying companies for transcription and basic encoding. Quality assurance was then carried out by editorial teams in Oxford and Michigan. 5% (or 5 pages, whichever is the greater) of each text was proofread for accuracy and those which did not meet QA standards were returned to the keyers to be redone. After proofreading, the encoding was enhanced and/or corrected and characters marked as illegible were corrected where possible up to a limit of 100 instances per text. Any remaining illegibles were encoded as &lt;gap&gt;s. Understanding these processes should make clear that, while the overall quality of TCP data is very good, some errors will remain and some readable characters will be marked as illegible. Users should bear in mind that in all likelihood such instances will never have been looked at by a TCP editor.</p>
+            <p>The texts were encoded and linked to page images in accordance with level 4 of the TEI in Libraries guidelines.</p>
+            <p>Copies of the texts have been issued variously as SGML (TCP schema; ASCII text with mnemonic sdata character entities); displayable XML (TCP schema; characters represented either as UTF-8 Unicode or text strings within braces); or lossless XML (TEI P5, characters represented either as UTF-8 Unicode or TEI g elements).</p>
+            <p>Keying and markup guidelines are available at the <ref target="http://www.textcreationpartnership.org/docs/.">Text Creation Partnership web site</ref>.</p>
+         </editorialDecl>
+         <listPrefixDef>
+            <prefixDef ident="tcp"
+                       matchPattern="([0-9\-]+):([0-9IVX]+)"
+                       replacementPattern="http://eebo.chadwyck.com/downloadtiff?vid=$1&amp;page=$2"/>
+            <prefixDef ident="char"
+                       matchPattern="(.+)"
+                       replacementPattern="https://raw.githubusercontent.com/textcreationpartnership/Texts/master/tcpchars.xml#$1"/>
+         </listPrefixDef>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="eng">eng</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="http://authorities.loc.gov/">
+               <term>Charles --  II, --  King of England, 1630-1685 --  Poetry --  Early works to 1800.</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change>
+            <date>2007-02</date>
+            <label>TCP</label>Assigned for keying and markup</change>
+         <change>
+            <date>2007-03</date>
+            <label>Aptara</label>Keyed and coded from ProQuest page images</change>
+         <change>
+            <date>2007-04</date>
+            <label>Emma (Leeson) Huber</label>Sampled and proofread</change>
+         <change>
+            <date>2007-04</date>
+            <label>Emma (Leeson) Huber</label>Text and markup reviewed and edited</change>
+         <change>
+            <date>2008-02</date>
+            <label>pfs</label>Batch review (QC) and XML conversion</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="eng">
+      <front>
+         <div type="royal_blazon">
+            <pb facs="tcp:135049:1"/>
+            <p>
+               <figure>
+                  <p>C R</p>
+                  <p>HONI SOIT QVI MAL Y PENSE</p>
+                  <p>DIEV ET MON DROIT</p>
+               </figure>
+            </p>
+         </div>
+         <div type="title_page">
+            <pb facs="tcp:135049:1"/>
+            <p>A<U+017F>traea Redux. A
+POEM
+On the Happy
+Re<U+017F>toration &amp; Return
+Of His Sacred Maje<U+017F>ty
+Charles the Second. <hi>By</hi> JOHN DRIDEN.</p>
+            <q>Jam Redit &amp; Virgo, Redeunt Saturnia Regna.</q>
+            <bibl>Virgil.</bibl>
+            <p>
+               <hi>LONDON,</hi>
+Printed by <hi>J. M.</hi> for <hi>Henry Herringman,</hi> and are to be <U+017F>old at
+his Shop, at the Blew-<hi>Anchor,</hi> in the lower Walk of the New-Exchange,
+1660.</p>
+         </div>
+      </front>
+      <body>
+         <div type="text">
+            <pb facs="tcp:135049:2"/>
+            <pb n="5" facs="tcp:135049:2"/>
+            <head>A<U+017F>traea Redux. A
+POEM
+On the Happy Re<U+017F>toration and Return of His
+Sacred MAJESTY
+Charles the Second.</head>
+            <lg>
+               <l>NOw with a general Peace the World was ble<U+017F>t,</l>
+               <l>While Ours, a World divided from the re<U+017F>t,</l>
+               <l>A dreadful Quiet felt, and wor<U+017F>er farre</l>
+               <l>Then Armes, a <U+017F>ullen Intervall of Warre:</l>
+               <l>Thus when black Clouds draw down the lab'ring Skies,</l>
+               <l>Ere yet abroad the winged Thunder flyes</l>
+               <l>An horrid Stillne<U+017F>s fir<U+017F>t invades the ear,</l>
+               <l>And in that <U+017F>ilence Wee the Tempe<U+017F>t fear.</l>
+               <l>Th' Ambitious <hi>Swede</hi> like re<U+017F>tle<U+017F>s Billowes to<U+017F>t,</l>
+               <l>On this hand gaining what on that he lo<U+017F>t,</l>
+               <l>Though in his life he Blood and Ruine breath'd</l>
+               <l>To his now guidele<U+017F>s Kingdome Peace bequeath'd.</l>
+               <l>And Heaven that <U+017F>eem'd regardle<U+017F>s of our Fate,</l>
+               <l>For <hi>France</hi> and <hi>Spain</hi> did Miracles create,</l>
+               <l>Such mortal Quarrels to compo<U+017F>e in Peace</l>
+               <l>As Nature bred and Int're<U+017F>t did encrea<U+017F>e.</l>
+               <l>We <U+017F>igh'd to hear the fair <hi>Iberian</hi> Bride</l>
+               <l>Mu<U+017F>t grow a Lilie to the Lilies <U+017F>ide,</l>
+               <l>
+                  <pb n="6" facs="tcp:135049:3"/>
+While Our cro<U+017F>s Stars deny'd us <hi>Charles</hi> his Bed</l>
+               <l>Whom Our fir<U+017F>t Flames and Virgin Love did wed.</l>
+               <l>For his long ab<U+017F>ence Church and State did groan;</l>
+               <l>Madne<U+017F>s the Pulpit, Faction <U+017F>eiz'd the Throne:</l>
+               <l>Experienc'd Age in deep de<U+017F>pair was lo<U+017F>t</l>
+               <l>To <U+017F>ee the Rebel thrive, the Loyal cro<U+017F>t:</l>
+               <l>Youth that with Joys had unacquainted been</l>
+               <l>Envy'd gray hairs that once good days had <U+017F>een:</l>
+               <l>We thought our Sires, not with their own content,</l>
+               <l>Had ere we came to age our Portion <U+017F>pent.</l>
+               <l>Nor could our Nobles hope their bold Attempt</l>
+               <l>Who ruin'd Crowns would Coronets exempt:</l>
+               <l>For when by their de<U+017F>igning Leaders taught</l>
+               <l>To <U+017F>trike at Pow'r which for them<U+017F>elves they <U+017F>ought,</l>
+               <l>The Vulgar gull'd into Rebellion, arm'd,</l>
+               <l>Their blood to action by the Prize was warm'd.</l>
+               <l>The Sacred Purple then and Scarlet Gown</l>
+               <l>Like <U+017F>anguine Dye to Elephants was <U+017F>hown.</l>
+               <l>Thus when the bold <hi>Typhoeus</hi> <U+017F>cal'd the Sky,</l>
+               <l>And forc'd great <hi>Jove</hi> from his own Heaven to fly,</l>
+               <l>(What King, what Crown from Trea<U+017F>ons reach is free,</l>
+               <l>If <hi>Jove</hi> and <hi>Heaven</hi> can violated be?)</l>
+               <l>The le<U+017F><U+017F>er Gods that <U+017F>har'd his pro<U+017F>p'rous State</l>
+               <l>All <U+017F>uffer'd in the Exil'd Thund'rers Fate.</l>
+               <l>The Rabble now <U+017F>uch Freedom did enjoy,</l>
+               <l>As Winds at Sea that u<U+017F>e it to de<U+017F>troy:</l>
+               <l>Blind as the <hi>Cyclops,</hi> and as wild as he,</l>
+               <l>They own'd a lawle<U+017F>s <U+017F>alvage Libertie,</l>
+               <l>Like that our painted Ance<U+017F>tours <U+017F>o priz'd</l>
+               <l>Ere Empires Arts their Brea<U+017F>ts had Civiliz'd.</l>
+               <l>How Great were then Our <hi>Charles</hi> his Woes, who thus</l>
+               <l>Was forc'd to <U+017F>uffer for Him<U+017F>elf and us!</l>
+               <l>
+                  <pb n="7" facs="tcp:135049:3"/>
+He to<U+017F>s'd by Fate, and hurried up and down,</l>
+               <l>Heir to his Fathers Sorrows, with his Crown,</l>
+               <l>Could ta<U+017F>t no <U+017F>weets of youths de<U+017F>ired Age,</l>
+               <l>But found his life too true a Pilgrimage.</l>
+               <l>Unconquer'd yet in that forlorne E<U+017F>tate</l>
+               <l>His Manly Courage overcame his Fate.</l>
+               <l>His wounds he took like <hi>Romans</hi> on his bre<U+017F>t,</l>
+               <l>Which by his Vertue were with Lawrells dre<U+017F>t.</l>
+               <l>As Souls reach Heav'n while yet in Bodies pent,</l>
+               <l>So did he live above his Bani<U+017F>hment.</l>
+               <l>That Sun which we beheld with cous'ned eyes</l>
+               <l>Within the water, mov'd along the skies.</l>
+               <l>How ea<U+017F>ie 'tis when De<U+017F>tiny proves kind</l>
+               <l>With full <U+017F>pread Sails to run before the wind,</l>
+               <l>But tho<U+017F>e that 'gain<U+017F>t <U+017F>tiff gales laveering go</l>
+               <l>Mu<U+017F>t be at once re<U+017F>olv'd and skilfull too.</l>
+               <l>He would not like <U+017F>oft <hi>Otho</hi> hope prevent</l>
+               <l>But <U+017F>tay'd and <U+017F>uffer'd Fortune to repent.</l>
+               <l>The<U+017F>e Vertues <hi>Galba</hi> in a <U+017F>tranger <U+017F>ought;</l>
+               <l>And <hi>Pi<U+017F>o</hi> to Adopted Empire brought.</l>
+               <l>How <U+017F>hall I then my doubtful thoughts expre<U+017F>s</l>
+               <l>That mu<U+017F>t his <U+017F>uff'rings both regret and ble<U+017F>s!</l>
+               <l>For when his early Valour Heav'n had cro<U+017F>t,</l>
+               <l>And all at <hi>Worc'<U+017F>ter</hi> but the honour lo<U+017F>t,</l>
+               <l>Forc'd into exile from his rightful Throne</l>
+               <l>He made all Countries where he came his own.</l>
+               <l>And viewing Monarchs <U+017F>ecret Arts of <U+017F>way</l>
+               <l>A Royal Factor for their Kingdomes lay.</l>
+               <l>Thus bani<U+017F>h'd <hi>David</hi> <U+017F>pent abroad his time.</l>
+               <l>When to be Gods Anointed was his Crime</l>
+               <l>And when re<U+017F>tor'd made his proud Neighbours rue</l>
+               <l>Tho<U+017F>e choi<U+017F>e Remarques he from his Travels drew,</l>
+               <l>
+                  <pb n="8" facs="tcp:135049:4"/>
+Nor is he onely by afflictions <U+017F>hown</l>
+               <l>To conquer others Realms but rule his own:</l>
+               <l>Recov'ring hardly what he lo<U+017F>t before</l>
+               <l>His right indears it much, his purcha<U+017F>e more.</l>
+               <l>Inur'd to <U+017F>uffer ere he came to raigne</l>
+               <l>No ra<U+017F>h procedure will his actions <U+017F>tain.</l>
+               <l>To bus'ne<U+017F>s ripened by dige<U+017F>tive thought</l>
+               <l>His future rule is into Method brought:</l>
+               <l>As they who fir<U+017F>t Proportion under<U+017F>tand</l>
+               <l>With ea<U+017F>ie Practice reach a Ma<U+017F>ters hand.</l>
+               <l>Well might the Ancient Poets then confer</l>
+               <l>On Night the honour'd name of <hi>Coun<U+017F>eller,</hi>
+               </l>
+               <l>Since <U+017F>truck with rayes of pro<U+017F>p'rous fortune blind</l>
+               <l>We light alone in dark afflictions find.</l>
+               <l>In <U+017F>uch adver<U+017F>ities to Scepters train'd</l>
+               <l>The name of <hi>Great</hi> his famous Grand<U+017F>ire gain'd:</l>
+               <l>Who yet a King alone in Name and Right,</l>
+               <l>With hunger, cold and angry <hi>Jove</hi> did fight;</l>
+               <l>Shock'd by a Covenanting Leagues va<U+017F>t Pow'rs</l>
+               <l>As holy and as Catholique as ours:</l>
+               <l>Till Fortunes fruitle<U+017F>s <U+017F>pight had made it known</l>
+               <l>Her blowes not <U+017F>hook but riveted his Throne.</l>
+               <l>Some lazy Ages lo<U+017F>t in <U+017F>leep and ea<U+017F>e</l>
+               <l>No action leave to bu<U+017F>ie Chronicles;</l>
+               <l>Such who<U+017F>e <U+017F>upine felicity but makes</l>
+               <l>In <U+017F>tory <hi>Cha<U+017F>mes,</hi> in <hi>Epoche's</hi> mi<U+017F>takes;</l>
+               <l>O're whom <hi>Time</hi> gently <U+017F>hakes his wings of Down</l>
+               <l>Till with his <U+017F>ilent <U+017F>ickle they are mown:</l>
+               <l>Such is not <hi>Charles</hi> his too too active age,</l>
+               <l>Which govern'd by the wild di<U+017F>temper'd rage</l>
+               <l>Of <U+017F>ome black Star infecting all the Skies,</l>
+               <l>Made him at his own co<U+017F>t like <hi>Adam</hi> wi<U+017F>e.</l>
+               <l>
+                  <pb n="9" facs="tcp:135049:4"/>
+Tremble ye Nations who <U+017F>ecure before</l>
+               <l>Laught at tho<U+017F>e Armes that 'gain<U+017F>t our <U+017F>elves we bore;</l>
+               <l>Rous'd by the la<U+017F>h of his own <U+017F>tubborn tail</l>
+               <l>Our Lyon now will forraign Foes a<U+017F><U+017F>ail.</l>
+               <l>With <hi>Alga</hi> who the <U+017F>acred altar <U+017F>trowes?</l>
+               <l>To all the Sea-Gods <hi>Charles</hi> an Offring owes:</l>
+               <l>A Bull to thee <hi>Portunus</hi> <U+017F>hall be <U+017F>lain</l>
+               <l>A Lamb to you the Tempe<U+017F>ts of the Main:</l>
+               <l>For tho<U+017F>e loud <U+017F>tormes that did again<U+017F>t him rore</l>
+               <l>Have ca<U+017F>t his <U+017F>hipwrack'd Ve<U+017F><U+017F>el on the <U+017F>hore.</l>
+               <l>Yet as wi<U+017F>e Arti<U+017F>ts mix their colours <U+017F>o</l>
+               <l>That by degrees they from each other go,</l>
+               <l>Black <U+017F>teals unheeded from the neighb'ring white</l>
+               <l>Without offending the well cous'ned <U+017F>ight:</l>
+               <l>So on us <U+017F>tole our ble<U+017F><U+017F>ed change; while we</l>
+               <l>Th' effect did feel but <U+017F>carce the manner <U+017F>ee.</l>
+               <l>Fro<U+017F>ts that con<U+017F>train the ground, and birth deny</l>
+               <l>To flow'rs, that in its womb expecting lye,</l>
+               <l>Do <U+017F>eldom their u<U+017F>urping Pow'r withdraw,</l>
+               <l>But raging floods pur<U+017F>ue their ha<U+017F>ty thaw:</l>
+               <l>Our thaw was mild, the cold not chas'd away</l>
+               <l>But lo<U+017F>t in kindly heat of lengthned day.</l>
+               <l>Heav'n would no bargain for its ble<U+017F>sings drive</l>
+               <l>But what we could not pay for, freely give.</l>
+               <l>The Prince of Peace would like him<U+017F>elf confer</l>
+               <l>A gift unhop'd without the price of war.</l>
+               <l>Yet as he knew his ble<U+017F>sings worth, took care</l>
+               <l>That we <U+017F>hould know it by repeated pray'r;</l>
+               <l>Which <U+017F>torm'd the skies and ravi<U+017F>h'd <hi>Charles</hi> from thence</l>
+               <l>As Heav'n it <U+017F>elf is took by violence.</l>
+               <l>
+                  <hi>Booth</hi>'s forward Valour only <U+017F>erv'd to <U+017F>how</l>
+               <l>He dur<U+017F>t that duty pay we all did owe:</l>
+               <l>
+                  <pb n="10" facs="tcp:135049:5"/>
+Th' Attempt was fair; but Heav'ns prefixed hour</l>
+               <l>Not come; <U+017F>o like the watchful travellour</l>
+               <l>That by the Moons mi<U+017F>taken light did ri<U+017F>e,</l>
+               <l>Lay down again, and clos'd his weary eyes.</l>
+               <l>'Twas <hi>MONCK</hi> whom Providence de<U+017F>ign'd to loo<U+017F>e</l>
+               <l>Tho<U+017F>e real bonds fal<U+017F>e freedom did impo<U+017F>e.</l>
+               <l>The ble<U+017F><U+017F>ed Saints that watch'd this turning Scene</l>
+               <l>Did from their Stars with joyful wonder leane,</l>
+               <l>To <U+017F>ee <U+017F>mall clues draw va<U+017F>te<U+017F>t weights along,</l>
+               <l>Not in their bulk but in their order <U+017F>trong.</l>
+               <l>Thus Pencils can by one <U+017F>light touch re<U+017F>tore</l>
+               <l>Smiles to that changed face that wept before.</l>
+               <l>With ea<U+017F>e <U+017F>uch fond <hi>Chymaera's</hi> we pur<U+017F>ue</l>
+               <l>As fancy frames for fancy to <U+017F>ubdue,</l>
+               <l>But when our <U+017F>elves to action we betake</l>
+               <l>It <U+017F>huns the Mint like gold that Chymi<U+017F>ts make:</l>
+               <l>How hard was then his task, at once to be</l>
+               <l>What in the body natural we <U+017F>ee</l>
+               <l>Mans Architect di<U+017F>tinctly did ordain</l>
+               <l>The charge of Mu<U+017F>cles, Nerves, and of the Brain;</l>
+               <l>Through viewle<U+017F>s Conduits Spirits to di<U+017F>pen<U+017F>e,</l>
+               <l>The Springs of Motion from the Seat of Sen<U+017F>e.</l>
+               <l>'Twas not the ha<U+017F>ty product of a day,</l>
+               <l>But the well ripened fruit of wi<U+017F>e delay.</l>
+               <l>He like a patient Angler, er'e he <U+017F>trooke</l>
+               <l>Would let them play a while upon the hook.</l>
+               <l>Our healthful food the Stomach labours thus</l>
+               <l>At fir<U+017F>t embracing what it <U+017F>trait doth cru<U+017F>h.</l>
+               <l>Wi<U+017F>e Leeches will not vain Receipts obtrude,</l>
+               <l>While growing pains pronounce the humours crude;</l>
+               <l>Deaf to complaints they wait upon the ill</l>
+               <l>Till <U+017F>ome <U+017F>afe <hi>Cri<U+017F>is</hi> authori<U+017F>e their skill.</l>
+               <l>
+                  <pb n="11" facs="tcp:135049:5"/>
+Nor could his Acts too clo<U+017F>e a vizard wear</l>
+               <l>To <U+017F>cape their eyes whom guilt had taught to fear,</l>
+               <l>And guard with caution that polluted ne<U+017F>t</l>
+               <l>Whence Legion twice before was di<U+017F>po<U+017F><U+017F>e<U+017F>t.</l>
+               <l>Once <U+017F>acred hou<U+017F>e which when they enter'd in</l>
+               <l>They thought the place could <U+017F>anctifie a <U+017F>in;</l>
+               <l>Like tho<U+017F>e that vainly hop'd kind Heav'n would wink</l>
+               <l>While to exce<U+017F>s on Martyrs tombs they drink.</l>
+               <l>And as devouter <hi>Turks</hi> fir<U+017F>t warn their <U+017F>ouls</l>
+               <l>To part, before they ta<U+017F>t forbidden bowls,</l>
+               <l>So the<U+017F>e when their black crimes they went about</l>
+               <l>Fir<U+017F>t timely charm'd their u<U+017F>ele<U+017F>s con<U+017F>cience out.</l>
+               <l>Religions name again<U+017F>t it <U+017F>elf was made;</l>
+               <l>The <U+017F>hadow <U+017F>erv'd the <U+017F>ub<U+017F>tance to invade:</l>
+               <l>Like Zealous Mi<U+017F>sions they did care pretend</l>
+               <l>Of <U+017F>ouls in <U+017F>hew, but made the Gold their end.</l>
+               <l>Th' incen<U+017F>ed Powr's beheld with <U+017F>corn from high</l>
+               <l>An Heaven <U+017F>o far di<U+017F>tant from the sky,</l>
+               <l>Which dur<U+017F>t with hor<U+017F>es hoofs that beat the ground</l>
+               <l>And Martial bra<U+017F>s bely the thunders <U+017F>ound.</l>
+               <l>'Twas hence at length ju<U+017F>t Vengeance thought it fit</l>
+               <l>To <U+017F>peed their ruine by their impious wit.</l>
+               <l>Thus <hi>Sforza</hi> curs'd with a too fertile brain</l>
+               <l>Lo<U+017F>t by his wiles the Pow'r his wit did gain.</l>
+               <l>Henceforth their Fogue mu<U+017F>t <U+017F>pend at le<U+017F><U+017F>er rate</l>
+               <l>Then in its flames to wrap a Nations Fate.</l>
+               <l>Suffer'd to live, they are like <hi>Helots</hi> <U+017F>et</l>
+               <l>A vertuous <U+017F>hame within us to beget.</l>
+               <l>For by example mo<U+017F>t we <U+017F>inn'd before,</l>
+               <l>And gla<U+017F>s-like clearne<U+017F>s mixt with frailty bore.</l>
+               <l>But <U+017F>ince reform'd by what we did ami<U+017F>s,</l>
+               <l>We by our <U+017F>uff'rings learn to prize our bli<U+017F>s.</l>
+               <l>
+                  <pb n="12" facs="tcp:135049:6"/>
+Like early Lovers who<U+017F>e unpractis'd hearts</l>
+               <l>Were long the May-game of malicious arts,</l>
+               <l>When once they find their Jealou<U+017F>ies were vain</l>
+               <l>With double heat renew their fires again.</l>
+               <l>'Twas this produc'd the joy that hurried o're</l>
+               <l>Such <U+017F>warmes of Engli<U+017F>h to the Neighb'ring <U+017F>hore,</l>
+               <l>To fetch that prize, by which <hi>Batavia</hi> made</l>
+               <l>So rich amends for our impoveri<U+017F>h'd Trade.</l>
+               <l>Oh had you <U+017F>een from <hi>Schevelines</hi> barren <U+017F>hore</l>
+               <l>(Crowded with troops, and barren now no more,)</l>
+               <l>Afflicted <hi>Holland</hi> to his farewell bring</l>
+               <l>True Sorrow, <hi>Holland</hi> to regret a King;</l>
+               <l>While waiting him his Royal Fleet did ride</l>
+               <l>And willing winds to their low'rd <U+017F>ayles deny'd.</l>
+               <l>The wavering Streamers, Flags, and Standart out</l>
+               <l>The merry Seamens rude but chearful <U+017F>hout,</l>
+               <l>And la<U+017F>t the Cannons voice that <U+017F>hook the skies</l>
+               <l>And, as it fares in <U+017F>udden Exta<U+017F>ies</l>
+               <l>At once bereft us both of ears and eyes.</l>
+               <l>The <hi>Na<U+017F>eby</hi> now no longer <hi>Englands</hi> <U+017F>hame</l>
+               <l>But better to be lo<U+017F>t in <hi>Charles</hi> his name</l>
+               <l>(Like <U+017F>ome unequal Bride in nobler <U+017F>heets)</l>
+               <l>Receives her Lord: the joyful <hi>London</hi> meets</l>
+               <l>The Princely <hi>York,</hi> him<U+017F>elf alone a freight;</l>
+               <l>The <hi>Swift-<U+017F>ure</hi> groans beneath Great <hi>Gloc'<U+017F>ters</hi> weight.</l>
+               <l>Secure as when the <hi>Halcyon</hi> breeds, with the<U+017F>e</l>
+               <l>He that was born to drown might cro<U+017F>s the Seas.</l>
+               <l>Heav'n could not own a Providence and take</l>
+               <l>The wealth three Nations ventur'd at a <U+017F>take.</l>
+               <l>The <U+017F>ame indulgence <hi>Charles</hi> his Voyage ble<U+017F>s'd</l>
+               <l>Which in his right had Miracles confe<U+017F>s'd.</l>
+               <l>The winds that never Moderation knew</l>
+               <l>Afraid to blow too much, too faintly blew;</l>
+               <l>
+                  <pb n="13" facs="tcp:135049:6"/>
+Or out of breath with joy could not enlarge</l>
+               <l>Their <U+017F>traightned lungs, or con<U+017F>cious of their Charge.</l>
+               <l>The Briti<U+017F>h <hi>Amphitryte</hi> <U+017F>mooth and clear</l>
+               <l>In richer Azure never did appear;</l>
+               <l>Proud her returning Prince to entertain</l>
+               <l>With the <U+017F>ubmitted Fa<U+017F>ces of the Main.</l>
+            </lg>
+            <lg>
+               <l>ANd welcome now (<hi>Great Monarch</hi>) to your own;</l>
+               <l>Behold th' approaching cliffes of <hi>Albion;</hi>
+               </l>
+               <l>It is no longer Motion cheats your view,</l>
+               <l>As you meet it, the Land approacheth you.</l>
+               <l>The Land returns, and in the white it wears</l>
+               <l>The marks of penitence and <U+017F>orrow bears.</l>
+               <l>But you, who<U+017F>e goodne<U+017F>s your di<U+017F>cent doth <U+017F>how,</l>
+               <l>Your Heav'nly Parentage and earthly too;</l>
+               <l>By that <U+017F>ame mildne<U+017F>s which your Fathers Crown</l>
+               <l>Before did ravi<U+017F>h, <U+017F>hall <U+017F>ecure your own.</l>
+               <l>Not ty'd to rules of Policy, you find</l>
+               <l>Revenge le<U+017F>s <U+017F>weet then a forgiving mind.</l>
+               <l>Thus when th' Almighty would to <hi>Mo<U+017F>es</hi> give</l>
+               <l>A <U+017F>ight of all he could behold and live;</l>
+               <l>A voice before his entry did proclaim</l>
+               <l>Long-Suff'ring, Goodne<U+017F>s, Mercy <hi>in his Name.</hi>
+               </l>
+               <l>Your Pow'r to Ju<U+017F>tice doth <U+017F>ubmit your Cau<U+017F>e,</l>
+               <l>Your Goodne<U+017F>s only is above the Laws;</l>
+               <l>Who<U+017F>e rigid letter while pronounc'd by you</l>
+               <l>Is <U+017F>ofter made. So winds that tempe<U+017F>ts brew</l>
+               <l>When through Arabian Groves they take their flight</l>
+               <l>Made wanton with rich Odours, lo<U+017F>e their <U+017F>pight.</l>
+               <l>And as tho<U+017F>e Lees that trouble it, refine</l>
+               <l>The agitated Soul of Generous Wine,</l>
+               <l>
+                  <pb n="14" facs="tcp:135049:7"/>
+So tears of joy for your returning <U+017F>pilt,</l>
+               <l>Work out and expiate our former guilt.</l>
+               <l>Methinks I <U+017F>ee tho<U+017F>e Crowds on <hi>Dovers</hi> Strand</l>
+               <l>Who in their ha<U+017F>t to welcome you to Land</l>
+               <l>Choak'd up the Beach with their <U+017F>till growing <U+017F>tore,</l>
+               <l>And made a wilder Torrent on the <U+017F>hore.</l>
+               <l>While <U+017F>purr'd with eager thoughts of pa<U+017F>t delight</l>
+               <l>Tho<U+017F>e who had <U+017F>een you, court a <U+017F>econd <U+017F>ight;</l>
+               <l>Preventing <U+017F>till your <U+017F>teps, and making ha<U+017F>t</l>
+               <l>To meet you often where <U+017F>o e're you pa<U+017F>t.</l>
+               <l>How <U+017F>hall I <U+017F>peak of that triumphant Day</l>
+               <l>When you renew'd the expiring Pomp of <hi>May!</hi>
+               </l>
+               <l>(A Month that owns an Intre<U+017F>t in your Name:</l>
+               <l>You and the Flow'rs are its peculiar Claim.)</l>
+               <l>That Star that at your Birth <U+017F>hone out <U+017F>o bright</l>
+               <l>It <U+017F>tain'd the duller Suns Meridian light,</l>
+               <l>Did once again its potent Fires renew</l>
+               <l>Guiding our eyes to find and wor<U+017F>hip you.</l>
+               <l>And now times whiter Series is begun</l>
+               <l>Which in <U+017F>oft Centuries <U+017F>hall <U+017F>moothly run;</l>
+               <l>Tho<U+017F>e Clouds that overca<U+017F>t your Morne <U+017F>hall fly</l>
+               <l>Di<U+017F>pell'd to farthe<U+017F>t corners of the sky.</l>
+               <l>Our Nation with united Int're<U+017F>t ble<U+017F>t</l>
+               <l>Not now content to poize, <U+017F>hall <U+017F>way the re<U+017F>t.</l>
+               <l>Abroad your Empire <U+017F>hall no Limits know,</l>
+               <l>But like the Sea in boundle<U+017F>s Circles flow.</l>
+               <l>Your much lov'd Fleet <U+017F>hall with a wide Command</l>
+               <l>Be<U+017F>iege the petty Monarchs of the Land:</l>
+               <l>And as Old Time his Off-<U+017F>pring <U+017F>wallow'd down</l>
+               <l>Our Ocean in its depths all Seas <U+017F>hall drown.</l>
+               <l>Their wealthy Trade from Pyrates Rapine free</l>
+               <l>Our Merchants <U+017F>hall no more Advent'rers be:</l>
+               <l>
+                  <pb n="15" facs="tcp:135049:7"/>
+Nor in the farthe<U+017F>t Ea<U+017F>t tho<U+017F>e Dangers fear</l>
+               <l>Which humble <hi>Holland</hi> mu<U+017F>t di<U+017F><U+017F>emble here.</l>
+               <l>
+                  <hi>Spain</hi> to your Gift alone her Indies owes;</l>
+               <l>For what the Pow'rful takes not he be<U+017F>towes.</l>
+               <l>And <hi>France</hi> that did an Exiles pre<U+017F>ence fear</l>
+               <l>May ju<U+017F>tly apprehend you <U+017F>till too near.</l>
+               <l>At home the hateful names of Parties cea<U+017F>e</l>
+               <l>And factious Souls are weary'd into peace.</l>
+               <l>The di<U+017F>contented now are only they</l>
+               <l>Who<U+017F>e Crimes before did your Ju<U+017F>t Cau<U+017F>e betray:</l>
+               <l>Of tho<U+017F>e your Edicts <U+017F>ome reclaim from <U+017F>ins,</l>
+               <l>But mo<U+017F>t your Life and Ble<U+017F>t Example wins.</l>
+               <l>Oh happy Prince whom Heav'n hath taught the way</l>
+               <l>By paying Vowes, to have more Vowes to pay!</l>
+               <l>Oh Happy Age! Oh times like tho<U+017F>e alone</l>
+               <l>By Fate re<U+017F>erv'd for Great <hi>Augu<U+017F>tus</hi> Throne!</l>
+               <l>When the joint growth of Armes and Arts fore<U+017F>hew</l>
+               <l>The World a Monarch, and that Monarch <hi>You.</hi>
+               </l>
+            </lg>
+         </div>
+      </body>
+   </text>
+</TEI>
+

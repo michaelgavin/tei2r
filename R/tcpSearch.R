@@ -65,5 +65,6 @@ tcpSearch = function(term = NULL, range = NULL, field, free = TRUE, write = FALS
     write.csv(results, file = "index.csv", row.names = F)
   }
   View(results)
+  results$Date = as.integer(as.character(results$Date))
   return(results)
 }

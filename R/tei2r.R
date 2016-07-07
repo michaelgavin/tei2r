@@ -21,8 +21,8 @@
 #' \strong{Basic operations:}
 #' \itemize{
 #'   \item \code{\link{buildDocList}}: Represents your collection of documents
+#'   \item \code{\link{cleanup}}: Normalizes TEI texts to vectors of character data
 #'   \item \code{\link{importTexts}}: Moves texts into R
-#'   \item \code{\link{buildConcordance}}: Parses the documents for keywords-in-context
 #' }
 #' 
 #' \strong{Getting Started:}
@@ -34,12 +34,11 @@
 #' \strong{Sample Data:}
 #' \itemize{
 #'   \item \code{\link{natlaw}}: A collection of 33 documents related to 17th-cent 
-#'                               political theory.
+#'                               political theory. (From EEBO-TCP)
 #'                               
-#'   \item \code{\link{richardson}}: The novels of Samuel Richardson.
+#'   \item \code{\link{richardson}}: The novels of Samuel Richardson. (From ECCO-TCP)
 #' }
 #' 
 #' 
 #' @import XML
-#' @importFrom tools file_path_sans_ext
 NULL
