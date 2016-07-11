@@ -12,9 +12,9 @@ vignette: >
 
 The `tei2r` package is designed for humanities scholars and students interested in using R for text analysis. Its creation was prompted by the recent public release of thousands of documents by the Text Creation Partnership, including Early English Books Online, Evans, and Eighteenth-Century Collections Online. `tei2r` has built-in functions that allow users easily to access and download TCP files from Github, <https://github.com/textcreationpartnership>, where they are freely available.
 
-You don't need to be an experienced R programmer to use `tei2r`. Its most important functions require learning only a small handful of commands, which are explained below. `tei2r` makes it easy to measure word frequencies, build concordances, and train topic models. Each of these operations is explained in this introduction (which can be followed step-by-step in less than 20 minutes). For this reason, `tei2r` is ideal for DH-curious scholars with a strong interest in early modern literature and history.
+You don't need to be an experienced R programmer to use `tei2r`. Its most important functions require learning only a small handful of commands, which are explained below. `tei2r` makes it easy to measure word frequencies and train topic models. Each of these operations is explained in this introduction (which can be followed step-by-step in less than 20 minutes). For this reason, `tei2r` is ideal for DH-curious scholars with a strong interest in early modern literature and history.
 
-Scholars already comfortable doing text analysis with R or Python may still find `tei2r` useful, because its method for organizing objects in the R environment makes it easy to work with small- to medium-sized collections. Forthcoming complementary packages -- `htn` for historical text network analysis and `empson` for vector-space modeling -- build on and extend the core `tei2r` functionalities with more complex analytical techniques.
+Scholars already comfortable doing text analysis with R or Python may still find `tei2r` useful, because its method for organizing objects in the R environment makes it easy to work with small- to medium-sized collections. Two complementary packages -- `htn` for historical text network analysis and `empson` for vector-space modeling -- build on and extend the core `tei2r` functionalities with more complex analytical techniques.
 
 Anyone using `tei2r` should feel free to email Michael Gavin at mgavin@mailbox.sc.edu with questions, complaints, critiques, requests, bug reports, suggestions, or offers to collaborate.
 
@@ -159,39 +159,98 @@ If you wanted the text but didn't want to normalize the texts, adjust the parame
 dl = importTexts(dl = dl, normalize = FALSE)
 ```
 
-Note, too, that `importTexts` works with plain-text documents just fine.
-
-When imported into R, your documents' texts have a structure very similar to that of the list itself: it holds the name of the source directory and the index file, then a big list that holds each text as a *character vector*. 
-
-To get a sense of the contours of the `docList` object, look at `dl@texts`:
+The `importTexts()` function creates a big list that holds each text as a *character vector*, then stores that list to the last slot in the `docList` object. To get a sense of its contours, look at `dl@texts`:
 
 ```r
 dl@texts
 ```
 
-This will print out the full character vector for each text, so it'll be pretty much unreadable. Notice that, by default, the texts are stored with their TCP number as the key. If you ever need to look a number up, remember that the index is stored in your environment. Just call `View(dl@index)`.
+This will print out the full character vector for each text, so it'll be pretty much unreadable. However, if you scroll up and down in your console you'll get a sense of what happens with each document. Notice that, by default, the texts are stored with their TCP number as the key. If you ever need to look a number up, remember that the index is stored in your environment. Just call `View(dl@index)`.
 
 To print out the character vector of any individual text, you can select it by number (that is, its place in the order of the collection) or by TCP number. For example, here are two different ways to access the word vectors that make up Dryden's *Tyrannick Love*, which has the TCP number 'A36708' and is the 72nd item in the collection:
 
 ```r
-dt@text$A36708
+dl@texts$A36708
 
-dt@text[[72]]
+dl@texts[[72]]
 ```
 
-`tei2r` does not have many built-in analytical functions, but it does have a few. To see the word frequencies for each document in the collection, call
+### The `cleanup()` function
+
+As mentioned above the `importTexts()` operation performs several text-processing steps more or less automatically. These steps can be adjusted in a variety of ways, and it helps to have a sense of what's happening under the hood as a document is being transformed. Try using `cleanup()` by itself.
 
 ```r
-df = frequencies(dt)
+# First, import the stopwords to your global environment
+data(stopwords)
+
+# Then, run cleanup()
+cleanup("A36708.xml", stopwords = stopwords)[1:500]
 ```
 
-To build a correspondence around any single term, try
+You'll see that the text has been reduced to an ordered list of terms, beginning with the title page and dedication. It's worth pausing to look briefly over `cleanup()` to see how this is done. Here's the text of the function:
 
 ```r
-dc = buildConcordance(dt = dt, keyword = "wit", context = 5)
+# Cleanup has two parameters, stopwords (default is empty) and normalize (default is true)
+cleanup <- function (filepath, stopwords = c(), normalize = TRUE) 
+{
+    #First it checks to see if your file is plain text
+    if (length(grep(".txt", filepath)) == 1) {
+        text = scan(filepath, what = "character", sep = "\n", 
+            fileEncoding = "UTF-8")
+        text = paste(text, collapse = " ")
+    }
+    
+    # if not, it parses the XML, taking the entirety of the <text> element in TEI
+    else if (length(grep(".xml", filepath)) == 1) {
+        parsedText = htmlTreeParse(filepath, useInternalNodes = TRUE)
+        nodes = getNodeSet(parsedText, "//text")
+        text = lapply(nodes, xmlValue)
+    }
+    
+    # Here it deletes out phrases from the TEI encoding that get scooped up
+    text = gsub("non-Latin alphabet", " ", text)
+    text = gsub("1 page duplicate", " ", text)
+    
+    # Then, if normalize is true, it runs these steps
+    if (normalize == TRUE) {
+        
+        # it deletes out two kinds of long-S encoding
+        text = gsub("??", "s", text) 
+        text = gsub("A,?", "s", text)
+        
+        # it removes all numbers
+        text = gsub("[0-9]", "", text)
+        
+        # it converts vv to w
+        text = gsub("vv", "w", text)
+        
+        # it converts 'd and 'ring to ed and ering, respectively
+        text = gsub("'d ", "ed ", text)
+        text = gsub("'ring ", "ering ", text)
+    }
+    
+    # Then, it breaks the long string of text into individual words
+    text = strsplit(text, "\\W")
+    text = unlist(text)
+    text = text[text != ""] # removing blanks
+    
+    
+    if (normalize == TRUE) {
+        
+        # then converts everything to lower case
+        text = tolower(text)
+        
+        # keeps only words that AREN'T in the stopwords
+        text = text[text %in% stopwords == FALSE]
+        
+        # then removes all words with special characters
+        if (any(grep("[^ -~]", text))) 
+            text = text[-grep("[^ -~]", text)]
+    }
+    return(text)
+}
 ```
-
-Each of these objects will have a structure very similar to the others: some metadata at the top, followed by a list of results for each document in your collection. Words frequency counts and concordances are very useful for text analysis of various kinds. The `empson` package uses them to perform various kinds of more advanced semantic analysis. But even on their own, they can be very useful for getting a picture of how the documents in your collection relate to each other.
+As written, the normalization includes many steps that users may want to play around with. For example, removing numbers results in very tangible distortion when analyzing concepts that involve quantification or biblical citation. Removing special characters can distort results when working with non-English sources. If you want to adjust the normalization procedures, you can tweak the code directly by running `fix(cleanup)` and commenting out features you don't want or otherwise adjusting them. If you're new to R programming and don't feel comfortable adjusting the operations by hand, please email the author. I would be more than happy to hear about your project and provide what help I can. Seriously.
 
 ### Topic modeling with `mallet` and `tei2r`
 
@@ -231,5 +290,12 @@ dl = buildDocList(directory = getwd(), indexFile = "index.csv")
 ```
 4. Train the model and store the results in R
 ```r
-tmod = buildModel(dl = dl, dt = dt, tnum = 20)
+tmod = buildModel(dl = dl, tnum = 20)
 ```
+Note that, if you've already downloaded the EEBO-TCP files to a folder, you can skip step 2 and set that folder as the directory in step 3.
+
+### Conclusion
+
+The `tei2r` package was designed primarily for facilitating specific kinds of analysis I was doing with social and semantic networks. It doesn't do any kind of grammatical analysis, part-of-speech tagging, or other kinds of work. If any readers are interested in collaborating to add these or any other functions should contact the author.
+
+Thank you for using the `tei2r` package.
