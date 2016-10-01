@@ -31,7 +31,7 @@ cleanup = function(filepath, stopwords = c(), normalize = TRUE) {
   
   if (normalize == TRUE) {
     text = gsub("ſ", "s", text)
-    text = gsub("�.¿", "s", text)
+    #text = gsub("?.¿", "s", text)
     text = gsub("[0-9]", "", text)
     text = gsub("vv", "w", text)
     text = gsub("'d ", "ed ", text)
